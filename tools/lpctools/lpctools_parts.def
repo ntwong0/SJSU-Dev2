@@ -1,0 +1,17 @@
+# Parts definition file
+#
+# Note that the version of this file found in /etc should not be modified to ease program update.
+# Instead place a copy in your project directory or specify an alternative using the appropriate option.
+#
+# Lines starting whith # are comments
+# All values but the last one MUST be immediately followed by a coma (',') and can be precedeed by
+#  any number of whitespaces.
+# "part name" must be under 25 characters.
+
+# Line format :
+
+#       part info             |        flash             | reset  |       ram         |    ram      |   UU
+#                             |                      nb  | vector |                   |   buffer    | encode
+# part_id      part name      | base addr    size   sect | offset | base addr   size  |  off   size |   ?
+# LPC407X/8X Familly
+0x47193F47, LPC4078FBD80,       0x00000000, 0x80000, 30,   0x04,    0x10000000, 0x10000, 0x800, 0x800,   1
