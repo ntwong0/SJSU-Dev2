@@ -1,0 +1,61 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d5/d50/structfakeit_1_1ActualInvocationsContainer.html" title="fakeit::ActualInvocations\lContainer" alt="" coords="202,71,369,112"/>
+<area shape="rect" id="node2" href="$d8/d03/classfakeit_1_1RecordedMethodBody.html" title="fakeit::RecordedMethodBody\l\&lt; R, arglist \&gt;" alt="" coords="443,73,633,115"/>
+<area shape="rect" id="node3" href="$d4/d8c/structfakeit_1_1ActualInvocationsSource.html" title="fakeit::ActualInvocations\lSource" alt="" coords="202,267,369,308"/>
+<area shape="rect" id="node4" href="$da/d5e/structfakeit_1_1AggregateInvocationsSource.html" title="fakeit::AggregateInvocations\lSource" alt="" coords="444,139,632,180"/>
+<area shape="rect" id="node5" href="$d5/d55/structfakeit_1_1InvocationsSourceProxy.html" title="fakeit::InvocationsSource\lProxy" alt="" coords="453,204,623,245"/>
+<area shape="rect" id="node6" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; R, arglist \&gt;" alt="" coords="438,517,638,559"/>
+<area shape="rect" id="node7" href="$dd/da0/classfakeit_1_1Mock.html" title="fakeit::Mock\&lt; C, baseclasses \&gt;" alt="" coords="433,270,643,297"/>
+<area shape="rect" id="node8" href="$d8/d6b/classfakeit_1_1MockImpl.html" title="fakeit::MockImpl\&lt; C,\l baseclasses \&gt;" alt="" coords="465,765,611,807"/>
+<area shape="rect" id="node9" href="$db/def/structfakeit_1_1UnverifiedInvocationsSource.html" title="fakeit::UnverifiedInvocations\lSource" alt="" coords="444,321,632,363"/>
+<area shape="rect" id="node10" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; R, arglist... \&gt;" alt="" coords="438,583,638,624"/>
+<area shape="rect" id="node12" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; void \&gt;" alt="" coords="438,452,638,493"/>
+<area shape="rect" id="node14" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; void, arglist... \&gt;" alt="" coords="438,387,638,428"/>
+<area shape="rect" id="node16" href="$d8/d6b/classfakeit_1_1MockImpl.html" title="fakeit::MockImpl\&lt; C,\l baseclasses... \&gt;" alt="" coords="465,700,611,741"/>
+<area shape="rect" id="node11" href="$de/de1/classfakeit_1_1MockingContext.html" title="fakeit::MockingContext\l\&lt; R, arglist \&gt;" alt="" coords="703,583,861,624"/>
+<area shape="rect" id="node13" href="$d6/d31/classfakeit_1_1DtorMockingContext.html" title="fakeit::DtorMockingContext" alt="" coords="691,459,873,486"/>
+<area shape="rect" id="node15" href="$d1/dce/classfakeit_1_1MockingContext_3_01void_00_01arglist_8_8_8_01_4.html" title="fakeit::MockingContext\l\&lt; void, arglist... \&gt;" alt="" coords="703,387,861,428"/>
+<area shape="rect" id="node17" href="$d3/d31/classfakeit_1_1Destructible.html" title="fakeit::Destructible" alt="" coords="5,1150,137,1177"/>
+<area shape="rect" id="node18" href="$d0/d1b/structfakeit_1_1Action.html" title="fakeit::Action\&lt; R,\l arglist... \&gt;" alt="" coords="223,1013,348,1055"/>
+<area shape="rect" id="node23" href="$d1/d8c/structfakeit_1_1ActualInvocationHandler.html" title="fakeit::ActualInvocation\lHandler\&lt; R, arglist... \&gt;" alt="" coords="206,1176,365,1217"/>
+<area shape="rect" id="node26" href="$d0/d1b/structfakeit_1_1Action.html" title="fakeit::Action\&lt; R,\l arglist \&gt;" alt="" coords="223,1111,348,1152"/>
+<area shape="rect" id="node27" href="$dc/de7/structfakeit_1_1ActualInvocation_1_1Matcher.html" title="fakeit::ActualInvocation\l\&lt; arglist \&gt;::Matcher" alt="" coords="206,1275,365,1316"/>
+<area shape="rect" id="node31" href="$d1/d8c/structfakeit_1_1ActualInvocationHandler.html" title="fakeit::ActualInvocation\lHandler\&lt; R, arglist \&gt;" alt="" coords="206,1340,365,1381"/>
+<area shape="rect" id="node32" href="$d5/dc6/structfakeit_1_1IMatcher.html" title="fakeit::IMatcher" alt="" coords="229,1438,342,1465"/>
+<area shape="rect" id="node42" href="$d2/df6/structfakeit_1_1Invocation.html" title="fakeit::Invocation" alt="" coords="224,1530,347,1557"/>
+<area shape="rect" id="node45" href="$d5/d4f/structfakeit_1_1MethodInvocationHandler.html" title="fakeit::MethodInvocation\lHandler\&lt; R, arglist \&gt;" alt="" coords="203,769,368,811"/>
+<area shape="rect" id="node46" href="$d6/dc4/structfakeit_1_1MethodMockingContext_1_1Context.html" title="fakeit::MethodMockingContext\l\&lt; R, arglist \&gt;::Context" alt="" coords="185,835,385,876"/>
+<area shape="rect" id="node47" href="$d5/d4f/structfakeit_1_1MethodInvocationHandler.html" title="fakeit::MethodInvocation\lHandler\&lt; R, arglist... \&gt;" alt="" coords="203,201,368,243"/>
+<area shape="rect" id="node19" href="$d1/dc5/structfakeit_1_1Repeat.html" title="fakeit::Repeat\&lt; R,\l arglist \&gt;" alt="" coords="473,948,603,989"/>
+<area shape="rect" id="node20" href="$d8/d85/structfakeit_1_1RepeatForever.html" title="fakeit::RepeatForever\l\&lt; R, arglist \&gt;" alt="" coords="464,1013,612,1055"/>
+<area shape="rect" id="node21" href="$d0/d75/structfakeit_1_1ReturnDefaultValue.html" title="fakeit::ReturnDefaultValue\l\&lt; R, arglist \&gt;" alt="" coords="450,1079,626,1120"/>
+<area shape="rect" id="node22" href="$d9/d92/structfakeit_1_1ReturnDelegateValue.html" title="fakeit::ReturnDelegateValue\l\&lt; R, arglist \&gt;" alt="" coords="445,883,631,924"/>
+<area shape="rect" id="node24" href="$dc/d5b/structfakeit_1_1ActionSequence.html" title="fakeit::ActionSequence\l\&lt; R, arglist... \&gt;" alt="" coords="459,1209,617,1251"/>
+<area shape="rect" id="node25" href="$dc/d5b/structfakeit_1_1ActionSequence.html" title="fakeit::ActionSequence\l\&lt; R, arglist \&gt;" alt="" coords="459,1144,617,1185"/>
+<area shape="rect" id="node28" href="$df/df7/structfakeit_1_1ArgumentsMatcherInvocationMatcher.html" title="fakeit::ArgumentsMatcher\lInvocationMatcher\&lt; arglist \&gt;" alt="" coords="444,1340,632,1381"/>
+<area shape="rect" id="node29" href="$da/d84/structfakeit_1_1DefaultInvocationMatcher.html" title="fakeit::DefaultInvocation\lMatcher\&lt; arglist \&gt;" alt="" coords="456,1405,620,1447"/>
+<area shape="rect" id="node30" href="$de/dff/structfakeit_1_1UserDefinedInvocationMatcher.html" title="fakeit::UserDefinedInvocation\lMatcher\&lt; arglist \&gt;" alt="" coords="441,1275,635,1316"/>
+<area shape="rect" id="node33" href="$d3/ddb/structfakeit_1_1TypedMatcher.html" title="fakeit::TypedMatcher\&lt; T \&gt;" alt="" coords="449,1471,627,1498"/>
+<area shape="rect" id="node34" href="$dc/d72/structfakeit_1_1ComparisonMatcherCreator_1_1Matcher.html" title="fakeit::ComparisonMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="693,1497,871,1539"/>
+<area shape="rect" id="node41" href="$d0/dd9/structfakeit_1_1internal_1_1TypedAnyMatcher_1_1Matcher.html" title="fakeit::internal::TypedAny\lMatcher\&lt; T \&gt;::Matcher" alt="" coords="697,1432,867,1473"/>
+<area shape="rect" id="node35" href="$d3/d7b/structfakeit_1_1internal_1_1EqMatcherCreator_1_1Matcher.html" title="fakeit::internal::EqMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="922,1333,1097,1375"/>
+<area shape="rect" id="node36" href="$d9/dfb/structfakeit_1_1internal_1_1GeMatcherCreator_1_1Matcher.html" title="fakeit::internal::GeMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="921,1399,1097,1440"/>
+<area shape="rect" id="node37" href="$d7/df9/structfakeit_1_1internal_1_1GtMatcherCreator_1_1Matcher.html" title="fakeit::internal::GtMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="923,1464,1096,1505"/>
+<area shape="rect" id="node38" href="$db/d6f/structfakeit_1_1internal_1_1LeMatcherCreator_1_1Matcher.html" title="fakeit::internal::LeMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="923,1529,1096,1571"/>
+<area shape="rect" id="node39" href="$db/d74/structfakeit_1_1internal_1_1LtMatcherCreator_1_1Matcher.html" title="fakeit::internal::LtMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="924,1595,1095,1636"/>
+<area shape="rect" id="node40" href="$d4/d94/structfakeit_1_1internal_1_1NeMatcherCreator_1_1Matcher.html" title="fakeit::internal::NeMatcher\lCreator\&lt; T \&gt;::Matcher" alt="" coords="921,1660,1097,1701"/>
+<area shape="rect" id="node43" href="$d1/d9c/structfakeit_1_1ActualInvocation.html" title="fakeit::ActualInvocation\l\&lt; arglist... \&gt;" alt="" coords="459,1588,617,1629"/>
+<area shape="rect" id="node44" href="$d1/d9c/structfakeit_1_1ActualInvocation.html" title="fakeit::ActualInvocation\l\&lt; arglist \&gt;" alt="" coords="459,1523,617,1564"/>
+<area shape="rect" id="node48" href="$d3/d20/structfakeit_1_1Invocation_1_1Matcher.html" title="fakeit::Invocation\l::Matcher" alt="" coords="224,463,347,504"/>
+<area shape="rect" id="node49" href="$d2/d55/structfakeit_1_1MockObject.html" title="fakeit::MockObject\&lt; C \&gt;" alt="" coords="202,901,369,927"/>
+<area shape="rect" id="node50" href="$dd/dd8/classfakeit_1_1Sequence.html" title="fakeit::Sequence" alt="" coords="225,659,345,686"/>
+<area shape="rect" id="node51" href="$de/d31/classfakeit_1_1ConcatenatedSequence.html" title="fakeit::ConcatenatedSequence" alt="" coords="437,649,639,675"/>
+<area shape="rect" id="node52" href="$db/d6a/classfakeit_1_1RepeatedSequence.html" title="fakeit::RepeatedSequence" alt="" coords="450,831,626,858"/>
+<area shape="rect" id="node53" href="$d6/d39/structfakeit_1_1Xaction.html" title="fakeit::Xaction" alt="" coords="18,373,125,399"/>
+<area shape="rect" id="node54" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; R, arglist \&gt;" alt="" coords="211,5,359,47"/>
+<area shape="rect" id="node55" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; R, arglist \&gt;" alt="" coords="206,136,365,177"/>
+<area shape="rect" id="node56" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; R, arglist... \&gt;" alt="" coords="211,528,359,569"/>
+<area shape="rect" id="node57" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; void, arglist... \&gt;" alt="" coords="211,397,359,439"/>
+<area shape="rect" id="node58" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; R, arglist... \&gt;" alt="" coords="206,593,365,635"/>
+<area shape="rect" id="node59" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; void, arglist... \&gt;" alt="" coords="206,332,365,373"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="fakeit::Xaction" name="fakeit::Xaction">
+<area shape="rect" id="node2" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; R, arglist \&gt;" alt="" coords="165,5,313,47"/>
+<area shape="rect" id="node3" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; R, arglist \&gt;" alt="" coords="160,71,319,112"/>
+<area shape="rect" id="node4" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; R, arglist... \&gt;" alt="" coords="165,136,313,177"/>
+<area shape="rect" id="node8" href="$df/d1c/structfakeit_1_1SpyingContext.html" title="fakeit::SpyingContext\l\&lt; void, arglist... \&gt;" alt="" coords="165,267,313,308"/>
+<area shape="rect" id="node13" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; R, arglist... \&gt;" alt="" coords="160,201,319,243"/>
+<area shape="rect" id="node14" href="$db/d27/structfakeit_1_1StubbingContext.html" title="fakeit::StubbingContext\l\&lt; void, arglist... \&gt;" alt="" coords="160,332,319,373"/>
+<area shape="rect" id="node5" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; R, arglist \&gt;" alt="" coords="367,136,567,177"/>
+<area shape="rect" id="node6" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; R, arglist... \&gt;" alt="" coords="367,201,567,243"/>
+<area shape="rect" id="node7" href="$de/de1/classfakeit_1_1MockingContext.html" title="fakeit::MockingContext\l\&lt; R, arglist \&gt;" alt="" coords="627,201,785,243"/>
+<area shape="rect" id="node9" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; void \&gt;" alt="" coords="367,267,567,308"/>
+<area shape="rect" id="node11" href="$df/d64/classfakeit_1_1MethodMockingContext.html" title="fakeit::MethodMockingContext\l\&lt; void, arglist... \&gt;" alt="" coords="367,332,567,373"/>
+<area shape="rect" id="node10" href="$d6/d31/classfakeit_1_1DtorMockingContext.html" title="fakeit::DtorMockingContext" alt="" coords="615,274,797,301"/>
+<area shape="rect" id="node12" href="$d1/dce/classfakeit_1_1MockingContext_3_01void_00_01arglist_8_8_8_01_4.html" title="fakeit::MockingContext\l\&lt; void, arglist... \&gt;" alt="" coords="627,332,785,373"/>
+</map>

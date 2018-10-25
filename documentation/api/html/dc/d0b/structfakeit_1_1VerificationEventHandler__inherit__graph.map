@@ -1,0 +1,10 @@
+<map id="fakeit::VerificationEventHandler" name="fakeit::VerificationEventHandler">
+<area shape="rect" id="node2" href="$db/d31/structfakeit_1_1EventHandler.html" title="fakeit::EventHandler" alt="" coords="190,95,331,121"/>
+<area shape="rect" id="node9" href="$d1/d05/classfakeit_1_1ThrowFalseEventHandler.html" title="fakeit::ThrowFalseEventHandler" alt="" coords="356,95,565,121"/>
+<area shape="rect" id="node3" href="$d9/dca/classfakeit_1_1CatchAdapter.html" title="fakeit::CatchAdapter" alt="" coords="5,169,148,196"/>
+<area shape="rect" id="node4" href="$df/de5/structfakeit_1_1DefaultEventLogger.html" title="fakeit::DefaultEventLogger" alt="" coords="172,169,349,196"/>
+<area shape="rect" id="node5" href="$dd/d25/structfakeit_1_1FakeitContext.html" title="fakeit::FakeitContext" alt="" coords="374,169,518,196"/>
+<area shape="rect" id="node6" href="$d4/da2/classfakeit_1_1AbstractFakeit.html" title="fakeit::AbstractFakeit" alt="" coords="373,244,519,271"/>
+<area shape="rect" id="node7" href="$dd/d58/classfakeit_1_1DefaultFakeit.html" title="fakeit::DefaultFakeit" alt="" coords="376,319,516,345"/>
+<area shape="rect" id="node8" href="$d6/da6/classfakeit_1_1CatchFakeit.html" title="fakeit::CatchFakeit" alt="" coords="379,393,513,420"/>
+</map>

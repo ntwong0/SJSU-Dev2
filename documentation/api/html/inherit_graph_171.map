@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d8/d58/structfakeit_1_1TypedMatcherCreator.html" title="fakeit::TypedMatcherCreator\&lt; T \&gt;" alt="" coords="5,210,225,237"/>
+<area shape="rect" id="node2" href="$de/d8e/structfakeit_1_1ComparisonMatcherCreator.html" title="fakeit::ComparisonMatcher\lCreator\&lt; T \&gt;" alt="" coords="273,169,452,211"/>
+<area shape="rect" id="node9" href="$d3/dc3/structfakeit_1_1internal_1_1TypedAnyMatcher.html" title="fakeit::internal::TypedAny\lMatcher\&lt; T \&gt;" alt="" coords="277,235,448,276"/>
+<area shape="rect" id="node3" href="$d9/dd5/structfakeit_1_1internal_1_1EqMatcherCreator.html" title="fakeit::internal::EqMatcher\lCreator\&lt; T \&gt;" alt="" coords="501,5,675,47"/>
+<area shape="rect" id="node4" href="$d1/ddd/structfakeit_1_1internal_1_1GeMatcherCreator.html" title="fakeit::internal::GeMatcher\lCreator\&lt; T \&gt;" alt="" coords="500,71,676,112"/>
+<area shape="rect" id="node5" href="$d5/d21/structfakeit_1_1internal_1_1GtMatcherCreator.html" title="fakeit::internal::GtMatcher\lCreator\&lt; T \&gt;" alt="" coords="501,136,675,177"/>
+<area shape="rect" id="node6" href="$d6/df3/structfakeit_1_1internal_1_1LeMatcherCreator.html" title="fakeit::internal::LeMatcher\lCreator\&lt; T \&gt;" alt="" coords="501,201,675,243"/>
+<area shape="rect" id="node7" href="$d2/d24/structfakeit_1_1internal_1_1LtMatcherCreator.html" title="fakeit::internal::LtMatcher\lCreator\&lt; T \&gt;" alt="" coords="503,267,673,308"/>
+<area shape="rect" id="node8" href="$dc/dca/structfakeit_1_1internal_1_1NeMatcherCreator.html" title="fakeit::internal::NeMatcher\lCreator\&lt; T \&gt;" alt="" coords="500,332,676,373"/>
+</map>

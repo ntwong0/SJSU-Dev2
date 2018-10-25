@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$de/dcb/structfakeit_1_1EventFormatter.html" title="fakeit::EventFormatter" alt="" coords="243,31,395,57"/>
+<area shape="rect" id="node2" href="$dd/dce/structfakeit_1_1DefaultEventFormatter.html" title="fakeit::DefaultEventFormatter" alt="" coords="472,5,667,32"/>
+<area shape="rect" id="node3" href="$dd/d25/structfakeit_1_1FakeitContext.html" title="fakeit::FakeitContext" alt="" coords="497,56,641,83"/>
+<area shape="rect" id="node4" href="$d4/da2/classfakeit_1_1AbstractFakeit.html" title="fakeit::AbstractFakeit" alt="" coords="715,56,861,83"/>
+<area shape="rect" id="node5" href="$dd/d58/classfakeit_1_1DefaultFakeit.html" title="fakeit::DefaultFakeit" alt="" coords="909,56,1049,83"/>
+<area shape="rect" id="node6" href="$d6/da6/classfakeit_1_1CatchFakeit.html" title="fakeit::CatchFakeit" alt="" coords="1097,56,1231,83"/>
+<area shape="rect" id="node7" href="$d0/dda/structfakeit_1_1VerificationEventHandler.html" title="fakeit::VerificationEvent\lHandler" alt="" coords="5,125,167,166"/>
+<area shape="rect" id="node8" href="$db/d31/structfakeit_1_1EventHandler.html" title="fakeit::EventHandler" alt="" coords="249,107,390,133"/>
+<area shape="rect" id="node11" href="$d1/d05/classfakeit_1_1ThrowFalseEventHandler.html" title="fakeit::ThrowFalseEventHandler" alt="" coords="215,157,424,184"/>
+<area shape="rect" id="node9" href="$d9/dca/classfakeit_1_1CatchAdapter.html" title="fakeit::CatchAdapter" alt="" coords="498,107,641,133"/>
+<area shape="rect" id="node10" href="$df/de5/structfakeit_1_1DefaultEventLogger.html" title="fakeit::DefaultEventLogger" alt="" coords="481,157,658,184"/>
+</map>
