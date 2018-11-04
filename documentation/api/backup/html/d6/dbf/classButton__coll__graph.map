@@ -1,8 +1,0 @@
-<map id="Button" name="Button">
-<area shape="rect" id="node2" href="$d3/dc5/classButtonInterface.html" title="ButtonInterface" alt="" coords="5,171,116,197"/>
-<area shape="rect" id="node3" href="$d4/d79/classGpio.html" title="Gpio" alt="" coords="140,171,189,197"/>
-<area shape="rect" id="node4" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="20,81,120,108"/>
-<area shape="rect" id="node5" href="$da/da0/classPin.html" title="Pin" alt="" coords="144,81,185,108"/>
-<area shape="rect" id="node6" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="119,5,211,32"/>
-<area shape="rect" id="node7" href="$d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="209,81,355,108"/>
-</map>

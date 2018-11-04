@@ -12,7 +12,7 @@ var searchData=
   ['verifyunverifiedfunctor',['VerifyUnverifiedFunctor',['../d1/d6e/classfakeit_1_1VerifyUnverifiedFunctor.html',1,'fakeit']]],
   ['virtualoffsetselector',['VirtualOffsetSelector',['../d2/dcb/structfakeit_1_1VirtualOffsetSelector.html',1,'fakeit']]],
   ['virtualtable',['VirtualTable',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
-  ['virtualtable_3c_20c_2c_20baseclasses_2e_2e_2e_20_3e',['VirtualTable&lt; C, baseclasses... &gt;',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
+  ['virtualtable_3c_20c_2c_20baseclasses_2e_2e_2e_3e',['VirtualTable&lt; C, baseclasses...&gt;',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
   ['virtualtablebase',['VirtualTableBase',['../d0/df9/structfakeit_1_1VirtualTableBase.html',1,'fakeit']]],
   ['vqueuedelete',['vQueueDelete',['../de/d60/group__vQueueDelete.html',1,'']]],
   ['vsemaphorecreatebinary',['vSemaphoreCreateBinary',['../da/d7c/group__vSemaphoreCreateBinary.html',1,'']]],

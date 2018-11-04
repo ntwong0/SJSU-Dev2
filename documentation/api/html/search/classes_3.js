@@ -29,5 +29,5 @@ var searchData=
   ['dtormockingcontext',['DtorMockingContext',['../d6/d31/classfakeit_1_1DtorMockingContext.html',1,'fakeit']]],
   ['dwt_5ftype',['DWT_Type',['../d5/db5/structDWT__Type.html',1,'']]],
   ['dynamicproxy',['DynamicProxy',['../df/d4f/structfakeit_1_1DynamicProxy.html',1,'fakeit']]],
-  ['dynamicproxy_3c_20c_2c_20baseclasses_2e_2e_2e_20_3e',['DynamicProxy&lt; C, baseclasses... &gt;',['../df/d4f/structfakeit_1_1DynamicProxy.html',1,'fakeit']]]
+  ['dynamicproxy_3c_20c_2c_20baseclasses_2e_2e_2e_3e',['DynamicProxy&lt; C, baseclasses...&gt;',['../df/d4f/structfakeit_1_1DynamicProxy.html',1,'fakeit']]]
 ];

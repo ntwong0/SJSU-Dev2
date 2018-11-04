@@ -44,22 +44,9 @@ inline void UsedVariadicFunction(...) {}
 #define SJ2_ARRAY_LENGTH(array) sizeof(array) / sizeof(*array)
 /// SJ2_PACKED give a specified type a packed attribute
 #define SJ2_PACKED(type) type __attribute__((packed))
-<<<<<<< HEAD
 // SJ2_IGNORE_STACK_TRACE will remove function profiling for this
 // specific function which means it will not be recoreded in the stack_trace
 // array and will not show up when a SJ2_DUMP_BACKTRACE() is called.
-=======
-/// SJ2_DUMP_BACKTRACE will print a list of the called functions leading up to
-/// where this macro is called.
-#if defined SJ2_INCLUDE_BACKTRACE && SJ2_INCLUDE_BACKTRACE == true
-#define SJ2_DUMP_BACKTRACE() ::debug::PrintTrace()
-#else
-#define SJ2_DUMP_BACKTRACE()
-#endif  // defined SJ2_INCLUDE_BACKTRACE && SJ2_INCLUDE_BACKTRACE == true
-/// SJ2_IGNORE_STACK_TRACE will remove function profiling for this
-/// specific function which means it will not be recoreded in the stack_trace
-/// array and will not show up when a SJ2_DUMP_BACKTRACE() is called.
->>>>>>> 4739879... Updated doxygen config and generated documentation
 #define SJ2_IGNORE_STACK_TRACE(function) \
   function __attribute__((no_instrument_function))
 /// Set a function as a "weak" function. This means that if there is another
@@ -76,59 +63,3 @@ inline void UsedVariadicFunction(...) {}
 #define SJ2_ALIAS(f) \
   __attribute__((weak, alias(#f), no_instrument_function))  // NOLINT
 #endif
-<<<<<<< HEAD
-=======
-/// When the condition is false, issue a warning to the user with a warning
-/// message. Warning message format acts like printf.
-#define SJ2_ASSERT_WARNING(condition, warning_message, ...)        \
-  do                                                               \
-  {                                                                \
-    if (!(condition))                                              \
-    {                                                              \
-      LOG_WARNING(warning_message SJ2_COLOR_RESET, ##__VA_ARGS__); \
-    }                                                              \
-  } while (0)
-/// When the condition is false, issue a critical level message to the user and
-/// halt the processor.
-#define SJ2_ASSERT_FATAL_WITH_DUMP(with_dump, condition, fatal_message, ...)  \
-  do                                                                          \
-  {                                                                           \
-    if (!(condition))                                                         \
-    {                                                                         \
-      LOG_CRITICAL(fatal_message SJ2_COLOR_RESET, ##__VA_ARGS__);             \
-      if ((with_dump))                                                        \
-      {                                                                       \
-        printf("\nPrinting Stack Trace:\n\n");                                \
-        SJ2_DUMP_BACKTRACE();                                                 \
-        printf(                                                               \
-            "\nRun: the following command in your project directory"          \
-            "\n\n    " SJ2_BOLD_WHITE                                         \
-            "arm-none-eabi-addr2line -e build/binaries/firmware.elf "         \
-            "<insert pc>" SJ2_COLOR_RESET                                     \
-            "\n\n"                                                            \
-            "This will report the file and line number associated with that " \
-            "program counter values provided above in the backtrace.\n\n");   \
-      }                                                                       \
-      while (true)                                                            \
-      {                                                                       \
-        continue;                                                             \
-      }                                                                       \
-    }                                                                         \
-  } while (0)
-
-#if defined HOST_TEST
-#define SJ2_ASSERT_FATAL(condition, fatal_message, ...)               \
-  /* Without the if statement using the (condition) and SJ2_USED() */ \
-  /* the compiler may complain about unused variables.             */ \
-  /* This serves to silence those warnings during host tests.      */ \
-  if (condition)                                                      \
-  {                                                                   \
-    SJ2_USED(fatal_message);                                          \
-  }
-#else
-#define SJ2_ASSERT_FATAL(condition, fatal_message, ...) \
-  SJ2_ASSERT_FATAL_WITH_DUMP(true, (condition), fatal_message, ##__VA_ARGS__)
-#endif  // defined HOST_TEST
-
-/* @} */
->>>>>>> 4739879... Updated doxygen config and generated documentation

@@ -1,0 +1,20 @@
+digraph "/home/travis/build/kammce/SJSU-Dev2/firmware/library" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_01d556f76393421b16360bb90a483cb1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="firmware" fontname="Helvetica", fontsize="10", URL="dir_01d556f76393421b16360bb90a483cb1.html"]
+  subgraph clusterdir_5bd71e30699729ce4f291488f202cd36 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5bd71e30699729ce4f291488f202cd36.html"];
+    dir_5bd71e30699729ce4f291488f202cd36 [shape=plaintext label="library"];
+    dir_5b07014e5c40d07411105f4fb0a3e5f5 [shape=box label="L0_LowLevel" color="red" fillcolor="white" style="filled" URL="dir_5b07014e5c40d07411105f4fb0a3e5f5.html"];
+    dir_69c4750e1922972fe56d4dc605891a38 [shape=box label="L1_Drivers" color="red" fillcolor="white" style="filled" URL="dir_69c4750e1922972fe56d4dc605891a38.html"];
+    dir_98ec84a7fde92d99766d54fe33701202 [shape=box label="L2_Utilities" color="red" fillcolor="white" style="filled" URL="dir_98ec84a7fde92d99766d54fe33701202.html"];
+    dir_8bff4f56cb90886293117589da6dceda [shape=box label="L3_HAL" color="red" fillcolor="white" style="filled" URL="dir_8bff4f56cb90886293117589da6dceda.html"];
+    dir_a9ad8001cf085f9df1317e37e7c5cf0c [shape=box label="L4_Application" color="red" fillcolor="white" style="filled" URL="dir_a9ad8001cf085f9df1317e37e7c5cf0c.html"];
+    dir_4c3dec1d5fcdddaa8837fa9deba1cc5f [shape=box label="L5_Testing" color="black" fillcolor="white" style="filled" URL="dir_4c3dec1d5fcdddaa8837fa9deba1cc5f.html"];
+    dir_f339966a0ef19474cbb1bdf7c327631f [shape=box label="newlib" color="black" fillcolor="white" style="filled" URL="dir_f339966a0ef19474cbb1bdf7c327631f.html"];
+    dir_e09eb42682f400a396ce0cf97b885b03 [shape=box label="third_party" color="red" fillcolor="white" style="filled" URL="dir_e09eb42682f400a396ce0cf97b885b03.html"];
+  }
+  }
+}

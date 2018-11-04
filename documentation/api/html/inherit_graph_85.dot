@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CoreDebug_Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d00/structCoreDebug__Type.html",tooltip="Structure type to access the Core Debug Register (CoreDebug). "];
+}

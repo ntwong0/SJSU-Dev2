@@ -26,18 +26,18 @@ namespace config
 /// 1) Check if the macro is already defined. The macros should only be changed
 ///    in the <project_config.hpp> file
 /// 2) If the macro is not defined, give it a default value here.
-/// 3) Generate a typed constexpr version of the macro using SJ2_DECLARE_CONSTANT
-///    This will check that the desired typed variable, and the macro equal
-///    each other. They wouldn't in cases where the type is bool and the user
-///    uses the value 2 for the macro.
+/// 3) Generate a typed constexpr version of the macro using
+///    SJ2_DECLARE_CONSTANT This will check that the desired typed variable,
+///    and the macro equal each other. They wouldn't in cases where the type is
+///    bool and the user uses the value 2 for the macro.
 /// 4) It is recommend, that if there exists an acceptable range for a constant,
 ///    then use a static_assert to check that the constant generated from
 ///    SJ2_DECLARE_CONSTANT, is within range. For example if kSystemClockRate
 ///    can only be between 1Hz and 100Mhz, then kSystemClockRate should be
 ///    checked if it is within range.
 
-/// Creates a typed constexpr version of the macro defintion which should be used
-/// rather than using the macro directly.
+/// Creates a typed constexpr version of the macro defintion which should be
+/// used rather than using the macro directly.
 #define SJ2_DECLARE_CONSTANT(macro_name, type, constant_name) \
   constexpr type constant_name = SJ2_##macro_name;            \
   static_assert(constant_name == SJ2_##macro_name,            \
@@ -121,8 +121,8 @@ static_assert(kLogLevel == SJ2_LOG_LEVEL_NONESET  ||
               "SJ2_LOG_LEVEL must equal to one of the predefined log levels "
               "such as SJ2_LOG_LEVEL_INFO.");
 
-/// If set to true, will display function name in LOG_* function calls. Otherwise
-/// omit writing function names.
+/// If set to true, will display function name in LOG_* function calls.
+/// Otherwise omit writing function names.
 #if !defined(SJ2_DESCRIPTIVE_FUNCTION_NAME)
 #define SJ2_DESCRIPTIVE_FUNCTION_NAME true
 #endif  // !defined(SJ2_DESCRIPTIVE_FUNCTION_NAME)

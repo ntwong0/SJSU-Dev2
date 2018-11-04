@@ -1,8 +1,0 @@
-<map id="fakeit::DefaultFakeit" name="fakeit::DefaultFakeit">
-<area shape="rect" id="node7" href="$d6/da6/classfakeit_1_1CatchFakeit.html" title="fakeit::CatchFakeit" alt="" coords="105,393,238,420"/>
-<area shape="rect" id="node2" href="$d4/da2/classfakeit_1_1AbstractFakeit.html" title="fakeit::AbstractFakeit" alt="" coords="98,244,245,271"/>
-<area shape="rect" id="node3" href="$dd/d25/structfakeit_1_1FakeitContext.html" title="fakeit::FakeitContext" alt="" coords="99,169,243,196"/>
-<area shape="rect" id="node4" href="$db/d31/structfakeit_1_1EventHandler.html" title="fakeit::EventHandler" alt="" coords="15,95,157,121"/>
-<area shape="rect" id="node5" href="$d0/dda/structfakeit_1_1VerificationEventHandler.html" title="fakeit::VerificationEvent\lHandler" alt="" coords="5,5,167,47"/>
-<area shape="rect" id="node6" href="$de/dcb/structfakeit_1_1EventFormatter.html" title="fakeit::EventFormatter" alt="" coords="181,95,333,121"/>
-</map>

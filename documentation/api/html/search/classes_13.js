@@ -9,7 +9,7 @@ var searchData=
   ['verifyunverifiedfunctor',['VerifyUnverifiedFunctor',['../d1/d6e/classfakeit_1_1VerifyUnverifiedFunctor.html',1,'fakeit']]],
   ['virtualoffsetselector',['VirtualOffsetSelector',['../d2/dcb/structfakeit_1_1VirtualOffsetSelector.html',1,'fakeit']]],
   ['virtualtable',['VirtualTable',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
-  ['virtualtable_3c_20c_2c_20baseclasses_2e_2e_2e_20_3e',['VirtualTable&lt; C, baseclasses... &gt;',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
+  ['virtualtable_3c_20c_2c_20baseclasses_2e_2e_2e_3e',['VirtualTable&lt; C, baseclasses...&gt;',['../dc/d13/structfakeit_1_1VirtualTable.html',1,'fakeit']]],
   ['virtualtablebase',['VirtualTableBase',['../d0/df9/structfakeit_1_1VirtualTableBase.html',1,'fakeit']]],
   ['vtablemethodtype',['VTableMethodType',['../df/d12/structfakeit_1_1VTableMethodType.html',1,'fakeit']]],
   ['vtutils',['VTUtils',['../d4/d5e/classfakeit_1_1VTUtils.html',1,'fakeit']]]
