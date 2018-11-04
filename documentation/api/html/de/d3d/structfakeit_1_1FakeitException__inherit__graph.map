@@ -1,0 +1,6 @@
+<map id="fakeit::FakeitException" name="fakeit::FakeitException">
+<area shape="rect" id="node2" href="$db/dcd/structfakeit_1_1UnexpectedMethodCallException.html" title="fakeit::UnexpectedMethod\lCallException" alt="" coords="217,5,391,46"/>
+<area shape="rect" id="node3" href="$d5/d23/structfakeit_1_1VerificationException.html" title="fakeit::VerificationException" alt="" coords="211,71,397,97"/>
+<area shape="rect" id="node4" href="$d6/d42/structfakeit_1_1NoMoreInvocationsVerificationException.html" title="fakeit::NoMoreInvocations\lVerificationException" alt="" coords="451,30,626,71"/>
+<area shape="rect" id="node5" href="$d0/da6/structfakeit_1_1SequenceVerificationException.html" title="fakeit::SequenceVerification\lException" alt="" coords="446,95,631,137"/>
+</map>
