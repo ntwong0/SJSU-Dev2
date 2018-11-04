@@ -1,7 +1,0 @@
-<map id="Catch::Matchers::Impl::MatcherUntypedBase" name="Catch::Matchers::Impl::MatcherUntypedBase">
-<area shape="rect" id="node2" href="$d8/d94/structCatch_1_1Matchers_1_1Impl_1_1MatcherBase.html" title="Catch::Matchers::Impl\l::MatcherBase\&lt; T \&gt;" alt="" coords="215,5,367,46"/>
-<area shape="rect" id="node3" href="$d8/d94/structCatch_1_1Matchers_1_1Impl_1_1MatcherBase.html" title="Catch::Matchers::Impl\l::MatcherBase\&lt; ArgT \&gt;" alt="" coords="211,70,370,111"/>
-<area shape="rect" id="node4" href="$d8/d68/structCatch_1_1Matchers_1_1Impl_1_1MatchAllOf.html" title="Catch::Matchers::Impl\l::MatchAllOf\&lt; ArgT \&gt;" alt="" coords="420,5,572,46"/>
-<area shape="rect" id="node5" href="$dc/d21/structCatch_1_1Matchers_1_1Impl_1_1MatchAnyOf.html" title="Catch::Matchers::Impl\l::MatchAnyOf\&lt; ArgT \&gt;" alt="" coords="419,70,573,111"/>
-<area shape="rect" id="node6" href="$db/d84/structCatch_1_1Matchers_1_1Impl_1_1MatchNotOf.html" title="Catch::Matchers::Impl\l::MatchNotOf\&lt; ArgT \&gt;" alt="" coords="419,135,573,177"/>
-</map>
