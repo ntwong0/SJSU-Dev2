@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="fakeit::has_one_base\l\< std::tr2::direct_bases\l\< T1 \>::type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d24/classfakeit_1_1has__one__base.html"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="fakeit::has_one_base\l\< std::tr2::__reflection\l_typelist\< T1 \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dda/classfakeit_1_1has__one__base_3_01std_1_1tr2_1_1____reflection__typelist_3_01T1_01_4_01_4.html"];
-}
