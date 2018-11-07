@@ -118,9 +118,12 @@ Collaboration diagram for Buzzer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71800ef7f4ad930113518e9bf7505f3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71800ef7f4ad930113518e9bf7505f3d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Buzzer</b> (uint8_t select_pin)</td></tr>
-<tr class="separator:a71800ef7f4ad930113518e9bf7505f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06f0dae2071dc6b8444e7464bc5d9ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06f0dae2071dc6b8444e7464bc5d9ea"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Buzzer</b> (uint8_t pin_select)</td></tr>
+<tr class="separator:ac06f0dae2071dc6b8444e7464bc5d9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed80c7ac9ac1583505ecd7a1b7b3877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ed80c7ac9ac1583505ecd7a1b7b3877"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Buzzer</b> (<a class="el" href="../../d6/d2b/classPwmInterface.html">PwmInterface</a> *pwm_pin_select)</td></tr>
+<tr class="separator:a6ed80c7ac9ac1583505ecd7a1b7b3877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b47728535f5d808865d108a3fcc84e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75b47728535f5d808865d108a3fcc84e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> () override</td></tr>
 <tr class="separator:a75b47728535f5d808865d108a3fcc84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> () override<
 <tr class="memitem:a179ae7466919feba34d97dab7cb9c0c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a179ae7466919feba34d97dab7cb9c0c5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Beep</b> (uint32_t frequency=500, float volume=1.0) override</td></tr>
 <tr class="separator:a179ae7466919feba34d97dab7cb9c0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44efbb1efc342b73215a7c762e1dfd0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44efbb1efc342b73215a7c762e1dfd0a"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetFrequency</b> ()</td></tr>
+<tr class="separator:a44efbb1efc342b73215a7c762e1dfd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8f16124aff798933ffda11209c03d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c8f16124aff798933ffda11209c03d2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetVolume</b> ()</td></tr>
+<tr class="separator:a2c8f16124aff798933ffda11209c03d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L3_HAL/<a class="el" href="../../df/d07/buzzer_8hpp_source.html">buzzer.hpp</a></li>
