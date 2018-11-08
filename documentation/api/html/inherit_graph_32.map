@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$de/da3/structCatch_1_1Matchers_1_1Impl_1_1MatcherMethod.html" title="Catch::Matchers::Impl\l::MatcherMethod\&lt; ArgT \&gt;" alt="" coords="6,37,178,78"/>
+<area shape="rect" id="node2" href="$d8/d94/structCatch_1_1Matchers_1_1Impl_1_1MatcherBase.html" title="Catch::Matchers::Impl\l::MatcherBase\&lt; ArgT \&gt;" alt="" coords="227,70,386,111"/>
+<area shape="rect" id="node3" href="$d8/d68/structCatch_1_1Matchers_1_1Impl_1_1MatchAllOf.html" title="Catch::Matchers::Impl\l::MatchAllOf\&lt; ArgT \&gt;" alt="" coords="436,5,588,46"/>
+<area shape="rect" id="node4" href="$dc/d21/structCatch_1_1Matchers_1_1Impl_1_1MatchAnyOf.html" title="Catch::Matchers::Impl\l::MatchAnyOf\&lt; ArgT \&gt;" alt="" coords="435,70,589,111"/>
+<area shape="rect" id="node5" href="$db/d84/structCatch_1_1Matchers_1_1Impl_1_1MatchNotOf.html" title="Catch::Matchers::Impl\l::MatchNotOf\&lt; ArgT \&gt;" alt="" coords="435,135,589,177"/>
+<area shape="rect" id="node6" href="$de/da3/structCatch_1_1Matchers_1_1Impl_1_1MatcherMethod.html" title="Catch::Matchers::Impl\l::MatcherMethod\&lt; T \&gt;" alt="" coords="16,167,168,209"/>
+<area shape="rect" id="node7" href="$d8/d94/structCatch_1_1Matchers_1_1Impl_1_1MatcherBase.html" title="Catch::Matchers::Impl\l::MatcherBase\&lt; T \&gt;" alt="" coords="231,151,383,193"/>
+<area shape="rect" id="node8" href="$d9/d7c/classCatch_1_1Matchers_1_1Impl_1_1MatcherUntypedBase.html" title="Catch::Matchers::Impl\l::MatcherUntypedBase" alt="" coords="14,102,170,143"/>
+</map>
