@@ -157,7 +157,6 @@ var searchData=
   ['shp',['SHP',['../d1/dd1/structSCB__Type.html#a9b05f74580fc93daa7fe2f0e1c9c5663',1,'SCB_Type']]],
   ['silenceunusedvariablewarnings',['SilenceUnusedVariableWarnings',['../d7/de0/classfakeit_1_1SilenceUnusedVariableWarnings.html',1,'fakeit']]],
   ['sj2_5falias',['SJ2_ALIAS',['../d3/deb/group__Macros.html#gafc93aeceb59fe9af53a5d847d1e19a0d',1,'macros.hpp']]],
-  ['sj2_5farray_5flength',['SJ2_ARRAY_LENGTH',['../d3/deb/group__Macros.html#gace2a3734385981b81851fb803e1a641e',1,'macros.hpp']]],
   ['sj2_5fpacked',['SJ2_PACKED',['../d3/deb/group__Macros.html#ga3bad8d88b6328d998ff5df3d9266447e',1,'macros.hpp']]],
   ['sj2_5fstringify',['SJ2_STRINGIFY',['../d3/deb/group__Macros.html#ga13324cd98c1a46b0d1b943cb649b3c21',1,'macros.hpp']]],
   ['sj2_5fused',['SJ2_USED',['../d3/deb/group__Macros.html#ga68a374c2a89fb133de70e8b963bda7b3',1,'macros.hpp']]],
