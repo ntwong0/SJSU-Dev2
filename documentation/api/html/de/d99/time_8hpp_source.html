@@ -172,16 +172,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">// Delay the system for a duration of time</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Delay(uint64_t delay_time_ms)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Delay([[maybe_unused]] uint64_t delay_time_ms)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#if defined(HOST_TEST)</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span>  <a class="code" href="../../d3/deb/group__Macros.html#ga68a374c2a89fb133de70e8b963bda7b3">SJ2_USED</a>(delay_time_ms);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span>  Wait(delay_time_ms);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif  // HOST_TEST</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="ttc" id="group__Macros_html_ga68a374c2a89fb133de70e8b963bda7b3"><div class="ttname"><a href="../../d3/deb/group__Macros.html#ga68a374c2a89fb133de70e8b963bda7b3">SJ2_USED</a></div><div class="ttdeci">#define SJ2_USED(variable)</div><div class="ttdef"><b>Definition:</b> macros.hpp:27</div></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span>  Wait(delay_time_ms);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif  // HOST_TEST</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"></span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

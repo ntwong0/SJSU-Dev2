@@ -113,8 +113,8 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf5d9d5aecf1c18b835d0eca11d142858"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf5d9d5aecf1c18b835d0eca11d142858"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_SECTION</b>(section_name)&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((used, section(section_name)))</td></tr>
 <tr class="separator:gaf5d9d5aecf1c18b835d0eca11d142858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68a374c2a89fb133de70e8b963bda7b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga68a374c2a89fb133de70e8b963bda7b3">SJ2_USED</a>(variable)&#160;&#160;&#160;((void)variable)</td></tr>
-<tr class="separator:ga68a374c2a89fb133de70e8b963bda7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33d64951132f6a4ce8b4977e8f911683"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga33d64951132f6a4ce8b4977e8f911683">_SJ2_USED</a>(variable)&#160;&#160;&#160;((void)variable)</td></tr>
+<tr class="separator:ga33d64951132f6a4ce8b4977e8f911683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9cb6a4578e2d0edb300af9c1dee18027"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_VARIADIC_USED</b>(...)</td></tr>
 <tr class="separator:ga9cb6a4578e2d0edb300af9c1dee18027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga13324cd98c1a46b0d1b943cb649b3c21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga13324cd98c1a46b0d1b943cb649b3c21">SJ2_STRINGIFY</a>(s)&#160;&#160;&#160;SJ2_STRINGIFY2(s)</td></tr>
@@ -142,6 +142,23 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>This module is meant for general purpose macros that can be used across the SJSU-Dev2 environment. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga33d64951132f6a4ce8b4977e8f911683"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _SJ2_USED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">variable</td><td>)</td>
+          <td>&#160;&#160;&#160;((void)variable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DO NOT USE this macro directly. Use the C++17 attribute [[maybe_unused]] instead. _SJ2_USED will use void casting as a means to convince the compiler that the variable has been used in the software, to remove compiler warnings about unused variables. NOTE: this will not stop the compiler from optimizing this variable out. </p>
+
+</div>
+</div>
 <a class="anchor" id="gafc93aeceb59fe9af53a5d847d1e19a0d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,23 +194,6 @@ Functions</h2></td></tr>
  #define STRING "value = " STRINGIFY(s) =&gt; "value = true"</pre> 
 </div>
 </div>
-<a class="anchor" id="ga68a374c2a89fb133de70e8b963bda7b3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SJ2_USED</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">variable</td><td>)</td>
-          <td>&#160;&#160;&#160;((void)variable)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>SJ2_USED will use void casting as a means to convince the compiler that the variable has been used in the software, to remove compiler warnings about unused variables. NOTE: this will not stop the compiler from optimizing this variable out. </p>
-
-</div>
-</div>
 <a class="anchor" id="ga9cb6a4578e2d0edb300af9c1dee18027"></a>
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +211,7 @@ Functions</h2></td></tr>
 <div class="line">  {                                    <a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">\</a></div>
 <div class="line"><a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">    UsedVariadicFunction</a>(__VA_ARGS__); \</div>
 <div class="line">  }</div>
-<div class="ttc" id="group__Macros_html_ga4929073c0c56a9cf86a6c49aa637f83d"><div class="ttname"><a href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">UsedVariadicFunction</a></div><div class="ttdeci">void UsedVariadicFunction(...)</div><div class="ttdef"><b>Definition:</b> macros.hpp:30</div></div>
+<div class="ttc" id="group__Macros_html_ga4929073c0c56a9cf86a6c49aa637f83d"><div class="ttname"><a href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">UsedVariadicFunction</a></div><div class="ttdeci">void UsedVariadicFunction(...)</div><div class="ttdef"><b>Definition:</b> macros.hpp:32</div></div>
 </div><!-- fragment -->
 </div>
 </div>

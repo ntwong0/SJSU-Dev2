@@ -159,7 +159,6 @@ var searchData=
   ['sj2_5falias',['SJ2_ALIAS',['../d3/deb/group__Macros.html#gafc93aeceb59fe9af53a5d847d1e19a0d',1,'macros.hpp']]],
   ['sj2_5fpacked',['SJ2_PACKED',['../d3/deb/group__Macros.html#ga3bad8d88b6328d998ff5df3d9266447e',1,'macros.hpp']]],
   ['sj2_5fstringify',['SJ2_STRINGIFY',['../d3/deb/group__Macros.html#ga13324cd98c1a46b0d1b943cb649b3c21',1,'macros.hpp']]],
-  ['sj2_5fused',['SJ2_USED',['../d3/deb/group__Macros.html#ga68a374c2a89fb133de70e8b963bda7b3',1,'macros.hpp']]],
   ['sj2_5fweak',['SJ2_WEAK',['../d3/deb/group__Macros.html#ga96772d27ce0f9363a2430ed8b07877e1',1,'macros.hpp']]],
   ['sjsu_2ddev2',['SJSU-Dev2',['../d9/dd4/group__SJSU-Dev2.html',1,'']]],
   ['sleepcnt',['SLEEPCNT',['../d5/db5/structDWT__Type.html#a416a54e2084ce66e5ca74f152a5ecc70',1,'DWT_Type']]],
