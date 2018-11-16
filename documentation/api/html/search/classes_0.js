@@ -16,6 +16,7 @@ var searchData=
   ['adcinterface',['AdcInterface',['../d0/d58/classAdcInterface.html',1,'']]],
   ['aggregateinvocationssource',['AggregateInvocationsSource',['../da/d5e/structfakeit_1_1AggregateInvocationsSource.html',1,'fakeit']]],
   ['anymatcher',['AnyMatcher',['../d6/d17/structfakeit_1_1AnyMatcher.html',1,'fakeit']]],
+  ['apds9960',['Apds9960',['../df/d34/classApds9960.html',1,'']]],
   ['apds9960interface',['Apds9960Interface',['../d9/dcc/classApds9960Interface.html',1,'']]],
   ['apply_5ffunc',['apply_func',['../da/d40/structfakeit_1_1apply__func.html',1,'fakeit']]],
   ['apply_5ffunc_3c_200_20_3e',['apply_func&lt; 0 &gt;',['../d7/d94/structfakeit_1_1apply__func_3_010_01_4.html',1,'fakeit']]],

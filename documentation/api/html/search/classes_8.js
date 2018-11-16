@@ -2,6 +2,7 @@ var searchData=
 [
   ['i2c',['I2c',['../d0/d6f/classI2c.html',1,'']]],
   ['i2cdevice',['I2cDevice',['../dc/d1b/classI2cDevice.html',1,'']]],
+  ['i2cdevice_3c_26i2c_2c_200x39_2c_20device_3a_3aendian_3a_3aklittle_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['I2cDevice&lt;&amp;i2c, 0x39, device::Endian::kLittle, Apds9960Interface::MemoryMap_t &gt;',['../dc/d1b/classI2cDevice.html',1,'']]],
   ['i2cinterface',['I2cInterface',['../de/d73/classI2cInterface.html',1,'']]],
   ['iexceptiontranslator',['IExceptionTranslator',['../d9/d8c/structCatch_1_1IExceptionTranslator.html',1,'Catch']]],
   ['iexceptiontranslatorregistry',['IExceptionTranslatorRegistry',['../d7/d91/structCatch_1_1IExceptionTranslatorRegistry.html',1,'Catch']]],

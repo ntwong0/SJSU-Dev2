@@ -32,6 +32,7 @@ var searchData=
   ['demcr',['DEMCR',['../d6/d00/structCoreDebug__Type.html#aeb3126abc4c258a858f21f356c0df6ee',1,'CoreDebug_Type']]],
   ['destructible',['Destructible',['../d3/d31/classfakeit_1_1Destructible.html',1,'fakeit']]],
   ['device',['Device',['../d7/d94/classDevice.html',1,'']]],
+  ['device_3c_20i2cdevice_3c_20i2c_2c_20kdeviceaddress_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['Device&lt; I2cDevice&lt; i2c, kDeviceAddress, endianess, Apds9960Interface::MemoryMap_t &gt;, endianess, Apds9960Interface::MemoryMap_t &gt;',['../d7/d94/classDevice.html',1,'']]],
   ['device_3c_20i2cdevice_3c_20i2c_2c_20kdeviceaddress_2c_20endianess_2c_20memorymap_20_3e_2c_20endianess_2c_20memorymap_20_3e',['Device&lt; I2cDevice&lt; i2c, kDeviceAddress, endianess, MemoryMap &gt;, endianess, MemoryMap &gt;',['../d7/d94/classDevice.html',1,'']]],
   ['devid',['DEVID',['../db/daf/structTPI__Type.html#abc0ecda8a5446bc754080276bad77514',1,'TPI_Type']]],
   ['devtype',['DEVTYPE',['../db/daf/structTPI__Type.html#ad98855854a719bbea33061e71529a472',1,'TPI_Type']]],

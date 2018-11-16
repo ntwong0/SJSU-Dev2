@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/d94/classDevice.html" title="Device\&lt; I2cDevice\&lt;\l i2c, kDeviceAddress,\l endianess, MemoryMap\l \&gt;, endianess, MemoryMap \&gt;" alt="" coords="6,5,199,75"/>
-<area shape="rect" id="node2" href="$dc/d1b/classI2cDevice.html" title="I2cDevice\&lt; i2c, kDeviceAddress,\l endianess, MemoryMap \&gt;" alt="" coords="248,19,467,61"/>
+<area shape="rect" id="node1" href="$d7/d94/classDevice.html" title="Device\&lt; I2cDevice\&lt;\l i2c, kDeviceAddress,\l endianess, Apds9960Interface\l::MemoryMap_t \&gt;, endianess,\l Apds9960Interface::MemoryMap_t \&gt;" alt="" coords="6,5,245,91"/>
+<area shape="rect" id="node2" href="$dc/d1b/classI2cDevice.html" title="I2cDevice\&lt;&amp;i2c, 0x39,\l device::Endian::kLittle,\l Apds9960Interface::MemoryMap_t \&gt;" alt="" coords="294,20,533,76"/>
 </map>

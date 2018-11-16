@@ -151,6 +151,7 @@ var searchData=
   ['sequenceverificationexception',['SequenceVerificationException',['../d0/da6/structfakeit_1_1SequenceVerificationException.html',1,'fakeit']]],
   ['sequenceverificationexpectation',['SequenceVerificationExpectation',['../dd/d85/structfakeit_1_1SequenceVerificationExpectation.html',1,'fakeit']]],
   ['sequenceverificationprogress',['SequenceVerificationProgress',['../d8/d73/classfakeit_1_1SequenceVerificationProgress.html',1,'fakeit']]],
+  ['setmode',['SetMode',['../df/d34/classApds9960.html#a1e5898180863a64d817cc81ed89e6e7f',1,'Apds9960']]],
   ['sff_5fgrp_5fsa',['SFF_GRP_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a372d5dfdf917983f56e4b337dba0cbba',1,'LPC_CANAF_TypeDef']]],
   ['sff_5fsa',['SFF_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a55cb93958630b8b11dc10c682d7ede3a',1,'LPC_CANAF_TypeDef']]],
   ['shcsr',['SHCSR',['../d1/dd1/structSCB__Type.html#a7b5ae9741a99808043394c4743b635c4',1,'SCB_Type']]],

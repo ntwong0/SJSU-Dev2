@@ -4,6 +4,7 @@ var searchData=
   ['instrumentation_20trace_20macrocell_20_28itm_29',['Instrumentation Trace Macrocell (ITM)',['../d7/d2e/group__CMSIS__ITM.html',1,'']]],
   ['i2c',['I2c',['../d0/d6f/classI2c.html',1,'']]],
   ['i2cdevice',['I2cDevice',['../dc/d1b/classI2cDevice.html',1,'']]],
+  ['i2cdevice_3c_26i2c_2c_200x39_2c_20device_3a_3aendian_3a_3aklittle_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['I2cDevice&lt;&amp;i2c, 0x39, device::Endian::kLittle, Apds9960Interface::MemoryMap_t &gt;',['../dc/d1b/classI2cDevice.html',1,'']]],
   ['i2cinterface',['I2cInterface',['../de/d73/classI2cInterface.html',1,'']]],
   ['iabr',['IABR',['../d9/deb/structNVIC__Type.html#a55efb38ee86027a5e0b92bd40dba46c4',1,'NVIC_Type']]],
   ['icer',['ICER',['../d9/deb/structNVIC__Type.html#ad30ec76aa0be02aa9a56ff4bdc401180',1,'NVIC_Type']]],
