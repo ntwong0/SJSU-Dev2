@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d2/df3/structfakeit_1_1InvocationHandlerCollection.html" title="fakeit::InvocationHandler\lCollection" alt="" coords="6,5,173,46"/>
-<area shape="rect" id="node2" href="$d3/df5/classfakeit_1_1InvocationHandlers.html" title="fakeit::InvocationHandlers" alt="" coords="222,12,397,39"/>
+<area shape="rect" id="node1" href="$d4/d24/classfakeit_1_1has__one__base.html" title="fakeit::has_one_base\l\&lt; std::tr2::direct_bases\l\&lt; T \&gt;::type \&gt;" alt="" coords="5,4,163,60"/>
+<area shape="rect" id="node2" href="$de/d28/classfakeit_1_1is__simple__inheritance__layout.html" title="fakeit::is_simple_inheritance\l_layout\&lt; T \&gt;" alt="" coords="211,11,397,53"/>
 </map>

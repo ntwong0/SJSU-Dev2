@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setmode',['SetMode',['../df/d34/classApds9960.html#a1e5898180863a64d817cc81ed89e6e7f',1,'Apds9960']]],
-  ['systemcoreclockupdate',['SystemCoreClockUpdate',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#ae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_LPC407x_8x_177x_8x.h']]],
-  ['systeminit',['SystemInit',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#a93f514700ccf00d08dbdcff7f1224eb2',1,'startup.cpp']]],
-  ['systick_5fconfig',['SysTick_Config',['../d2/d8f/group__CMSIS__Core__SysTickFunctions.html#gae4e8f0238527c69f522029b93c8e5b78',1,'core_cm4.h']]]
+  ['initialize',['Initialize',['../dd/d02/classCommandLine.html#aab41d0d20d848ed40ca585584f23170a',1,'CommandLine']]],
+  ['itm_5fcheckchar',['ITM_CheckChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gae61ce9ca5917735325cd93b0fb21dd29',1,'core_cm4.h']]],
+  ['itm_5freceivechar',['ITM_ReceiveChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gac3ee2c30a1ac4ed34c8a866a17decd53',1,'core_cm4.h']]],
+  ['itm_5fsendchar',['ITM_SendChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gac90a497bd64286b84552c2c553d3419e',1,'core_cm4.h']]]
 ];

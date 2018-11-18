@@ -17,6 +17,7 @@ var searchData=
   ['actualinvocationssource',['ActualInvocationsSource',['../d4/d8c/structfakeit_1_1ActualInvocationsSource.html',1,'fakeit']]],
   ['adc',['Adc',['../da/d13/classAdc.html',1,'']]],
   ['adcinterface',['AdcInterface',['../d0/d58/classAdcInterface.html',1,'']]],
+  ['addcommand',['AddCommand',['../dd/d02/classCommandLine.html#a7d7dfcebbe76f0d91364753bac0f62c4',1,'CommandLine']]],
   ['adr',['ADR',['../d1/dd1/structSCB__Type.html#af084e1b2dad004a88668efea1dfe7fa1',1,'SCB_Type']]],
   ['adr0',['ADR0',['../d8/d12/structLPC__I2C__TypeDef.html#ac8ed8ecb80a084f3f10a82d7e29dc069',1,'LPC_I2C_TypeDef']]],
   ['adr1',['ADR1',['../d8/d12/structLPC__I2C__TypeDef.html#ab280cbe7965f098dd17a41ee2641710a',1,'LPC_I2C_TypeDef']]],
@@ -50,6 +51,7 @@ var searchData=
   ['assertionhandler',['AssertionHandler',['../d9/d88/classCatch_1_1AssertionHandler.html',1,'Catch']]],
   ['assertioninfo',['AssertionInfo',['../d2/d71/structCatch_1_1AssertionInfo.html',1,'Catch']]],
   ['assertionreaction',['AssertionReaction',['../dd/d07/structCatch_1_1AssertionReaction.html',1,'Catch']]],
+  ['autocomplete',['AutoComplete',['../dc/d02/classCommandInterface.html#a19b65ed06e8478e9e9c99b93a6472cee',1,'CommandInterface']]],
   ['autoreg',['AutoReg',['../dc/d59/structCatch_1_1AutoReg.html',1,'Catch']]],
   ['a_20printf_20_2f_20sprintf_20implementation_20for_20embedded_20systems',['A printf / sprintf Implementation for Embedded Systems',['../d1/dcb/md__home_travis_build_kammce_SJSU-Dev2_firmware_library_third_party_printf_README.html',1,'']]]
 ];

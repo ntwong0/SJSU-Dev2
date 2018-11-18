@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['itm_5fcheckchar',['ITM_CheckChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gae61ce9ca5917735325cd93b0fb21dd29',1,'core_cm4.h']]],
-  ['itm_5freceivechar',['ITM_ReceiveChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gac3ee2c30a1ac4ed34c8a866a17decd53',1,'core_cm4.h']]],
-  ['itm_5fsendchar',['ITM_SendChar',['../da/d30/group__CMSIS__core__DebugFunctions.html#gac90a497bd64286b84552c2c553d3419e',1,'core_cm4.h']]]
+  ['addcommand',['AddCommand',['../dd/d02/classCommandLine.html#a7d7dfcebbe76f0d91364753bac0f62c4',1,'CommandLine']]],
+  ['autocomplete',['AutoComplete',['../dc/d02/classCommandInterface.html#a19b65ed06e8478e9e9c99b93a6472cee',1,'CommandInterface']]]
 ];

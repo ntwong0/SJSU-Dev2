@@ -11,5 +11,6 @@ var searchData=
   ['resultwas',['ResultWas',['../d5/d8c/structCatch_1_1ResultWas.html',1,'Catch']]],
   ['returndefaultvalue',['ReturnDefaultValue',['../d0/d75/structfakeit_1_1ReturnDefaultValue.html',1,'fakeit']]],
   ['returndelegatevalue',['ReturnDelegateValue',['../d9/d92/structfakeit_1_1ReturnDelegateValue.html',1,'fakeit']]],
-  ['reusablestringstream',['ReusableStringStream',['../d9/d54/classCatch_1_1ReusableStringStream.html',1,'Catch']]]
+  ['reusablestringstream',['ReusableStringStream',['../d9/d54/classCatch_1_1ReusableStringStream.html',1,'Catch']]],
+  ['ring_5fhistory_5ft',['ring_history_t',['../d3/ddf/structring__history__t.html',1,'']]]
 ];
