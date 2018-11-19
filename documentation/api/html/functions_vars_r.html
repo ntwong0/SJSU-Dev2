@@ -50,6 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,6 +84,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -118,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -140,6 +143,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>RDB
 : <a class="el" href="d1/dba/structLPC__CAN__TypeDef.html#a9e30d0e614d62cb8c4dcc028b54b1c1c">LPC_CAN_TypeDef</a>
 </li>
+<li>read
+: <a class="el" href="d1/d60/classetl_1_1queue__spsc__atomic__base.html#afc821c4a56d6edf49aeda7ee10f0bec5">etl::queue_spsc_atomic_base&lt; MEMORY_MODEL &gt;</a>
+</li>
+<li>read_index
+: <a class="el" href="d0/d97/classetl_1_1queue__mpmc__mutex__base.html#a3a1da1bbaa2198b6aaaa6cd949ef936e">etl::queue_mpmc_mutex_base&lt; MEMORY_MODEL &gt;</a>
+, <a class="el" href="d4/d36/classetl_1_1queue__spsc__isr__base.html#a7d8fa381684c6ebced87449cde8d9ef1">etl::queue_spsc_isr_base&lt; T, MEMORY_MODEL &gt;</a>
+</li>
+<li>RESERVED
+: <a class="el" href="d1/d60/classetl_1_1queue__spsc__atomic__base.html#a0f8c8a89fbf5b23d72dd74683ffce82b">etl::queue_spsc_atomic_base&lt; MEMORY_MODEL &gt;</a>
+</li>
 <li>RFS
 : <a class="el" href="d1/dba/structLPC__CAN__TypeDef.html#a1226fc21b1f4530138d8804d4616ee75">LPC_CAN_TypeDef</a>
 </li>
@@ -148,6 +161,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>RIS
 : <a class="el" href="d2/d47/structLPC__SSP__TypeDef.html#ac864a0884f6871821318720c8a7c06ef">LPC_SSP_TypeDef</a>
+</li>
+<li>root_node
+: <a class="el" href="d3/d9c/classetl_1_1map__base.html#aa080f9b6c1c0c4712f53d7dc4167ef91">etl::map_base</a>
+, <a class="el" href="d9/d29/classetl_1_1multimap__base.html#aac8b79f66f6e13a7c40c93c70dc1f98a">etl::multimap_base</a>
+, <a class="el" href="d5/d4c/classetl_1_1multiset__base.html#aa9652d0949533dcc24d1bb2347cb1960">etl::multiset_base</a>
+, <a class="el" href="d8/d1f/classetl_1_1set__base.html#adac2a135d49ed21ef7c98a0ffe5cf86e">etl::set_base</a>
 </li>
 <li>RS485CTRL
 : <a class="el" href="d9/d2d/structLPC__UART4__TypeDef.html#a6e42d3f9e0ff7e37017b01cd8775d605">LPC_UART4_TypeDef</a>

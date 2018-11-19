@@ -1,0 +1,4 @@
+<map id="etl::debounce&lt; VALID_COUNT, HOLD_COUNT, REPEAT_COUNT &gt;" name="etl::debounce&lt; VALID_COUNT, HOLD_COUNT, REPEAT_COUNT &gt;">
+<area shape="rect" id="node2" href="$d1/d0a/classetl_1_1private__debounce_1_1debounce4.html" title="State change logic for 4 state debounce. " alt="" coords="51,97,197,138"/>
+<area shape="rect" id="node3" href="$dc/db2/classetl_1_1private__debounce_1_1debounce__base.html" title="etl::private_debounce\l::debounce_base" alt="" coords="51,6,197,47"/>
+</map>

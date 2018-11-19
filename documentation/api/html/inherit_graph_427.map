@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d0/d97/classetl_1_1queue__mpmc__mutex__base.html" title="etl::queue_mpmc_mutex\l_base\&lt; MEMORY_MODEL \&gt;" alt="" coords="5,5,200,46"/>
+<area shape="rect" id="node2" href="$d3/d2c/classetl_1_1iqueue__mpmc__mutex.html" title="This is the base for all queue_mpmc_mutexs that contain a particular type. " alt="" coords="248,5,424,46"/>
+<area shape="rect" id="node3" href="$d1/dfe/classetl_1_1queue__mpmc__mutex.html" title="etl::queue_mpmc_mutex\l\&lt; T, SIZE, MEMORY_MODEL \&gt;" alt="" coords="473,5,687,46"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="etl::queue_spsc_isr&lt; T, SIZE, TAccess, MEMORY_MODEL &gt;" name="etl::queue_spsc_isr&lt; T, SIZE, TAccess, MEMORY_MODEL &gt;">
+<area shape="rect" id="node2" href="$de/db4/classetl_1_1iqueue__spsc__isr.html" title="This is the base for all queue_spsc_isrs that contain a particular type. " alt="" coords="24,96,195,152"/>
+<area shape="rect" id="node3" href="$d4/d36/classetl_1_1queue__spsc__isr__base.html" title="etl::queue_spsc_isr\l_base\&lt; T, MEMORY_MODEL \&gt;" alt="" coords="4,6,213,47"/>
+</map>

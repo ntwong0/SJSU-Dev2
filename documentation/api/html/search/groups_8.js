@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['trace_20port_20interface_20_28tpi_29',['Trace Port Interface (TPI)',['../d7/df6/group__CMSIS__TPI.html',1,'']]],
-  ['taskdisable_5finterrupts',['taskDISABLE_INTERRUPTS',['../d3/d51/group__taskDISABLE__INTERRUPTS.html',1,'']]],
-  ['taskenable_5finterrupts',['taskENABLE_INTERRUPTS',['../df/dc8/group__taskENABLE__INTERRUPTS.html',1,'']]],
-  ['taskenter_5fcritical',['taskENTER_CRITICAL',['../d1/d12/group__taskENTER__CRITICAL.html',1,'']]],
-  ['taskexit_5fcritical',['taskEXIT_CRITICAL',['../d6/d7a/group__taskEXIT__CRITICAL.html',1,'']]],
-  ['taskhandle_5ft',['TaskHandle_t',['../d5/d5a/group__TaskHandle__t.html',1,'']]],
-  ['taskyield',['taskYIELD',['../df/d3f/group__taskYIELD.html',1,'']]]
+  ['endian',['endian',['../d4/d6b/group__endian.html',1,'']]],
+  ['enum_5ftype',['enum_type',['../db/daf/group__enum__type.html',1,'']]],
+  ['error_5fhandler',['error_handler',['../d0/d14/group__error__handler.html',1,'']]],
+  ['embedded_20template_20library_2e',['Embedded Template Library.',['../df/dd8/group__etl.html',1,'']]],
+  ['eventgroup',['EventGroup',['../dc/d84/group__EventGroup.html',1,'']]],
+  ['eventgrouphandle_5ft',['EventGroupHandle_t',['../dc/d43/group__EventGroupHandle__t.html',1,'']]],
+  ['exception',['exception',['../da/da6/group__exception.html',1,'']]]
 ];

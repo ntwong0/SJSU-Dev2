@@ -1,3 +1,141 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/d58/classfakeit_1_1UnverifiedFunctor.html" title="fakeit::UnverifiedFunctor" alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node1" href="$dd/d6a/classetl_1_1exception.html" title="etl::exception" alt="" coords="6,2536,106,2563"/>
+<area shape="rect" id="node2" href="$da/d8c/classetl_1_1array__exception.html" title="etl::array_exception" alt="" coords="181,31,317,57"/>
+<area shape="rect" id="node4" href="$d8/d92/classetl_1_1array__view__exception.html" title="The base class for array_view exceptions. " alt="" coords="164,107,335,133"/>
+<area shape="rect" id="node7" href="$d3/dd0/classetl_1_1array__wrapper__exception.html" title="The base class for array_wrapper exceptions. " alt="" coords="186,175,313,217"/>
+<area shape="rect" id="node9" href="$d6/dca/classetl_1_1binary__exception.html" title="etl::binary_exception" alt="" coords="178,260,321,287"/>
+<area shape="rect" id="node11" href="$de/d52/classetl_1_1bitset__exception.html" title="etl::bitset_exception" alt="" coords="180,340,319,367"/>
+<area shape="rect" id="node13" href="$dd/d84/classetl_1_1deque__exception.html" title="etl::deque_exception" alt="" coords="178,441,321,468"/>
+<area shape="rect" id="node18" href="$df/de0/classetl_1_1factory__exception.html" title="etl::factory_exception" alt="" coords="176,616,323,643"/>
+<area shape="rect" id="node21" href="$db/d2c/classetl_1_1flat__map__exception.html" title="etl::flat_map_exception" alt="" coords="171,733,328,760"/>
+<area shape="rect" id="node24" href="$d5/d16/classetl_1_1flat__multimap__exception.html" title="etl::flat_multimap\l_exception" alt="" coords="188,806,311,847"/>
+<area shape="rect" id="node26" href="$d1/d8d/classetl_1_1flat__multiset__exception.html" title="etl::flat_multiset\l_exception" alt="" coords="192,894,307,935"/>
+<area shape="rect" id="node29" href="$d5/d10/classetl_1_1flat__set__exception.html" title="etl::flat_set_exception" alt="" coords="174,1011,325,1037"/>
+<area shape="rect" id="node32" href="$de/d91/classetl_1_1forward__list__exception.html" title="etl::forward_list_exception" alt="" coords="162,1137,337,1164"/>
+<area shape="rect" id="node36" href="$d5/dce/classetl_1_1fsm__exception.html" title="Base exception class for FSM. " alt="" coords="185,1309,314,1336"/>
+<area shape="rect" id="node40" href="$de/d84/classetl_1_1hash__exception.html" title="etl::hash_exception" alt="" coords="182,1463,317,1489"/>
+<area shape="rect" id="node42" href="$d7/dbc/classetl_1_1intrusive__forward__list__exception.html" title="etl::intrusive_forward\l_list_exception" alt="" coords="178,1579,321,1621"/>
+<area shape="rect" id="node47" href="$db/d3c/classetl_1_1intrusive__list__exception.html" title="etl::intrusive_list\l_exception" alt="" coords="191,1831,308,1873"/>
+<area shape="rect" id="node51" href="$d9/dfa/classetl_1_1intrusive__queue__exception.html" title="etl::intrusive_queue\l_exception" alt="" coords="182,1915,317,1957"/>
+<area shape="rect" id="node53" href="$db/d6d/classetl_1_1intrusive__stack__exception.html" title="etl::intrusive_stack\l_exception" alt="" coords="183,2018,315,2059"/>
+<area shape="rect" id="node55" href="$d7/d3d/classetl_1_1link__exception.html" title="Link exception. " alt="" coords="186,2160,313,2187"/>
+<area shape="rect" id="node57" href="$d6/d78/classetl_1_1list__exception.html" title="etl::list_exception" alt="" coords="187,2225,311,2252"/>
+<area shape="rect" id="node63" href="$d7/dd5/classetl_1_1map__exception.html" title="etl::map_exception" alt="" coords="183,2417,315,2444"/>
+<area shape="rect" id="node67" href="$da/d8a/classetl_1_1message__bus__exception.html" title="Base exception class for message bus. " alt="" coords="155,2508,343,2535"/>
+<area shape="rect" id="node69" href="$df/d25/classetl_1_1message__exception.html" title="etl::message_exception" alt="" coords="169,2563,329,2589"/>
+<area shape="rect" id="node71" href="$dc/d9e/classetl_1_1message__router__exception.html" title="Base exception class for message router. " alt="" coords="181,2619,318,2661"/>
+<area shape="rect" id="node73" href="$d5/d16/classetl_1_1multimap__exception.html" title="etl::multimap_exception" alt="" coords="169,2716,329,2743"/>
+<area shape="rect" id="node77" href="$dc/d68/classetl_1_1multiset__exception.html" title="etl::multiset_exception" alt="" coords="173,2884,326,2911"/>
+<area shape="rect" id="node81" href="$dd/d2f/classetl_1_1observer__exception.html" title="etl::observer_exception" alt="" coords="171,2964,328,2991"/>
+<area shape="rect" id="node83" href="$dc/d50/classetl_1_1optional__exception.html" title="etl::optional_exception" alt="" coords="173,3048,325,3075"/>
+<area shape="rect" id="node85" href="$df/dc3/classetl_1_1pool__exception.html" title="etl::pool_exception" alt="" coords="184,3153,315,3180"/>
+<area shape="rect" id="node89" href="$d0/da1/classetl_1_1priority__queue__exception.html" title="etl::priority_queue\l_exception" alt="" coords="187,3289,312,3330"/>
+<area shape="rect" id="node92" href="$dc/ddf/classetl_1_1queue__exception.html" title="etl::queue_exception" alt="" coords="178,3413,321,3440"/>
+<area shape="rect" id="node95" href="$d7/d8b/classetl_1_1scheduler__exception.html" title="Base exception class for scheduler. " alt="" coords="168,3556,331,3583"/>
+<area shape="rect" id="node99" href="$d4/d2e/classetl_1_1set__exception.html" title="etl::set_exception" alt="" coords="187,3737,312,3764"/>
+<area shape="rect" id="node103" href="$db/d17/classetl_1_1stack__exception.html" title="etl::stack_exception" alt="" coords="180,3864,319,3891"/>
+<area shape="rect" id="node106" href="$d4/dda/classetl_1_1string__exception.html" title="etl::string_exception" alt="" coords="180,3991,319,4017"/>
+<area shape="rect" id="node110" href="$d3/d86/classetl_1_1string__view__exception.html" title="The base class for basic_string_view exceptions. " alt="" coords="163,4100,336,4127"/>
+<area shape="rect" id="node113" href="$d0/d60/classetl_1_1task__exception.html" title="Base exception class for task. " alt="" coords="183,4151,315,4177"/>
+<area shape="rect" id="node114" href="$d2/dc1/classetl_1_1unordered__map__exception.html" title="etl::unordered_map\l_exception" alt="" coords="183,4257,316,4298"/>
+<area shape="rect" id="node118" href="$d4/d90/classetl_1_1unordered__multimap__exception.html" title="etl::unordered_multimap\l_exception" alt="" coords="169,4439,330,4481"/>
+<area shape="rect" id="node122" href="$db/dd4/classetl_1_1unordered__multiset__exception.html" title="etl::unordered_multiset\l_exception" alt="" coords="172,4622,327,4663"/>
+<area shape="rect" id="node126" href="$d7/d6d/classetl_1_1unordered__set__exception.html" title="etl::unordered_set\l_exception" alt="" coords="186,4805,313,4846"/>
+<area shape="rect" id="node130" href="$d9/dc0/classetl_1_1variant__exception.html" title="etl::variant_exception" alt="" coords="176,4921,323,4948"/>
+<area shape="rect" id="node132" href="$d6/d3a/classetl_1_1variant__pool__exception.html" title="etl::variant_pool_exception" alt="" coords="161,5037,338,5064"/>
+<area shape="rect" id="node135" href="$d6/d6f/classetl_1_1vector__exception.html" title="etl::vector_exception" alt="" coords="178,5212,321,5239"/>
+<area shape="rect" id="node3" href="$d4/de4/classetl_1_1array__out__of__range.html" title="etl::array_out_of_range" alt="" coords="411,5,565,32"/>
+<area shape="rect" id="node5" href="$d5/d59/classetl_1_1array__view__bounds.html" title="etl::array_view_bounds" alt="" coords="410,56,566,83"/>
+<area shape="rect" id="node6" href="$d3/d5d/classetl_1_1array__view__uninitialised.html" title="etl::array_view_uninitialised" alt="" coords="397,107,579,133"/>
+<area shape="rect" id="node8" href="$de/d69/classetl_1_1array__wrapper__bounds.html" title="etl::array_wrapper\l_bounds" alt="" coords="425,158,551,199"/>
+<area shape="rect" id="node10" href="$d2/d89/classetl_1_1binary__out__of__range.html" title="etl::binary_out_of\l_range" alt="" coords="427,223,549,265"/>
+<area shape="rect" id="node12" href="$dc/d57/classetl_1_1bitset__nullptr.html" title="etl::bitset_nullptr" alt="" coords="429,289,547,316"/>
+<area shape="rect" id="node14" href="$dc/daf/classetl_1_1deque__empty.html" title="etl::deque_empty" alt="" coords="427,340,549,367"/>
+<area shape="rect" id="node15" href="$dc/dad/classetl_1_1deque__full.html" title="etl::deque_full" alt="" coords="437,391,539,417"/>
+<area shape="rect" id="node16" href="$d0/d39/classetl_1_1deque__incompatible__type.html" title="etl::deque_incompatible_type" alt="" coords="393,441,583,468"/>
+<area shape="rect" id="node17" href="$da/d37/classetl_1_1deque__out__of__bounds.html" title="etl::deque_out_of_bounds" alt="" coords="403,492,573,519"/>
+<area shape="rect" id="node19" href="$d8/d53/classetl_1_1factory__cannot__create.html" title="etl::factory_cannot\l_create" alt="" coords="423,543,553,585"/>
+<area shape="rect" id="node20" href="$d2/d1a/classetl_1_1factory__did__not__create.html" title="etl::factory_did_not\l_create" alt="" coords="421,609,555,650"/>
+<area shape="rect" id="node22" href="$dd/d2f/classetl_1_1flat__map__full.html" title="etl::flat_map_full" alt="" coords="429,675,547,701"/>
+<area shape="rect" id="node23" href="$da/df4/classetl_1_1flat__map__out__of__bounds.html" title="etl::flat_map_out_of\l_bounds" alt="" coords="419,726,557,767"/>
+<area shape="rect" id="node25" href="$df/d12/classetl_1_1flat__multimap__full.html" title="etl::flat_multimap_full" alt="" coords="415,792,561,819"/>
+<area shape="rect" id="node27" href="$df/d54/classetl_1_1flat__multiset__full.html" title="etl::flat_multiset_full" alt="" coords="419,843,557,869"/>
+<area shape="rect" id="node28" href="$d0/dce/classetl_1_1flat__multiset__iterator.html" title="etl::flat_multiset\l_iterator" alt="" coords="431,894,545,935"/>
+<area shape="rect" id="node30" href="$d2/d51/classetl_1_1flat__set__full.html" title="etl::flat_set_full" alt="" coords="433,960,543,987"/>
+<area shape="rect" id="node31" href="$dc/dcb/classetl_1_1flat__set__iterator.html" title="etl::flat_set_iterator" alt="" coords="421,1011,555,1037"/>
+<area shape="rect" id="node33" href="$d3/dad/classetl_1_1forward__list__empty.html" title="etl::forward_list_empty" alt="" coords="411,1061,565,1088"/>
+<area shape="rect" id="node34" href="$dc/d33/classetl_1_1forward__list__full.html" title="etl::forward_list_full" alt="" coords="421,1112,555,1139"/>
+<area shape="rect" id="node35" href="$dc/de9/classetl_1_1forward__list__iterator.html" title="etl::forward_list_iterator" alt="" coords="409,1163,567,1189"/>
+<area shape="rect" id="node37" href="$d0/d76/classetl_1_1fsm__null__state__exception.html" title="Exception for null state pointer. " alt="" coords="423,1214,553,1255"/>
+<area shape="rect" id="node38" href="$d2/d70/classetl_1_1fsm__state__id__exception.html" title="Exception for invalid state id. " alt="" coords="397,1280,579,1307"/>
+<area shape="rect" id="node39" href="$d8/dae/classetl_1_1fsm__state__list__exception.html" title="Exception for incompatible state list. " alt="" coords="425,1331,551,1373"/>
+<area shape="rect" id="node41" href="$d6/d7d/classetl_1_1hash__finalised.html" title="etl::hash_finalised" alt="" coords="425,1397,551,1424"/>
+<area shape="rect" id="node43" href="$d7/dfc/classetl_1_1intrusive__forward__list__empty.html" title="etl::intrusive_forward\l_list_empty" alt="" coords="417,1449,559,1490"/>
+<area shape="rect" id="node44" href="$dd/d8d/classetl_1_1intrusive__forward__list__index__exception.html" title="etl::intrusive_forward\l_list_index_exception" alt="" coords="415,1514,561,1555"/>
+<area shape="rect" id="node45" href="$d6/d65/classetl_1_1intrusive__forward__list__iterator__exception.html" title="etl::intrusive_forward\l_list_iterator_exception" alt="" coords="410,1579,566,1621"/>
+<area shape="rect" id="node46" href="$d9/dcd/classetl_1_1intrusive__forward__list__unsorted.html" title="etl::intrusive_forward\l_list_unsorted" alt="" coords="417,1645,559,1686"/>
+<area shape="rect" id="node48" href="$d7/df2/classetl_1_1intrusive__list__empty.html" title="etl::intrusive_list\l_empty" alt="" coords="429,1710,547,1751"/>
+<area shape="rect" id="node49" href="$d6/d9c/classetl_1_1intrusive__list__iterator__exception.html" title="etl::intrusive_list\l_iterator_exception" alt="" coords="422,1775,554,1817"/>
+<area shape="rect" id="node50" href="$d8/d32/classetl_1_1intrusive__list__unsorted.html" title="etl::intrusive_list\l_unsorted" alt="" coords="429,1841,547,1882"/>
+<area shape="rect" id="node52" href="$dd/da8/classetl_1_1intrusive__queue__empty.html" title="etl::intrusive_queue\l_empty" alt="" coords="421,1906,555,1947"/>
+<area shape="rect" id="node54" href="$df/d8c/classetl_1_1intrusive__stack__empty.html" title="etl::intrusive_stack\l_empty" alt="" coords="422,1971,554,2013"/>
+<area shape="rect" id="node56" href="$de/d03/classetl_1_1not__unlinked__exception.html" title="not unlinked exception. " alt="" coords="398,2037,578,2064"/>
+<area shape="rect" id="node58" href="$d3/d25/classetl_1_1list__empty.html" title="etl::list_empty" alt="" coords="436,2088,540,2115"/>
+<area shape="rect" id="node59" href="$db/dbe/classetl_1_1list__full.html" title="etl::list_full" alt="" coords="445,2139,531,2165"/>
+<area shape="rect" id="node60" href="$db/d8d/classetl_1_1list__iterator.html" title="etl::list_iterator" alt="" coords="434,2189,542,2216"/>
+<area shape="rect" id="node61" href="$d7/d8b/classetl_1_1list__no__pool.html" title="etl::list_no_pool" alt="" coords="431,2240,545,2267"/>
+<area shape="rect" id="node62" href="$d1/dab/classetl_1_1list__unsorted.html" title="etl::list_unsorted" alt="" coords="429,2291,547,2317"/>
+<area shape="rect" id="node64" href="$d4/d93/classetl_1_1map__full.html" title="etl::map_full" alt="" coords="441,2341,535,2368"/>
+<area shape="rect" id="node65" href="$d3/dc4/classetl_1_1map__iterator.html" title="etl::map_iterator" alt="" coords="430,2392,546,2419"/>
+<area shape="rect" id="node66" href="$dc/da8/classetl_1_1map__out__of__bounds.html" title="etl::map_out_of_bounds" alt="" coords="407,2443,569,2469"/>
+<area shape="rect" id="node68" href="$d9/d18/classetl_1_1message__bus__too__many__subscribers.html" title="Too many subscribers. " alt="" coords="413,2494,563,2535"/>
+<area shape="rect" id="node70" href="$d4/d82/classetl_1_1unhandled__message__exception.html" title="etl::unhandled_message\l_exception" alt="" coords="407,2559,569,2601"/>
+<area shape="rect" id="node72" href="$d2/db5/classetl_1_1message__router__illegal__id.html" title="Router id is out of the legal range. " alt="" coords="419,2625,557,2666"/>
+<area shape="rect" id="node74" href="$d8/dfe/classetl_1_1multimap__full.html" title="etl::multimap_full" alt="" coords="427,2691,549,2717"/>
+<area shape="rect" id="node75" href="$d9/d05/classetl_1_1multimap__iterator.html" title="etl::multimap_iterator" alt="" coords="416,2741,560,2768"/>
+<area shape="rect" id="node76" href="$d0/d96/classetl_1_1multimap__out__of__bounds.html" title="etl::multimap_out_of\l_bounds" alt="" coords="418,2793,558,2834"/>
+<area shape="rect" id="node78" href="$da/d09/classetl_1_1multiset__full.html" title="etl::multiset_full" alt="" coords="431,2859,545,2885"/>
+<area shape="rect" id="node79" href="$d8/d2c/classetl_1_1multiset__iterator.html" title="etl::multiset_iterator" alt="" coords="419,2909,557,2936"/>
+<area shape="rect" id="node80" href="$d7/da2/classetl_1_1multiset__out__of__bounds.html" title="etl::multiset_out_of\l_bounds" alt="" coords="421,2961,555,3002"/>
+<area shape="rect" id="node82" href="$de/d05/classetl_1_1observer__list__full.html" title="etl::observer_list_full" alt="" coords="417,3027,559,3053"/>
+<area shape="rect" id="node84" href="$dc/d1f/classetl_1_1optional__invalid.html" title="etl::optional_invalid" alt="" coords="421,3077,555,3104"/>
+<area shape="rect" id="node86" href="$dc/dd5/classetl_1_1pool__element__size.html" title="etl::pool_element_size" alt="" coords="412,3128,564,3155"/>
+<area shape="rect" id="node87" href="$d8/d1d/classetl_1_1pool__no__allocation.html" title="etl::pool_no_allocation" alt="" coords="413,3179,563,3205"/>
+<area shape="rect" id="node88" href="$da/d60/classetl_1_1pool__object__not__in__pool.html" title="etl::pool_object_not\l_in_pool" alt="" coords="421,3230,555,3271"/>
+<area shape="rect" id="node90" href="$db/d9e/classetl_1_1priority__queue__full.html" title="etl::priority_queue_full" alt="" coords="413,3296,563,3323"/>
+<area shape="rect" id="node91" href="$d5/d7d/classetl_1_1priority__queue__iterator.html" title="etl::priority_queue\l_iterator" alt="" coords="425,3347,551,3389"/>
+<area shape="rect" id="node93" href="$da/d9f/classetl_1_1queue__empty.html" title="etl::queue_empty" alt="" coords="427,3413,549,3440"/>
+<area shape="rect" id="node94" href="$d5/d99/classetl_1_1queue__full.html" title="etl::queue_full" alt="" coords="437,3464,539,3491"/>
+<area shape="rect" id="node96" href="$d5/d23/classetl_1_1scheduler__no__tasks__exception.html" title="&#39;No tasks&#39; exception. " alt="" coords="408,3515,568,3557"/>
+<area shape="rect" id="node97" href="$d5/dcf/classetl_1_1scheduler__null__task__exception.html" title="&#39;Null tasks&#39; exception. " alt="" coords="425,3581,551,3622"/>
+<area shape="rect" id="node98" href="$d1/de8/classetl_1_1scheduler__too__many__tasks__exception.html" title="&#39;Too many tasks&#39; exception. " alt="" coords="407,3646,569,3687"/>
+<area shape="rect" id="node100" href="$de/dd6/classetl_1_1set__full.html" title="etl::set_full" alt="" coords="445,3712,531,3739"/>
+<area shape="rect" id="node101" href="$d1/da8/classetl_1_1set__iterator.html" title="etl::set_iterator" alt="" coords="433,3763,543,3789"/>
+<area shape="rect" id="node102" href="$de/dca/classetl_1_1set__out__of__bounds.html" title="etl::set_out_of_bounds" alt="" coords="411,3813,565,3840"/>
+<area shape="rect" id="node104" href="$dd/d7d/classetl_1_1stack__empty.html" title="etl::stack_empty" alt="" coords="429,3864,547,3891"/>
+<area shape="rect" id="node105" href="$dd/df9/classetl_1_1stack__full.html" title="etl::stack_full" alt="" coords="438,3915,538,3941"/>
+<area shape="rect" id="node107" href="$d4/dc3/classetl_1_1string__empty.html" title="etl::string_empty" alt="" coords="429,3965,547,3992"/>
+<area shape="rect" id="node108" href="$d4/dd2/classetl_1_1string__iterator.html" title="etl::string_iterator" alt="" coords="427,4016,549,4043"/>
+<area shape="rect" id="node109" href="$d6/d77/classetl_1_1string__out__of__bounds.html" title="etl::string_out_of\l_bounds" alt="" coords="429,4067,547,4109"/>
+<area shape="rect" id="node111" href="$d8/dc6/classetl_1_1string__view__bounds.html" title="etl::string_view_bounds" alt="" coords="409,4133,567,4160"/>
+<area shape="rect" id="node112" href="$d5/da9/classetl_1_1string__view__uninitialised.html" title="etl::string_view_uninitialised" alt="" coords="395,4184,581,4211"/>
+<area shape="rect" id="node115" href="$dd/d18/classetl_1_1unordered__map__full.html" title="etl::unordered_map_full" alt="" coords="409,4235,567,4261"/>
+<area shape="rect" id="node116" href="$d7/d39/classetl_1_1unordered__map__iterator.html" title="etl::unordered_map\l_iterator" alt="" coords="421,4286,555,4327"/>
+<area shape="rect" id="node117" href="$db/d55/classetl_1_1unordered__map__out__of__range.html" title="etl::unordered_map\l_out_of_range" alt="" coords="421,4351,555,4393"/>
+<area shape="rect" id="node119" href="$da/db7/classetl_1_1unordered__multimap__full.html" title="etl::unordered_multimap_full" alt="" coords="395,4417,581,4444"/>
+<area shape="rect" id="node120" href="$dd/da0/classetl_1_1unordered__multimap__iterator.html" title="etl::unordered_multimap\l_iterator" alt="" coords="407,4469,569,4510"/>
+<area shape="rect" id="node121" href="$d8/da0/classetl_1_1unordered__multimap__out__of__range.html" title="etl::unordered_multimap\l_out_of_range" alt="" coords="407,4534,569,4575"/>
+<area shape="rect" id="node123" href="$de/d94/classetl_1_1unordered__multiset__full.html" title="etl::unordered_multiset_full" alt="" coords="399,4600,577,4627"/>
+<area shape="rect" id="node124" href="$d6/dc8/classetl_1_1unordered__multiset__iterator.html" title="etl::unordered_multiset\l_iterator" alt="" coords="411,4651,565,4693"/>
+<area shape="rect" id="node125" href="$d2/dd2/classetl_1_1unordered__multiset__out__of__range.html" title="etl::unordered_multiset\l_out_of_range" alt="" coords="411,4717,565,4758"/>
+<area shape="rect" id="node127" href="$d6/dd6/classetl_1_1unordered__set__full.html" title="etl::unordered_set_full" alt="" coords="413,4783,563,4809"/>
+<area shape="rect" id="node128" href="$d4/d53/classetl_1_1unordered__set__iterator.html" title="etl::unordered_set\l_iterator" alt="" coords="425,4834,551,4875"/>
+<area shape="rect" id="node129" href="$d9/dc2/classetl_1_1unordered__set__out__of__range.html" title="etl::unordered_set\l_out_of_range" alt="" coords="425,4899,551,4941"/>
+<area shape="rect" id="node131" href="$d3/d9b/classetl_1_1variant__incorrect__type__exception.html" title="etl::variant_incorrect\l_type_exception" alt="" coords="418,4965,558,5006"/>
+<area shape="rect" id="node133" href="$d2/dfa/classetl_1_1variant__pool__cannot__create.html" title="etl::variant_pool_cannot\l_create" alt="" coords="408,5030,568,5071"/>
+<area shape="rect" id="node134" href="$d7/dc1/classetl_1_1variant__pool__did__not__create.html" title="etl::variant_pool_did\l_not_create" alt="" coords="419,5095,557,5137"/>
+<area shape="rect" id="node136" href="$db/d21/classetl_1_1vector__empty.html" title="etl::vector_empty" alt="" coords="427,5161,549,5188"/>
+<area shape="rect" id="node137" href="$d0/d19/classetl_1_1vector__full.html" title="etl::vector_full" alt="" coords="436,5212,540,5239"/>
+<area shape="rect" id="node138" href="$de/d78/classetl_1_1vector__incompatible__type.html" title="etl::vector_incompatible_type" alt="" coords="392,5263,584,5289"/>
+<area shape="rect" id="node139" href="$d8/d45/classetl_1_1vector__out__of__bounds.html" title="etl::vector_out_of\l_bounds" alt="" coords="427,5314,549,5355"/>
 </map>

@@ -1,22 +1,9 @@
 var searchData=
 [
-  ['xaction',['Xaction',['../d6/d39/structfakeit_1_1Xaction.html',1,'fakeit']]],
-  ['xeventgroupdefinition',['xEventGroupDefinition',['../dc/d91/structxEventGroupDefinition.html',1,'']]],
-  ['xlist',['xLIST',['../d3/d26/structxLIST.html',1,'']]],
-  ['xlist_5fitem',['xLIST_ITEM',['../d1/d58/structxLIST__ITEM.html',1,'']]],
-  ['xmemory_5fregion',['xMEMORY_REGION',['../da/d7e/structxMEMORY__REGION.html',1,'']]],
-  ['xmini_5flist_5fitem',['xMINI_LIST_ITEM',['../da/d58/structxMINI__LIST__ITEM.html',1,'']]],
-  ['xpsr_5ftype',['xPSR_Type',['../d7/ddc/unionxPSR__Type.html',1,'']]],
-  ['xstatic_5fevent_5fgroup',['xSTATIC_EVENT_GROUP',['../d5/dae/structxSTATIC__EVENT__GROUP.html',1,'']]],
-  ['xstatic_5flist',['xSTATIC_LIST',['../d3/d21/structxSTATIC__LIST.html',1,'']]],
-  ['xstatic_5flist_5fitem',['xSTATIC_LIST_ITEM',['../d3/d07/structxSTATIC__LIST__ITEM.html',1,'']]],
-  ['xstatic_5fmini_5flist_5fitem',['xSTATIC_MINI_LIST_ITEM',['../d3/d02/structxSTATIC__MINI__LIST__ITEM.html',1,'']]],
-  ['xstatic_5fqueue',['xSTATIC_QUEUE',['../d2/dd3/structxSTATIC__QUEUE.html',1,'']]],
-  ['xstatic_5fstream_5fbuffer',['xSTATIC_STREAM_BUFFER',['../d6/da4/structxSTATIC__STREAM__BUFFER.html',1,'']]],
-  ['xstatic_5ftcb',['xSTATIC_TCB',['../d7/d29/structxSTATIC__TCB.html',1,'']]],
-  ['xstatic_5ftimer',['xSTATIC_TIMER',['../d9/d77/structxSTATIC__TIMER.html',1,'']]],
-  ['xstream_5fbuffer',['xSTREAM_BUFFER',['../da/d5b/structxSTREAM__BUFFER.html',1,'']]],
-  ['xtask_5fparameters',['xTASK_PARAMETERS',['../dd/d9e/structxTASK__PARAMETERS.html',1,'']]],
-  ['xtask_5fstatus',['xTASK_STATUS',['../d1/d79/structxTASK__STATUS.html',1,'']]],
-  ['xtime_5fout',['xTIME_OUT',['../db/dec/structxTIME__OUT.html',1,'']]]
+  ['whenfunctor',['WhenFunctor',['../d5/d24/classfakeit_1_1WhenFunctor.html',1,'fakeit']]],
+  ['wipe_5fon_5fdestruct',['wipe_on_destruct',['../d2/d76/structetl_1_1wipe__on__destruct.html',1,'etl']]],
+  ['withinabsmatcher',['WithinAbsMatcher',['../d2/d2a/structCatch_1_1Matchers_1_1Floating_1_1WithinAbsMatcher.html',1,'Catch::Matchers::Floating']]],
+  ['withinulpsmatcher',['WithinUlpsMatcher',['../d7/daf/structCatch_1_1Matchers_1_1Floating_1_1WithinUlpsMatcher.html',1,'Catch::Matchers::Floating']]],
+  ['wrapper',['wrapper',['../d3/dc4/structetl_1_1private__error__handler_1_1wrapper.html',1,'etl::private_error_handler']]],
+  ['wstring',['wstring',['../de/d87/classetl_1_1wstring.html',1,'etl']]]
 ];

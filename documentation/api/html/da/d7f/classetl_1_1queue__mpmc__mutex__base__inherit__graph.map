@@ -1,0 +1,4 @@
+<map id="etl::queue_mpmc_mutex_base&lt; MEMORY_MODEL &gt;" name="etl::queue_mpmc_mutex_base&lt; MEMORY_MODEL &gt;">
+<area shape="rect" id="node2" href="$d3/d2c/classetl_1_1iqueue__mpmc__mutex.html" title="This is the base for all queue_mpmc_mutexs that contain a particular type. " alt="" coords="19,97,187,138"/>
+<area shape="rect" id="node3" href="$d1/dfe/classetl_1_1queue__mpmc__mutex.html" title="etl::queue_mpmc_mutex\l\&lt; T, MEMORY_MODEL \&gt;" alt="" coords="15,187,191,229"/>
+</map>

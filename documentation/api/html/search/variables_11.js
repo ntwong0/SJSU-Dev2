@@ -14,6 +14,8 @@ var searchData=
   ['spsel',['SPSEL',['../d0/dc5/unionCONTROL__Type.html#a8cc085fea1c50a8bd9adea63931ee8e2',1,'CONTROL_Type']]],
   ['sr',['SR',['../d2/d47/structLPC__SSP__TypeDef.html#a82edd1e82e00dbdc9db58e5173893d77',1,'LPC_SSP_TypeDef::SR()'],['../d1/dba/structLPC__CAN__TypeDef.html#af196d4014a0e6c89397940310a708025',1,'LPC_CAN_TypeDef::SR()']]],
   ['sspsr',['SSPSR',['../db/daf/structTPI__Type.html#a7b72598e20066133e505bb781690dc22',1,'TPI_Type']]],
+  ['start_5flink',['start_link',['../d1/d08/classetl_1_1intrusive__forward__list__base.html#a81bf08bbd5350ffeba4e12923aec116d',1,'etl::intrusive_forward_list_base']]],
+  ['start_5fnode',['start_node',['../d3/dfa/classetl_1_1forward__list__base.html#a3d4117ae3ff201f29be6f0864d3f02eb',1,'etl::forward_list_base']]],
   ['stat',['STAT',['../d8/d12/structLPC__I2C__TypeDef.html#ad899053f412fa24b201a479017f04f5e',1,'LPC_I2C_TypeDef::STAT()'],['../d3/d95/structLPC__ADC__TypeDef.html#a1bdbd1fea2c9424fa59b47192fcf63d0',1,'LPC_ADC_TypeDef::STAT()']]],
   ['stir',['STIR',['../d9/deb/structNVIC__Type.html#a37de89637466e007171c6b135299bc75',1,'NVIC_Type']]],
   ['syncctrl',['SYNCCTRL',['../d9/d2d/structLPC__UART4__TypeDef.html#afcc9eceff2ec718d0a90d992fbd147dd',1,'LPC_UART4_TypeDef']]],

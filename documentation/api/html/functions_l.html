@@ -50,6 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,6 +84,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -97,6 +100,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_j.html#index_j"><span>j</span></a></li>
+      <li><a href="functions_k.html#index_k"><span>k</span></a></li>
       <li class="current"><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
@@ -109,7 +114,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_u.html#index_u"><span>u</span></a></li>
       <li><a href="functions_v.html#index_v"><span>v</span></a></li>
       <li><a href="functions_w.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_x.html#index_x"><span>x</span></a></li>
       <li><a href="functions_z.html#index_z"><span>z</span></a></li>
+      <li><a href="functions_~.html#index_~"><span>~</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -118,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -134,17 +141,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>LAR
 : <a class="el" href="d8/da9/structITM__Type.html#a7f9c2a2113a11c7f3e98915f95b669d5">ITM_Type</a>
 </li>
+<li>last()
+: <a class="el" href="d3/da8/classetl_1_1cyclic__value.html#abcf57f8c9bca9e33c332484609197add">etl::cyclic_value&lt; T, FIRST, LAST, typename &gt;</a>
+, <a class="el" href="d3/d6e/classetl_1_1cyclic__value_3_01T_00_01FIRST_00_01LAST_00_01typename_01etl_1_1enable__if_3_07FIRST0ab65d5090d3bcb0d42e856753ee8848.html#ac1bce884ffec0d9e4abdb792768d497a">etl::cyclic_value&lt; T, FIRST, LAST, typename etl::enable_if&lt;(FIRST==0)&amp;&amp;(LAST==0)&gt;::type &gt;</a>
+</li>
 <li>LCD_CFG
 : <a class="el" href="df/d8b/structLPC__SC__TypeDef.html#a2fc3096e2521a3a334238f43e8d96f06">LPC_SC_TypeDef</a>
 </li>
 <li>LCR
 : <a class="el" href="d9/d2d/structLPC__UART4__TypeDef.html#a1a405b88dfe980973027f7f9273b37b7">LPC_UART4_TypeDef</a>
 </li>
+<li>length()
+: <a class="el" href="d8/d35/classetl_1_1basic__string__view.html#a27dc352b2fab8671eb698a3f16a962bf">etl::basic_string_view&lt; T, TTraits &gt;</a>
+, <a class="el" href="d8/d00/classetl_1_1string__base.html#accf39c278a738c3fa44be17eb410e515">etl::string_base</a>
+</li>
 <li>LER
 : <a class="el" href="dc/dbf/structLPC__PWM__TypeDef.html#a66870e1624cc34e666a6028d4b90bd1c">LPC_PWM_TypeDef</a>
 </li>
+<li>line_number()
+: <a class="el" href="dd/d6a/classetl_1_1exception.html#a995ee0ac30f8e34758e763e2ca4e2b01">etl::exception</a>
+</li>
+<li>list()
+: <a class="el" href="d4/d45/classetl_1_1list.html#ae452bb8303ac6f59228babeb2eeb3eab">etl::list&lt; T, MAX_SIZE_ &gt;</a>
+, <a class="el" href="dc/dec/classetl_1_1list_3_01T_00_010_01_4.html#ae666cad09c0c6650d5c5a5ffcbbec6e5">etl::list&lt; T, 0 &gt;</a>
+</li>
+<li>list_base()
+: <a class="el" href="d4/df6/classetl_1_1list__base.html#a47575c516881e66be9cfbd3b56f70734">etl::list_base</a>
+</li>
 <li>LOAD
 : <a class="el" href="d5/d2b/structSysTick__Type.html#a4780a489256bb9f54d0ba8ed4de191cd">SysTick_Type</a>
+</li>
+<li>load_factor()
+: <a class="el" href="d6/df7/classetl_1_1iunordered__map.html#a5a6898fe9ded2b8c3f97876681ab4ef1">etl::iunordered_map&lt; TKey, T, THash, TKeyEqual &gt;</a>
+, <a class="el" href="d3/df2/classetl_1_1iunordered__multimap.html#a419588c450b0acaa8c3c15790b0490f1">etl::iunordered_multimap&lt; TKey, T, THash, TKeyEqual &gt;</a>
+, <a class="el" href="d2/d5e/classetl_1_1iunordered__multiset.html#a03a6de5a4724640fb1f3abe48deab59b">etl::iunordered_multiset&lt; TKey, THash, TKeyEqual &gt;</a>
+, <a class="el" href="d1/d45/classetl_1_1iunordered__set.html#ad80dde29597584456e56113bcd9d5b62">etl::iunordered_set&lt; TKey, THash, TKeyEqual &gt;</a>
+</li>
+<li>lower_bound()
+: <a class="el" href="d4/d8b/classetl_1_1iflat__map.html#ac90e2d37324ad2bc740de511542d18fe">etl::iflat_map&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="d6/d62/classetl_1_1iflat__multimap.html#a4bbdceb272ff0cad53b1a9e4a470327d">etl::iflat_multimap&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="dc/d42/classetl_1_1iflat__multiset.html#aafad50d9c6380102622ccd6fbb938616">etl::iflat_multiset&lt; T, TKeyCompare &gt;</a>
+, <a class="el" href="df/dc5/classetl_1_1iflat__set.html#a6597d5fcca978728bf14b41d92fa24ff">etl::iflat_set&lt; T, TKeyCompare &gt;</a>
+, <a class="el" href="d6/d71/classetl_1_1imap.html#a04e65fe6e10c38057177cb73568ecebf">etl::imap&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="d3/d4a/classetl_1_1imultimap.html#a3e6116ad6fc0ba69eab7528ee729a435">etl::imultimap&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="d5/d32/classetl_1_1imultiset.html#a90cd4f473193bfa9215f03a9496e83e8">etl::imultiset&lt; T, TCompare &gt;</a>
+, <a class="el" href="df/d7e/classetl_1_1ireference__flat__map.html#a8457b1436bd20d4504b76d8fc15e3806">etl::ireference_flat_map&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="dc/d8b/classetl_1_1ireference__flat__multimap.html#a144494d3504d1801f316b7c45f75ef91">etl::ireference_flat_multimap&lt; TKey, TMapped, TKeyCompare &gt;</a>
+, <a class="el" href="d7/d67/classetl_1_1ireference__flat__multiset.html#aa0e0be38b2069924ce2cc866a55bccb6">etl::ireference_flat_multiset&lt; T, TKeyCompare &gt;</a>
+, <a class="el" href="dd/d8a/classetl_1_1ireference__flat__set.html#af770c0ce567baa6565a13e73beb70f8f">etl::ireference_flat_set&lt; T, TKeyCompare &gt;</a>
+, <a class="el" href="d1/d90/classetl_1_1iset.html#af024e26b6894ac64277d232a103f6849">etl::iset&lt; T, TCompare &gt;</a>
 </li>
 <li>LSR
 : <a class="el" href="d8/da9/structITM__Type.html#a3861c67933a24dd6632288c4ed0b80c8">ITM_Type</a>

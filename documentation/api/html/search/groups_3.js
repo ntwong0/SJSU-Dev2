@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['functions_20and_20instructions_20reference',['Functions and Instructions Reference',['../d8/df6/group__CMSIS__Core__FunctionInterface.html',1,'']]]
+  ['8_20bit_20crc_20calculation',['8 bit CRC calculation',['../d7/d25/group__crc8__ccitt.html',1,'']]]
 ];

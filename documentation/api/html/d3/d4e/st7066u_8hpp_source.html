@@ -50,6 +50,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -81,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -420,7 +421,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    constexpr uint8_t kMaxDisplayWidth = 20;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">const</span> uint8_t kStartOffset         = position.position;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    uint8_t termination_index          = uint8_t(strlen(text));</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    uint8_t termination_index          = uint8_t(<a class="code" href="../../d4/de2/namespaceetl.html#a722b80a552b623e889de268bffa4eeea">strlen</a>(text));</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// calculate the termination_index to stop writing to the display</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">// if the string length of text exceeds the display&#39;s width</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (termination_index &gt; kMaxDisplayWidth)</div>
@@ -449,6 +450,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="ttc" id="structSt7066uInterface_1_1CursorPosition__t_html"><div class="ttname"><a href="../../d8/d0e/structSt7066uInterface_1_1CursorPosition__t.html">St7066uInterface::CursorPosition_t</a></div><div class="ttdef"><b>Definition:</b> st7066u.hpp:65</div></div>
 <div class="ttc" id="structSt7066u_1_1ControlPins__t_html"><div class="ttname"><a href="../../dc/d85/structSt7066u_1_1ControlPins__t.html">St7066u::ControlPins_t</a></div><div class="ttdef"><b>Definition:</b> st7066u.hpp:109</div></div>
 <div class="ttc" id="classSt7066u_html"><div class="ttname"><a href="../../d2/db0/classSt7066u.html">St7066u</a></div><div class="ttdef"><b>Definition:</b> st7066u.hpp:88</div></div>
+<div class="ttc" id="namespaceetl_html_a722b80a552b623e889de268bffa4eeea"><div class="ttname"><a href="../../d4/de2/namespaceetl.html#a722b80a552b623e889de268bffa4eeea">etl::strlen</a></div><div class="ttdeci">size_t strlen(const T *t)</div><div class="ttdoc">Alternative strlen for all character types. </div><div class="ttdef"><b>Definition:</b> basic_string.h:78</div></div>
 <div class="ttc" id="classCommand_html"><div class="ttname"><a href="../../d9/d71/classCommand.html">Command</a></div><div class="ttdef"><b>Definition:</b> commandline.hpp:66</div></div>
 <div class="ttc" id="classGpioInterface_html"><div class="ttname"><a href="../../d9/d4e/classGpioInterface.html">GpioInterface</a></div><div class="ttdef"><b>Definition:</b> gpio.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->

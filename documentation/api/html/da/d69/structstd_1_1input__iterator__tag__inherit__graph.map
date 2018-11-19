@@ -1,0 +1,5 @@
+<map id="std::input_iterator_tag" name="std::input_iterator_tag">
+<area shape="rect" id="node2" href="$df/d4f/structstd_1_1forward__iterator__tag.html" title="std::forward_iterator_tag" alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node3" href="$da/d16/structstd_1_1bidirectional__iterator__tag.html" title="std::bidirectional\l_iterator_tag" alt="" coords="28,155,144,197"/>
+<area shape="rect" id="node4" href="$d5/db6/structstd_1_1random__access__iterator__tag.html" title="std::random_access\l_iterator_tag" alt="" coords="17,246,156,287"/>
+</map>

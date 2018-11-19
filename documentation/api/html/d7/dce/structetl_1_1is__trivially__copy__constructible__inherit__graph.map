@@ -1,0 +1,4 @@
+<map id="etl::is_trivially_copy_constructible&lt; T &gt;" name="etl::is_trivially_copy_constructible&lt; T &gt;">
+<area shape="rect" id="node2" href="$de/dd9/structetl_1_1is__pod.html" title="etl::is_pod\&lt; T \&gt;" alt="" coords="232,27,347,53"/>
+<area shape="rect" id="node3" href="$d4/dc2/structetl_1_1integral__constant.html" title="etl::integral_constant\l\&lt; bool, etl::is_fundamental\l\&lt; T \&gt;::value\|\|etl::is_pointer\l\&lt; T \&gt;::value \&gt;" alt="" coords="6,5,183,75"/>
+</map>
