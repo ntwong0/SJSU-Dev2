@@ -1,6 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dc/d8b/classetl_1_1ireference__flat__multimap.html" title="etl::ireference_flat\l_multimap\&lt; TKey, TValue,\l TCompare \&gt;" alt="" coords="5,41,184,97"/>
-<area shape="rect" id="node2" href="$dd/d95/classetl_1_1reference__flat__multimap.html" title="etl::reference_flat\l_multimap\&lt; TKey, TValue,\l MAX_SIZE_, TCompare \&gt;" alt="" coords="239,5,419,61"/>
-<area shape="rect" id="node3" href="$d6/d62/classetl_1_1iflat__multimap.html" title="etl::iflat_multimap\l\&lt; TKey, TValue, TCompare \&gt;" alt="" coords="232,85,427,126"/>
-<area shape="rect" id="node4" href="$dc/d10/classetl_1_1flat__multimap.html" title="etl::flat_multimap\l\&lt; TKey, TValue, MAX\l_SIZE_, TCompare \&gt;" alt="" coords="475,77,626,133"/>
+<area shape="rect" id="node1" href="$dc/d8b/classetl_1_1ireference__flat__multimap.html" title="etl::ireference_flat\l_multimap\&lt; TKey, TMapped,\l TKeyCompare \&gt;" alt="" coords="6,4,197,60"/>
+<area shape="rect" id="node2" href="$d6/d62/classetl_1_1iflat__multimap.html" title="etl::iflat_multimap\l\&lt; TKey, TMapped, TKeyCompare \&gt;" alt="" coords="246,11,477,53"/>
 </map>

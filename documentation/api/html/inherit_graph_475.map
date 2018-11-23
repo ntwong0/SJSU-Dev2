@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/d83/structetl_1_1state__chart_1_1state.html" title="State definition. " alt="" coords="6,5,173,46"/>
+<area shape="rect" id="node1" href="$d4/d24/classetl_1_1stack__base.html" title="etl::stack_base" alt="" coords="6,5,117,32"/>
+<area shape="rect" id="node2" href="$d5/daa/classetl_1_1istack.html" title="This is the base for all stacks that contain a particular type. " alt="" coords="166,5,277,32"/>
+<area shape="rect" id="node3" href="$d5/d3f/classetl_1_1stack.html" title="etl::stack\&lt; T, SIZE \&gt;" alt="" coords="325,5,472,32"/>
 </map>

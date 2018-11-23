@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['value_5fcompare',['value_compare',['../d4/d8e/classetl_1_1imap_1_1value__compare.html',1,'etl::imap']]],
   ['value_5fcompare',['value_compare',['../db/df6/classetl_1_1imultimap_1_1value__compare.html',1,'etl::imultimap']]],
+  ['value_5fcompare',['value_compare',['../d4/d8e/classetl_1_1imap_1_1value__compare.html',1,'etl::imap']]],
   ['variant',['variant',['../d9/db3/classetl_1_1variant.html',1,'etl']]],
   ['variant_5fexception',['variant_exception',['../d9/dc0/classetl_1_1variant__exception.html',1,'etl']]],
   ['variant_5fincorrect_5ftype_5fexception',['variant_incorrect_type_exception',['../d3/d9b/classetl_1_1variant__incorrect__type__exception.html',1,'etl']]],
@@ -10,6 +10,7 @@ var searchData=
   ['variant_5fpool_5fdid_5fnot_5fcreate',['variant_pool_did_not_create',['../d7/dc1/classetl_1_1variant__pool__did__not__create.html',1,'etl']]],
   ['variant_5fpool_5fexception',['variant_pool_exception',['../d6/d3a/classetl_1_1variant__pool__exception.html',1,'etl']]],
   ['vector',['vector',['../d0/d49/classetl_1_1vector.html',1,'etl']]],
+  ['vector_3c_20commandinterface_20_2a_2c_20knumberofcommands_20_3e',['vector&lt; CommandInterface *, kNumberOfCommands &gt;',['../d0/d49/classetl_1_1vector.html',1,'etl']]],
   ['vector_3c_20etl_3a_3aetl_3a_3aimessage_5frouter_20_2a_2c_20max_5frouters_5f_20_3e',['vector&lt; etl::etl::imessage_router *, MAX_ROUTERS_ &gt;',['../d0/d49/classetl_1_1vector.html',1,'etl']]],
   ['vector_3c_20etl_3a_3atask_20_2a_2c_20max_5ftasks_20_3e',['vector&lt; etl::task *, MAX_TASKS &gt;',['../d0/d49/classetl_1_1vector.html',1,'etl']]],
   ['vector_3c_20node_5ft_20_2a_2c_20max_5fsize_20_3e',['vector&lt; node_t *, MAX_SIZE &gt;',['../d0/d49/classetl_1_1vector.html',1,'etl']]],

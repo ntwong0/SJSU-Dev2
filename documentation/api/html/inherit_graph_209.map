@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/d33/classetl_1_1frame__check__sequence.html" title="etl::frame_check_sequence\l\&lt; fnv_1_policy_64 \&gt;" alt="" coords="6,5,189,46"/>
-<area shape="rect" id="node2" href="$d5/df1/classetl_1_1fnv__1__64.html" title="etl::fnv_1_64" alt="" coords="238,12,335,39"/>
+<area shape="rect" id="node1" href="$d3/d33/classetl_1_1frame__check__sequence.html" title="etl::frame_check_sequence\l\&lt; fnv_1_policy_32 \&gt;" alt="" coords="6,5,189,46"/>
+<area shape="rect" id="node2" href="$de/d0f/classetl_1_1fnv__1__32.html" title="etl::fnv_1_32" alt="" coords="238,12,335,39"/>
 </map>
