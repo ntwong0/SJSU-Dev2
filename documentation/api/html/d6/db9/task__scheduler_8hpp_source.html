@@ -146,16 +146,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../de/ddd/classrtos_1_1TaskScheduler.html">TaskScheduler</a> instance;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">inline</span> EventGroupHandle_t GetPreRunEventGroupHandle()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  EventGroupHandle_t GetPreRunEventGroupHandle()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> pre_run_event_group_handle_;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> EventBits_t GetPreRunSyncBits()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  EventBits_t GetPreRunSyncBits()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> pre_run_sync_bits_;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// @return Returns the current number of scheduled tasks.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">inline</span> uint8_t GetTaskCount()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  uint8_t GetTaskCount()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> task_count_;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  };</div>
@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// Removes a specified task by its name and updates the task_list_ and</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// task_count_.</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// @param task_name  Name of the task to remove.</span></div>
@@ -190,7 +190,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">//</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// @param   task_name Name of the task.</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// @return  Returns nullptr if the task does not exist. Otherwise, returns a</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">//          pointer reference to the retreived task with the matching name.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">//          pointer reference to the retrieved task with the matching name.</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="../../d4/d33/classrtos_1_1TaskInterface.html">TaskInterface</a> * GetTask(<span class="keyword">const</span> <span class="keywordtype">char</span> * task_name)<span class="keyword"> override</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> uint32_t kTaskIndex = GetTaskIndex(task_name);</div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> task_list_[kTaskIndex];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// Used to get a task&#39;s index to determine the sync bit for the PreRun event</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// group.</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">//</span></div>
@@ -208,10 +208,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">//          scheduled, kTaskSchedulerSize + 1 will be returned.</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  uint8_t GetTaskIndex(<span class="keyword">const</span> <span class="keywordtype">char</span> * task_name) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="comment">// @return Returns a pointer reference to all currently scheduled tasks.</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">inline</span> <a class="code" href="../../d4/d33/classrtos_1_1TaskInterface.html">TaskInterface</a> ** GetAllTasks()</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="../../d4/d33/classrtos_1_1TaskInterface.html">TaskInterface</a> ** GetAllTasks()</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> task_list_;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  };</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// Starts the scheduler and attempts to initialize all tasks.</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="comment">// If there are currently no tasks scheduled, a fatal error will be</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// asserted.</span></div>
@@ -224,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    InitializeAllTasks();</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    vTaskStartScheduler();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// does not reach this point</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  };</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// Array containing all scheduled tasks.</span></div>
@@ -255,7 +255,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;};  <span class="comment">// namespace rtos</span></div>
 <div class="ttc" id="classrtos_1_1TaskScheduler_html"><div class="ttname"><a href="../../de/ddd/classrtos_1_1TaskScheduler.html">rtos::TaskScheduler</a></div><div class="ttdef"><b>Definition:</b> task_scheduler.hpp:38</div></div>
 <div class="ttc" id="classrtos_1_1TaskSchedulerInterface_html"><div class="ttname"><a href="../../da/df5/classrtos_1_1TaskSchedulerInterface.html">rtos::TaskSchedulerInterface</a></div><div class="ttdef"><b>Definition:</b> task_scheduler.hpp:24</div></div>
-<div class="ttc" id="classrtos_1_1TaskInterface_html"><div class="ttname"><a href="../../d4/d33/classrtos_1_1TaskInterface.html">rtos::TaskInterface</a></div><div class="ttdef"><b>Definition:</b> task.hpp:20</div></div>
+<div class="ttc" id="classrtos_1_1TaskInterface_html"><div class="ttname"><a href="../../d4/d33/classrtos_1_1TaskInterface.html">rtos::TaskInterface</a></div><div class="ttdef"><b>Definition:</b> task.hpp:21</div></div>
 <div class="ttc" id="structxSTATIC__EVENT__GROUP_html"><div class="ttname"><a href="../../d5/dae/structxSTATIC__EVENT__GROUP.html">xSTATIC_EVENT_GROUP</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:1090</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
