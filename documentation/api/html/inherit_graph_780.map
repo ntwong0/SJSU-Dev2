@@ -1,4 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$d9/d07/classstd_1_1binder1st.html" title="std::binder1st\&lt; TFunction \&gt;" alt="" coords="162,5,345,32"/>
-<area shape="rect" id="node3" href="$d2/da5/classstd_1_1binder2nd.html" title="std::binder2nd\&lt; TFunction \&gt;" alt="" coords="160,56,347,83"/>
+<area shape="rect" id="node1" href="$d2/d85/structstd_1_1binary__function.html" title="std::binary_function\l\&lt; TFirstArgumentType,\l TSecondArgumentType,\l TResultType \&gt;" alt="" coords="6,5,173,75"/>
 </map>
