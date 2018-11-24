@@ -116,23 +116,18 @@ Collaboration diagram for Ssp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d4f/classSsp__coll__graph.png" border="0" usemap="#Ssp_coll__map" alt="Collaboration graph"/></div>
 <map name="Ssp_coll__map" id="Ssp_coll__map">
-<area shape="rect" id="node2" href="../../d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,5,101,32"/><area shape="rect" id="node3" href="../../d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="125,5,264,32"/><area shape="rect" id="node4" href="../../df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="288,5,417,32"/></map>
+<area shape="rect" id="node2" href="../../d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,83,101,109"/><area shape="rect" id="node3" href="../../da/da0/classPin.html" title="Pin" alt="" coords="126,83,167,109"/><area shape="rect" id="node4" href="../../d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="101,5,192,32"/><area shape="rect" id="node5" href="../../d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="195,83,333,109"/><area shape="rect" id="node6" href="../../df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="357,83,487,109"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac522eed74e58bae9f8e94b7fc688058a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>PortPins</b> : uint8_t { <br/>
-&#160;&#160;<b>kPort0</b> = 0, 
-<b>kPin7</b> = 7, 
-<b>kPin8</b> = 8, 
-<b>kPin9</b> = 9, 
-<br/>
-&#160;&#160;<b>kPin15</b> = 15, 
-<b>kPin17</b> = 17, 
-<b>kPin18</b> = 18
-<br/>
+<tr class="memitem:aee2a8b5258dfdb9e430ed2ed51cd2e4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> { <b>kSsp0</b> = 0, 
+<b>kSsp1</b> = 1, 
+<b>kSsp2</b> = 2, 
+<b>kNumberOfPeripherals</b>
  }</td></tr>
-<tr class="separator:ac522eed74e58bae9f8e94b7fc688058a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:aee2a8b5258dfdb9e430ed2ed51cd2e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP peripherals. <br/></td></tr>
+<tr class="separator:aee2a8b5258dfdb9e430ed2ed51cd2e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38fa3c0a54021c77840feaa0ffa4d8ec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>RegisterBitPositions</b> : uint8_t { <br/>
 &#160;&#160;<b>kDataBit</b> = 0, 
 <b>kFrameBit</b> = 4, 
@@ -145,15 +140,12 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:a38fa3c0a54021c77840feaa0ffa4d8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1326b06946be644c5d58a9bbed2aa8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>MatrixLookup</b> { <b>kMosi</b> = 0, 
+<b>kMiso</b> = 1, 
+<b>kSck</b> = 2
+ }</td></tr>
+<tr class="separator:a0b1326b06946be644c5d58a9bbed2aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classSspInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classSspInterface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a></td></tr>
-<tr class="memitem:af0a907d73b23707a42c0d801c81cc936 inherit pub_types_classSspInterface"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Peripheral</b> { <b>kSsp0</b> = 0, 
-<b>kSsp1</b> = 1
- }</td></tr>
-<tr class="separator:af0a907d73b23707a42c0d801c81cc936 inherit pub_types_classSspInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d25f479b7bce51b72f376b16df5ba56 inherit pub_types_classSspInterface"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>PowerOn</b> { <b>kPconp0</b> = 21, 
-<b>kPconp1</b> = 10
- }</td></tr>
-<tr class="separator:a7d25f479b7bce51b72f376b16df5ba56 inherit pub_types_classSspInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3212abadde1bc04e63c21025a18dcb5 inherit pub_types_classSspInterface"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>FrameMode</b> { <b>kSpi</b> = 0, 
 <b>kTi</b> = 1, 
 <b>kMicro</b> = 2
@@ -186,24 +178,23 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abe858ecd6d2fa2feef041777786917eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe858ecd6d2fa2feef041777786917eb"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Ssp</b> (Peripheral set_pssp)</td></tr>
+<tr class="memitem:a61067541fb55fdb4e18fb832234c1c45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61067541fb55fdb4e18fb832234c1c45"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a61067541fb55fdb4e18fb832234c1c45">Ssp</a> ()</td></tr>
+<tr class="memdesc:a61067541fb55fdb4e18fb832234c1c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor sets up SSP0 peripheral as SPI master. <br/></td></tr>
+<tr class="separator:a61067541fb55fdb4e18fb832234c1c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe858ecd6d2fa2feef041777786917eb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#abe858ecd6d2fa2feef041777786917eb">Ssp</a> (<a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> set_pssp)</td></tr>
 <tr class="separator:abe858ecd6d2fa2feef041777786917eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7af79fae11ebc76f8a764ac997938a32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7af79fae11ebc76f8a764ac997938a32"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Ssp</b> (Peripheral pssp, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *mosi_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *miso_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *sck_pin)</td></tr>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Ssp</b> (<a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> pssp, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *mosi_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *miso_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *sck_pin)</td></tr>
 <tr class="separator:a7af79fae11ebc76f8a764ac997938a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a428c77249e902d5d1eb7e36de7d2405c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a428c77249e902d5d1eb7e36de7d2405c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> () override</td></tr>
-<tr class="separator:a428c77249e902d5d1eb7e36de7d2405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f8f37aa9f3682c428c50e3593f3df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a29f8f37aa9f3682c428c50e3593f3df3">Initialize</a> () override</td></tr>
+<tr class="separator:a29f8f37aa9f3682c428c50e3593f3df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53c3e42d8e1f169cf6722213ef4331d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53c3e42d8e1f169cf6722213ef4331d3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransferStatus</b> () override</td></tr>
 <tr class="separator:a53c3e42d8e1f169cf6722213ef4331d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafacf6282b449b8afad0fd08cee931c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafacf6282b449b8afad0fd08cee931c4"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (uint16_t data) override</td></tr>
 <tr class="separator:aafacf6282b449b8afad0fd08cee931c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47a7f06b987c8d451d6caeb7d78dfa81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47a7f06b987c8d451d6caeb7d78dfa81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralPower</b> () override</td></tr>
-<tr class="separator:a47a7f06b987c8d451d6caeb7d78dfa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f392ff9d7e6170714e38d97641af81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51f392ff9d7e6170714e38d97641af81"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralMode</b> (MasterSlaveMode mode, FrameMode frame, DataSize size) override</td></tr>
 <tr class="separator:a51f392ff9d7e6170714e38d97641af81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,16 +208,158 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheral
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9dbe3c08790ae1b0203efd32ff700b0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dbe3c08790ae1b0203efd32ff700b0c"></a>
-static <a class="el" href="../../d2/d47/structLPC__SSP__TypeDef.html">LPC_SSP_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ssp_registers</b> [2] = { LPC_SSP0, LPC_SSP1 }</td></tr>
-<tr class="separator:a9dbe3c08790ae1b0203efd32ff700b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0273887650760a5c8d52919d39d5a3a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d47/structLPC__SSP__TypeDef.html">LPC_SSP_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a0273887650760a5c8d52919d39d5a3a9">ssp_registers</a> []</td></tr>
+<tr class="memdesc:a0273887650760a5c8d52919d39d5a3a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP register lookup table.  <a href="#a0273887650760a5c8d52919d39d5a3a9">More...</a><br/></td></tr>
+<tr class="separator:a0273887650760a5c8d52919d39d5a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a139194650d2657ee57238b5dfcb741c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a139194650d2657ee57238b5dfcb741c5"></a>
 static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sysclock_register</b> = LPC_SC</td></tr>
 <tr class="separator:a139194650d2657ee57238b5dfcb741c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e8713bd3202da47ceec711fef43600b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e8713bd3202da47ceec711fef43600b"></a>
-static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kEnableSspPins</b> = 0b010</td></tr>
-<tr class="separator:a8e8713bd3202da47ceec711fef43600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedba5fcfe88d1a5fc72c1fedb4044565"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedba5fcfe88d1a5fc72c1fedb4044565"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kPinSelect</b> [] = { 0b010, 0b010, 0b100 }</td></tr>
+<tr class="separator:aedba5fcfe88d1a5fc72c1fedb4044565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9867d1c959a668d9f7c39c94d7f223"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kNumberOfPeripherals</b></td></tr>
+<tr class="separator:a9e9867d1c959a668d9f7c39c94d7f223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d56de193712076ed34616aeb6d85387"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../da/da0/classPin.html">Pin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>kSspPinMatrix</b> [kNumberOfPeripherals][3]</td></tr>
+<tr class="separator:a7d56de193712076ed34616aeb6d85387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1641684664ebdd5e52e8be5fde2a95ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1641684664ebdd5e52e8be5fde2a95ad"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kPowerOnBit</b> [] = { 21, 10, 20 }</td></tr>
+<tr class="separator:a1641684664ebdd5e52e8be5fde2a95ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abe858ecd6d2fa2feef041777786917eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr Ssp::Ssp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a>&#160;</td>
+          <td class="paramname"><em>set_pssp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>User modified constructor. <b>MUST</b> be followed by the setter functions for Power, Clock, and Frame format found below. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a29f8f37aa9f3682c428c50e3593f3df3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ssp::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Powers on the peripheral, sets the peripheral clock, format, and data size, and enables the SSP pins for communication see and more. See page 601 of user manual UM10562 LPC408x/407x for more details. </p>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a9e9867d1c959a668d9f7c39c94d7f223"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t Ssp::kNumberOfPeripherals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      util::Value(Peripheral::kNumberOfPeripherals)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7d56de193712076ed34616aeb6d85387"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../da/da0/classPin.html">Pin</a> Ssp::kSspPinMatrix[kNumberOfPeripherals][3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    </div>
+<div class="line">    { [MatrixLookup::kMosi] = Pin::CreatePin&lt;0, 18&gt;(),</div>
+<div class="line">      [MatrixLookup::kMiso] = Pin::CreatePin&lt;0, 17&gt;(),</div>
+<div class="line">      [MatrixLookup::kSck]  = Pin::CreatePin&lt;0, 15&gt;() },</div>
+<div class="line">    </div>
+<div class="line">    { [MatrixLookup::kMosi] = Pin::CreatePin&lt;0, 9&gt;(),</div>
+<div class="line">      [MatrixLookup::kMiso] = Pin::CreatePin&lt;0, 8&gt;(),</div>
+<div class="line">      [MatrixLookup::kSck]  = Pin::CreatePin&lt;0, 7&gt;() },</div>
+<div class="line">    </div>
+<div class="line">    { [MatrixLookup::kMosi] = Pin::CreatePin&lt;1, 1&gt;(),</div>
+<div class="line">      [MatrixLookup::kMiso] = Pin::CreatePin&lt;1, 4&gt;(),</div>
+<div class="line">      [MatrixLookup::kSck]  = Pin::CreatePin&lt;1, 0&gt;() }</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0273887650760a5c8d52919d39d5a3a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d47/structLPC__SSP__TypeDef.html">LPC_SSP_TypeDef</a>* Ssp::ssp_registers[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { LPC_SSP0, LPC_SSP1,</div>
+<div class="line">                                                      LPC_SSP2 }</div>
+</div><!-- fragment -->
+<p>SSP register lookup table. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../d2/d0e/ssp_8hpp_source.html">ssp.hpp</a></li>
 </ul>

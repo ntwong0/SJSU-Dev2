@@ -1,5 +1,7 @@
 <map id="Ssp" name="Ssp">
-<area shape="rect" id="node2" href="$d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,5,101,32"/>
-<area shape="rect" id="node3" href="$d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="125,5,264,32"/>
-<area shape="rect" id="node4" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="288,5,417,32"/>
+<area shape="rect" id="node2" href="$d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,83,101,109"/>
+<area shape="rect" id="node3" href="$da/da0/classPin.html" title="Pin" alt="" coords="126,83,167,109"/>
+<area shape="rect" id="node4" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="101,5,192,32"/>
+<area shape="rect" id="node5" href="$d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="195,83,333,109"/>
+<area shape="rect" id="node6" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="357,83,487,109"/>
 </map>

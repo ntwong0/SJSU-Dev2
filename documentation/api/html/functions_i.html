@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -256,10 +257,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>Initialize()
 : <a class="el" href="dd/d02/classCommandLine.html#aab41d0d20d848ed40ca585584f23170a">CommandLine&lt; command_list &gt;</a>
+, <a class="el" href="db/d74/classSsp.html#a29f8f37aa9f3682c428c50e3593f3df3">Ssp</a>
 </li>
 <li>insert()
 : <a class="el" href="df/d32/classetl_1_1array.html#abed1e097db11afe37facc9258e323928">etl::array&lt; T, SIZE_ &gt;</a>
-, <a class="el" href="d3/df9/classetl_1_1ibasic__string.html#a6e2e7dcd77631846cb4065a91559eabd">etl::ibasic_string&lt; T &gt;</a>
+, <a class="el" href="d3/df9/classetl_1_1ibasic__string.html#a89cb1d51ce89a08879f46c162dc0e2c7">etl::ibasic_string&lt; T &gt;</a>
 , <a class="el" href="dc/d61/classetl_1_1ideque.html#af107646d390b0af74ee3127c41cef31c">etl::ideque&lt; T &gt;</a>
 , <a class="el" href="d4/d8b/classetl_1_1iflat__map.html#ab1246dcb760f17a119a8269e6ad663ee">etl::iflat_map&lt; TKey, TMapped, TKeyCompare &gt;</a>
 , <a class="el" href="d6/d62/classetl_1_1iflat__multimap.html#acceadfecf6703732d7773a902f846930">etl::iflat_multimap&lt; TKey, TMapped, TKeyCompare &gt;</a>
@@ -275,11 +277,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="d7/d67/classetl_1_1ireference__flat__multiset.html#aed4ac6e0376191b2146c86896e04223b">etl::ireference_flat_multiset&lt; T, TKeyCompare &gt;</a>
 , <a class="el" href="dd/d8a/classetl_1_1ireference__flat__set.html#ae8306337c7bd064133db78f46cbb09b1">etl::ireference_flat_set&lt; T, TKeyCompare &gt;</a>
 , <a class="el" href="d1/d90/classetl_1_1iset.html#a3bc450e1eb0ad94a3ece610cc2361a9b">etl::iset&lt; T, TCompare &gt;</a>
-, <a class="el" href="d6/df7/classetl_1_1iunordered__map.html#a61d72dbcee116f05faef4ef580d14701">etl::iunordered_map&lt; TKey, T, THash, TKeyEqual &gt;</a>
+, <a class="el" href="d6/df7/classetl_1_1iunordered__map.html#a5e90e817b44dbfd1f2dd2aaeff77995e">etl::iunordered_map&lt; TKey, T, THash, TKeyEqual &gt;</a>
 , <a class="el" href="d3/df2/classetl_1_1iunordered__multimap.html#a50ab4facafa720f7c0f05f0147e8d31d">etl::iunordered_multimap&lt; TKey, T, THash, TKeyEqual &gt;</a>
 , <a class="el" href="d2/d5e/classetl_1_1iunordered__multiset.html#a4096dfb43a2ee13cce40b4912257c6fa">etl::iunordered_multiset&lt; TKey, THash, TKeyEqual &gt;</a>
-, <a class="el" href="d1/d45/classetl_1_1iunordered__set.html#a7865e2afbce498d1f8a2e543d182257c">etl::iunordered_set&lt; TKey, THash, TKeyEqual &gt;</a>
-, <a class="el" href="db/d9d/classetl_1_1ivector.html#af4057eb2c5e916896bad1a7a6d8dbb4c">etl::ivector&lt; T &gt;</a>
+, <a class="el" href="d1/d45/classetl_1_1iunordered__set.html#aab12f1fa1b58356b94cd5103c23b3015">etl::iunordered_set&lt; TKey, THash, TKeyEqual &gt;</a>
+, <a class="el" href="db/d9d/classetl_1_1ivector.html#a45200770c32c04bbdab21c6f3b930be8">etl::ivector&lt; T &gt;</a>
 , <a class="el" href="d2/dd2/classetl_1_1ivector_3_01const_01T_01_5_01_4.html#a4e6caf68d8e225cd63a14f075854d8c9">etl::ivector&lt; const T * &gt;</a>
 , <a class="el" href="d2/dc9/classetl_1_1ivector_3_01T_01_5_01_4.html#a61da7f0a0fa4fce8c0f22d0e57fd82ff">etl::ivector&lt; T * &gt;</a>
 , <a class="el" href="d2/d51/classetl_1_1pvoidvector.html#a0e35059bea86b85d64e341faedd30232">etl::pvoidvector</a>
@@ -308,7 +310,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d3/dfa/classetl_1_1forward__list__base.html#a261d43fdb32af040c6fae9a13a4799cb">etl::forward_list_base</a>
 </li>
 <li>instance_count()
-: <a class="el" href="d6/dc0/classetl_1_1instance__count.html#a830103208da34df3e31df946bbcfebb4">etl::instance_count&lt; T &gt;</a>
+: <a class="el" href="d6/dc0/classetl_1_1instance__count.html#a13874e6f77d9a4a442d5824c439e8738">etl::instance_count&lt; T &gt;</a>
 </li>
 <li>INTCE
 : <a class="el" href="d9/d2d/structLPC__UART4__TypeDef.html#a21fac54a3afb7b8456ebff6683c91109">LPC_UART4_TypeDef</a>
@@ -356,13 +358,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d9/d7e/classetl_1_1io__port__ro_3_01T_00_010_01_4.html#a6037200c2843f6424b114d295df1c4d1">etl::io_port_ro&lt; T, 0 &gt;</a>
 </li>
 <li>io_port_rw()
-: <a class="el" href="da/de8/classetl_1_1io__port__rw_3_01T_00_010_01_4.html#aed18293a3363529a5067f638a36c06c4">etl::io_port_rw&lt; T, 0 &gt;</a>
+: <a class="el" href="da/de8/classetl_1_1io__port__rw_3_01T_00_010_01_4.html#abf68bf711b8696a17356f7760ec1f4eb">etl::io_port_rw&lt; T, 0 &gt;</a>
 </li>
 <li>io_port_wo()
-: <a class="el" href="d2/d9f/classetl_1_1io__port__wo_3_01T_00_010_01_4.html#ae8a6edb224b8464906e220b31c3d3af4">etl::io_port_wo&lt; T, 0 &gt;</a>
+: <a class="el" href="d2/d9f/classetl_1_1io__port__wo_3_01T_00_010_01_4.html#a042d9e28278e370dcd1b24c3aa50d918">etl::io_port_wo&lt; T, 0 &gt;</a>
 </li>
 <li>io_port_wos()
-: <a class="el" href="dd/d7e/classetl_1_1io__port__wos_3_01T_00_010_01_4.html#ad31810a192b8d77971ba2fb2edd37d62">etl::io_port_wos&lt; T, 0 &gt;</a>
+: <a class="el" href="dd/d7e/classetl_1_1io__port__wos_3_01T_00_010_01_4.html#aa6b7f30fd3ce8e90efc7436af0b540fe">etl::io_port_wos&lt; T, 0 &gt;</a>
 </li>
 <li>IP
 : <a class="el" href="d9/deb/structNVIC__Type.html#a9a4341692e45d089a113986a3d344e98">NVIC_Type</a>
@@ -428,7 +430,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="d8/d6f/classetl_1_1imessage__timer.html#a38dd0a29e93c272be5cca2f302edcf4b">etl::imessage_timer</a>
 </li>
 <li>is_same_type()
-: <a class="el" href="d9/db3/classetl_1_1variant.html#ab317704146a20ab4386bfdab6a94fda8">etl::variant&lt; T1, T2, T3, T4, T5, T6, T7, T8 &gt;</a>
+: <a class="el" href="d9/db3/classetl_1_1variant.html#a3592e64c70ea28dace2fb54eaa120d8b">etl::variant&lt; T1, T2, T3, T4, T5, T6, T7, T8 &gt;</a>
 </li>
 <li>is_set()
 : <a class="el" href="dc/db2/classetl_1_1private__debounce_1_1debounce__base.html#ab82b7431b2aed017c40d2f6ae68abb51">etl::private_debounce::debounce_base</a>

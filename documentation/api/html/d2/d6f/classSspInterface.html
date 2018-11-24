@@ -113,14 +113,6 @@ Inheritance diagram for SspInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af0a907d73b23707a42c0d801c81cc936"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Peripheral</b> { <b>kSsp0</b> = 0, 
-<b>kSsp1</b> = 1
- }</td></tr>
-<tr class="separator:af0a907d73b23707a42c0d801c81cc936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d25f479b7bce51b72f376b16df5ba56"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>PowerOn</b> { <b>kPconp0</b> = 21, 
-<b>kPconp1</b> = 10
- }</td></tr>
-<tr class="separator:a7d25f479b7bce51b72f376b16df5ba56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3212abadde1bc04e63c21025a18dcb5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>FrameMode</b> { <b>kSpi</b> = 0, 
 <b>kTi</b> = 1, 
 <b>kMicro</b> = 2
@@ -153,18 +145,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace62c14d098f3078eb588cccb128f657"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace62c14d098f3078eb588cccb128f657"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
-<tr class="separator:ace62c14d098f3078eb588cccb128f657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bab462edc9fc0e3b9ea74374e1a4748"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bab462edc9fc0e3b9ea74374e1a4748"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
+<tr class="separator:a6bab462edc9fc0e3b9ea74374e1a4748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4669aa7d55fb3ecff6dd8e0ffd2a22aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4669aa7d55fb3ecff6dd8e0ffd2a22aa"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransferStatus</b> ()=0</td></tr>
 <tr class="separator:a4669aa7d55fb3ecff6dd8e0ffd2a22aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac444ae3a656b35f93fc22c5d31a5f629"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac444ae3a656b35f93fc22c5d31a5f629"></a>
 virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (uint16_t data)=0</td></tr>
 <tr class="separator:ac444ae3a656b35f93fc22c5d31a5f629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbef42161e83468e2c893378fba1d3a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbef42161e83468e2c893378fba1d3a8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralPower</b> ()=0</td></tr>
-<tr class="separator:afbef42161e83468e2c893378fba1d3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184460c445217538c41e88bea3c027de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184460c445217538c41e88bea3c027de"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralMode</b> (MasterSlaveMode mode, FrameMode frame, DataSize size)=0</td></tr>
 <tr class="separator:a184460c445217538c41e88bea3c027de"><td class="memSeparator" colspan="2">&#160;</td></tr>

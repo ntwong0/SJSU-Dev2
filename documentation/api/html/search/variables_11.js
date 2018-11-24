@@ -13,6 +13,7 @@ var searchData=
   ['sppr',['SPPR',['../db/daf/structTPI__Type.html#a12f79d4e3ddc69893ba8bff890d04cc5',1,'TPI_Type']]],
   ['spsel',['SPSEL',['../d0/dc5/unionCONTROL__Type.html#a8cc085fea1c50a8bd9adea63931ee8e2',1,'CONTROL_Type']]],
   ['sr',['SR',['../d2/d47/structLPC__SSP__TypeDef.html#a82edd1e82e00dbdc9db58e5173893d77',1,'LPC_SSP_TypeDef::SR()'],['../d1/dba/structLPC__CAN__TypeDef.html#af196d4014a0e6c89397940310a708025',1,'LPC_CAN_TypeDef::SR()']]],
+  ['ssp_5fregisters',['ssp_registers',['../db/d74/classSsp.html#a0273887650760a5c8d52919d39d5a3a9',1,'Ssp']]],
   ['sspsr',['SSPSR',['../db/daf/structTPI__Type.html#a7b72598e20066133e505bb781690dc22',1,'TPI_Type']]],
   ['start_5flink',['start_link',['../d1/d08/classetl_1_1intrusive__forward__list__base.html#a81bf08bbd5350ffeba4e12923aec116d',1,'etl::intrusive_forward_list_base']]],
   ['start_5fnode',['start_node',['../d3/dfa/classetl_1_1forward__list__base.html#a3d4117ae3ff201f29be6f0864d3f02eb',1,'etl::forward_list_base']]],
