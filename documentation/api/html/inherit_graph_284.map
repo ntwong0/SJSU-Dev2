@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d6/ddb/classetl_1_1intrusive__stack__base.html" title="etl::intrusive_stack\l_base\&lt; TLink \&gt;" alt="" coords="6,5,138,46"/>
-<area shape="rect" id="node2" href="$d2/d61/classetl_1_1intrusive__stack.html" title="etl::intrusive_stack\l\&lt; TValue, TLink \&gt;" alt="" coords="187,5,319,46"/>
+<area shape="rect" id="node1" href="$d0/de4/classetl_1_1intrusive__queue__base.html" title="etl::intrusive_queue\l_base\&lt; TLink \&gt;" alt="" coords="6,5,141,46"/>
+<area shape="rect" id="node2" href="$d5/dd4/classetl_1_1intrusive__queue.html" title="etl::intrusive_queue\l\&lt; TValue, TLink \&gt;" alt="" coords="190,5,325,46"/>
 </map>

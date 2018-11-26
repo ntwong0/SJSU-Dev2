@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$db/df6/classetl_1_1imultimap_1_1value__compare.html" title="etl::imultimap\&lt; TKey,\l TMapped, TKeyCompare\l \&gt;::value_compare" alt="" coords="6,4,178,60"/>
+<area shape="rect" id="node2" href="$df/d45/structetl_1_1imultimap_1_1Data__Node.html" title="The data node element in the multimap. " alt="" coords="107,5,279,61"/>
+<area shape="rect" id="node3" href="$d4/db5/structetl_1_1iset_1_1Data__Node.html" title="The data node element in the set. " alt="" coords="116,85,271,126"/>
 </map>

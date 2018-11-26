@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$de/d37/structetl_1_1radix.html" title="etl::radix" alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node1" href="$d4/d36/classetl_1_1queue__spsc__isr__base.html" title="etl::queue_spsc_isr\l_base\&lt; T, MEMORY_MODEL \&gt;" alt="" coords="5,11,216,53"/>
+<area shape="rect" id="node2" href="$de/db4/classetl_1_1iqueue__spsc__isr.html" title="This is the base for all queue_spsc_isrs that contain a particular type. " alt="" coords="264,4,435,60"/>
+<area shape="rect" id="node3" href="$d7/d4d/classetl_1_1queue__spsc__isr.html" title="etl::queue_spsc_isr\l\&lt; T, SIZE, TAccess,\l MEMORY_MODEL \&gt;" alt="" coords="483,4,635,60"/>
 </map>

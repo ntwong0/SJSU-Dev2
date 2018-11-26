@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/d67/classetl_1_1ireference__flat__multiset.html" title="etl::ireference_flat\l_multiset\&lt; TKey, TKeyCompare \&gt;" alt="" coords="6,11,229,53"/>
-<area shape="rect" id="node2" href="$d7/d57/classetl_1_1reference__flat__multiset.html" title="etl::reference_flat\l_multiset\&lt; TKey, MAX\l_SIZE_, TKeyCompare \&gt;" alt="" coords="277,4,448,60"/>
+<area shape="rect" id="node1" href="$d7/d67/classetl_1_1ireference__flat__multiset.html" title="etl::ireference_flat\l_multiset\&lt; T, TKeyCompare \&gt;" alt="" coords="6,5,205,46"/>
+<area shape="rect" id="node2" href="$dc/d42/classetl_1_1iflat__multiset.html" title="etl::iflat_multiset\l\&lt; T, TKeyCompare \&gt;" alt="" coords="253,5,400,46"/>
 </map>

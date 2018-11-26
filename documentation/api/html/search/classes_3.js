@@ -51,6 +51,7 @@ var searchData=
   ['device',['Device',['../d7/d94/classDevice.html',1,'']]],
   ['device_3c_20i2cdevice_3c_20i2c_2c_20kdeviceaddress_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['Device&lt; I2cDevice&lt; i2c, kDeviceAddress, endianess, Apds9960Interface::MemoryMap_t &gt;, endianess, Apds9960Interface::MemoryMap_t &gt;',['../d7/d94/classDevice.html',1,'']]],
   ['device_3c_20i2cdevice_3c_20i2c_2c_20kdeviceaddress_2c_20endianess_2c_20memorymap_20_3e_2c_20endianess_2c_20memorymap_20_3e',['Device&lt; I2cDevice&lt; i2c, kDeviceAddress, endianess, MemoryMap &gt;, endianess, MemoryMap &gt;',['../d7/d94/classDevice.html',1,'']]],
+  ['displayinterface',['DisplayInterface',['../df/d42/classDisplayInterface.html',1,'']]],
   ['dtormockingcontext',['DtorMockingContext',['../d6/d31/classfakeit_1_1DtorMockingContext.html',1,'fakeit']]],
   ['dwt_5ftype',['DWT_Type',['../d5/db5/structDWT__Type.html',1,'']]],
   ['dynamicproxy',['DynamicProxy',['../df/d4f/structfakeit_1_1DynamicProxy.html',1,'fakeit']]],

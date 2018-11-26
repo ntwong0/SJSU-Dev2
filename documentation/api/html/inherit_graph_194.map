@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/dfa/classetl_1_1forward__list__base.html" title="etl::forward_list_base" alt="" coords="5,12,152,39"/>
-<area shape="rect" id="node2" href="$d2/d95/classetl_1_1iforward__list.html" title="etl::iforward_list\&lt; T \&gt;" alt="" coords="200,12,347,39"/>
-<area shape="rect" id="node3" href="$d9/df5/classetl_1_1forward__list.html" title="etl::forward_list\&lt;\l T, MAX_SIZE_ \&gt;" alt="" coords="395,5,522,46"/>
+<area shape="rect" id="node1" href="$d0/d9f/structetl_1_1forward__link.html" title="A forward link. " alt="" coords="5,53,128,94"/>
+<area shape="rect" id="node2" href="$d1/dd9/structetl_1_1iunordered__multimap_1_1node__t.html" title="etl::iunordered_multimap\l\&lt; TKey, T, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="176,5,376,61"/>
+<area shape="rect" id="node3" href="$d3/d32/structetl_1_1iunordered__multiset_1_1node__t.html" title="etl::iunordered_multiset\l\&lt; TKey, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="184,85,368,141"/>
 </map>

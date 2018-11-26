@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$df/dbf/structetl_1_1set__base_1_1Node.html" title="The node element in the set. " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node1" href="$d8/d1f/classetl_1_1set__base.html" title="etl::set_base" alt="" coords="6,12,103,39"/>
+<area shape="rect" id="node2" href="$d1/d90/classetl_1_1iset.html" title="etl::iset\&lt; T, TCompare \&gt;" alt="" coords="153,12,319,39"/>
+<area shape="rect" id="node3" href="$d0/dd0/classetl_1_1set.html" title="A templated set implementation that uses a fixed size buffer. " alt="" coords="369,5,525,46"/>
 </map>

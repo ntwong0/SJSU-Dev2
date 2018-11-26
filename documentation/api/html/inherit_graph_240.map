@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$da/d7a/classetl_1_1ifunction.html" title="etl::ifunction\&lt; const\l std::pair &amp; \&gt;" alt="" coords="6,5,143,46"/>
+<area shape="rect" id="node1" href="$da/d7a/classetl_1_1ifunction.html" title="etl::ifunction\&lt; const\l etl::exception &amp; \&gt;" alt="" coords="6,38,143,79"/>
+<area shape="rect" id="node2" href="$d3/d50/classetl_1_1function.html" title="etl::function\&lt; TObject,\l const etl::exception &amp; \&gt;" alt="" coords="192,5,357,46"/>
+<area shape="rect" id="node4" href="$d3/d50/classetl_1_1function.html" title="etl::function\&lt; void,\l const etl::exception &amp; \&gt;" alt="" coords="192,70,357,111"/>
+<area shape="rect" id="node3" href="$d6/d88/structetl_1_1error__handler_1_1member__function.html" title="Callback class for member handler functions. " alt="" coords="405,5,605,46"/>
+<area shape="rect" id="node5" href="$dd/d97/structetl_1_1error__handler_1_1free__function.html" title="Callback class for free handler functions. " alt="" coords="446,70,565,111"/>
 </map>

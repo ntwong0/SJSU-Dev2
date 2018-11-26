@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d0/d9f/structetl_1_1forward__link.html" title="A forward link. " alt="" coords="5,53,128,94"/>
-<area shape="rect" id="node2" href="$d1/dd9/structetl_1_1iunordered__multimap_1_1node__t.html" title="etl::iunordered_multimap\l\&lt; TKey, T, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="176,5,376,61"/>
-<area shape="rect" id="node3" href="$d3/d32/structetl_1_1iunordered__multiset_1_1node__t.html" title="etl::iunordered_multiset\l\&lt; TKey, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="184,85,368,141"/>
+<area shape="rect" id="node1" href="$d0/d9f/structetl_1_1forward__link.html" title="etl::forward_link\&lt; 0 \&gt;" alt="" coords="6,60,151,87"/>
+<area shape="rect" id="node2" href="$d0/da3/structetl_1_1iunordered__map_1_1node__t.html" title="etl::iunordered_map\l\&lt; TKey, T, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="200,5,400,61"/>
+<area shape="rect" id="node3" href="$d7/d01/structetl_1_1iunordered__set_1_1node__t.html" title="etl::iunordered_set\l\&lt; TKey, THash, TKeyEqual\l \&gt;::node_t" alt="" coords="208,85,392,141"/>
 </map>

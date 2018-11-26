@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/d33/classetl_1_1frame__check__sequence.html" title="etl::frame_check_sequence\l\&lt; etl::crc_policy_16_ccitt \&gt;" alt="" coords="6,5,189,46"/>
-<area shape="rect" id="node2" href="$d4/d98/classetl_1_1crc16__ccitt.html" title="CRC16 CCITT. " alt="" coords="238,12,346,39"/>
+<area shape="rect" id="node1" href="$d3/d33/classetl_1_1frame__check__sequence.html" title="etl::frame_check_sequence\l\&lt; etl::crc_policy_16 \&gt;" alt="" coords="6,5,189,46"/>
+<area shape="rect" id="node2" href="$d3/dc6/classetl_1_1crc16.html" title="CRC16. " alt="" coords="238,12,314,39"/>
 </map>
