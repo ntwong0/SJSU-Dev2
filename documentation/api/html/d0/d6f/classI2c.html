@@ -96,7 +96,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -120,14 +119,9 @@ Collaboration diagram for I2c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d87/classI2c__coll__graph.png" border="0" usemap="#I2c_coll__map" alt="Collaboration graph"/></div>
 <map name="I2c_coll__map" id="I2c_coll__map">
-<area shape="rect" id="node2" href="../../de/d73/classI2cInterface.html" title="I2cInterface" alt="" coords="5,5,96,32"/><area shape="rect" id="node3" href="../../d8/d12/structLPC__I2C__TypeDef.html" title="LPC_I2C_TypeDef" alt="" coords="120,5,253,32"/><area shape="rect" id="node4" href="../../dc/d3e/structI2c_1_1Transaction__t.html" title="I2c::Transaction_t" alt="" coords="278,5,404,32"/></map>
+<area shape="rect" id="node2" href="../../de/d73/classI2cInterface.html" title="I2cInterface" alt="" coords="5,5,96,32"/><area shape="rect" id="node3" href="../../d8/d12/structLPC__I2C__TypeDef.html" title="LPC_I2C_TypeDef" alt="" coords="120,5,253,32"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3e/structI2c_1_1Transaction__t.html">Transaction_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:afda35345c47f88c4b9699177a645addc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Port</b> : uint8_t { <b>kI2c0</b> = 0, 
@@ -146,10 +140,6 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:a35786844fe6ed5962f1bb48eb085a519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26d0fe9f5d4f53cdc9028344d4061dfd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Operation</b> : uint8_t { <b>kWrite</b> = 0, 
-<b>kRead</b> = 1
- }</td></tr>
-<tr class="separator:a26d0fe9f5d4f53cdc9028344d4061dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b7006a5a1922d63ea93e7e2f653957"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>MasterState</b> : uint32_t { <br/>
 &#160;&#160;<b>kBusError</b> = 0x00, 
 <b>kStartCondition</b> = 0x08, 
@@ -171,6 +161,11 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:ab1b7006a5a1922d63ea93e7e2f653957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classI2cInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classI2cInterface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/d73/classI2cInterface.html">I2cInterface</a></td></tr>
+<tr class="memitem:a66fad791e8e84510c5e90f5c5e5c0328 inherit pub_types_classI2cInterface"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Operation</b> : uint8_t { <b>kWrite</b> = 0, 
+<b>kRead</b> = 1
+ }</td></tr>
+<tr class="separator:a66fad791e8e84510c5e90f5c5e5c0328 inherit pub_types_classI2cInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -183,12 +178,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> () ove
 <tr class="memitem:af9fe5b701237eebcf10e383e818c8907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9fe5b701237eebcf10e383e818c8907"></a>
 Status&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (uint8_t address, uint8_t *data, size_t length, uint32_t timeout=kDefaultTimeout) override</td></tr>
 <tr class="separator:af9fe5b701237eebcf10e383e818c8907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25a45eeeed65b5d6cdbf5d6b25db007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad25a45eeeed65b5d6cdbf5d6b25db007"></a>
-Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, uint8_t *data, size_t length, uint32_t timeout=kDefaultTimeout) override</td></tr>
-<tr class="separator:ad25a45eeeed65b5d6cdbf5d6b25db007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61aa8ffe515ee7ae0beb3d2df89c846"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad61aa8ffe515ee7ae0beb3d2df89c846"></a>
-Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout) override</td></tr>
-<tr class="separator:ad61aa8ffe515ee7ae0beb3d2df89c846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad69c01c0f1eeeaecc0f1d7ccd9db74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ad69c01c0f1eeeaecc0f1d7ccd9db74"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, const uint8_t *data, size_t length, uint32_t timeout=kDefaultTimeout) override</td></tr>
+<tr class="separator:a8ad69c01c0f1eeeaecc0f1d7ccd9db74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab598a38502115e9b946c4175420b413b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab598a38502115e9b946c4175420b413b"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, const uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout) override</td></tr>
+<tr class="separator:ab598a38502115e9b946c4175420b413b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classI2cInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classI2cInterface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d73/classI2cInterface.html">I2cInterface</a></td></tr>
+<tr class="memitem:a728dc3a1cffc1b208070deb9b6915fc6 inherit pub_methods_classI2cInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728dc3a1cffc1b208070deb9b6915fc6"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; transmit, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)</td></tr>
+<tr class="separator:a728dc3a1cffc1b208070deb9b6915fc6 inherit pub_methods_classI2cInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca6bd57834889030db93092127276e2 inherit pub_methods_classI2cInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abca6bd57834889030db93092127276e2"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; data, uint32_t timeout=kDefaultTimeout)</td></tr>
+<tr class="separator:abca6bd57834889030db93092127276e2 inherit pub_methods_classI2cInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -200,7 +202,7 @@ template&lt;Port port&gt; </td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBusyState</b> (Port port, bool busy_state)</td></tr>
 <tr class="separator:a2ddf0c5c737e44e52ecb9ab074f7e2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43aa49776b02c5681fb85776b09294d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43aa49776b02c5681fb85776b09294d3"></a>
-static <a class="el" href="../../dc/d3e/structI2c_1_1Transaction__t.html">Transaction_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransactionInfo</b> (Port port)</td></tr>
+static <a class="el" href="../../da/de5/structI2cInterface_1_1Transaction__t.html">Transaction_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransactionInfo</b> (Port port)</td></tr>
 <tr class="separator:a43aa49776b02c5681fb85776b09294d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -242,7 +244,7 @@ virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>BlockUntilF
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:ab8f8f7748f10739398ead0245176f62c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8f8f7748f10739398ead0245176f62c"></a>
-static <a class="el" href="../../dc/d3e/structI2c_1_1Transaction__t.html">Transaction_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b> [kNumberOfPorts]</td></tr>
+static <a class="el" href="../../da/de5/structI2cInterface_1_1Transaction__t.html">Transaction_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b> [kNumberOfPorts]</td></tr>
 <tr class="separator:ab8f8f7748f10739398ead0245176f62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>

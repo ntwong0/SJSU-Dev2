@@ -96,6 +96,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d6/de8/classI2cInterface-members.html">List of all members</a>  </div>
@@ -111,6 +113,18 @@ Inheritance diagram for I2cInterface:</div>
 <area shape="rect" id="node2" href="../../d0/d6f/classI2c.html" title="I2c" alt="" coords="31,80,69,107"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de5/structI2cInterface_1_1Transaction__t.html">Transaction_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a66fad791e8e84510c5e90f5c5e5c0328"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Operation</b> : uint8_t { <b>kWrite</b> = 0, 
+<b>kRead</b> = 1
+ }</td></tr>
+<tr class="separator:a66fad791e8e84510c5e90f5c5e5c0328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ace086a29ff7253fc2906a081c3d6cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ace086a29ff7253fc2906a081c3d6cb"></a>
@@ -119,12 +133,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b
 <tr class="memitem:ab4dc5ed971aa12749e8f8922b470fe7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4dc5ed971aa12749e8f8922b470fe7d"></a>
 virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (uint8_t address, uint8_t *destination, size_t length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
 <tr class="separator:ab4dc5ed971aa12749e8f8922b470fe7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ade8e6a2433fbce0e4d7ebf57e77850"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ade8e6a2433fbce0e4d7ebf57e77850"></a>
-virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, uint8_t *destination, size_t length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
-<tr class="separator:a2ade8e6a2433fbce0e4d7ebf57e77850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba6812326bdbe2949f79a87263e1e436"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba6812326bdbe2949f79a87263e1e436"></a>
-virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
-<tr class="separator:aba6812326bdbe2949f79a87263e1e436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550cb73cf736c3e57f9b2d68264f4500"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a550cb73cf736c3e57f9b2d68264f4500"></a>
+virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, const uint8_t *destination, size_t length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
+<tr class="separator:a550cb73cf736c3e57f9b2d68264f4500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572114ed1cfcbb89d6013fcce0bac87e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a572114ed1cfcbb89d6013fcce0bac87e"></a>
+virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, const uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
+<tr class="separator:a572114ed1cfcbb89d6013fcce0bac87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728dc3a1cffc1b208070deb9b6915fc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728dc3a1cffc1b208070deb9b6915fc6"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; transmit, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)</td></tr>
+<tr class="separator:a728dc3a1cffc1b208070deb9b6915fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca6bd57834889030db93092127276e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abca6bd57834889030db93092127276e2"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; data, uint32_t timeout=kDefaultTimeout)</td></tr>
+<tr class="separator:abca6bd57834889030db93092127276e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>

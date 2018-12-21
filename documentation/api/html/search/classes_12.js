@@ -20,7 +20,7 @@ var searchData=
   ['times',['Times',['../d7/d79/structfakeit_1_1Times.html',1,'fakeit']]],
   ['totals',['Totals',['../d2/d01/structCatch_1_1Totals.html',1,'Catch']]],
   ['tpi_5ftype',['TPI_Type',['../db/daf/structTPI__Type.html',1,'']]],
-  ['transaction_5ft',['Transaction_t',['../dc/d3e/structI2c_1_1Transaction__t.html',1,'I2c']]],
+  ['transaction_5ft',['Transaction_t',['../da/de5/structI2cInterface_1_1Transaction__t.html',1,'I2cInterface']]],
   ['transition',['transition',['../d5/de6/structetl_1_1state__chart_1_1transition.html',1,'etl::state_chart']]],
   ['tree_5flink',['tree_link',['../d0/dcc/structetl_1_1tree__link.html',1,'etl']]],
   ['tsktaskcontrolblock',['tskTaskControlBlock',['../d3/d7e/structtskTaskControlBlock.html',1,'']]],

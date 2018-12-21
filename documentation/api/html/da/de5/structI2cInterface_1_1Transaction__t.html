@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.6"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>SJSU-Dev2: I2c::Transaction_t Struct Reference</title>
+        <title>SJSU-Dev2: I2cInterface::Transaction_t Struct Reference</title>
         <!--<link href="../../tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="../../dynsections.js"></script>
         <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
@@ -95,60 +95,60 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d6f/classI2c.html">I2c</a></li><li class="navelem"><a class="el" href="../../dc/d3e/structI2c_1_1Transaction__t.html">Transaction_t</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../de/d73/classI2cInterface.html">I2cInterface</a></li><li class="navelem"><a class="el" href="../../da/de5/structI2cInterface_1_1Transaction__t.html">Transaction_t</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="../../d0/da0/structI2c_1_1Transaction__t-members.html">List of all members</a>  </div>
+<a href="../../da/dbb/structI2cInterface_1_1Transaction__t-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">I2c::Transaction_t Struct Reference</div>  </div>
+<div class="title">I2cInterface::Transaction_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aceb979f4d45872120790065f86edee5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aceb979f4d45872120790065f86edee5a"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Transaction_t</b> (uint8_t set_address, uint8_t *set_data_out, size_t set_out_length, uint8_t *set_data_in, size_t set_in_length, size_t set_position, bool set_repeated, bool set_busy, Status set_status, Operation set_operation, uint64_t set_timeout)</td></tr>
-<tr class="separator:aceb979f4d45872120790065f86edee5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa397e8567ff8cf4a71170d6a86b61537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa397e8567ff8cf4a71170d6a86b61537"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetProperAddress</b> ()</td></tr>
+<tr class="separator:aa397e8567ff8cf4a71170d6a86b61537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abdae640da3bf656d2bb9ac429255e268"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdae640da3bf656d2bb9ac429255e268"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b></td></tr>
-<tr class="separator:abdae640da3bf656d2bb9ac429255e268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada51786bfec54192e43a148f92a4b03e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada51786bfec54192e43a148f92a4b03e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>out_length</b></td></tr>
-<tr class="separator:ada51786bfec54192e43a148f92a4b03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acddf2a9b04bb160f9a9ea757f53b684b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddf2a9b04bb160f9a9ea757f53b684b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>in_length</b></td></tr>
-<tr class="separator:acddf2a9b04bb160f9a9ea757f53b684b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26cd21ab5080494e65b64d1137f47200"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26cd21ab5080494e65b64d1137f47200"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
-<tr class="separator:a26cd21ab5080494e65b64d1137f47200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a986bf105a23bc2a752cc7e771dd7954b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a986bf105a23bc2a752cc7e771dd7954b"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data_out</b></td></tr>
-<tr class="separator:a986bf105a23bc2a752cc7e771dd7954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc18f4a5536ca6a200480d2ab3804b57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc18f4a5536ca6a200480d2ab3804b57"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data_in</b></td></tr>
-<tr class="separator:abc18f4a5536ca6a200480d2ab3804b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7d3d88a26e43ffb240d107e8af54c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c7d3d88a26e43ffb240d107e8af54c3"></a>
-Status&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
-<tr class="separator:a2c7d3d88a26e43ffb240d107e8af54c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42791aac29b81462e9a1f02b3f9fccde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42791aac29b81462e9a1f02b3f9fccde"></a>
-Operation&#160;</td><td class="memItemRight" valign="bottom"><b>operation</b></td></tr>
-<tr class="separator:a42791aac29b81462e9a1f02b3f9fccde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ee3a19093edfe079bd66c0a2fb8c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5ee3a19093edfe079bd66c0a2fb8c5d"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>address</b></td></tr>
-<tr class="separator:ab5ee3a19093edfe079bd66c0a2fb8c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5e83dd1c345b2061b9676f6ba96c8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5e83dd1c345b2061b9676f6ba96c8e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b></td></tr>
-<tr class="separator:a1f5e83dd1c345b2061b9676f6ba96c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef9ef8e53faf09cfedce6f2d1981f4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ef9ef8e53faf09cfedce6f2d1981f4b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>busy</b></td></tr>
-<tr class="separator:a9ef9ef8e53faf09cfedce6f2d1981f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae620a11176c41f2d78da40cba8613bdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae620a11176c41f2d78da40cba8613bdd"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b> = I2cInterface::kDefaultTimeout</td></tr>
+<tr class="separator:ae620a11176c41f2d78da40cba8613bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc02589cec003fe40c85b24ca86c0b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fc02589cec003fe40c85b24ca86c0b0"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>out_length</b> = 0</td></tr>
+<tr class="separator:a6fc02589cec003fe40c85b24ca86c0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674c47d4265167bf3cf1881617e294fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a674c47d4265167bf3cf1881617e294fc"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>in_length</b> = 0</td></tr>
+<tr class="separator:a674c47d4265167bf3cf1881617e294fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19729ad424b32b2402bc6ae6ccc92b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae19729ad424b32b2402bc6ae6ccc92b7"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = 0</td></tr>
+<tr class="separator:ae19729ad424b32b2402bc6ae6ccc92b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203e2ad689f383cf4d20ebab4aa76998"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a203e2ad689f383cf4d20ebab4aa76998"></a>
+const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data_out</b> = nullptr</td></tr>
+<tr class="separator:a203e2ad689f383cf4d20ebab4aa76998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad004a81e29e05c2cc7c2d08fb49f8eba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad004a81e29e05c2cc7c2d08fb49f8eba"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data_in</b> = nullptr</td></tr>
+<tr class="separator:ad004a81e29e05c2cc7c2d08fb49f8eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab610e7898f1454fcf07c027fcc3045d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab610e7898f1454fcf07c027fcc3045d5"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>status</b> = Status::kSuccess</td></tr>
+<tr class="separator:ab610e7898f1454fcf07c027fcc3045d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1991946e3e28702b04a91d789a16be21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1991946e3e28702b04a91d789a16be21"></a>
+Operation&#160;</td><td class="memItemRight" valign="bottom"><b>operation</b> = Operation::kWrite</td></tr>
+<tr class="separator:a1991946e3e28702b04a91d789a16be21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01d7de699bac18904a0b4aec7ce6e25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad01d7de699bac18904a0b4aec7ce6e25"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> = 0xFF</td></tr>
+<tr class="separator:ad01d7de699bac18904a0b4aec7ce6e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58eb1c2d29cc0a6a0974db3e863ced0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad58eb1c2d29cc0a6a0974db3e863ced0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>repeated</b> = false</td></tr>
+<tr class="separator:ad58eb1c2d29cc0a6a0974db3e863ced0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc3b794a5516245ae378a6165328ebe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cc3b794a5516245ae378a6165328ebe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>busy</b> = false</td></tr>
+<tr class="separator:a2cc3b794a5516245ae378a6165328ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../db/d1c/i2c_8hpp_source.html">i2c.hpp</a></li>
