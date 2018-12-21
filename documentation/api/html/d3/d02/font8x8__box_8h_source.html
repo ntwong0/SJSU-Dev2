@@ -106,136 +106,137 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Contains an 8x8 font map for unicode points U+2500 - U+257F (box drawing)</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span><span class="comment">// SJSU-Dev2: made this lookup table inlined</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">char</span> font8x8_box[128][8] = {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2500 (thin horizontal)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2501 (thick horizontal)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08},   <span class="comment">// U+2502 (thin vertical)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+2503 (thich vertical)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xBB, 0x00, 0x00, 0x00},   <span class="comment">// U+2504 (thin horizontal dashed)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    { 0x00, 0x00, 0x00, 0xBB, 0xBB, 0x00, 0x00, 0x00},   <span class="comment">// U+2505 (thick horizontal dashed)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    { 0x08, 0x00, 0x08, 0x08, 0x08, 0x00, 0x08, 0x08},   <span class="comment">// U+2506 (thin vertical dashed)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    { 0x18, 0x00, 0x18, 0x18, 0x18, 0x00, 0x18, 0x18},   <span class="comment">// U+2507 (thich vertical dashed)</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x55, 0x00, 0x00, 0x00},   <span class="comment">// U+2508 (thin horizontal dotted)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    { 0x00, 0x00, 0x00, 0x55, 0x55, 0x00, 0x00, 0x00},   <span class="comment">// U+2509 (thick horizontal dotted)</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    { 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08},   <span class="comment">// U+250A (thin vertical dotted)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { 0x00, 0x18, 0x00, 0x18, 0x00, 0x18, 0x00, 0x18},   <span class="comment">// U+250B (thich vertical dotted)</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+250C (down L, right L)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+250D (down L, right H)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+250E (down H, right L)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+250F (down H, right H)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2510 (down L, left L)</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    { 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2511 (down L, left H)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2512 (down H, left L)</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    { 0x00, 0x00, 0x00, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2513 (down H, left H)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2514 (up L, right L)</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2515 (up L, right H)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2516 (up H, right L)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2517 (up H, right H)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x0f, 0x00, 0x00, 0x00},   <span class="comment">// U+2518 (up L, left L)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0x0f, 0x00, 0x00, 0x00},   <span class="comment">// U+2519 (up L, left H)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x00, 0x00, 0x00},   <span class="comment">// U+251A (up H, left L)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x00, 0x00, 0x00},   <span class="comment">// U+251B (up H, left H)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251C (down L, right L, up L)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251D (down L, right H, up L)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251E (down L, right L, up H)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+251F (down H, right L, up L)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2520 (down H, right L, up H)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+2521 (down L, right H, up H)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2522 (down H, right H, up L)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2523 (down H, right H, up H)</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2524 (down L, left L, up L)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2525 (down L, left H, up L)</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x08, 0x08, 0x08},   <span class="comment">// U+2526 (down L, left L, up H)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2527 (down H, left L, up L)</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2528 (down H, left L, up H)</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x08, 0x08, 0x08},   <span class="comment">// U+2529 (down L, left H, up H)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    { 0x08, 0x08, 0x08, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+252A (down H, left H, up L)</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+252B (down H, left H, up H)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252C (down L, right L, left L)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    { 0x00, 0x00, 0x00, 0x0f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252D (down L, right L, left H)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252E (down L, right H, left L)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    { 0x00, 0x00, 0x00, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252F (down L, right H, left H)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2530 (down H, right L, left L)</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    { 0x00, 0x00, 0x00, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2531 (down H, right L, left H)</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2532 (down H, right H, left L)</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    { 0x00, 0x00, 0x00, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2533 (down H, right H, left H)</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2534 (up L, right L, left L)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2535 (up L, right L, left H)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2536 (up L, right H, left L)</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2537 (up L, right H, left H)</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2538 (up H, right L, left L)</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2539 (up H, right L, left H)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+253A (up H, right H, left L)</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+253B (up H, right H, left H)</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253C (up L, right L, left L, down L)</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253D (up L, right L, left H, down L)</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253E (up L, right H, left L, down L)</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253F (up L, right H, left H, down L)</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2540 (up H, right L, left L, down L)</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2541 (up L, right L, left L, down H)</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2542 (up H, right L, left L, down H)</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2543 (up H, right L, left H, down L)</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2544 (up H, right H, left L, down L)</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    { 0x08, 0x08, 0x08, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2545 (up L, right L, left H, down H)</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2546 (up L, right H, left L, down H)</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2547 (up L, right H, left H, down H)</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+254B (up H, right H, left H, down L)</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+254A (up H, right H, left L, down H)</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2549 (up H, right L, left H, down H)</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+254B (up H, right H, left H, down H)</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xE7, 0x00, 0x00, 0x00},   <span class="comment">// U+254C (thin horizontal broken)</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    { 0x00, 0x00, 0x00, 0xE7, 0xE7, 0x00, 0x00, 0x00},   <span class="comment">// U+254D (thick horizontal broken)</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    { 0x08, 0x08, 0x08, 0x00, 0x00, 0x08, 0x08, 0x08},   <span class="comment">// U+254E (thin vertical broken)</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    { 0x18, 0x18, 0x18, 0x00, 0x00, 0x18, 0x18, 0x18},   <span class="comment">// U+254F (thich vertical broken)</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2550 (double horizontal)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14},   <span class="comment">// U+2551 (double vertical)</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0x08, 0xF8, 0x08, 0x08},   <span class="comment">// U+2552 (down L, right D)</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFC, 0x14, 0x14, 0x14},   <span class="comment">// U+2553 (down D, right L)</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    { 0x00, 0x00, 0x00, 0xFC, 0x04, 0xF4, 0x14, 0x14},   <span class="comment">// U+2554 (down D, right D)</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0x08, 0x0F, 0x08, 0x08},   <span class="comment">// U+2555 (down L, left D)</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x1F, 0x14, 0x14, 0x14},   <span class="comment">// U+2556 (down D, left L)</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    { 0x00, 0x00, 0x00, 0x1F, 0x10, 0x17, 0x14, 0x14},   <span class="comment">// U+2557 (down D, left D)</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    { 0x08, 0x08, 0x08, 0xF8, 0x08, 0xF8, 0x00, 0x00},   <span class="comment">// U+2558 (up L, right D)</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFC, 0x00, 0x00, 0x00},   <span class="comment">// U+2559 (up D, right L)</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    { 0x14, 0x14, 0x14, 0xF4, 0x04, 0xFC, 0x00, 0x00},   <span class="comment">// U+255A (up D, right D)</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    { 0x08, 0x08, 0x08, 0x0F, 0x08, 0x0F, 0x00, 0x00},   <span class="comment">// U+255B (up L, left D)</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x1F, 0x00, 0x00, 0x00},   <span class="comment">// U+255C (up D, left L)</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    { 0x14, 0x14, 0x14, 0x17, 0x10, 0x1F, 0x00, 0x00},   <span class="comment">// U+255D (up D, left D)</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    { 0x08, 0x08, 0x08, 0xF8, 0x08, 0xF8, 0x08, 0x08},   <span class="comment">// U+255E (up L, down L, right D)</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xF4, 0x14, 0x14, 0x14},   <span class="comment">// U+255F (up D, down D, right L)</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    { 0x14, 0x14, 0x14, 0xF4, 0x04, 0xF4, 0x14, 0x14},   <span class="comment">// U+2560 (up D, down D, right D)</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    { 0x08, 0x08, 0x08, 0x0F, 0x08, 0x0F, 0x08, 0x08},   <span class="comment">// U+2561 (up L, down L, left D)</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x17, 0x14, 0x14, 0x14},   <span class="comment">// U+2562 (up D, down D, left L)</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    { 0x14, 0x14, 0x14, 0x17, 0x10, 0x17, 0x14, 0x14},   <span class="comment">// U+2563 (up D, down D, left D)</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x08, 0x08},   <span class="comment">// U+2564 (left D, right D, down L)</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFF, 0x14, 0x14, 0x14},   <span class="comment">// U+2565 (left L, right L, down D)</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xF7, 0x14, 0x14},   <span class="comment">// U+2566 (left D, right D, down D)</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    { 0x08, 0x08, 0x08, 0xFF, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2567 (left D, right D, up L)</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2568 (left L, right L, up D)</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    { 0x14, 0x14, 0x14, 0xF7, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2569 (left D, right D, up D)</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    { 0x08, 0x08, 0x08, 0xFF, 0x08, 0xFF, 0x08, 0x08},   <span class="comment">// U+256A (left D, right D, down L, up L)</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFF, 0x14, 0x14, 0x14},   <span class="comment">// U+256B (left L, right L, down D, up D)</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    { 0x14, 0x14, 0x14, 0xF7, 0x00, 0xF7, 0x14, 0x14},   <span class="comment">// U+256C (left D, right D, down D, up D)</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xE0, 0x10, 0x08, 0x08},   <span class="comment">// U+256D (curve down-right)</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x03, 0x04, 0x08, 0x08},   <span class="comment">// U+256E (curve down-left)</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    { 0x08, 0x08, 0x08, 0x04, 0x03, 0x00, 0x00, 0x00},   <span class="comment">// U+256F (curve up-left)</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    { 0x08, 0x08, 0x08, 0x10, 0xE0, 0x00, 0x00, 0x00},   <span class="comment">// U+2570 (curve up-right)</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    { 0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01},   <span class="comment">// U+2571 (diagonal bottom-left to top-right)</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80},   <span class="comment">// U+2572 (diagonal bottom-right to top-left)</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    { 0x81, 0x42, 0x24, 0x18, 0x18, 0x24, 0x42, 0x81},   <span class="comment">// U+2573 (diagonal cross)</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00},   <span class="comment">// U+2574 (left L)</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x00, 0x00, 0x00, 0x00},   <span class="comment">// U+2575 (up L)</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00},   <span class="comment">// U+2576 (right L)</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x08, 0x08, 0x08, 0x08},   <span class="comment">// U+2577 (down L)</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x00, 0x00, 0x00},   <span class="comment">// U+2578 (left H)</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x00, 0x00, 0x00, 0x00},   <span class="comment">// U+2579 (up H)</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0xF8, 0x00, 0x00, 0x00},   <span class="comment">// U+257A (right H)</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+257B (down H)</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+257C (right H, left L)</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+257D (up L, down H)</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+257E (right L, left H)</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x08, 0x08, 0x08, 0x08}    <span class="comment">// U+257F (up H, down L)</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">inline</span> uint8_t font8x8_box[128][8] = {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2500 (thin horizontal)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2501 (thick horizontal)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08},   <span class="comment">// U+2502 (thin vertical)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+2503 (thich vertical)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xBB, 0x00, 0x00, 0x00},   <span class="comment">// U+2504 (thin horizontal dashed)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    { 0x00, 0x00, 0x00, 0xBB, 0xBB, 0x00, 0x00, 0x00},   <span class="comment">// U+2505 (thick horizontal dashed)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    { 0x08, 0x00, 0x08, 0x08, 0x08, 0x00, 0x08, 0x08},   <span class="comment">// U+2506 (thin vertical dashed)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { 0x18, 0x00, 0x18, 0x18, 0x18, 0x00, 0x18, 0x18},   <span class="comment">// U+2507 (thich vertical dashed)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x55, 0x00, 0x00, 0x00},   <span class="comment">// U+2508 (thin horizontal dotted)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    { 0x00, 0x00, 0x00, 0x55, 0x55, 0x00, 0x00, 0x00},   <span class="comment">// U+2509 (thick horizontal dotted)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08},   <span class="comment">// U+250A (thin vertical dotted)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    { 0x00, 0x18, 0x00, 0x18, 0x00, 0x18, 0x00, 0x18},   <span class="comment">// U+250B (thich vertical dotted)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+250C (down L, right L)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+250D (down L, right H)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+250E (down H, right L)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+250F (down H, right H)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2510 (down L, left L)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    { 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2511 (down L, left H)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2512 (down H, left L)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    { 0x00, 0x00, 0x00, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2513 (down H, left H)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2514 (up L, right L)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2515 (up L, right H)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2516 (up H, right L)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x00, 0x00, 0x00},   <span class="comment">// U+2517 (up H, right H)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x0f, 0x00, 0x00, 0x00},   <span class="comment">// U+2518 (up L, left L)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0x0f, 0x00, 0x00, 0x00},   <span class="comment">// U+2519 (up L, left H)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x00, 0x00, 0x00},   <span class="comment">// U+251A (up H, left L)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x00, 0x00, 0x00},   <span class="comment">// U+251B (up H, left H)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251C (down L, right L, up L)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251D (down L, right H, up L)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+251E (down L, right L, up H)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+251F (down H, right L, up L)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2520 (down H, right L, up H)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x08, 0x08, 0x08},   <span class="comment">// U+2521 (down L, right H, up H)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2522 (down H, right H, up L)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xf8, 0x18, 0x18, 0x18},   <span class="comment">// U+2523 (down H, right H, up H)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2524 (down L, left L, up L)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0x0f, 0x08, 0x08, 0x08},   <span class="comment">// U+2525 (down L, left H, up L)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x08, 0x08, 0x08},   <span class="comment">// U+2526 (down L, left L, up H)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2527 (down H, left L, up L)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+2528 (down H, left L, up H)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x08, 0x08, 0x08},   <span class="comment">// U+2529 (down L, left H, up H)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    { 0x08, 0x08, 0x08, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+252A (down H, left H, up L)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0x1f, 0x18, 0x18, 0x18},   <span class="comment">// U+252B (down H, left H, up H)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252C (down L, right L, left L)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    { 0x00, 0x00, 0x00, 0x0f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252D (down L, right L, left H)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252E (down L, right H, left L)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    { 0x00, 0x00, 0x00, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+252F (down L, right H, left H)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2530 (down H, right L, left L)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    { 0x00, 0x00, 0x00, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2531 (down H, right L, left H)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    { 0x00, 0x00, 0x00, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2532 (down H, right H, left L)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    { 0x00, 0x00, 0x00, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2533 (down H, right H, left H)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2534 (up L, right L, left L)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2535 (up L, right L, left H)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2536 (up L, right H, left L)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2537 (up L, right H, left H)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2538 (up H, right L, left L)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+2539 (up H, right L, left H)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+253A (up H, right H, left L)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x00, 0x00, 0x00},   <span class="comment">// U+253B (up H, right H, left H)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253C (up L, right L, left L, down L)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    { 0x08, 0x08, 0x08, 0x0f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253D (up L, right L, left H, down L)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253E (up L, right H, left L, down L)</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+253F (up L, right H, left H, down L)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2540 (up H, right L, left L, down L)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2541 (up L, right L, left L, down H)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2542 (up H, right L, left L, down H)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2543 (up H, right L, left H, down L)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+2544 (up H, right H, left L, down L)</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    { 0x08, 0x08, 0x08, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2545 (up L, right L, left H, down H)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    { 0x08, 0x08, 0x08, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2546 (up L, right H, left L, down H)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    { 0x08, 0x08, 0x08, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2547 (up L, right H, left H, down H)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x08, 0x08, 0x08},   <span class="comment">// U+254B (up H, right H, left H, down L)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    { 0x18, 0x18, 0x18, 0xf8, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+254A (up H, right H, left L, down H)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    { 0x18, 0x18, 0x18, 0x1f, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+2549 (up H, right L, left H, down H)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    { 0x18, 0x18, 0x18, 0xff, 0xff, 0x18, 0x18, 0x18},   <span class="comment">// U+254B (up H, right H, left H, down H)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xE7, 0x00, 0x00, 0x00},   <span class="comment">// U+254C (thin horizontal broken)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    { 0x00, 0x00, 0x00, 0xE7, 0xE7, 0x00, 0x00, 0x00},   <span class="comment">// U+254D (thick horizontal broken)</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    { 0x08, 0x08, 0x08, 0x00, 0x00, 0x08, 0x08, 0x08},   <span class="comment">// U+254E (thin vertical broken)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    { 0x18, 0x18, 0x18, 0x00, 0x00, 0x18, 0x18, 0x18},   <span class="comment">// U+254F (thich vertical broken)</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2550 (double horizontal)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14},   <span class="comment">// U+2551 (double vertical)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0x08, 0xF8, 0x08, 0x08},   <span class="comment">// U+2552 (down L, right D)</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFC, 0x14, 0x14, 0x14},   <span class="comment">// U+2553 (down D, right L)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    { 0x00, 0x00, 0x00, 0xFC, 0x04, 0xF4, 0x14, 0x14},   <span class="comment">// U+2554 (down D, right D)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0x08, 0x0F, 0x08, 0x08},   <span class="comment">// U+2555 (down L, left D)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x1F, 0x14, 0x14, 0x14},   <span class="comment">// U+2556 (down D, left L)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    { 0x00, 0x00, 0x00, 0x1F, 0x10, 0x17, 0x14, 0x14},   <span class="comment">// U+2557 (down D, left D)</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    { 0x08, 0x08, 0x08, 0xF8, 0x08, 0xF8, 0x00, 0x00},   <span class="comment">// U+2558 (up L, right D)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFC, 0x00, 0x00, 0x00},   <span class="comment">// U+2559 (up D, right L)</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    { 0x14, 0x14, 0x14, 0xF4, 0x04, 0xFC, 0x00, 0x00},   <span class="comment">// U+255A (up D, right D)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    { 0x08, 0x08, 0x08, 0x0F, 0x08, 0x0F, 0x00, 0x00},   <span class="comment">// U+255B (up L, left D)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x1F, 0x00, 0x00, 0x00},   <span class="comment">// U+255C (up D, left L)</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    { 0x14, 0x14, 0x14, 0x17, 0x10, 0x1F, 0x00, 0x00},   <span class="comment">// U+255D (up D, left D)</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    { 0x08, 0x08, 0x08, 0xF8, 0x08, 0xF8, 0x08, 0x08},   <span class="comment">// U+255E (up L, down L, right D)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xF4, 0x14, 0x14, 0x14},   <span class="comment">// U+255F (up D, down D, right L)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    { 0x14, 0x14, 0x14, 0xF4, 0x04, 0xF4, 0x14, 0x14},   <span class="comment">// U+2560 (up D, down D, right D)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    { 0x08, 0x08, 0x08, 0x0F, 0x08, 0x0F, 0x08, 0x08},   <span class="comment">// U+2561 (up L, down L, left D)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0x17, 0x14, 0x14, 0x14},   <span class="comment">// U+2562 (up D, down D, left L)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    { 0x14, 0x14, 0x14, 0x17, 0x10, 0x17, 0x14, 0x14},   <span class="comment">// U+2563 (up D, down D, left D)</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x08, 0x08},   <span class="comment">// U+2564 (left D, right D, down L)</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xFF, 0x14, 0x14, 0x14},   <span class="comment">// U+2565 (left L, right L, down D)</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    { 0x00, 0x00, 0x00, 0xFF, 0x00, 0xF7, 0x14, 0x14},   <span class="comment">// U+2566 (left D, right D, down D)</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    { 0x08, 0x08, 0x08, 0xFF, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2567 (left D, right D, up L)</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+2568 (left L, right L, up D)</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    { 0x14, 0x14, 0x14, 0xF7, 0x00, 0xFF, 0x00, 0x00},   <span class="comment">// U+2569 (left D, right D, up D)</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    { 0x08, 0x08, 0x08, 0xFF, 0x08, 0xFF, 0x08, 0x08},   <span class="comment">// U+256A (left D, right D, down L, up L)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    { 0x14, 0x14, 0x14, 0x14, 0xFF, 0x14, 0x14, 0x14},   <span class="comment">// U+256B (left L, right L, down D, up D)</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    { 0x14, 0x14, 0x14, 0xF7, 0x00, 0xF7, 0x14, 0x14},   <span class="comment">// U+256C (left D, right D, down D, up D)</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xE0, 0x10, 0x08, 0x08},   <span class="comment">// U+256D (curve down-right)</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x03, 0x04, 0x08, 0x08},   <span class="comment">// U+256E (curve down-left)</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    { 0x08, 0x08, 0x08, 0x04, 0x03, 0x00, 0x00, 0x00},   <span class="comment">// U+256F (curve up-left)</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    { 0x08, 0x08, 0x08, 0x10, 0xE0, 0x00, 0x00, 0x00},   <span class="comment">// U+2570 (curve up-right)</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    { 0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01},   <span class="comment">// U+2571 (diagonal bottom-left to top-right)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80},   <span class="comment">// U+2572 (diagonal bottom-right to top-left)</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    { 0x81, 0x42, 0x24, 0x18, 0x18, 0x24, 0x42, 0x81},   <span class="comment">// U+2573 (diagonal cross)</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00},   <span class="comment">// U+2574 (left L)</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x00, 0x00, 0x00, 0x00},   <span class="comment">// U+2575 (up L)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00},   <span class="comment">// U+2576 (right L)</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x08, 0x08, 0x08, 0x08},   <span class="comment">// U+2577 (down L)</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x00, 0x00, 0x00},   <span class="comment">// U+2578 (left H)</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x00, 0x00, 0x00, 0x00},   <span class="comment">// U+2579 (up H)</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0xF8, 0x00, 0x00, 0x00},   <span class="comment">// U+257A (right H)</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    { 0x00, 0x00, 0x00, 0x00, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+257B (down H)</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    { 0x00, 0x00, 0x00, 0xF8, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+257C (right H, left L)</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    { 0x08, 0x08, 0x08, 0x08, 0x18, 0x18, 0x18, 0x18},   <span class="comment">// U+257D (up L, down H)</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    { 0x00, 0x00, 0x00, 0x0F, 0xFF, 0x00, 0x00, 0x00},   <span class="comment">// U+257E (right L, left H)</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    { 0x18, 0x18, 0x18, 0x18, 0x08, 0x08, 0x08, 0x08}    <span class="comment">// U+257F (up H, down L)</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

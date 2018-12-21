@@ -119,46 +119,48 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          red(r),</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;          green(g),</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          blue(b),</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          color_bits(bits),</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          alpha(a)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Color_t()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        : monochrome(<span class="keyword">false</span>),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          red(<span class="keyword">false</span>),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          green(<span class="keyword">false</span>),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          blue(<span class="keyword">false</span>),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          color_bits(0),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          alpha(0)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> monochrome: 1;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> red: 1;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> green: 1;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> blue: 1;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">unsigned</span>: 4;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    uint8_t color_bits;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    uint8_t alpha;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> GetWidth()  = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> GetHeight() = 0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> Color_t <a class="code" href="../../df/d42/classDisplayInterface.html#a3dc51e947c67c19af2136fd58afcafd5">AvailableColors</a>() = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#ac1b2fc1aa7d50321c3115215629574fd">Initialize</a>() = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">   54</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">Enable</a>() {}</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">   57</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">Disable</a>() {}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#af1201ae15181bb4746d2d3212a1e4a11">Clear</a>() = 0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a342766d35978ddc603c618c465a6d86d">DrawPixel</a>(int32_t x, int32_t y, Color_t color) = 0;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">   73</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">Update</a>() {}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          padding(0),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          color_bits(bits),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          alpha(a)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Color_t()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        : monochrome(<span class="keyword">false</span>),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          red(<span class="keyword">false</span>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          green(<span class="keyword">false</span>),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          blue(<span class="keyword">false</span>),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          padding(0),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          color_bits(0),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          alpha(0)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> monochrome: 1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> red: 1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> green: 1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> blue: 1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">unsigned</span> padding: 4;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    uint8_t color_bits;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint8_t alpha;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> GetWidth()  = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> GetHeight() = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> Color_t <a class="code" href="../../df/d42/classDisplayInterface.html#a3dc51e947c67c19af2136fd58afcafd5">AvailableColors</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#ac1b2fc1aa7d50321c3115215629574fd">Initialize</a>() = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">   56</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">Enable</a>() {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">   59</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">Disable</a>() {}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#af1201ae15181bb4746d2d3212a1e4a11">Clear</a>() = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a342766d35978ddc603c618c465a6d86d">DrawPixel</a>(int32_t x, int32_t y, Color_t color) = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">   75</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">Update</a>() {}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
 <div class="ttc" id="classDisplayInterface_html_a342766d35978ddc603c618c465a6d86d"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a342766d35978ddc603c618c465a6d86d">DisplayInterface::DrawPixel</a></div><div class="ttdeci">virtual void DrawPixel(int32_t x, int32_t y, Color_t color)=0</div></div>
-<div class="ttc" id="classDisplayInterface_html_a2e25b47534ad0e0d1e4794e4b9a0360c"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">DisplayInterface::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> displays.hpp:73</div></div>
-<div class="ttc" id="classDisplayInterface_html_a8d299da63de02d78c16b54508fdc9eb8"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">DisplayInterface::Enable</a></div><div class="ttdeci">virtual void Enable()</div><div class="ttdoc">Optional method to turn on display if applicable. </div><div class="ttdef"><b>Definition:</b> displays.hpp:54</div></div>
+<div class="ttc" id="classDisplayInterface_html_a2e25b47534ad0e0d1e4794e4b9a0360c"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a2e25b47534ad0e0d1e4794e4b9a0360c">DisplayInterface::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> displays.hpp:75</div></div>
+<div class="ttc" id="classDisplayInterface_html_a8d299da63de02d78c16b54508fdc9eb8"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8">DisplayInterface::Enable</a></div><div class="ttdeci">virtual void Enable()</div><div class="ttdoc">Optional method to turn on display if applicable. </div><div class="ttdef"><b>Definition:</b> displays.hpp:56</div></div>
 <div class="ttc" id="classDisplayInterface_html_a3dc51e947c67c19af2136fd58afcafd5"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a3dc51e947c67c19af2136fd58afcafd5">DisplayInterface::AvailableColors</a></div><div class="ttdeci">virtual Color_t AvailableColors()=0</div></div>
 <div class="ttc" id="classDisplayInterface_html_ac1b2fc1aa7d50321c3115215629574fd"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#ac1b2fc1aa7d50321c3115215629574fd">DisplayInterface::Initialize</a></div><div class="ttdeci">virtual void Initialize()=0</div><div class="ttdoc">Configure hardware peripherals and initialize external display hardware. </div></div>
 <div class="ttc" id="classDisplayInterface_html_af1201ae15181bb4746d2d3212a1e4a11"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#af1201ae15181bb4746d2d3212a1e4a11">DisplayInterface::Clear</a></div><div class="ttdeci">virtual void Clear()=0</div><div class="ttdoc">Clear the screen of the display. </div></div>
 <div class="ttc" id="classDisplayInterface_html"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html">DisplayInterface</a></div><div class="ttdef"><b>Definition:</b> displays.hpp:14</div></div>
-<div class="ttc" id="classDisplayInterface_html_a0a989b84ba7ffb6990768929480514fe"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">DisplayInterface::Disable</a></div><div class="ttdeci">virtual void Disable()</div><div class="ttdef"><b>Definition:</b> displays.hpp:57</div></div>
+<div class="ttc" id="classDisplayInterface_html_a0a989b84ba7ffb6990768929480514fe"><div class="ttname"><a href="../../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe">DisplayInterface::Disable</a></div><div class="ttdeci">virtual void Disable()</div><div class="ttdef"><b>Definition:</b> displays.hpp:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

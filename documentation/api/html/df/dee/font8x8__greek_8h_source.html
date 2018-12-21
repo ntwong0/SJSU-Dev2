@@ -106,66 +106,67 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Contains an 8x8 font map for unicode points U+0390 - U+03C9 (greek characters)</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span><span class="comment">// SJSU-Dev2: made this lookup table inlined</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">char</span> font8x8_greek[58][8] = {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    { 0x2D, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+0390 (iota with tonos and diaeresis)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    { 0x0C, 0x1E, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x00},   <span class="comment">// U+0391 (Alpha)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    { 0x3F, 0x66, 0x66, 0x3E, 0x66, 0x66, 0x3F, 0x00},   <span class="comment">// U+0392 (Beta)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    { 0x3F, 0x33, 0x03, 0x03, 0x03, 0x03, 0x03, 0x00},   <span class="comment">// U+0393 (Gamma)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    { 0x08, 0x1C, 0x1C, 0x36, 0x36, 0x63, 0x7F, 0x00},   <span class="comment">// U+0394 (Delta)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    { 0x7F, 0x46, 0x16, 0x1E, 0x16, 0x46, 0x7F, 0x00},   <span class="comment">// U+0395 (Epsilon)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    { 0x7F, 0x63, 0x31, 0x18, 0x4C, 0x66, 0x7F, 0x00},   <span class="comment">// U+0396 (Zeta)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    { 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x00},   <span class="comment">// U+0397 (Eta)</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { 0x1C, 0x36, 0x63, 0x7F, 0x63, 0x36, 0x1C, 0x00},   <span class="comment">// U+0398 (Theta)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    { 0x1E, 0x0C, 0x0C, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+0399 (Iota)</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    { 0x67, 0x66, 0x36, 0x1E, 0x36, 0x66, 0x67, 0x00},   <span class="comment">// U+039A (Kappa)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { 0x08, 0x1C, 0x1C, 0x36, 0x36, 0x63, 0x63, 0x00},   <span class="comment">// U+039B (Lambda)</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    { 0x63, 0x77, 0x7F, 0x7F, 0x6B, 0x63, 0x63, 0x00},   <span class="comment">// U+039C (Mu)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    { 0x63, 0x67, 0x6F, 0x7B, 0x73, 0x63, 0x63, 0x00},   <span class="comment">// U+039D (Nu)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { 0x7F, 0x63, 0x00, 0x3E, 0x00, 0x63, 0x7F, 0x00},   <span class="comment">// U+039E (Xi)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    { 0x1C, 0x36, 0x63, 0x63, 0x63, 0x36, 0x1C, 0x00},   <span class="comment">// U+039F (Omikron)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    { 0x7F, 0x36, 0x36, 0x36, 0x36, 0x36, 0x36, 0x00},   <span class="comment">// U+03A0 (Pi)</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    { 0x3F, 0x66, 0x66, 0x3E, 0x06, 0x06, 0x0F, 0x00},   <span class="comment">// U+03A1 (Rho)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    { 0x00, 0x01, 0x02, 0x04, 0x4F, 0x90, 0xA0, 0x40},   <span class="comment">// U+03A2</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    { 0x7F, 0x63, 0x06, 0x0C, 0x06, 0x63, 0x7F, 0x00},   <span class="comment">// U+03A3 (Sigma 2)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    { 0x3F, 0x2D, 0x0C, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A4 (Tau)</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    { 0x33, 0x33, 0x33, 0x1E, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A5 (Upsilon)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    { 0x18, 0x7E, 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03A6 (Phi)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    { 0x63, 0x63, 0x36, 0x1C, 0x36, 0x63, 0x63, 0x00},   <span class="comment">// U+03A7 (Chi)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    { 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x18, 0x3C, 0x00},   <span class="comment">// U+03A8 (Psi)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    { 0x3E, 0x63, 0x63, 0x63, 0x36, 0x36, 0x77, 0x00},   <span class="comment">// U+03A9 (Omega)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    { 0x33, 0x00, 0x1E, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+0399 (Iota with diaeresis)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    { 0x33, 0x00, 0x33, 0x33, 0x1E, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A5 (Upsilon with diaeresis)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    { 0x70, 0x00, 0x6E, 0x3B, 0x13, 0x3B, 0x6E, 0x00},   <span class="comment">// U+03AC (alpha aigu)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    { 0x38, 0x00, 0x1E, 0x03, 0x0E, 0x03, 0x1E, 0x00},   <span class="comment">// U+03AD (epsilon aigu)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    { 0x38, 0x00, 0x1F, 0x33, 0x33, 0x33, 0x33, 0x30},   <span class="comment">// U+03AE (eta aigu)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    { 0x38, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+03AF (iota aigu)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    { 0x2D, 0x00, 0x33, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B0 (upsilon with tonos and diaeresis)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { 0x00, 0x00, 0x6E, 0x3B, 0x13, 0x3B, 0x6E, 0x00},   <span class="comment">// U+03B1 (alpha)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    { 0x00, 0x1E, 0x33, 0x1F, 0x33, 0x1F, 0x03, 0x03},   <span class="comment">// U+03B2 (beta)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x1E, 0x0C, 0x0C, 0x00},   <span class="comment">// U+03B3 (gamma)</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    { 0x38, 0x0C, 0x18, 0x3E, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B4 (delta)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    { 0x00, 0x00, 0x1E, 0x03, 0x0E, 0x03, 0x1E, 0x00},   <span class="comment">// U+03B5 (epsilon)</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    { 0x00, 0x3F, 0x06, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03B6 (zeta)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { 0x00, 0x00, 0x1F, 0x33, 0x33, 0x33, 0x33, 0x30},   <span class="comment">// U+03B7 (eta)</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    { 0x00, 0x00, 0x1E, 0x33, 0x3F, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B8 (theta)</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    { 0x00, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+03B9 (iota)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    { 0x00, 0x00, 0x33, 0x1B, 0x0F, 0x1B, 0x33, 0x00},   <span class="comment">// U+03BA (kappa)</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    { 0x00, 0x03, 0x06, 0x0C, 0x1C, 0x36, 0x63, 0x00},   <span class="comment">// U+03BB (lambda)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    { 0x00, 0x00, 0x66, 0x66, 0x66, 0x3E, 0x06, 0x03},   <span class="comment">// U+03BC (mu)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x33, 0x1E, 0x0C, 0x00},   <span class="comment">// U+03BD (nu)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    { 0x1E, 0x03, 0x0E, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03BE (xi)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    { 0x00, 0x00, 0x1E, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03BF (omikron)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    { 0x00, 0x00, 0x7F, 0x36, 0x36, 0x36, 0x36, 0x00},   <span class="comment">// U+03C0 (pi)</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    { 0x00, 0x00, 0x3C, 0x66, 0x66, 0x36, 0x06, 0x06},   <span class="comment">// U+03C1 (rho)</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    { 0x00, 0x00, 0x3E, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03C2 (sigma 1)</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    { 0x00, 0x00, 0x7E, 0x1B, 0x1B, 0x1B, 0x0E, 0x00},   <span class="comment">// U+03C3 (sigma 2)</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    { 0x00, 0x00, 0x7E, 0x18, 0x18, 0x58, 0x30, 0x00},   <span class="comment">// U+03C4 (tau)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03C5 (upsilon)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    { 0x00, 0x00, 0x76, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03C6 (phi)</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    { 0x00, 0x63, 0x36, 0x1C, 0x1C, 0x36, 0x63, 0x00},   <span class="comment">// U+03C7 (chi)</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    { 0x00, 0x00, 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03C8 (psi)</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    { 0x00, 0x00, 0x36, 0x63, 0x6B, 0x7F, 0x36, 0x00}    <span class="comment">// U+03C9 (omega)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">inline</span> uint8_t font8x8_greek[58][8] = {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    { 0x2D, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+0390 (iota with tonos and diaeresis)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    { 0x0C, 0x1E, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x00},   <span class="comment">// U+0391 (Alpha)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    { 0x3F, 0x66, 0x66, 0x3E, 0x66, 0x66, 0x3F, 0x00},   <span class="comment">// U+0392 (Beta)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    { 0x3F, 0x33, 0x03, 0x03, 0x03, 0x03, 0x03, 0x00},   <span class="comment">// U+0393 (Gamma)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    { 0x08, 0x1C, 0x1C, 0x36, 0x36, 0x63, 0x7F, 0x00},   <span class="comment">// U+0394 (Delta)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    { 0x7F, 0x46, 0x16, 0x1E, 0x16, 0x46, 0x7F, 0x00},   <span class="comment">// U+0395 (Epsilon)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    { 0x7F, 0x63, 0x31, 0x18, 0x4C, 0x66, 0x7F, 0x00},   <span class="comment">// U+0396 (Zeta)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x00},   <span class="comment">// U+0397 (Eta)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    { 0x1C, 0x36, 0x63, 0x7F, 0x63, 0x36, 0x1C, 0x00},   <span class="comment">// U+0398 (Theta)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    { 0x1E, 0x0C, 0x0C, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+0399 (Iota)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { 0x67, 0x66, 0x36, 0x1E, 0x36, 0x66, 0x67, 0x00},   <span class="comment">// U+039A (Kappa)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    { 0x08, 0x1C, 0x1C, 0x36, 0x36, 0x63, 0x63, 0x00},   <span class="comment">// U+039B (Lambda)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    { 0x63, 0x77, 0x7F, 0x7F, 0x6B, 0x63, 0x63, 0x00},   <span class="comment">// U+039C (Mu)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { 0x63, 0x67, 0x6F, 0x7B, 0x73, 0x63, 0x63, 0x00},   <span class="comment">// U+039D (Nu)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    { 0x7F, 0x63, 0x00, 0x3E, 0x00, 0x63, 0x7F, 0x00},   <span class="comment">// U+039E (Xi)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    { 0x1C, 0x36, 0x63, 0x63, 0x63, 0x36, 0x1C, 0x00},   <span class="comment">// U+039F (Omikron)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    { 0x7F, 0x36, 0x36, 0x36, 0x36, 0x36, 0x36, 0x00},   <span class="comment">// U+03A0 (Pi)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    { 0x3F, 0x66, 0x66, 0x3E, 0x06, 0x06, 0x0F, 0x00},   <span class="comment">// U+03A1 (Rho)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    { 0x00, 0x01, 0x02, 0x04, 0x4F, 0x90, 0xA0, 0x40},   <span class="comment">// U+03A2</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    { 0x7F, 0x63, 0x06, 0x0C, 0x06, 0x63, 0x7F, 0x00},   <span class="comment">// U+03A3 (Sigma 2)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    { 0x3F, 0x2D, 0x0C, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A4 (Tau)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    { 0x33, 0x33, 0x33, 0x1E, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A5 (Upsilon)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    { 0x18, 0x7E, 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03A6 (Phi)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    { 0x63, 0x63, 0x36, 0x1C, 0x36, 0x63, 0x63, 0x00},   <span class="comment">// U+03A7 (Chi)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    { 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x18, 0x3C, 0x00},   <span class="comment">// U+03A8 (Psi)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    { 0x3E, 0x63, 0x63, 0x63, 0x36, 0x36, 0x77, 0x00},   <span class="comment">// U+03A9 (Omega)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    { 0x33, 0x00, 0x1E, 0x0C, 0x0C, 0x0C, 0x1E, 0x00},   <span class="comment">// U+0399 (Iota with diaeresis)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    { 0x33, 0x00, 0x33, 0x33, 0x1E, 0x0C, 0x1E, 0x00},   <span class="comment">// U+03A5 (Upsilon with diaeresis)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    { 0x70, 0x00, 0x6E, 0x3B, 0x13, 0x3B, 0x6E, 0x00},   <span class="comment">// U+03AC (alpha aigu)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    { 0x38, 0x00, 0x1E, 0x03, 0x0E, 0x03, 0x1E, 0x00},   <span class="comment">// U+03AD (epsilon aigu)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    { 0x38, 0x00, 0x1F, 0x33, 0x33, 0x33, 0x33, 0x30},   <span class="comment">// U+03AE (eta aigu)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    { 0x38, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+03AF (iota aigu)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { 0x2D, 0x00, 0x33, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B0 (upsilon with tonos and diaeresis)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    { 0x00, 0x00, 0x6E, 0x3B, 0x13, 0x3B, 0x6E, 0x00},   <span class="comment">// U+03B1 (alpha)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    { 0x00, 0x1E, 0x33, 0x1F, 0x33, 0x1F, 0x03, 0x03},   <span class="comment">// U+03B2 (beta)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x1E, 0x0C, 0x0C, 0x00},   <span class="comment">// U+03B3 (gamma)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    { 0x38, 0x0C, 0x18, 0x3E, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B4 (delta)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    { 0x00, 0x00, 0x1E, 0x03, 0x0E, 0x03, 0x1E, 0x00},   <span class="comment">// U+03B5 (epsilon)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { 0x00, 0x3F, 0x06, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03B6 (zeta)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    { 0x00, 0x00, 0x1F, 0x33, 0x33, 0x33, 0x33, 0x30},   <span class="comment">// U+03B7 (eta)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    { 0x00, 0x00, 0x1E, 0x33, 0x3F, 0x33, 0x1E, 0x00},   <span class="comment">// U+03B8 (theta)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    { 0x00, 0x00, 0x0C, 0x0C, 0x0C, 0x2C, 0x18, 0x00},   <span class="comment">// U+03B9 (iota)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    { 0x00, 0x00, 0x33, 0x1B, 0x0F, 0x1B, 0x33, 0x00},   <span class="comment">// U+03BA (kappa)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    { 0x00, 0x03, 0x06, 0x0C, 0x1C, 0x36, 0x63, 0x00},   <span class="comment">// U+03BB (lambda)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    { 0x00, 0x00, 0x66, 0x66, 0x66, 0x3E, 0x06, 0x03},   <span class="comment">// U+03BC (mu)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x33, 0x1E, 0x0C, 0x00},   <span class="comment">// U+03BD (nu)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    { 0x1E, 0x03, 0x0E, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03BE (xi)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    { 0x00, 0x00, 0x1E, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03BF (omikron)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    { 0x00, 0x00, 0x7F, 0x36, 0x36, 0x36, 0x36, 0x00},   <span class="comment">// U+03C0 (pi)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    { 0x00, 0x00, 0x3C, 0x66, 0x66, 0x36, 0x06, 0x06},   <span class="comment">// U+03C1 (rho)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    { 0x00, 0x00, 0x3E, 0x03, 0x03, 0x1E, 0x30, 0x1C},   <span class="comment">// U+03C2 (sigma 1)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    { 0x00, 0x00, 0x7E, 0x1B, 0x1B, 0x1B, 0x0E, 0x00},   <span class="comment">// U+03C3 (sigma 2)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    { 0x00, 0x00, 0x7E, 0x18, 0x18, 0x58, 0x30, 0x00},   <span class="comment">// U+03C4 (tau)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    { 0x00, 0x00, 0x33, 0x33, 0x33, 0x33, 0x1E, 0x00},   <span class="comment">// U+03C5 (upsilon)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    { 0x00, 0x00, 0x76, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03C6 (phi)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    { 0x00, 0x63, 0x36, 0x1C, 0x1C, 0x36, 0x63, 0x00},   <span class="comment">// U+03C7 (chi)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    { 0x00, 0x00, 0xDB, 0xDB, 0xDB, 0x7E, 0x18, 0x00},   <span class="comment">// U+03C8 (psi)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    { 0x00, 0x00, 0x36, 0x63, 0x6B, 0x7F, 0x36, 0x00}    <span class="comment">// U+03C9 (omega)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
