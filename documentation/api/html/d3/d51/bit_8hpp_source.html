@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.6"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>SJSU-Dev2: /home/travis/build/kammce/SJSU-Dev2/firmware/library/L2_Utilities/utility.hpp Source File</title>
+        <title>SJSU-Dev2: /home/travis/build/kammce/SJSU-Dev2/firmware/library/L2_Utilities/bit.hpp Source File</title>
         <!--<link href="../../tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="../../dynsections.js"></script>
         <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
@@ -98,31 +98,31 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">utility.hpp</div>  </div>
+<div class="title">bit.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>utility</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;uint32_t Random(uint32_t min, uint32_t max);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> SetRandomSeed(uint32_t = 0xFFFFFFFF);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;uint32_t BitExtract(uint32_t target, uint8_t start_bit, uint8_t width);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;uint32_t BitPlace(uint32_t target, uint8_t start_bit, uint8_t new_bits,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                  uint8_t width);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;uint32_t BitPlace(uint32_t target, uint8_t start_bit, <span class="keywordtype">bool</span> new_bit,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                  uint8_t width);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;uint32_t BitSet(uint32_t target, uint8_t bit_position);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;uint32_t BitClear(uint32_t target, uint8_t bit_position);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;uint32_t BitRead(uint32_t target, uint8_t bit_position);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;uint32_t Min(uint32_t compare_1, uint32_t compare_2);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;uint32_t Max(uint32_t compare_1, uint32_t compare_2);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;uint32_t Map(uint32_t value, uint32_t current_min, uint32_t current_max,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;             uint32_t new_min, uint32_t new_max);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;uint32_t Constrain(uint32_t value, uint32_t min, uint32_t max);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}  <span class="comment">// namespace utility</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>bit</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">inline</span> T Extract(T target, uint8_t position, uint8_t width = 1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">inline</span> T Insert(T target, uint8_t payload, uint8_t position,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                       uint8_t width = 1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">inline</span> T Set(T target, uint8_t position);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// @param target the value you want to change</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">// @param position the position of the bit you would like to change to 0</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">inline</span> T Clear(T target, uint8_t position);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">// @param target the value you want to change</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// @param position the position of the bit you would like to toggle</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">inline</span> T Toggle(T target, uint8_t position);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace bit</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

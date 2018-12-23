@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.6"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>SJSU-Dev2: SJSU-Dev2</title>
+        <title>SJSU-Dev2: /home/travis/build/kammce/SJSU-Dev2/firmware/library/L2_Utilities/map.hpp Source File</title>
         <!--<link href="../../tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="../../dynsections.js"></script>
         <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
@@ -52,7 +52,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
-      <li><a href="../../files.html"><span>Files</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,7 +71,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>File&#160;List</span></a></li>
+      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -86,36 +91,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_01d556f76393421b16360bb90a483cb1.html">firmware</a></li><li class="navelem"><a class="el" href="../../dir_5bd71e30699729ce4f291488f202cd36.html">library</a></li><li class="navelem"><a class="el" href="../../dir_98ec84a7fde92d99766d54fe33701202.html">L2_Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">SJSU-Dev2</div>  </div>
+<div class="title">map.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for SJSU-Dev2:</div>
-<div class="dyncontent">
-<center><table><tr><td><img src="../../d9/dd4/group__SJSU-Dev2.png" border="0" alt="" usemap="#d9_2dd4_2group____SJSU-Dev2"/>
-<map name="d9_2dd4_2group____SJSU-Dev2" id="d9_2dd4_2group____SJSU-Dev2">
-<area shape="rect" id="node2" href="../../d3/deb/group__Macros.html" title="This module is meant for general purpose macros that can be used across the SJSU&#45;Dev2 environment..." alt="" coords="163,5,266,32"/><area shape="rect" id="node3" href="../../d9/ddc/group__Bit.html" title="This library contains helper methods for manipulating or extracting bits from a numeric values..." alt="" coords="147,56,282,83"/><area shape="rect" id="node4" href="../../de/d43/group__Config.html" title="Testing... " alt="" coords="165,107,264,133"/></map>
-</td></tr></table></center>
-</div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:de/d43/group__Config"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d43/group__Config.html">Configuration</a></td></tr>
-<tr class="memdesc:de/d43/group__Config"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing... <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d9/ddc/group__Bit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ddc/group__Bit.html">manipulation library</a></td></tr>
-<tr class="memdesc:d9/ddc/group__Bit"><td class="mdescLeft">&#160;</td><td class="mdescRight">This library contains helper methods for manipulating or extracting bits from a numeric values. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d3/deb/group__Macros"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html">Utility Macros</a></td></tr>
-<tr class="memdesc:d3/deb/group__Macros"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module is meant for general purpose macros that can be used across the SJSU-Dev2 environment. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">inline</span> U Map(T value, T current_minimum, T current_maximum, U new_minimum,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;             U new_maximum);</div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
