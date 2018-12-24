@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['manipulation_20library',['manipulation library',['../d9/ddc/group__Bit.html',1,'']]],
   ['misra_2dc_3a2004_20compliance_20exceptions',['MISRA-C:2004 Compliance Exceptions',['../d1/d92/CMSIS_MISRA_Exceptions.html',1,'']]],
   ['macros_2eh',['macros.h',['../de/d3c/macros_8h.html',1,'']]],
   ['make_5fcopy_5fat',['make_copy_at',['../d7/ded/group__memory.html#gac1cf0d5ddaac32a512c8ee523dddc052',1,'etl::make_copy_at(T *p, const T &amp;other)'],['../d7/ded/group__memory.html#ga810a36ffb765aeba4997975a38f65df8',1,'etl::make_copy_at(T *p, const T &amp;other, TCounter &amp;count)']]],

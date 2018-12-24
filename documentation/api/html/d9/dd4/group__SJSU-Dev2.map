@@ -1,5 +1,4 @@
 <map id="SJSU&#45;Dev2" name="SJSU&#45;Dev2">
-<area shape="rect" id="node2" href="$d3/deb/group__Macros.html" title="This module is meant for general purpose macros that can be used across the SJSU&#45;Dev2 environment..." alt="" coords="163,5,266,32"/>
-<area shape="rect" id="node3" href="$d9/ddc/group__Bit.html" title="This library contains helper methods for manipulating or extracting bits from a numeric values..." alt="" coords="147,56,282,83"/>
-<area shape="rect" id="node4" href="$de/d43/group__Config.html" title="Testing... " alt="" coords="165,107,264,133"/>
+<area shape="rect" id="node2" href="$d3/deb/group__Macros.html" title="This module is meant for general purpose macros that can be used across the SJSU&#45;Dev2 environment..." alt="" coords="147,5,250,32"/>
+<area shape="rect" id="node3" href="$de/d43/group__Config.html" title="Testing... " alt="" coords="149,56,248,83"/>
 </map>
