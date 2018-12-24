@@ -231,9 +231,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEmcClockDivider</b
 <tr class="memitem:a84c6aaf6ee32aea315d89b0a058e43d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c6aaf6ee32aea315d89b0a058e43d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralClockDivider</b> (uint8_t peripheral_divider)</td></tr>
 <tr class="separator:a84c6aaf6ee32aea315d89b0a058e43d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662ee0088c420fef97bbcac6bd283dee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a662ee0088c420fef97bbcac6bd283dee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClockFrequency</b> (uint8_t frequency_in_mhz) override</td></tr>
-<tr class="separator:a662ee0088c420fef97bbcac6bd283dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab8f26bebef959a4dd41f9723f0b39c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ab8f26bebef959a4dd41f9723f0b39c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetClockFrequency</b> (uint8_t frequency_in_mhz) override</td></tr>
+<tr class="separator:a8ab8f26bebef959a4dd41f9723f0b39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cabc0db89f1184187e3442fb5f51ae8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cabc0db89f1184187e3442fb5f51ae8"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockFrequency</b> () override</td></tr>
 <tr class="separator:a1cabc0db89f1184187e3442fb5f51ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,6 +282,9 @@ static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:ac716f043ad369fdcdbf662260513b3a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac716f043ad369fdcdbf662260513b3a6"></a>
 static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearUsbDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
 <tr class="separator:ac716f043ad369fdcdbf662260513b3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f349db00dbbaa34ab966daeeba69e20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f349db00dbbaa34ab966daeeba69e20"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultIRCFrequency</b> = 12'000'000</td></tr>
+<tr class="separator:a3f349db00dbbaa34ab966daeeba69e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classSystemClockInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classSystemClockInterface')"><img src="../../closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="../../d1/d78/classSystemClockInterface.html">SystemClockInterface</a></td></tr>
 <tr class="memitem:aa4a1bf74181588d0d4dfb88b2e6d220f inherit pub_static_attribs_classSystemClockInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4a1bf74181588d0d4dfb88b2e6d220f"></a>
 static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultTimeout</b> = 1000</td></tr>

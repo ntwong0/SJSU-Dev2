@@ -130,8 +130,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ga93dbe6030a3e7139823170fd39b55ef1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga93dbe6030a3e7139823170fd39b55ef1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_IGNORE_STACK_TRACE</b>(function)&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((no_instrument_function))</td></tr>
 <tr class="separator:ga93dbe6030a3e7139823170fd39b55ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga96772d27ce0f9363a2430ed8b07877e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga96772d27ce0f9363a2430ed8b07877e1">SJ2_WEAK</a>&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td></tr>
-<tr class="separator:ga96772d27ce0f9363a2430ed8b07877e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5cf9ee28fa3e0c027a9514a73ba3f0ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga5cf9ee28fa3e0c027a9514a73ba3f0ac">SJ2_WEAK</a>(function)&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td></tr>
+<tr class="separator:ga5cf9ee28fa3e0c027a9514a73ba3f0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc93aeceb59fe9af53a5d847d1e19a0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#gafc93aeceb59fe9af53a5d847d1e19a0d">SJ2_ALIAS</a>(f)&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak, alias(#f), no_instrument_function))</td></tr>
 <tr class="separator:gafc93aeceb59fe9af53a5d847d1e19a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -216,12 +216,16 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="ga96772d27ce0f9363a2430ed8b07877e1"></a>
+<a class="anchor" id="ga5cf9ee28fa3e0c027a9514a73ba3f0ac"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SJ2_WEAK&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td>
+          <td class="memname">#define SJ2_WEAK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function               </td><td>)</td>
+          <td>&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td>
         </tr>
       </table>
 </div><div class="memdoc">

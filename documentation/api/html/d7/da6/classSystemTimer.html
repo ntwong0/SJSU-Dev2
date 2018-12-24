@@ -137,10 +137,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIsrFunction</b> (I
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>StartTimer</b> () override</td></tr>
 <tr class="separator:aa7969a9fcb400cd63bc43ea431a4998f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d575fb20dfacc879824feaf871f8de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d575fb20dfacc879824feaf871f8de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableTimer</b> () override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a09d575fb20dfacc879824feaf871f8de">DisableTimer</a> () override</td></tr>
+<tr class="memdesc:a09d575fb20dfacc879824feaf871f8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">WARNING: Doing so will most likely disable FreeRTOS. <br/></td></tr>
 <tr class="separator:a09d575fb20dfacc879824feaf871f8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0251600e6b22d7aa14b62a28d2c15f7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0251600e6b22d7aa14b62a28d2c15f7a"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetTickFrequency</b> (uint32_t frequency) override</td></tr>
+<tr class="memitem:a0251600e6b22d7aa14b62a28d2c15f7a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a0251600e6b22d7aa14b62a28d2c15f7a">SetTickFrequency</a> (uint32_t frequency) override</td></tr>
 <tr class="separator:a0251600e6b22d7aa14b62a28d2c15f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -150,6 +150,40 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4e4437cfa75e43697aeead511658268e"><td class="memItemLeft" align="right" valign="top">static IsrPointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a4e4437cfa75e43697aeead511658268e">system_timer_isr</a> = nullptr</td></tr>
 <tr class="separator:a4e4437cfa75e43697aeead511658268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0251600e6b22d7aa14b62a28d2c15f7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SystemTimer::SetTickFrequency </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>frequency</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>set the frequency that SystemTick counter will run. If it is above the maximum SystemTick value 2^24 [SysTick_LOAD_RELOAD_Msk], the value is ceiled to SysTick_LOAD_RELOAD_Msk. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if the freqency was not divisible by the clock frequency, the remainder will be returned. If the freqency supplied is less then 2Hz, the function will return without changing any hardware. If the reload value exceeds the SysTick_LOAD_RELOAD_Msk, the returned value is the SysTick_LOAD_RELOAD_Msk. </dd></dl>
+
+<p>Implements <a class="el" href="../../d0/dd0/classSystemTimerInterface.html">SystemTimerInterface</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="ace8faed9ff7cbb87ec3e5e76e44c06fc"></a>
 <div class="memitem">
