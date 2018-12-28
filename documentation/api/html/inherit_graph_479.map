@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d8/d00/classetl_1_1string__base.html" title="etl::string_base" alt="" coords="6,97,117,124"/>
-<area shape="rect" id="node2" href="$d3/df9/classetl_1_1ibasic__string.html" title="etl::ibasic_string\&lt; T \&gt;" alt="" coords="165,97,315,124"/>
-<area shape="rect" id="node3" href="$d2/d98/classetl_1_1string.html" title="etl::string\&lt; MAX_SIZE_ \&gt;" alt="" coords="368,5,541,32"/>
-<area shape="rect" id="node4" href="$d0/dc8/classetl_1_1u16string.html" title="etl::u16string\&lt; MAX\l_SIZE_ \&gt;" alt="" coords="385,57,524,98"/>
-<area shape="rect" id="node5" href="$d7/da0/classetl_1_1u32string.html" title="etl::u32string\&lt; MAX\l_SIZE_ \&gt;" alt="" coords="385,122,524,163"/>
-<area shape="rect" id="node6" href="$de/d87/classetl_1_1wstring.html" title="etl::wstring\&lt; MAX_SIZE_ \&gt;" alt="" coords="363,188,546,215"/>
-</map>

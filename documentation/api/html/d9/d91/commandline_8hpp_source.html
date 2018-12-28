@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -82,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;L2_Utilities/log.hpp&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;L4_Application/globals.hpp&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d68/vector_8h.html">third_party/etl/vector.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;third_party/etl/vector.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;third_party/microrl/microrl.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d02/classCommandInterface.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d02/classCommandInterface.html">CommandInterface</a></div>
@@ -166,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> kNumberOfCommands;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="../../d0/d49/classetl_1_1vector.html">etl::vector&lt;CommandInterface *, kNumberOfCommands&gt;</a> commands;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  etl::vector&lt;CommandInterface *, kNumberOfCommands&gt; commands;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">namespace </span>command</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
@@ -296,22 +295,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">nullptr</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  };</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="../../dd/d99/structmicrorl__t.html">microrl_t</a> rl_;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  microrl_t rl_;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordtype">size_t</span> command_position_;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">bool</span> initialized_;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="../../d9/d71/classCommand.html">Command</a> quit_;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="../../d9/d71/classCommand.html">Command</a> list_;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;};</div>
-<div class="ttc" id="structmicrorl__t_html"><div class="ttname"><a href="../../dd/d99/structmicrorl__t.html">microrl_t</a></div><div class="ttdef"><b>Definition:</b> microrl.h:69</div></div>
 <div class="ttc" id="classCommandLine_html_a1de508cf6515128fb9d3d8f2f2d64bd3"><div class="ttname"><a href="../../dd/d02/classCommandLine.html#a1de508cf6515128fb9d3d8f2f2d64bd3">CommandLine::WaitForInput</a></div><div class="ttdeci">void WaitForInput()</div><div class="ttdef"><b>Definition:</b> commandline.hpp:187</div></div>
 <div class="ttc" id="classCommand_html_a825c7da8253a22ca7af9243b06549ec4"><div class="ttname"><a href="../../d9/d71/classCommand.html#a825c7da8253a22ca7af9243b06549ec4">Command::Command</a></div><div class="ttdeci">constexpr Command(const char *name, const char *description, CommandSignature program=DoNothingCommand)</div><div class="ttdef"><b>Definition:</b> commandline.hpp:77</div></div>
 <div class="ttc" id="classCommandLine_html_aab41d0d20d848ed40ca585584f23170a"><div class="ttname"><a href="../../dd/d02/classCommandLine.html#aab41d0d20d848ed40ca585584f23170a">CommandLine::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Call this to initialie the command line. </div><div class="ttdef"><b>Definition:</b> commandline.hpp:161</div></div>
 <div class="ttc" id="classCommandLine_html"><div class="ttname"><a href="../../dd/d02/classCommandLine.html">CommandLine</a></div><div class="ttdef"><b>Definition:</b> commandline.hpp:146</div></div>
 <div class="ttc" id="structCommandList__t_html"><div class="ttname"><a href="../../dd/d93/structCommandList__t.html">CommandList_t</a></div><div class="ttdef"><b>Definition:</b> commandline.hpp:111</div></div>
 <div class="ttc" id="classCommand_html_aa85aa6f2ed8d697378e1ffe04bc01f71"><div class="ttname"><a href="../../d9/d71/classCommand.html#aa85aa6f2ed8d697378e1ffe04bc01f71">Command::Program</a></div><div class="ttdeci">int Program(int argc, const char *const argv[]) override</div><div class="ttdef"><b>Definition:</b> commandline.hpp:92</div></div>
-<div class="ttc" id="classetl_1_1vector_html"><div class="ttname"><a href="../../d0/d49/classetl_1_1vector.html">etl::vector&lt; CommandInterface *, kNumberOfCommands &gt;</a></div></div>
 <div class="ttc" id="classCommandInterface_html_aa2e6c3d2ffbe9527106a02488a304bb4"><div class="ttname"><a href="../../dc/d02/classCommandInterface.html#aa2e6c3d2ffbe9527106a02488a304bb4">CommandInterface::Program</a></div><div class="ttdeci">virtual int Program(int argc, const char *const argv[])=0</div></div>
-<div class="ttc" id="vector_8h_html"><div class="ttname"><a href="../../d6/d68/vector_8h.html">vector.h</a></div></div>
 <div class="ttc" id="classCommandInterface_html"><div class="ttname"><a href="../../dc/d02/classCommandInterface.html">CommandInterface</a></div><div class="ttdoc">CommandInterface is the set of methods that every command must support. </div><div class="ttdef"><b>Definition:</b> commandline.hpp:12</div></div>
 <div class="ttc" id="classCommand_html"><div class="ttname"><a href="../../d9/d71/classCommand.html">Command</a></div><div class="ttdef"><b>Definition:</b> commandline.hpp:67</div></div>
 <div class="ttc" id="classCommandInterface_html_a19b65ed06e8478e9e9c99b93a6472cee"><div class="ttname"><a href="../../dc/d02/classCommandInterface.html#a19b65ed06e8478e9e9c99b93a6472cee">CommandInterface::AutoComplete</a></div><div class="ttdeci">virtual int AutoComplete([[maybe_unused]] int argc, [[maybe_unused]] const char *const argv[], [[maybe_unused]] const char *completion_array[], [[maybe_unused]] const size_t kCompletionArrayLength)</div><div class="ttdef"><b>Definition:</b> commandline.hpp:34</div></div>

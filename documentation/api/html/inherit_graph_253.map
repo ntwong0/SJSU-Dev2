@@ -1,4 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d4/dc2/structetl_1_1integral__constant.html" title="etl::integral_constant\l\&lt; bool, is_arithmetic\l\&lt; T \&gt;::value\|\|is_void\&lt;\l T \&gt;::value\|\|is_same\&lt; std\l::nullptr_t, remove_cv\&lt; T\l \&gt;::type \&gt;::value \&gt;" alt="" coords="5,5,176,105"/>
-<area shape="rect" id="node2" href="$dc/db9/structetl_1_1is__fundamental.html" title="etl::is_fundamental\&lt; T \&gt;" alt="" coords="225,41,389,68"/>
-</map>

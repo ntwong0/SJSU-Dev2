@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -84,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,13 +104,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d9/d91/commandline_8hpp_source.html">commandline.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for CommandList_t&lt; kNumberOfCommands &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../db/d2e/structCommandList__t__coll__graph.png" border="0" usemap="#CommandList__t_3_01kNumberOfCommands_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="CommandList__t_3_01kNumberOfCommands_01_4_coll__map" id="CommandList__t_3_01kNumberOfCommands_01_4_coll__map">
-<area shape="rect" id="node2" href="../../d0/d49/classetl_1_1vector.html" title="etl::vector\&lt; CommandInterface\l *, kNumberOfCommands \&gt;" alt="" coords="17,161,220,202"/><area shape="rect" id="node3" href="../../db/d9d/classetl_1_1ivector.html" title="etl::ivector\&lt; CommandInterface * \&gt;" alt="" coords="5,83,232,109"/><area shape="rect" id="node4" href="../../d0/d91/classetl_1_1vector__base.html" title="etl::vector_base" alt="" coords="61,5,176,32"/></map>
-<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -122,7 +114,7 @@ constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:addf89c7204c429a55d654860585bc51f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addf89c7204c429a55d654860585bc51f"></a>
-<a class="el" href="../../d0/d49/classetl_1_1vector.html">etl::vector</a>&lt; <a class="el" href="../../dc/d02/classCommandInterface.html">CommandInterface</a> <br class="typebreak"/>
+etl::vector&lt; <a class="el" href="../../dc/d02/classCommandInterface.html">CommandInterface</a> <br class="typebreak"/>
 *, kNumberOfCommands &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>commands</b></td></tr>
 <tr class="separator:addf89c7204c429a55d654860585bc51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

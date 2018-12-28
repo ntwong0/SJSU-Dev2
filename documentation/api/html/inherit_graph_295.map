@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dd/d8a/classetl_1_1ireference__flat__set.html" title="etl::ireference_flat\l_set\&lt; T, TCompare \&gt;" alt="" coords="6,5,154,46"/>
-<area shape="rect" id="node2" href="$df/dc5/classetl_1_1iflat__set.html" title="etl::iflat_set\&lt; T,\l TCompare \&gt;" alt="" coords="203,5,317,46"/>
-<area shape="rect" id="node3" href="$da/de9/classetl_1_1flat__set.html" title="etl::flat_set\&lt; T, MAX\l_SIZE_, TCompare \&gt;" alt="" coords="365,5,512,46"/>
-</map>

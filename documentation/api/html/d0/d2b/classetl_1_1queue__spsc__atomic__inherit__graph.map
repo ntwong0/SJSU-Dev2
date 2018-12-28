@@ -1,4 +1,0 @@
-<map id="etl::queue_spsc_atomic&lt; T, SIZE, MEMORY_MODEL &gt;" name="etl::queue_spsc_atomic&lt; T, SIZE, MEMORY_MODEL &gt;">
-<area shape="rect" id="node2" href="$dc/d3b/classetl_1_1iqueue__spsc__atomic.html" title="This is the base for all queue_spscs that contain a particular type. " alt="" coords="24,97,200,138"/>
-<area shape="rect" id="node3" href="$d1/d60/classetl_1_1queue__spsc__atomic__base.html" title="etl::queue_spsc_atomic\l_base\&lt; MEMORY_MODEL \&gt;" alt="" coords="15,6,209,47"/>
-</map>

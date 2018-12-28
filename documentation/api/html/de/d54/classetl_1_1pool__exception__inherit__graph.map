@@ -1,6 +1,0 @@
-<map id="etl::pool_exception" name="etl::pool_exception">
-<area shape="rect" id="node3" href="$dc/dd5/classetl_1_1pool__element__size.html" title="etl::pool_element_size" alt="" coords="5,163,157,189"/>
-<area shape="rect" id="node4" href="$d8/d1d/classetl_1_1pool__no__allocation.html" title="etl::pool_no_allocation" alt="" coords="182,163,332,189"/>
-<area shape="rect" id="node5" href="$da/d60/classetl_1_1pool__object__not__in__pool.html" title="etl::pool_object_not\l_in_pool" alt="" coords="357,155,491,197"/>
-<area shape="rect" id="node2" href="$dd/d6a/classetl_1_1exception.html" title="etl::exception" alt="" coords="207,5,307,32"/>
-</map>

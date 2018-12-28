@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d1/d60/classetl_1_1queue__spsc__atomic__base.html" title="etl::queue_spsc_atomic\l_base\&lt; MEMORY_MODEL \&gt;" alt="" coords="5,5,200,46"/>
-<area shape="rect" id="node2" href="$dc/d3b/classetl_1_1iqueue__spsc__atomic.html" title="This is the base for all queue_spscs that contain a particular type. " alt="" coords="248,5,424,46"/>
-<area shape="rect" id="node3" href="$dc/d3b/classetl_1_1queue__spsc__atomic.html" title="etl::queue_spsc_atomic\l\&lt; T, SIZE, MEMORY_MODEL \&gt;" alt="" coords="473,5,687,46"/>
-</map>

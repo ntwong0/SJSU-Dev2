@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['jenkins',['jenkins',['../d9/d6c/classetl_1_1jenkins.html',1,'etl']]],
-  ['jenkins_5fpolicy',['jenkins_policy',['../d0/d52/structetl_1_1jenkins__policy.html',1,'etl']]]
+  ['nvic_5ftype',['NVIC_Type',['../d9/deb/structNVIC__Type.html',1,'']]]
 ];

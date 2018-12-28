@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -84,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,7 +119,7 @@ Collaboration diagram for rtos::Task&lt; kStackSize &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d4b/classrtos_1_1Task__coll__graph.png" border="0" usemap="#rtos_1_1Task_3_01kStackSize_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="rtos_1_1Task_3_01kStackSize_01_4_coll__map" id="rtos_1_1Task_3_01kStackSize_01_4_coll__map">
-<area shape="rect" id="node2" href="../../d4/d33/classrtos_1_1TaskInterface.html" title="rtos::TaskInterface" alt="" coords="5,96,136,123"/><area shape="rect" id="node3" href="../../d7/d29/structxSTATIC__TCB.html" title="xSTATIC_TCB" alt="" coords="161,96,271,123"/><area shape="rect" id="node4" href="../../d3/d07/structxSTATIC__LIST__ITEM.html" title="xSTATIC_LIST_ITEM" alt="" coords="141,5,291,32"/></map>
+<area shape="rect" id="node2" href="../../d4/d33/classrtos_1_1TaskInterface.html" title="rtos::TaskInterface" alt="" coords="25,5,156,32"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -156,7 +155,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHandle</b> (TaskHa
 TaskHandle_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetHandle</b> () override</td></tr>
 <tr class="separator:a1a4ecd8e27636619f786405a6f670d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e7cbc1cddead225cac29aa75cd5577"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78e7cbc1cddead225cac29aa75cd5577"></a>
-<a class="el" href="../../d7/d29/structxSTATIC__TCB.html">StaticTask_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTaskBuffer</b> () override</td></tr>
+StaticTask_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTaskBuffer</b> () override</td></tr>
 <tr class="separator:a78e7cbc1cddead225cac29aa75cd5577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a80180920bd5d0dc8f8b8ff5b4b7c43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a80180920bd5d0dc8f8b8ff5b4b7c43"></a>
 StackType_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetStack</b> () override</td></tr>
@@ -196,7 +195,7 @@ TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>handle_</b></
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>delay_time_</b></td></tr>
 <tr class="separator:aa6b91a9e139e06c6c46087cf2c943d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e666dd6ae87a78edd92a41b2f709821"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e666dd6ae87a78edd92a41b2f709821"></a>
-<a class="el" href="../../d7/d29/structxSTATIC__TCB.html">StaticTask_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>task_buffer_</b></td></tr>
+StaticTask_t&#160;</td><td class="memItemRight" valign="bottom"><b>task_buffer_</b></td></tr>
 <tr class="separator:a1e666dd6ae87a78edd92a41b2f709821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a506f8c604f2f8cecb0452d1145263c9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a506f8c604f2f8cecb0452d1145263c9c"></a>
 StackType_t&#160;</td><td class="memItemRight" valign="bottom"><b>stack_</b> [kStackSize]</td></tr>

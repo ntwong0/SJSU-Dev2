@@ -1,6 +1,0 @@
-<map id="etl::fsm_exception" name="etl::fsm_exception">
-<area shape="rect" id="node3" href="$d0/d76/classetl_1_1fsm__null__state__exception.html" title="Exception for null state pointer. " alt="" coords="361,5,490,46"/>
-<area shape="rect" id="node4" href="$d2/d70/classetl_1_1fsm__state__id__exception.html" title="Exception for invalid state id. " alt="" coords="334,71,517,97"/>
-<area shape="rect" id="node5" href="$d8/dae/classetl_1_1fsm__state__list__exception.html" title="Exception for incompatible state list. " alt="" coords="362,122,489,163"/>
-<area shape="rect" id="node2" href="$dd/d6a/classetl_1_1exception.html" title="etl::exception" alt="" coords="6,71,106,97"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d5/d97/classetl_1_1ifunction_3_01void_01_4.html" title="etl::ifunction\&lt; void \&gt;" alt="" coords="5,136,147,163"/>
-<area shape="rect" id="node2" href="$d1/d07/classetl_1_1function_3_01TObject_00_01void_01_4.html" title="etl::function\&lt; TObject,\l void \&gt;" alt="" coords="211,5,363,46"/>
-<area shape="rect" id="node3" href="$d9/d78/classetl_1_1function_3_01void_00_01void_01_4.html" title="etl::function\&lt; void,\l void \&gt;" alt="" coords="221,70,352,111"/>
-<area shape="rect" id="node4" href="$d5/d84/classetl_1_1function__fv.html" title="etl::function_fv\&lt; Function \&gt;" alt="" coords="195,136,378,163"/>
-<area shape="rect" id="node5" href="$de/d6d/classetl_1_1function__imv.html" title="etl::function_imv\&lt;\l TObject, Instance,\l Function \&gt;" alt="" coords="219,187,354,243"/>
-<area shape="rect" id="node6" href="$d9/d2e/classetl_1_1function__mv.html" title="etl::function_mv\&lt; TObject,\l Function \&gt;" alt="" coords="198,266,375,307"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="etl::scheduler_exception" name="etl::scheduler_exception">
-<area shape="rect" id="node3" href="$d5/d23/classetl_1_1scheduler__no__tasks__exception.html" title="&#39;No tasks&#39; exception. " alt="" coords="367,5,527,46"/>
-<area shape="rect" id="node4" href="$d5/dcf/classetl_1_1scheduler__null__task__exception.html" title="&#39;Null tasks&#39; exception. " alt="" coords="383,70,510,111"/>
-<area shape="rect" id="node5" href="$d1/de8/classetl_1_1scheduler__too__many__tasks__exception.html" title="&#39;Too many tasks&#39; exception. " alt="" coords="365,135,528,177"/>
-<area shape="rect" id="node2" href="$dd/d6a/classetl_1_1exception.html" title="etl::exception" alt="" coords="6,77,106,104"/>
-</map>
