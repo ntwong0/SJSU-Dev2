@@ -1,4 +1,6 @@
 <map id="I2c" name="I2c">
-<area shape="rect" id="node2" href="$de/d73/classI2cInterface.html" title="I2cInterface" alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node3" href="$d8/d12/structLPC__I2C__TypeDef.html" title="LPC_I2C_TypeDef" alt="" coords="120,5,253,32"/>
+<area shape="rect" id="node2" href="$de/d73/classI2cInterface.html" title="I2cInterface" alt="" coords="5,83,101,109"/>
+<area shape="rect" id="node3" href="$da/da0/classPin.html" title="Pin" alt="" coords="209,83,250,109"/>
+<area shape="rect" id="node4" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="129,5,226,32"/>
+<area shape="rect" id="node5" href="$d8/d12/structLPC__I2C__TypeDef.html" title="LPC_I2C_TypeDef" alt="" coords="273,83,404,109"/>
 </map>

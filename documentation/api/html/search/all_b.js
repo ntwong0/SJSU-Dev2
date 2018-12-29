@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['misra_2dc_3a2004_20compliance_20exceptions',['MISRA-C:2004 Compliance Exceptions',['../d1/d92/CMSIS_MISRA_Exceptions.html',1,'']]],
+  ['misra_2dc_3a2004_20compliance_20exceptions',['MISRA-C:2004 Compliance Exceptions',['../CMSIS_MISRA_Exceptions.html',1,'']]],
   ['mask0',['MASK0',['../d8/d12/structLPC__I2C__TypeDef.html#a2dbe9cd48d1a0b7efa8175a9b66c1af4',1,'LPC_I2C_TypeDef::MASK0()'],['../d5/db5/structDWT__Type.html#a821eb5e71f340ec077efc064cfc567db',1,'DWT_Type::MASK0()']]],
   ['mask1',['MASK1',['../d8/d12/structLPC__I2C__TypeDef.html#a8d9d4bb3ddf1de0ffdf8d9fb42488ad1',1,'LPC_I2C_TypeDef::MASK1()'],['../d5/db5/structDWT__Type.html#aabf94936c9340e62fed836dcfb152405',1,'DWT_Type::MASK1()']]],
   ['mask2',['MASK2',['../d8/d12/structLPC__I2C__TypeDef.html#a812c5823d41baf9e0ae59dc229994819',1,'LPC_I2C_TypeDef::MASK2()'],['../d5/db5/structDWT__Type.html#a00ac4d830dfe0070a656cda9baed170f',1,'DWT_Type::MASK2()']]],

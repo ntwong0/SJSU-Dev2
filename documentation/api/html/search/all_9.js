@@ -2,7 +2,7 @@ var searchData=
 [
   ['itm_20functions',['ITM Functions',['../da/d30/group__CMSIS__core__DebugFunctions.html',1,'']]],
   ['instrumentation_20trace_20macrocell_20_28itm_29',['Instrumentation Trace Macrocell (ITM)',['../d7/d2e/group__CMSIS__ITM.html',1,'']]],
-  ['i2c',['I2c',['../d0/d6f/classI2c.html',1,'']]],
+  ['i2c',['I2c',['../d0/d6f/classI2c.html',1,'I2c'],['../d0/d6f/classI2c.html#ace077f6dbb5c145eb7db5d7739c7630f',1,'I2c::I2c()']]],
   ['i2ccommand',['I2cCommand',['../de/dab/classI2cCommand.html',1,'']]],
   ['i2cdevice',['I2cDevice',['../dc/d1b/classI2cDevice.html',1,'']]],
   ['i2cdevice_3c_26i2c_2c_200x39_2c_20device_3a_3aendian_3a_3aklittle_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['I2cDevice&lt;&amp;i2c, 0x39, device::Endian::kLittle, Apds9960Interface::MemoryMap_t &gt;',['../dc/d1b/classI2cDevice.html',1,'']]],
