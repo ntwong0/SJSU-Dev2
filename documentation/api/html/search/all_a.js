@@ -5,6 +5,7 @@ var searchData=
   ['lcr',['LCR',['../d9/d2d/structLPC__UART4__TypeDef.html#a1a405b88dfe980973027f7f9273b37b7',1,'LPC_UART4_TypeDef']]],
   ['ler',['LER',['../dc/dbf/structLPC__PWM__TypeDef.html#a66870e1624cc34e666a6028d4b90bd1c',1,'LPC_PWM_TypeDef']]],
   ['load',['LOAD',['../d5/d2b/structSysTick__Type.html#a4780a489256bb9f54d0ba8ed4de191cd',1,'SysTick_Type']]],
+  ['lpc40xxsystemcontroller',['Lpc40xxSystemController',['../df/d59/classLpc40xxSystemController.html',1,'']]],
   ['lpc_5fadc_5ftypedef',['LPC_ADC_TypeDef',['../d3/d95/structLPC__ADC__TypeDef.html',1,'']]],
   ['lpc_5fcan_5ftypedef',['LPC_CAN_TypeDef',['../d1/dba/structLPC__CAN__TypeDef.html',1,'']]],
   ['lpc_5fcanaf_5fram_5ftypedef',['LPC_CANAF_RAM_TypeDef',['../df/dc2/structLPC__CANAF__RAM__TypeDef.html',1,'']]],

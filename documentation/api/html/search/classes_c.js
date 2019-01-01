@@ -7,8 +7,6 @@ var searchData=
   ['sspinterface',['SspInterface',['../d2/d6f/classSspInterface.html',1,'']]],
   ['st7066u',['St7066u',['../d2/db0/classSt7066u.html',1,'']]],
   ['st7066uinterface',['St7066uInterface',['../d9/d2b/classSt7066uInterface.html',1,'']]],
-  ['systemclock',['SystemClock',['../d9/d77/classSystemClock.html',1,'']]],
-  ['systemclockinterface',['SystemClockInterface',['../d1/d78/classSystemClockInterface.html',1,'']]],
   ['systemtimer',['SystemTimer',['../d7/da6/classSystemTimer.html',1,'']]],
   ['systemtimerinterface',['SystemTimerInterface',['../d0/dd0/classSystemTimerInterface.html',1,'']]],
   ['systick_5ftype',['SysTick_Type',['../d5/d2b/structSysTick__Type.html',1,'']]]

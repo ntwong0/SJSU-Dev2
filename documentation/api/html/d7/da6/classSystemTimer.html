@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d7/d11/classSystemTimer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -112,6 +113,7 @@ Inheritance diagram for SystemTimer:</div>
 <div class="center"><img src="../../d9/d1a/classSystemTimer__inherit__graph.png" border="0" usemap="#SystemTimer_inherit__map" alt="Inheritance graph"/></div>
 <map name="SystemTimer_inherit__map" id="SystemTimer_inherit__map">
 <area shape="rect" id="node2" href="../../d0/dd0/classSystemTimerInterface.html" title="SystemTimerInterface" alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node3" href="../../df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="193,5,378,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -119,8 +121,10 @@ Collaboration diagram for SystemTimer:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/df2/classSystemTimer__coll__graph.png" border="0" usemap="#SystemTimer_coll__map" alt="Collaboration graph"/></div>
 <map name="SystemTimer_coll__map" id="SystemTimer_coll__map">
-<area shape="rect" id="node2" href="../../d0/dd0/classSystemTimerInterface.html" title="SystemTimerInterface" alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node3" href="../../d5/d2b/structSysTick__Type.html" title="Structure type to access the System Timer (SysTick). " alt="" coords="192,5,296,32"/>
+<area shape="rect" id="node2" href="../../d0/dd0/classSystemTimerInterface.html" title="SystemTimerInterface" alt="" coords="5,95,168,121"/>
+<area shape="rect" id="node3" href="../../df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="193,95,378,121"/>
+<area shape="rect" id="node4" href="../../df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="221,5,349,32"/>
+<area shape="rect" id="node5" href="../../d5/d2b/structSysTick__Type.html" title="Structure type to access the System Timer (SysTick). " alt="" coords="403,95,507,121"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -141,12 +145,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIsrFunction</b> (I
 <tr class="memitem:aa7969a9fcb400cd63bc43ea431a4998f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7969a9fcb400cd63bc43ea431a4998f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>StartTimer</b> () override</td></tr>
 <tr class="separator:aa7969a9fcb400cd63bc43ea431a4998f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d575fb20dfacc879824feaf871f8de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d575fb20dfacc879824feaf871f8de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a09d575fb20dfacc879824feaf871f8de">DisableTimer</a> () override</td></tr>
-<tr class="memdesc:a09d575fb20dfacc879824feaf871f8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">WARNING: Doing so will most likely disable FreeRTOS. <br /></td></tr>
-<tr class="separator:a09d575fb20dfacc879824feaf871f8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0251600e6b22d7aa14b62a28d2c15f7a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a0251600e6b22d7aa14b62a28d2c15f7a">SetTickFrequency</a> (uint32_t frequency) override</td></tr>
 <tr class="separator:a0251600e6b22d7aa14b62a28d2c15f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6a6d2fa2d917a16012a4d5d005fbc31b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a6d2fa2d917a16012a4d5d005fbc31b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a6a6d2fa2d917a16012a4d5d005fbc31b">DisableTimer</a> ()</td></tr>
+<tr class="memdesc:a6a6d2fa2d917a16012a4d5d005fbc31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">WARNING: Doing so will most likely disable FreeRTOS. <br /></td></tr>
+<tr class="separator:a6a6d2fa2d917a16012a4d5d005fbc31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad279fa5c92bdb4523a5d6adfbb5b1ee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad279fa5c92bdb4523a5d6adfbb5b1ee2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SystemTimerHandler</b> ()</td></tr>
+<tr class="separator:ad279fa5c92bdb4523a5d6adfbb5b1ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -154,6 +164,152 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ace8faed9ff7cbb87ec3e5e76e44c06fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e4437cfa75e43697aeead511658268e"><td class="memItemLeft" align="right" valign="top">static IsrPointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSystemTimer.html#a4e4437cfa75e43697aeead511658268e">system_timer_isr</a> = nullptr</td></tr>
 <tr class="separator:a4e4437cfa75e43697aeead511658268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_classLpc40xxSystemController"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classLpc40xxSystemController')"><img src="../../closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="../../df/d59/classLpc40xxSystemController.html">Lpc40xxSystemController</a></td></tr>
+<tr class="memitem:ac4dfd765063446e8fbfcef03cf38f46a inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4dfd765063446e8fbfcef03cf38f46a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UsbSource</b> : uint16_t { <b>kBaseClock</b> = (0b00 &lt;&lt; 8), 
+<b>kMainPllClock</b> = (0b01 &lt;&lt; 8), 
+<b>kALternatePllClock</b> = (0b10 &lt;&lt; 8)
+ }</td></tr>
+<tr class="separator:ac4dfd765063446e8fbfcef03cf38f46a inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768af674629d57cab23e5af92f9c11ec inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a768af674629d57cab23e5af92f9c11ec"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SpifiSource</b> : uint16_t { <b>kBaseClock</b> = (0b00 &lt;&lt; 8), 
+<b>kMainPllClock</b> = (0b01 &lt;&lt; 8), 
+<b>kALternatePllClock</b> = (0b10 &lt;&lt; 8)
+ }</td></tr>
+<tr class="separator:a768af674629d57cab23e5af92f9c11ec inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed17ab54c9f746639a22ddeba06a313e inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed17ab54c9f746639a22ddeba06a313e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>OscillatorSource</b> : uint16_t { <b>kIrc</b> = 0b0, 
+<b>kMain</b> = 0b1
+ }</td></tr>
+<tr class="separator:aed17ab54c9f746639a22ddeba06a313e inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790c14c08dbd7180ddb1764414fdcd51 inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a790c14c08dbd7180ddb1764414fdcd51"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MainClockSource</b> : uint16_t { <b>kBaseClock</b> = (0b0 &lt;&lt; 8), 
+<b>kPllClock</b> = (0b1 &lt;&lt; 8)
+ }</td></tr>
+<tr class="separator:a790c14c08dbd7180ddb1764414fdcd51 inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27502d1494ae66d1db7a6513d8fc2f42 inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27502d1494ae66d1db7a6513d8fc2f42"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PllInput</b> : uint16_t { <b>kIrc</b> = 12, 
+<b>kF12MHz</b> = 12, 
+<b>kF16MHz</b> = 16, 
+<b>kF24MHz</b> = 24
+ }</td></tr>
+<tr class="separator:a27502d1494ae66d1db7a6513d8fc2f42 inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661d1098a710cb48ee2330cd2f9f33e5 inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a661d1098a710cb48ee2330cd2f9f33e5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>EmcDivider</b> : uint8_t { <b>kSameSpeedAsCpu</b>, 
+<b>kHalfTheSpeedOfCpu</b>
+ }</td></tr>
+<tr class="separator:a661d1098a710cb48ee2330cd2f9f33e5 inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb946f23e9cbef0cd5639a07b27f070 inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb946f23e9cbef0cd5639a07b27f070"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PeripheralPowerUp</b> : uint8_t { <br />
+&#160;&#160;<b>kLcd</b> = 0, 
+<b>kTimer0</b>, 
+<b>kTimer1</b>, 
+<b>kUart0</b>, 
+<br />
+&#160;&#160;<b>kUart1</b>, 
+<b>kPwm0</b>, 
+<b>kPwm1</b>, 
+<b>kI2c0</b>, 
+<br />
+&#160;&#160;<b>kUart4</b>, 
+<b>kRtc</b>, 
+<b>kSsp1</b>, 
+<b>kEmc</b>, 
+<br />
+&#160;&#160;<b>kAdc</b>, 
+<b>kCan1</b>, 
+<b>kCan2</b>, 
+<b>kGpio</b>, 
+<br />
+&#160;&#160;<b>kSpifi</b>, 
+<b>kMotorControlPwm</b>, 
+<b>kQuadratureEncoderInterface</b>, 
+<b>kI2c1</b>, 
+<br />
+&#160;&#160;<b>kSsp2</b>, 
+<b>kSsp0</b>, 
+<b>kTimer2</b>, 
+<b>kTimer3</b>, 
+<br />
+&#160;&#160;<b>kUart2</b>, 
+<b>kUart3</b>, 
+<b>kI2c2</b>, 
+<b>kI2s</b>, 
+<br />
+&#160;&#160;<b>kSdCard</b>, 
+<b>kGpdma</b>, 
+<b>kEthernetBlock</b>, 
+<b>kUsb</b>
+<br />
+ }</td></tr>
+<tr class="separator:aefb946f23e9cbef0cd5639a07b27f070 inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35c813e975af72213f49b9d0c919678 inherit pro_types_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab35c813e975af72213f49b9d0c919678"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UsbDivider</b> : uint8_t { <b>kDivideBy1</b> = 0, 
+<b>kDivideBy2</b>, 
+<b>kDivideBy3</b>, 
+<b>kDivideBy4</b>
+ }</td></tr>
+<tr class="separator:ab35c813e975af72213f49b9d0c919678 inherit pro_types_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classLpc40xxSystemController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classLpc40xxSystemController')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../df/d59/classLpc40xxSystemController.html">Lpc40xxSystemController</a></td></tr>
+<tr class="memitem:a8d08c37aa404e5b5c29a5e8ba729c245 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d08c37aa404e5b5c29a5e8ba729c245"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetClockFrequency</b> (uint8_t frequency_in_mhz)</td></tr>
+<tr class="separator:a8d08c37aa404e5b5c29a5e8ba729c245 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa79344ebde5c9f5317a817542835a973"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralClockDivider</b> (uint8_t peripheral_divider)</td></tr>
+<tr class="separator:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2557a2f41c0166207fb8eb37bc90bea0"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockFrequency</b> ()</td></tr>
+<tr class="separator:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9267af16b6b3a680cc0647f844b72a27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PowerUpPeripheral</b> (PeripheralPowerUp peripheral_select)</td></tr>
+<tr class="separator:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e5ece039e3149c8713649a6f68cacd inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e5ece039e3149c8713649a6f68cacd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PowerDownPeripheral</b> (PeripheralPowerUp peripheral_select)</td></tr>
+<tr class="separator:a53e5ece039e3149c8713649a6f68cacd inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classLpc40xxSystemController"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classLpc40xxSystemController')"><img src="../../closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="../../df/d59/classLpc40xxSystemController.html">Lpc40xxSystemController</a></td></tr>
+<tr class="memitem:adc380d0ae71796c2585e62a15f6c9b7d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc380d0ae71796c2585e62a15f6c9b7d"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kOscillatorSelect</b> = (1 &lt;&lt; 0)</td></tr>
+<tr class="separator:adc380d0ae71796c2585e62a15f6c9b7d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb19767c6b550e4bee70de07b0cee33c inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb19767c6b550e4bee70de07b0cee33c"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kBaseClockSelect</b> = (1 &lt;&lt; 8)</td></tr>
+<tr class="separator:adb19767c6b550e4bee70de07b0cee33c inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fdaf6102a25836ac6f8db81bbfa607 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56fdaf6102a25836ac6f8db81bbfa607"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kUsbClockSource</b> = (0b11 &lt;&lt; 8)</td></tr>
+<tr class="separator:a56fdaf6102a25836ac6f8db81bbfa607 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54379fee892926b1522b9d03df9b46e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab54379fee892926b1522b9d03df9b46e"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kSpifiClockSource</b> = (0b11 &lt;&lt; 8)</td></tr>
+<tr class="separator:ab54379fee892926b1522b9d03df9b46e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e0869efb8ea971ad01a23d35721667 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0e0869efb8ea971ad01a23d35721667"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kEnablePll</b> = (0b1 &lt;&lt; 0)</td></tr>
+<tr class="separator:ad0e0869efb8ea971ad01a23d35721667 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b0caa8a8cfb8977efab2318f0cdd6b inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44b0caa8a8cfb8977efab2318f0cdd6b"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kPlock</b> = 10</td></tr>
+<tr class="separator:a44b0caa8a8cfb8977efab2318f0cdd6b inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d842be2f4ac78c5691e0ebbea2988a inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65d842be2f4ac78c5691e0ebbea2988a"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDivideInputBy1</b> = 1</td></tr>
+<tr class="separator:a65d842be2f4ac78c5691e0ebbea2988a inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4013b8e927773b5ccb184bbb6c8e132 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4013b8e927773b5ccb184bbb6c8e132"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPllMultiplier</b> = (0x1f &lt;&lt; 0)</td></tr>
+<tr class="separator:aa4013b8e927773b5ccb184bbb6c8e132 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f95874fd50f3c0dafe17ec559c267e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19f95874fd50f3c0dafe17ec559c267e"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPllDivider</b> = (0b11 &lt;&lt; 5)</td></tr>
+<tr class="separator:a19f95874fd50f3c0dafe17ec559c267e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5da059b7fc9b5bc8b6d9b8a398d3c0e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5da059b7fc9b5bc8b6d9b8a398d3c0e"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearCpuDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
+<tr class="separator:ab5da059b7fc9b5bc8b6d9b8a398d3c0e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a15fc35751330adb66cf8e2134772e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1a15fc35751330adb66cf8e2134772e"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearEmcDivider</b> = (1 &lt;&lt; 0)</td></tr>
+<tr class="separator:ae1a15fc35751330adb66cf8e2134772e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ae7afea4059abf0dfc8e8d4e2c0b581"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPeripheralDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
+<tr class="separator:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbe56341b1b83688555c7d12b041411 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bbe56341b1b83688555c7d12b041411"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearUsbDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
+<tr class="separator:a6bbe56341b1b83688555c7d12b041411 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3052116694effa9550f7a42d1696b3c8 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3052116694effa9550f7a42d1696b3c8"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultIRCFrequency</b> = 12'000'000</td></tr>
+<tr class="separator:a3052116694effa9550f7a42d1696b3c8 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c40f424a3a650ea7d6bde0f0bbde243 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c40f424a3a650ea7d6bde0f0bbde243"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultTimeout</b> = 1'000</td></tr>
+<tr class="separator:a7c40f424a3a650ea7d6bde0f0bbde243 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3b1577de9f7b331f246145c1c12f5d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba3b1577de9f7b331f246145c1c12f5d"></a>
+static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>system_controller</b> = LPC_SC</td></tr>
+<tr class="separator:aba3b1577de9f7b331f246145c1c12f5d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a0251600e6b22d7aa14b62a28d2c15f7a"></a>

@@ -170,8 +170,6 @@ var searchData=
   ['sys_5ftick',['sys_tick',['../d7/da6/classSystemTimer.html#ace8faed9ff7cbb87ec3e5e76e44c06fc',1,'SystemTimer']]],
   ['system_5flpc407x_5f8x_5f177x_5f8x_2eh',['system_LPC407x_8x_177x_8x.h',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html',1,'']]],
   ['system_5ftimer_5fisr',['system_timer_isr',['../d7/da6/classSystemTimer.html#a4e4437cfa75e43697aeead511658268e',1,'SystemTimer']]],
-  ['systemclock',['SystemClock',['../d9/d77/classSystemClock.html',1,'']]],
-  ['systemclockinterface',['SystemClockInterface',['../d1/d78/classSystemClockInterface.html',1,'']]],
   ['systemcoreclock',['SystemCoreClock',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#aa3cd3e43291e81e795d642b79b6088e6',1,'system_LPC407x_8x_177x_8x.h']]],
   ['systemcoreclockupdate',['SystemCoreClockUpdate',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#ae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_LPC407x_8x_177x_8x.h']]],
   ['systeminit',['SystemInit',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#a93f514700ccf00d08dbdcff7f1224eb2',1,'startup.cpp']]],

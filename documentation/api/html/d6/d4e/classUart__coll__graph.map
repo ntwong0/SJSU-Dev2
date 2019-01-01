@@ -1,7 +1,8 @@
 <map id="Uart" name="Uart">
-<area shape="rect" id="node2" href="$d1/d3c/classUartInterface.html" title="UartInterface" alt="" coords="5,81,112,108"/>
-<area shape="rect" id="node3" href="$da/da0/classPin.html" title="Pin" alt="" coords="137,81,178,108"/>
-<area shape="rect" id="node4" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="109,5,206,32"/>
-<area shape="rect" id="node5" href="$db/d14/structLPC__UART__TypeDef.html" title="LPC_UART_TypeDef" alt="" coords="202,81,345,108"/>
-<area shape="rect" id="node6" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="369,81,497,108"/>
+<area shape="rect" id="node2" href="$d1/d3c/classUartInterface.html" title="UartInterface" alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="298,95,483,121"/>
+<area shape="rect" id="node4" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="165,5,293,32"/>
+<area shape="rect" id="node5" href="$da/da0/classPin.html" title="Pin" alt="" coords="507,95,549,121"/>
+<area shape="rect" id="node6" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="479,5,577,32"/>
+<area shape="rect" id="node7" href="$db/d14/structLPC__UART__TypeDef.html" title="LPC_UART_TypeDef" alt="" coords="573,95,715,121"/>
 </map>

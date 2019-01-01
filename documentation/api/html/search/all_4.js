@@ -18,7 +18,7 @@ var searchData=
   ['dfsr',['DFSR',['../d1/dd1/structSCB__Type.html#a191579bde0d21ff51d30a714fd887033',1,'SCB_Type']]],
   ['dhcsr',['DHCSR',['../d6/d00/structCoreDebug__Type.html#ad63554e4650da91a8e79929cbb63db66',1,'CoreDebug_Type']]],
   ['disable',['Disable',['../df/d42/classDisplayInterface.html#a0a989b84ba7ffb6990768929480514fe',1,'DisplayInterface']]],
-  ['disabletimer',['DisableTimer',['../d7/da6/classSystemTimer.html#a09d575fb20dfacc879824feaf871f8de',1,'SystemTimer']]],
+  ['disabletimer',['DisableTimer',['../d7/da6/classSystemTimer.html#a6a6d2fa2d917a16012a4d5d005fbc31b',1,'SystemTimer']]],
   ['displayinterface',['DisplayInterface',['../df/d42/classDisplayInterface.html',1,'']]],
   ['dll',['DLL',['../d9/d2d/structLPC__UART4__TypeDef.html#a3756b2ae589b406b6557d17d1e8736bd',1,'LPC_UART4_TypeDef']]],
   ['dlm',['DLM',['../d9/d2d/structLPC__UART4__TypeDef.html#a58593d36841f01114bab76ef36065055',1,'LPC_UART4_TypeDef']]],

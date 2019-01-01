@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['lpc40xxsystemcontroller',['Lpc40xxSystemController',['../df/d59/classLpc40xxSystemController.html',1,'']]],
   ['lpc_5fadc_5ftypedef',['LPC_ADC_TypeDef',['../d3/d95/structLPC__ADC__TypeDef.html',1,'']]],
   ['lpc_5fcan_5ftypedef',['LPC_CAN_TypeDef',['../d1/dba/structLPC__CAN__TypeDef.html',1,'']]],
   ['lpc_5fcanaf_5fram_5ftypedef',['LPC_CANAF_RAM_TypeDef',['../df/dc2/structLPC__CANAF__RAM__TypeDef.html',1,'']]],
