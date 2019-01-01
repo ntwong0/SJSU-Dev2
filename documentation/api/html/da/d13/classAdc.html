@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../db/d8c/classAdc-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Adc Class Reference</div>  </div>
+<div class="title">Adc Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -140,7 +140,9 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>kChannel4</b>, 
 <b>kChannel5</b>, 
 <b>kChannel6</b>, 
-<b>kChannel7</b>
+<b>kChannel7</b>, 
+<br />
+&#160;&#160;<b>kMaxNumOfPins</b>
 <br />
  }</td></tr>
 <tr class="separator:a27d7cbff963d47eee4bacdf245a76d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,16 +211,16 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>BurstMode</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1f5b76c527cea721c195ca5a0b87628c"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kAdcPorts</b> [kMaxNumOfPins]</td></tr>
-<tr class="separator:a1f5b76c527cea721c195ca5a0b87628c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae073e06528b723103d0a68685577d9e0"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kAdcPins</b> [kMaxNumOfPins]</td></tr>
-<tr class="separator:ae073e06528b723103d0a68685577d9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605aff791528335614022675d953817e"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kAdcPorts</b> [kTableLength]</td></tr>
+<tr class="separator:a605aff791528335614022675d953817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363dea90e4aab2d99724625660d7036d"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kAdcPins</b> [kTableLength]</td></tr>
+<tr class="separator:a363dea90e4aab2d99724625660d7036d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa75b08241a669e0f208626ed4ed3f95a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa75b08241a669e0f208626ed4ed3f95a"></a>
-static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kMaxNumOfPins</b> = 8</td></tr>
-<tr class="separator:aa75b08241a669e0f208626ed4ed3f95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae842b1f3ae182b77bc32bdb0fc3a6f92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae842b1f3ae182b77bc32bdb0fc3a6f92"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kTableLength</b> = util::Value(Channel::kMaxNumOfPins)</td></tr>
+<tr class="separator:ae842b1f3ae182b77bc32bdb0fc3a6f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8971fa7029eebbdbd9f0c8cf0acbf8cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8971fa7029eebbdbd9f0c8cf0acbf8cb"></a>
 static <a class="el" href="../../d3/d95/structLPC__ADC__TypeDef.html">LPC_ADC_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc_base</b> = LPC_ADC</td></tr>
 <tr class="separator:a8971fa7029eebbdbd9f0c8cf0acbf8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,28 +372,28 @@ static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_Type
 <tr class="separator:aba3b1577de9f7b331f246145c1c12f5d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae073e06528b723103d0a68685577d9e0"></a>
+<a class="anchor" id="a363dea90e4aab2d99724625660d7036d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t Adc::kAdcPins[kMaxNumOfPins]</td>
+          <td class="memname">const uint8_t Adc::kAdcPins[kTableLength]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= { kChannel0Pin, kChannel1Pin,</div><div class="line">                                            kChannel2Pin, kChannel3Pin,</div><div class="line">                                            kChannel4Pin, kChannel5Pin,</div><div class="line">                                            kChannel6Pin, kChannel7Pin }</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= { kChannel0Pin, kChannel1Pin,</div><div class="line">                                           kChannel2Pin, kChannel3Pin,</div><div class="line">                                           kChannel4Pin, kChannel5Pin,</div><div class="line">                                           kChannel6Pin, kChannel7Pin }</div></div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a1f5b76c527cea721c195ca5a0b87628c"></a>
+<a class="anchor" id="a605aff791528335614022675d953817e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t Adc::kAdcPorts[kMaxNumOfPins]</td>
+          <td class="memname">const uint8_t Adc::kAdcPorts[kTableLength]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= { kChannel0Port, kChannel1Port,</div><div class="line">                                             kChannel2Port, kChannel3Port,</div><div class="line">                                             kChannel4Port, kChannel5Port,</div><div class="line">                                             kChannel6Port, kChannel7Port }</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= { kChannel0Port, kChannel1Port,</div><div class="line">                                            kChannel2Port, kChannel3Port,</div><div class="line">                                            kChannel4Port, kChannel5Port,</div><div class="line">                                            kChannel6Port, kChannel7Port }</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

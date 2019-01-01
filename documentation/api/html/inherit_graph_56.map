@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$df/dcf/structLPC__WDT__TypeDef.html" title="LPC_WDT_TypeDef" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node1" href="$d3/dc5/classButtonInterface.html" title="ButtonInterface" alt="" coords="305,5,427,32"/>
+<area shape="rect" id="node2" href="$d1/d19/classButton.html" title="Button" alt="" coords="475,31,540,57"/>
+<area shape="rect" id="node3" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="151,31,257,57"/>
+<area shape="rect" id="node4" href="$d4/d79/classGpio.html" title="Gpio" alt="" coords="341,56,391,83"/>
+<area shape="rect" id="node5" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="5,81,103,108"/>
+<area shape="rect" id="node6" href="$da/da0/classPin.html" title="Pin" alt="" coords="183,81,225,108"/>
 </map>

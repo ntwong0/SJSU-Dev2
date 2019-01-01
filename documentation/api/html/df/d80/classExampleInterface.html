@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../dc/d18/classExampleInterface-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,20 +114,29 @@ Inheritance diagram for ExampleInterface:</div>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a78d85ced36997cea3591cd2c5ec0cc1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78d85ced36997cea3591cd2c5ec0cc1c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>InterfaceModes</b> { <b>kStartupMode</b> = 0, 
+<b>kSpecialMode</b>, 
+<b>kErrorMode</b>, 
+<b>kDestructorMode</b>
+ }</td></tr>
+<tr class="separator:a78d85ced36997cea3591cd2c5ec0cc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a41afc847609bed189975f9f781efc05e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41afc847609bed189975f9f781efc05e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()=0</td></tr>
-<tr class="separator:a41afc847609bed189975f9f781efc05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bca1feb407407986a1e29e4237eeaac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bca1feb407407986a1e29e4237eeaac"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
+<tr class="separator:a6bca1feb407407986a1e29e4237eeaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6bfe908740ac600815eebc6de524be5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6bfe908740ac600815eebc6de524be5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoSomeAction</b> ()=0</td></tr>
 <tr class="separator:ad6bfe908740ac600815eebc6de524be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fdf5bfab429e211a3af3435706f702c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fdf5bfab429e211a3af3435706f702c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SendData</b> (const uint8_t *payload, bool readback=false)=0</td></tr>
 <tr class="separator:a5fdf5bfab429e211a3af3435706f702c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e4f6bdb48128b5bc5731e24e381576"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19e4f6bdb48128b5bc5731e24e381576"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMode</b> ()=0</td></tr>
-<tr class="separator:a19e4f6bdb48128b5bc5731e24e381576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdb1ff534c7f462a2d0230debcaf9a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bdb1ff534c7f462a2d0230debcaf9a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMode</b> (InterfaceModes mode)=0</td></tr>
+<tr class="separator:a6bdb1ff534c7f462a2d0230debcaf9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../df/d6c/example__driver_8hpp_source.html">example_driver.hpp</a></li>

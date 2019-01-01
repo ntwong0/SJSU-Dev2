@@ -1,5 +1,7 @@
 <map id="Example" name="Example">
-<area shape="rect" id="node2" href="$df/d80/classExampleInterface.html" title="ExampleInterface" alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node3" href="$d0/dae/structLPC__USB__TypeDef.html" title="LPC_USB_TypeDef" alt="" coords="163,5,301,32"/>
-<area shape="rect" id="node4" href="$d1/dba/structLPC__CAN__TypeDef.html" title="LPC_CAN_TypeDef" alt="" coords="325,5,464,32"/>
+<area shape="rect" id="node2" href="$df/d80/classExampleInterface.html" title="ExampleInterface" alt="" coords="5,95,139,121"/>
+<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="163,95,349,121"/>
+<area shape="rect" id="node4" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="192,5,320,32"/>
+<area shape="rect" id="node5" href="$d0/dae/structLPC__USB__TypeDef.html" title="LPC_USB_TypeDef" alt="" coords="373,95,512,121"/>
+<area shape="rect" id="node6" href="$d1/dba/structLPC__CAN__TypeDef.html" title="LPC_CAN_TypeDef" alt="" coords="536,95,675,121"/>
 </map>

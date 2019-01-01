@@ -133,27 +133,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ace086a29ff7253fc2906a081c3d6cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ace086a29ff7253fc2906a081c3d6cb"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a2ace086a29ff7253fc2906a081c3d6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4dc5ed971aa12749e8f8922b470fe7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4dc5ed971aa12749e8f8922b470fe7d"></a>
-virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (uint8_t address, uint8_t *destination, size_t length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
-<tr class="separator:ab4dc5ed971aa12749e8f8922b470fe7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550cb73cf736c3e57f9b2d68264f4500"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a550cb73cf736c3e57f9b2d68264f4500"></a>
-virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, const uint8_t *destination, size_t length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
-<tr class="separator:a550cb73cf736c3e57f9b2d68264f4500"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572114ed1cfcbb89d6013fcce0bac87e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a572114ed1cfcbb89d6013fcce0bac87e"></a>
-virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, const uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)=0</td></tr>
-<tr class="separator:a572114ed1cfcbb89d6013fcce0bac87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a728dc3a1cffc1b208070deb9b6915fc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728dc3a1cffc1b208070deb9b6915fc6"></a>
-Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; transmit, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kDefaultTimeout)</td></tr>
-<tr class="separator:a728dc3a1cffc1b208070deb9b6915fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca6bd57834889030db93092127276e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abca6bd57834889030db93092127276e2"></a>
-Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; data, uint32_t timeout=kDefaultTimeout)</td></tr>
-<tr class="separator:abca6bd57834889030db93092127276e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611e33760929496db64647515dc41d6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a611e33760929496db64647515dc41d6d"></a>
+virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (uint8_t address, uint8_t *destination, size_t length, uint32_t timeout=kI2cTimeout)=0</td></tr>
+<tr class="separator:a611e33760929496db64647515dc41d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe91755b217a752fdf4f5b510ac374bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe91755b217a752fdf4f5b510ac374bc"></a>
+virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, const uint8_t *destination, size_t length, uint32_t timeout=kI2cTimeout)=0</td></tr>
+<tr class="separator:afe91755b217a752fdf4f5b510ac374bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2912a0b1e18cac405663698431824f22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2912a0b1e18cac405663698431824f22"></a>
+virtual Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, const uint8_t *transmit, size_t out_length, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kI2cTimeout)=0</td></tr>
+<tr class="separator:a2912a0b1e18cac405663698431824f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd47b85b91f3808dc6f8748cb170392"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdd47b85b91f3808dc6f8748cb170392"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>WriteThenRead</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; transmit, uint8_t *recieve, size_t recieve_length, uint32_t timeout=kI2cTimeout)</td></tr>
+<tr class="separator:acdd47b85b91f3808dc6f8748cb170392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00a9332a00ea2ebe58ec5ae43d59559"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac00a9332a00ea2ebe58ec5ae43d59559"></a>
+Status&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint8_t address, std::initializer_list&lt; uint8_t &gt; data, uint32_t timeout=kI2cTimeout)</td></tr>
+<tr class="separator:ac00a9332a00ea2ebe58ec5ae43d59559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9ff9af37ab1a97f637626839e153238b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ff9af37ab1a97f637626839e153238b"></a>
-static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultTimeout</b> = 1000</td></tr>
-<tr class="separator:a9ff9af37ab1a97f637626839e153238b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90205ef56659f59528be308f0e3f8f79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90205ef56659f59528be308f0e3f8f79"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kI2cTimeout</b> = 1000</td></tr>
+<tr class="separator:a90205ef56659f59528be308f0e3f8f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../db/d1c/i2c_8hpp_source.html">i2c.hpp</a></li>

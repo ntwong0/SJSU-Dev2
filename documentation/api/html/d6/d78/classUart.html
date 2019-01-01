@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d8/d43/classUart-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Uart Class Reference</div>  </div>
+<div class="title">Uart Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -122,11 +122,11 @@ Collaboration diagram for Uart:</div>
 <div class="center"><img src="../../d6/d4e/classUart__coll__graph.png" border="0" usemap="#Uart_coll__map" alt="Collaboration graph"/></div>
 <map name="Uart_coll__map" id="Uart_coll__map">
 <area shape="rect" id="node2" href="../../d1/d3c/classUartInterface.html" title="UartInterface" alt="" coords="5,95,112,121"/>
-<area shape="rect" id="node3" href="../../df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="298,95,483,121"/>
+<area shape="rect" id="node3" href="../../df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="137,95,322,121"/>
 <area shape="rect" id="node4" href="../../df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="165,5,293,32"/>
-<area shape="rect" id="node5" href="../../da/da0/classPin.html" title="Pin" alt="" coords="507,95,549,121"/>
-<area shape="rect" id="node6" href="../../d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="479,5,577,32"/>
-<area shape="rect" id="node7" href="../../db/d14/structLPC__UART__TypeDef.html" title="LPC_UART_TypeDef" alt="" coords="573,95,715,121"/>
+<area shape="rect" id="node5" href="../../da/da0/classPin.html" title="Pin" alt="" coords="346,95,387,121"/>
+<area shape="rect" id="node6" href="../../d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="319,5,417,32"/>
+<area shape="rect" id="node7" href="../../db/d14/structLPC__UART__TypeDef.html" title="LPC_UART_TypeDef" alt="" coords="411,95,554,121"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -191,16 +191,12 @@ static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><b>kTh
 <tr class="separator:a041f3df2c4037cb1490ecc49dbe7d09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add38ffe8c754f86bf2a93b710e7b9919"><td class="memItemLeft" align="right" valign="top">static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kRxUartPortFunction</b> [4]</td></tr>
 <tr class="separator:add38ffe8c754f86bf2a93b710e7b9919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa583981887779dbc6da11e2d858591da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa583981887779dbc6da11e2d858591da"></a>
-static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kPowerbit</b> [4] = { 1 &lt;&lt; 3, 1 &lt;&lt; 24, 1 &lt;&lt; 25, 1 &lt;&lt; 8 }</td></tr>
-<tr class="separator:aa583981887779dbc6da11e2d858591da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b14a02ec782efbc2278c7b2714fd88"><td class="memItemLeft" align="right" valign="top">static constexpr Lpc40xxSystemController::PeripheralPowerUp&#160;</td><td class="memItemRight" valign="bottom"><b>kPowerbit</b> []</td></tr>
+<tr class="separator:ac5b14a02ec782efbc2278c7b2714fd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71ccc055390dd2305bdb2e20d1865825"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d14/structLPC__UART__TypeDef.html">LPC_UART_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>uart</b> [4]</td></tr>
 <tr class="separator:a71ccc055390dd2305bdb2e20d1865825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb4db1211bda248e6b693dacd6c78f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../da/da0/classPin.html">Pin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pairs</b> [4][2]</td></tr>
 <tr class="separator:a3bb4db1211bda248e6b693dacd6c78f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea567669c03aae97cc675c9b1842a250"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea567669c03aae97cc675c9b1842a250"></a>
-static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sysclock_register</b> = LPC_SC</td></tr>
-<tr class="separator:aea567669c03aae97cc675c9b1842a250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -349,6 +345,26 @@ static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_Type
 <tr class="separator:aba3b1577de9f7b331f246145c1c12f5d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac5b14a02ec782efbc2278c7b2714fd88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr Lpc40xxSystemController::PeripheralPowerUp Uart::kPowerbit[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    Lpc40xxSystemController::PeripheralPowerUp::kUart0,</div><div class="line">    Lpc40xxSystemController::PeripheralPowerUp::kUart2,</div><div class="line">    Lpc40xxSystemController::PeripheralPowerUp::kUart3,</div><div class="line">    Lpc40xxSystemController::PeripheralPowerUp::kUart4</div><div class="line">  }</div></div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="add38ffe8c754f86bf2a93b710e7b9919"></a>
 <div class="memitem">
 <div class="memproto">
