@@ -1,6 +1,4 @@
 <map id="Gpio" name="Gpio">
-<area shape="rect" id="node2" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,81,112,108"/>
-<area shape="rect" id="node3" href="$da/da0/classPin.html" title="Pin" alt="" coords="137,81,178,108"/>
-<area shape="rect" id="node4" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="109,5,206,32"/>
-<area shape="rect" id="node5" href="$d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="201,81,343,108"/>
+<area shape="rect" id="node2" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="$d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="136,5,277,32"/>
 </map>

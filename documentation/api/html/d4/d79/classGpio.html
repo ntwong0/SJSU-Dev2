@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d0/dab/classGpio-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Gpio Class Reference</div>  </div>
+<div class="title">Gpio Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -110,10 +110,7 @@ Inheritance diagram for Gpio:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d3d/classGpio__inherit__graph.png" border="0" usemap="#Gpio_inherit__map" alt="Inheritance graph"/></div>
 <map name="Gpio_inherit__map" id="Gpio_inherit__map">
-<area shape="rect" id="node5" href="../../d1/d19/classButton.html" title="Button" alt="" coords="75,229,141,256"/>
-<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,80,112,107"/>
-<area shape="rect" id="node3" href="../../da/da0/classPin.html" title="Pin" alt="" coords="137,80,178,107"/>
-<area shape="rect" id="node4" href="../../d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="109,5,206,32"/>
+<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,5,112,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -121,10 +118,8 @@ Collaboration diagram for Gpio:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d6b/classGpio__coll__graph.png" border="0" usemap="#Gpio_coll__map" alt="Collaboration graph"/></div>
 <map name="Gpio_coll__map" id="Gpio_coll__map">
-<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,81,112,108"/>
-<area shape="rect" id="node3" href="../../da/da0/classPin.html" title="Pin" alt="" coords="137,81,178,108"/>
-<area shape="rect" id="node4" href="../../d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="109,5,206,32"/>
-<area shape="rect" id="node5" href="../../d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="201,81,343,108"/>
+<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="../../d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="136,5,277,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -133,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a173becb13c28984a0c3cce12219ec627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a173becb13c28984a0c3cce12219ec627"></a>
 constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Gpio</b> (uint8_t port_number, uint8_t pin_number)</td></tr>
 <tr class="separator:a173becb13c28984a0c3cce12219ec627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51161c47ef71c19ce950c8ed83b36398"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51161c47ef71c19ce950c8ed83b36398"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Gpio</b> (<a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *pin)</td></tr>
+<tr class="separator:a51161c47ef71c19ce950c8ed83b36398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93d1eed7bc84f3589ef865627a3d38ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93d1eed7bc84f3589ef865627a3d38ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAsInput</b> (void) override</td></tr>
 <tr class="separator:a93d1eed7bc84f3589ef865627a3d38ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,55 +158,9 @@ State&#160;</td><td class="memItemRight" valign="bottom"><b>ReadState</b> (void)
 <tr class="memitem:a715421b9f2354471d4e77cf47ba534c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a715421b9f2354471d4e77cf47ba534c6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (void) override</td></tr>
 <tr class="separator:a715421b9f2354471d4e77cf47ba534c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classPin"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPin')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/da0/classPin.html">Pin</a></td></tr>
-<tr class="memitem:a466666f489bf8449b58b0a9630fcbedc inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a466666f489bf8449b58b0a9630fcbedc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_PACKED</b> (struct) PinMap_t</td></tr>
-<tr class="separator:a466666f489bf8449b58b0a9630fcbedc inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ac2705a28ba0f95eae87a3de69ba5f7 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ac2705a28ba0f95eae87a3de69ba5f7"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Pin</b> (uint8_t port_number, uint8_t pin_number)</td></tr>
-<tr class="separator:a6ac2705a28ba0f95eae87a3de69ba5f7 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556c4137e4eb0371f8a8a9f837dee565 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a556c4137e4eb0371f8a8a9f837dee565"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPinFunction</b> (uint8_t function) override</td></tr>
-<tr class="separator:a556c4137e4eb0371f8a8a9f837dee565 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6b610acf048cc5cd70dff4470734853 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6b610acf048cc5cd70dff4470734853"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMode</b> (PinInterface::Mode mode) override</td></tr>
-<tr class="separator:ab6b610acf048cc5cd70dff4470734853 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f972c3bb2b7fcd76b894ac0186b1ef3 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f972c3bb2b7fcd76b894ac0186b1ef3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableHysteresis</b> (bool enable_hysteresis=true) override</td></tr>
-<tr class="separator:a9f972c3bb2b7fcd76b894ac0186b1ef3 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b03716983993f7e24460d324cfa141 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56b03716983993f7e24460d324cfa141"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAsActiveLow</b> (bool set_as_active_low=true) override</td></tr>
-<tr class="separator:a56b03716983993f7e24460d324cfa141 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93683a270729ef5d5de89916e0e8546d inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93683a270729ef5d5de89916e0e8546d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAsAnalogMode</b> (bool set_as_analog=true) override</td></tr>
-<tr class="separator:a93683a270729ef5d5de89916e0e8546d inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea0faa0899963e167f22a5b5ee1da6e8 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea0faa0899963e167f22a5b5ee1da6e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableDigitalFilter</b> (bool enable_digital_filter=true) override</td></tr>
-<tr class="separator:aea0faa0899963e167f22a5b5ee1da6e8 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae143d21e49b8ca8e653b09cbb11e038e inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae143d21e49b8ca8e653b09cbb11e038e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableFastMode</b> (bool enable_fast_mode=true) override</td></tr>
-<tr class="separator:ae143d21e49b8ca8e653b09cbb11e038e inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36623c0973740707000999d10618c282 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36623c0973740707000999d10618c282"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableI2cHighSpeedMode</b> (bool enable_high_speed=true) override</td></tr>
-<tr class="separator:a36623c0973740707000999d10618c282 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de01e8006371b2a671585f601a10ea4 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0de01e8006371b2a671585f601a10ea4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableI2cHighCurrentDrive</b> (bool enable_high_current=true) override</td></tr>
-<tr class="separator:a0de01e8006371b2a671585f601a10ea4 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacb637219920cedd0880498cf23afd14 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacb637219920cedd0880498cf23afd14"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAsOpenDrain</b> (bool set_as_open_drain=true) override</td></tr>
-<tr class="separator:aacb637219920cedd0880498cf23afd14 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5e1948ea149cc6129f978a1591378f inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc5e1948ea149cc6129f978a1591378f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableDac</b> (bool enable_dac=true) override</td></tr>
-<tr class="separator:adc5e1948ea149cc6129f978a1591378f inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86a38e1e985316fb9dc4e6b490c5eaeb inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86a38e1e985316fb9dc4e6b490c5eaeb"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>BitPlace</b> (uint32_t target, uint32_t position, uint32_t value, uint32_t value_width)</td></tr>
-<tr class="separator:a86a38e1e985316fb9dc4e6b490c5eaeb inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4fa2c3bfe8190d8576e1a7d6f4fc83 inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a4fa2c3bfe8190d8576e1a7d6f4fc83"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPort</b> ()</td></tr>
-<tr class="separator:a2a4fa2c3bfe8190d8576e1a7d6f4fc83 inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e17a2d9dfc4f08f84ed661db89734b inherit pub_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4e17a2d9dfc4f08f84ed661db89734b"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPin</b> ()</td></tr>
-<tr class="separator:ac4e17a2d9dfc4f08f84ed661db89734b inherit pub_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d99c8daa182a418972d2853f3d3e52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d99c8daa182a418972d2853f3d3e52f"></a>
+<a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPin</b> () override</td></tr>
+<tr class="separator:a1d99c8daa182a418972d2853f3d3e52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -217,10 +169,6 @@ static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>k
 <tr class="separator:a240c8b0269e52923cdfe2f69ac692086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aede45b9403243f14a7b07e31dbc731b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d56/structLPC__GPIO__TypeDef.html">LPC_GPIO_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_port</b> [6]</td></tr>
 <tr class="separator:aede45b9403243f14a7b07e31dbc731b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classPin"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classPin')"><img src="../../closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="../../da/da0/classPin.html">Pin</a></td></tr>
-<tr class="memitem:ae9f56cceee9a256b9386f01bdb6d5c0a inherit pub_static_attribs_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9f56cceee9a256b9386f01bdb6d5c0a"></a>
-static PinMap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>pin_map</b> = reinterpret_cast&lt;PinMap_t *&gt;(LPC_IOCON)</td></tr>
-<tr class="separator:ae9f56cceee9a256b9386f01bdb6d5c0a inherit pub_static_attribs_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -233,46 +181,6 @@ Additional Inherited Members</h2></td></tr>
 <b>kHigh</b> = 1
  }</td></tr>
 <tr class="separator:ac0ac70102893834fb69f5b7692ad5a0a inherit pub_types_classGpioInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classPin"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classPin')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../da/da0/classPin.html">Pin</a></td></tr>
-<tr class="memitem:a7e8134809a47106328121beab4e24b18 inherit pub_types_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e8134809a47106328121beab4e24b18"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PinBitMap</b> : uint8_t { <br />
-&#160;&#160;<b>kFunction</b> = 0, 
-<b>kMode</b> = 3, 
-<b>kHysteresis</b> = 5, 
-<b>kInputInvert</b> = 6, 
-<br />
-&#160;&#160;<b>kAnalogDigitalMode</b> = 7, 
-<b>kDigitalFilter</b> = 8, 
-<b>kI2cHighSpeed</b> = 8, 
-<b>kSlew</b> = 9, 
-<br />
-&#160;&#160;<b>kI2cHighCurrentDrive</b> = 9, 
-<b>kOpenDrain</b> = 10, 
-<b>kDacEnable</b> = 16
-<br />
- }</td></tr>
-<tr class="separator:a7e8134809a47106328121beab4e24b18 inherit pub_types_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classPinInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classPinInterface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a></td></tr>
-<tr class="memitem:a8a337ad7e7d93fc122dbd65e2b8c237b inherit pub_types_classPinInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a337ad7e7d93fc122dbd65e2b8c237b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Mode</b> : uint8_t { <b>kInactive</b> = 0, 
-<b>kPullDown</b>, 
-<b>kPullUp</b>, 
-<b>kRepeater</b>
- }</td></tr>
-<tr class="separator:a8a337ad7e7d93fc122dbd65e2b8c237b inherit pub_types_classPinInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classPin"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classPin')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../da/da0/classPin.html">Pin</a></td></tr>
-<tr class="memitem:ac80454bcd40954223b2e53e7c450f5a9 inherit pub_static_methods_classPin"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac80454bcd40954223b2e53e7c450f5a9"></a>
-template&lt;unsigned port_, unsigned pin_&gt; </td></tr>
-<tr class="memitem:ac80454bcd40954223b2e53e7c450f5a9 inherit pub_static_methods_classPin"><td class="memTemplItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../da/da0/classPin.html">Pin</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreatePin</b> ()</td></tr>
-<tr class="separator:ac80454bcd40954223b2e53e7c450f5a9 inherit pub_static_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf152bad91e9a947297f34c654f19cf5 inherit pub_static_methods_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf152bad91e9a947297f34c654f19cf5"></a>
-static constexpr <a class="el" href="../../da/da0/classPin.html">Pin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CreateInactivePin</b> ()</td></tr>
-<tr class="separator:adf152bad91e9a947297f34c654f19cf5 inherit pub_static_methods_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classPin"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classPin')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../da/da0/classPin.html">Pin</a></td></tr>
-<tr class="memitem:aa73a992ff1ad683638b0c1df426f9c71 inherit pro_attribs_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa73a992ff1ad683638b0c1df426f9c71"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>port_</b></td></tr>
-<tr class="separator:aa73a992ff1ad683638b0c1df426f9c71 inherit pro_attribs_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df5b6b4cbec5b9d1bfcd3ed71043348 inherit pro_attribs_classPin"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5df5b6b4cbec5b9d1bfcd3ed71043348"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pin_</b></td></tr>
-<tr class="separator:a5df5b6b4cbec5b9d1bfcd3ed71043348 inherit pro_attribs_classPin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="aede45b9403243f14a7b07e31dbc731b1"></a>
