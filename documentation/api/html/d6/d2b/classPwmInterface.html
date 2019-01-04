@@ -99,6 +99,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d8/dc0/classPwmInterface-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PwmInterface Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -115,9 +116,9 @@ Inheritance diagram for PwmInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb34ca9ab9d0012c01cf8ab95cfa506e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb34ca9ab9d0012c01cf8ab95cfa506e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t frequency_hz=1'000)=0</td></tr>
-<tr class="separator:adb34ca9ab9d0012c01cf8ab95cfa506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab400f4c5e8c5e2e15ff9ff4bbff6d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeab400f4c5e8c5e2e15ff9ff4bbff6d7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t frequency_hz=kDefaultFrequency)=0</td></tr>
+<tr class="separator:aeab400f4c5e8c5e2e15ff9ff4bbff6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b8429898a81410a8843479ddb18bf21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b8429898a81410a8843479ddb18bf21"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDutyCycle</b> (float duty_cycle)=0</td></tr>
 <tr class="separator:a4b8429898a81410a8843479ddb18bf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +137,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>EnablePwm</b>
 <tr class="memitem:a1695d96c78c07aeea891867662a267a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1695d96c78c07aeea891867662a267a9"></a>
 virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetMatchRegister0</b> ()=0</td></tr>
 <tr class="separator:a1695d96c78c07aeea891867662a267a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aab1eb233e1f0afc7ddfd28846d0e2103"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1eb233e1f0afc7ddfd28846d0e2103"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultFrequency</b> = 1'000</td></tr>
+<tr class="separator:aab1eb233e1f0afc7ddfd28846d0e2103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../d4/dc7/pwm_8hpp_source.html">pwm.hpp</a></li>

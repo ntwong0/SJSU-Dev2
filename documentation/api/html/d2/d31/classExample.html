@@ -261,9 +261,15 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetClockFrequency
 <tr class="memitem:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa79344ebde5c9f5317a817542835a973"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralClockDivider</b> (uint8_t peripheral_divider)</td></tr>
 <tr class="separator:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2557a2f41c0166207fb8eb37bc90bea0"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockFrequency</b> ()</td></tr>
-<tr class="separator:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56466a5dae7edc6d3c86733dad75043 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa56466a5dae7edc6d3c86733dad75043"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPeripheralClockDivider</b> () const </td></tr>
+<tr class="separator:aa56466a5dae7edc6d3c86733dad75043 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b22b19c04d0dbf700b9f437bd7c5af3 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b22b19c04d0dbf700b9f437bd7c5af3"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetSystemFrequency</b> ()</td></tr>
+<tr class="separator:a0b22b19c04d0dbf700b9f437bd7c5af3 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada20547ce22e57d18454c181ccfbe59 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aada20547ce22e57d18454c181ccfbe59"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPeripheralFrequency</b> ()</td></tr>
+<tr class="separator:aada20547ce22e57d18454c181ccfbe59 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9267af16b6b3a680cc0647f844b72a27"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PowerUpPeripheral</b> (PeripheralPowerUp peripheral_select)</td></tr>
 <tr class="separator:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,7 +311,7 @@ static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>
 static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearEmcDivider</b> = (1 &lt;&lt; 0)</td></tr>
 <tr class="separator:ae1a15fc35751330adb66cf8e2134772e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ae7afea4059abf0dfc8e8d4e2c0b581"></a>
-static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPeripheralDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPeripheralDivider</b> = (0b1'1111)</td></tr>
 <tr class="separator:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bbe56341b1b83688555c7d12b041411 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bbe56341b1b83688555c7d12b041411"></a>
 static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearUsbDivider</b> = (0x1F &lt;&lt; 0)</td></tr>

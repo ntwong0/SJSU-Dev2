@@ -153,9 +153,9 @@ constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Pwm</b> (uint8_t
 <tr class="memitem:a2956abfae472ac51b58910591f9aa658"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2956abfae472ac51b58910591f9aa658"></a>
 constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Pwm</b> (uint8_t channel, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *pin)</td></tr>
 <tr class="separator:a2956abfae472ac51b58910591f9aa658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e21365010049e7ea5baf60ab050ad0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5e21365010049e7ea5baf60ab050ad0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t frequency_hz=1'000) override</td></tr>
-<tr class="separator:aa5e21365010049e7ea5baf60ab050ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d85649667fde5664f1768ca9c05b086"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d85649667fde5664f1768ca9c05b086"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t frequency_hz=kDefaultFrequency) override</td></tr>
+<tr class="separator:a7d85649667fde5664f1768ca9c05b086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5724d0a23f35b2afaa843a3f89bcb3ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5724d0a23f35b2afaa843a3f89bcb3ee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDutyCycle</b> (float duty_cycle) override</td></tr>
 <tr class="separator:a5724d0a23f35b2afaa843a3f89bcb3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +198,10 @@ static <a class="el" href="../../dc/dbf/structLPC__PWM__TypeDef.html">LPC_PWM_Ty
 <tr class="separator:a8d373d22215d14ee2edd28b857568d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3e9c31e7269db4c020389e3511f80c"><td class="memItemLeft" align="right" valign="top">static volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><b>match</b> [7]</td></tr>
 <tr class="separator:a1d3e9c31e7269db4c020389e3511f80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classPwmInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classPwmInterface')"><img src="../../closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="../../d6/d2b/classPwmInterface.html">PwmInterface</a></td></tr>
+<tr class="memitem:aab1eb233e1f0afc7ddfd28846d0e2103 inherit pub_static_attribs_classPwmInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1eb233e1f0afc7ddfd28846d0e2103"></a>
+static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaultFrequency</b> = 1'000</td></tr>
+<tr class="separator:aab1eb233e1f0afc7ddfd28846d0e2103 inherit pub_static_attribs_classPwmInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -286,9 +290,15 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetClockFrequency
 <tr class="memitem:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa79344ebde5c9f5317a817542835a973"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralClockDivider</b> (uint8_t peripheral_divider)</td></tr>
 <tr class="separator:aa79344ebde5c9f5317a817542835a973 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2557a2f41c0166207fb8eb37bc90bea0"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockFrequency</b> ()</td></tr>
-<tr class="separator:a2557a2f41c0166207fb8eb37bc90bea0 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56466a5dae7edc6d3c86733dad75043 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa56466a5dae7edc6d3c86733dad75043"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPeripheralClockDivider</b> () const </td></tr>
+<tr class="separator:aa56466a5dae7edc6d3c86733dad75043 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b22b19c04d0dbf700b9f437bd7c5af3 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b22b19c04d0dbf700b9f437bd7c5af3"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetSystemFrequency</b> ()</td></tr>
+<tr class="separator:a0b22b19c04d0dbf700b9f437bd7c5af3 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada20547ce22e57d18454c181ccfbe59 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aada20547ce22e57d18454c181ccfbe59"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetPeripheralFrequency</b> ()</td></tr>
+<tr class="separator:aada20547ce22e57d18454c181ccfbe59 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9267af16b6b3a680cc0647f844b72a27"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PowerUpPeripheral</b> (PeripheralPowerUp peripheral_select)</td></tr>
 <tr class="separator:a9267af16b6b3a680cc0647f844b72a27 inherit pro_methods_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -330,7 +340,7 @@ static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>
 static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearEmcDivider</b> = (1 &lt;&lt; 0)</td></tr>
 <tr class="separator:ae1a15fc35751330adb66cf8e2134772e inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ae7afea4059abf0dfc8e8d4e2c0b581"></a>
-static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPeripheralDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearPeripheralDivider</b> = (0b1'1111)</td></tr>
 <tr class="separator:a2ae7afea4059abf0dfc8e8d4e2c0b581 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bbe56341b1b83688555c7d12b041411 inherit pro_static_attribs_classLpc40xxSystemController"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bbe56341b1b83688555c7d12b041411"></a>
 static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>kClearUsbDivider</b> = (0x1F &lt;&lt; 0)</td></tr>
