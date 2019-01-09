@@ -1,8 +1,9 @@
 <map id="Ssp" name="Ssp">
 <area shape="rect" id="node2" href="$d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,95,108,121"/>
-<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="295,95,480,121"/>
-<area shape="rect" id="node4" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="162,5,290,32"/>
-<area shape="rect" id="node5" href="$da/da0/classPin.html" title="Pin" alt="" coords="504,95,545,121"/>
-<area shape="rect" id="node6" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="476,5,573,32"/>
-<area shape="rect" id="node7" href="$d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="569,95,705,121"/>
+<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="132,95,317,121"/>
+<area shape="rect" id="node4" href="$d0/df2/classSystemControllerInterface.html" title="SystemControllerInterface" alt="" coords="89,5,278,32"/>
+<area shape="rect" id="node5" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="302,5,430,32"/>
+<area shape="rect" id="node6" href="$da/da0/classPin.html" title="Pin" alt="" coords="504,95,545,121"/>
+<area shape="rect" id="node7" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="476,5,573,32"/>
+<area shape="rect" id="node8" href="$d2/d47/structLPC__SSP__TypeDef.html" title="LPC_SSP_TypeDef" alt="" coords="569,95,705,121"/>
 </map>

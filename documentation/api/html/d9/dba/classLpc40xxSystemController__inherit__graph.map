@@ -1,10 +1,11 @@
 <map id="Lpc40xxSystemController" name="Lpc40xxSystemController">
-<area shape="rect" id="node2" href="$da/d13/classAdc.html" title="Adc" alt="" coords="5,80,52,107"/>
-<area shape="rect" id="node3" href="$d3/d32/classDac.html" title="Dac" alt="" coords="76,80,123,107"/>
-<area shape="rect" id="node4" href="$d2/d31/classExample.html" title="Example" alt="" coords="147,80,225,107"/>
-<area shape="rect" id="node5" href="$d0/d6f/classI2c.html" title="I2c" alt="" coords="249,80,289,107"/>
-<area shape="rect" id="node6" href="$d3/deb/classPwm.html" title="Pwm" alt="" coords="313,80,365,107"/>
-<area shape="rect" id="node7" href="$db/d74/classSsp.html" title="Ssp" alt="" coords="389,80,436,107"/>
-<area shape="rect" id="node8" href="$d7/da6/classSystemTimer.html" title="SystemTimer" alt="" coords="461,80,567,107"/>
-<area shape="rect" id="node9" href="$d6/d78/classUart.html" title="Uart" alt="" coords="591,80,642,107"/>
+<area shape="rect" id="node3" href="$da/d13/classAdc.html" title="Adc" alt="" coords="5,155,52,181"/>
+<area shape="rect" id="node4" href="$d3/d32/classDac.html" title="Dac" alt="" coords="76,155,123,181"/>
+<area shape="rect" id="node5" href="$d2/d31/classExample.html" title="Example" alt="" coords="147,155,225,181"/>
+<area shape="rect" id="node6" href="$d0/d6f/classI2c.html" title="I2c" alt="" coords="249,155,289,181"/>
+<area shape="rect" id="node7" href="$d3/deb/classPwm.html" title="Pwm" alt="" coords="313,155,365,181"/>
+<area shape="rect" id="node8" href="$db/d74/classSsp.html" title="Ssp" alt="" coords="389,155,436,181"/>
+<area shape="rect" id="node9" href="$d7/da6/classSystemTimer.html" title="SystemTimer" alt="" coords="461,155,567,181"/>
+<area shape="rect" id="node10" href="$d6/d78/classUart.html" title="Uart" alt="" coords="591,155,642,181"/>
+<area shape="rect" id="node2" href="$d0/df2/classSystemControllerInterface.html" title="SystemControllerInterface" alt="" coords="209,5,398,32"/>
 </map>

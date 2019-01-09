@@ -7,6 +7,7 @@ var searchData=
   ['adc',['Adc',['../da/d13/classAdc.html',1,'']]],
   ['adcinterface',['AdcInterface',['../d0/d58/classAdcInterface.html',1,'']]],
   ['addcommand',['AddCommand',['../dd/d02/classCommandLine.html#ae879186bfea306986f19640a8cd4776e',1,'CommandLine']]],
+  ['addperipheralid',['AddPeripheralID',['../d2/d17/classSystemControllerInterface_1_1AddPeripheralID.html',1,'SystemControllerInterface']]],
   ['adr',['ADR',['../d1/dd1/structSCB__Type.html#af084e1b2dad004a88668efea1dfe7fa1',1,'SCB_Type']]],
   ['adr0',['ADR0',['../d8/d12/structLPC__I2C__TypeDef.html#ac8ed8ecb80a084f3f10a82d7e29dc069',1,'LPC_I2C_TypeDef']]],
   ['adr1',['ADR1',['../d8/d12/structLPC__I2C__TypeDef.html#ab280cbe7965f098dd17a41ee2641710a',1,'LPC_I2C_TypeDef']]],

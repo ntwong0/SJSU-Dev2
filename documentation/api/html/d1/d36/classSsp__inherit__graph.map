@@ -1,4 +1,5 @@
 <map id="Ssp" name="Ssp">
-<area shape="rect" id="node2" href="$d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="132,5,317,32"/>
+<area shape="rect" id="node2" href="$d2/d6f/classSspInterface.html" title="SspInterface" alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="132,80,317,107"/>
+<area shape="rect" id="node4" href="$d0/df2/classSystemControllerInterface.html" title="SystemControllerInterface" alt="" coords="130,5,319,32"/>
 </map>

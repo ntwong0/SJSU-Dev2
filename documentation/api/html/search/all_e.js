@@ -10,6 +10,8 @@ var searchData=
   ['pcsr',['PCSR',['../d5/db5/structDWT__Type.html#a6353ca1d1ad9bc1be05d3b5632960113',1,'DWT_Type']]],
   ['peripheral',['Peripheral',['../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c',1,'Ssp']]],
   ['peripheralclock',['PeripheralClock',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#a5eb5586cefb17eda9a91efce0546ea64',1,'system_LPC407x_8x_177x_8x.h']]],
+  ['peripheralid',['PeripheralID',['../d5/d0e/classSystemControllerInterface_1_1PeripheralID.html',1,'SystemControllerInterface']]],
+  ['peripherals',['Peripherals',['../d7/dcd/classLpc40xxSystemController_1_1Peripherals.html',1,'Lpc40xxSystemController']]],
   ['pfr',['PFR',['../d1/dd1/structSCB__Type.html#a470fb15cbd417d76f0efac74a3e765b6',1,'SCB_Type']]],
   ['pid0',['PID0',['../d8/da9/structITM__Type.html#ab4a4cc97ad658e9c46cf17490daffb8a',1,'ITM_Type']]],
   ['pid1',['PID1',['../d8/da9/structITM__Type.html#a89ea1d805a668d6589b22d8e678eb6a4',1,'ITM_Type']]],
