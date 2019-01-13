@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enable',['Enable',['../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8',1,'DisplayInterface']]]
+  ['enable',['Enable',['../d1/d05/classPixelDisplayInterface.html#acb44141593d0b3a204492eb67398ed00',1,'PixelDisplayInterface']]]
 ];

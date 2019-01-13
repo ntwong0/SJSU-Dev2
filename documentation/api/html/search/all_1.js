@@ -33,5 +33,5 @@ var searchData=
   ['apsr_5fz_5fmsk',['APSR_Z_Msk',['../d5/dea/group__CMSIS__CORE.html#ga1deb4d1aa72bb83d1f79329406f15711',1,'core_cm4.h']]],
   ['apsr_5fz_5fpos',['APSR_Z_Pos',['../d5/dea/group__CMSIS__CORE.html#ga3661286d108b1aca308d7445685eae3a',1,'core_cm4.h']]],
   ['autocomplete',['AutoComplete',['../dc/d02/classCommandInterface.html#a19b65ed06e8478e9e9c99b93a6472cee',1,'CommandInterface']]],
-  ['availablecolors',['AvailableColors',['../df/d42/classDisplayInterface.html#a3dc51e947c67c19af2136fd58afcafd5',1,'DisplayInterface::AvailableColors()'],['../d8/d40/classSsd1306.html#a873ec4528f228d743e5f4e1f0d1e7390',1,'Ssd1306::AvailableColors()']]]
+  ['availablecolors',['AvailableColors',['../d8/d40/classSsd1306.html#a873ec4528f228d743e5f4e1f0d1e7390',1,'Ssd1306::AvailableColors()'],['../d1/d05/classPixelDisplayInterface.html#abf98b4dac4cae00dee5a4de3b2be33ac',1,'PixelDisplayInterface::AvailableColors()']]]
 ];

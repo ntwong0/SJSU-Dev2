@@ -17,7 +17,7 @@ var searchData=
   ['iir',['IIR',['../d9/d2d/structLPC__UART4__TypeDef.html#a59265237158ad22dd731d8b09944f6ad',1,'LPC_UART4_TypeDef']]],
   ['imcr',['IMCR',['../d8/da9/structITM__Type.html#ae2ce4d3a54df2fd11a197ccac4406cd0',1,'ITM_Type']]],
   ['imsc',['IMSC',['../d2/d47/structLPC__SSP__TypeDef.html#a61842512c283fb1c980ec6f04927a62c',1,'LPC_SSP_TypeDef']]],
-  ['initialize',['Initialize',['../db/d74/classSsp.html#a29f8f37aa9f3682c428c50e3593f3df3',1,'Ssp::Initialize()'],['../df/d42/classDisplayInterface.html#ac1b2fc1aa7d50321c3115215629574fd',1,'DisplayInterface::Initialize()'],['../d8/d40/classSsd1306.html#a0e882e78ad21faa645e19af946373d2f',1,'Ssd1306::Initialize()'],['../dd/d02/classCommandLine.html#aab41d0d20d848ed40ca585584f23170a',1,'CommandLine::Initialize()']]],
+  ['initialize',['Initialize',['../db/d74/classSsp.html#a29f8f37aa9f3682c428c50e3593f3df3',1,'Ssp::Initialize()'],['../d8/d40/classSsd1306.html#a0e882e78ad21faa645e19af946373d2f',1,'Ssd1306::Initialize()'],['../d1/d05/classPixelDisplayInterface.html#a97de89708f54ebeb743b29976e7eae9c',1,'PixelDisplayInterface::Initialize()'],['../dd/d02/classCommandLine.html#aab41d0d20d848ed40ca585584f23170a',1,'CommandLine::Initialize()']]],
   ['intce',['INTCE',['../d9/d2d/structLPC__UART4__TypeDef.html#a21fac54a3afb7b8456ebff6683c91109',1,'LPC_UART4_TypeDef']]],
   ['intcs',['INTCS',['../d9/d2d/structLPC__UART4__TypeDef.html#a3beab274778555b4d82324df3074bcfc',1,'LPC_UART4_TypeDef']]],
   ['inte',['INTE',['../d9/d2d/structLPC__UART4__TypeDef.html#a3905c7d78ec7ba154746feb24b760c41',1,'LPC_UART4_TypeDef']]],

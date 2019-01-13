@@ -15,7 +15,7 @@ var searchData=
   ['cid3',['CID3',['../d8/da9/structITM__Type.html#a43451f43f514108d9eaed5b017f8d921',1,'ITM_Type']]],
   ['claimclr',['CLAIMCLR',['../db/daf/structTPI__Type.html#a0e10e292cb019a832b03ddd055b2f6ac',1,'TPI_Type']]],
   ['claimset',['CLAIMSET',['../db/daf/structTPI__Type.html#af8b7d15fa5252b733dd4b11fa1b5730a',1,'TPI_Type']]],
-  ['clear',['Clear',['../df/d42/classDisplayInterface.html#af1201ae15181bb4746d2d3212a1e4a11',1,'DisplayInterface::Clear()'],['../d8/d40/classSsd1306.html#a50e942a4b84b1d1792484c7ffab98d1b',1,'Ssd1306::Clear()']]],
+  ['clear',['Clear',['../d8/d40/classSsd1306.html#a50e942a4b84b1d1792484c7ffab98d1b',1,'Ssd1306::Clear()'],['../d1/d05/classPixelDisplayInterface.html#acc6d9113a2dcd3a9e9eb3aa4c639ab75',1,'PixelDisplayInterface::Clear()']]],
   ['clkoutcfg',['CLKOUTCFG',['../df/d8b/structLPC__SC__TypeDef.html#a848ba26aa2608fc911578e16386b8dff',1,'LPC_SC_TypeDef']]],
   ['clksrcsel',['CLKSRCSEL',['../df/d8b/structLPC__SC__TypeDef.html#a8dcd0dd0fc85a2a6370a46fa65e851ee',1,'LPC_SC_TypeDef']]],
   ['cmr',['CMR',['../d1/dba/structLPC__CAN__TypeDef.html#a9c4aaea6fbeb16b7f985b0c1deea0a8a',1,'LPC_CAN_TypeDef']]],

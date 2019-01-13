@@ -7,7 +7,7 @@ var searchData=
   ['emcclock',['EMCClock',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#a60e14a85931d7842df6eb1e9b2bb36ae',1,'system_LPC407x_8x_177x_8x.h']]],
   ['emcdlyctl',['EMCDLYCTL',['../df/d8b/structLPC__SC__TypeDef.html#ad49808917666d18a197ba6ea4930c729',1,'LPC_SC_TypeDef']]],
   ['emr',['EMR',['../d2/d9b/structLPC__TIM__TypeDef.html#ad094765dc5720a2333d56dc17e14c4fc',1,'LPC_TIM_TypeDef']]],
-  ['enable',['Enable',['../df/d42/classDisplayInterface.html#a8d299da63de02d78c16b54508fdc9eb8',1,'DisplayInterface']]],
+  ['enable',['Enable',['../d1/d05/classPixelDisplayInterface.html#acb44141593d0b3a204492eb67398ed00',1,'PixelDisplayInterface']]],
   ['enablebitmaskoperators_5ft',['EnableBitMaskOperators_t',['../dc/d9a/structEnableBitMaskOperators__t.html',1,'']]],
   ['endoftable',['ENDofTable',['../d5/d2b/structLPC__CANAF__TypeDef.html#a705055dcc5dd3c2eaa964329bd2bcd7a',1,'LPC_CANAF_TypeDef']]],
   ['esp8266wifiinterface',['Esp8266WifiInterface',['../dd/d50/classEsp8266WifiInterface.html',1,'']]],
