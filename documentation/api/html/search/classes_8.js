@@ -32,5 +32,6 @@ var searchData=
   ['lpc_5fuart4_5ftypedef',['LPC_UART4_TypeDef',['../d9/d2d/structLPC__UART4__TypeDef.html',1,'']]],
   ['lpc_5fuart_5ftypedef',['LPC_UART_TypeDef',['../db/d14/structLPC__UART__TypeDef.html',1,'']]],
   ['lpc_5fusb_5ftypedef',['LPC_USB_TypeDef',['../d0/dae/structLPC__USB__TypeDef.html',1,'']]],
-  ['lpc_5fwdt_5ftypedef',['LPC_WDT_TypeDef',['../df/dcf/structLPC__WDT__TypeDef.html',1,'']]]
+  ['lpc_5fwdt_5ftypedef',['LPC_WDT_TypeDef',['../df/dcf/structLPC__WDT__TypeDef.html',1,'']]],
+  ['lpcsysteminfocommand',['LpcSystemInfoCommand',['../d2/d18/classLpcSystemInfoCommand.html',1,'']]]
 ];
