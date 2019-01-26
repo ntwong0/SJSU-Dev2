@@ -98,44 +98,59 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d2/df5/classCanInterface-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CanInterface Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CanInterface:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d19/classCanInterface__inherit__graph.png" border="0" usemap="#CanInterface_inherit__map" alt="Inheritance graph"/></div>
+<map name="CanInterface_inherit__map" id="CanInterface_inherit__map">
+<area shape="rect" id="node2" href="../../da/d85/classCan.html" title="Can" alt="" coords="33,80,80,107"/>
+</map>
+<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a1e333b0c659a7e5e529904d29e9f9802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e333b0c659a7e5e529904d29e9f9802"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TestType</b> { <b>kLocal</b> = 0, 
-<b>kGlobal</b> = 1
- }</td></tr>
-<tr class="separator:a1e333b0c659a7e5e529904d29e9f9802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/de1/unionCanInterface_1_1Data__t.html">Data_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb28f6586dafe42ebf662383ee5283fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb28f6586dafe42ebf662383ee5283fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_PACKED</b> (struct) CanMessage_t</td></tr>
-<tr class="separator:adb28f6586dafe42ebf662383ee5283fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ce388549fe710b4582877e62683b02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11ce388549fe710b4582877e62683b02"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_PACKED</b> (struct) TxMessage_t</td></tr>
+<tr class="separator:a11ce388549fe710b4582877e62683b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94404cd0d7e5a1e9e0ac6fed10d1cd03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94404cd0d7e5a1e9e0ac6fed10d1cd03"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_PACKED</b> (struct) RxMessage_t</td></tr>
+<tr class="separator:a94404cd0d7e5a1e9e0ac6fed10d1cd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae122a6f571354f8007ccaeb460356b06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae122a6f571354f8007ccaeb460356b06"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:ae122a6f571354f8007ccaeb460356b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a201e79888dfe06b125c9561e616059f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a201e79888dfe06b125c9561e616059f8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const CanMessage_t &amp;message)=0</td></tr>
-<tr class="separator:a201e79888dfe06b125c9561e616059f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ab032becef5425cd3d36a2351add09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9ab032becef5425cd3d36a2351add09"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Receive</b> (CanMessage_t *message)=0</td></tr>
-<tr class="separator:ad9ab032becef5425cd3d36a2351add09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c0be9c54d0ee601f2dfbbf6e880439"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2c0be9c54d0ee601f2dfbbf6e880439"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SelfTestBus</b> (const TestType kType)=0</td></tr>
-<tr class="separator:ab2c0be9c54d0ee601f2dfbbf6e880439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62cd47e53b571bfbe6e3835c1f5a36ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62cd47e53b571bfbe6e3835c1f5a36ca"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsBusOff</b> ()=0</td></tr>
-<tr class="separator:a62cd47e53b571bfbe6e3835c1f5a36ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11dcee0d9da149923f8a9a8fddb6768"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa11dcee0d9da149923f8a9a8fddb6768"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (TxMessage_t *const kMessage, uint32_t id, const uint8_t *const kPayload, size_t length) const =0</td></tr>
+<tr class="separator:aa11dcee0d9da149923f8a9a8fddb6768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80630823e3f825f87a4352fd6eee7ced"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80630823e3f825f87a4352fd6eee7ced"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Receive</b> (RxMessage_t *const kMessage) const =0</td></tr>
+<tr class="separator:a80630823e3f825f87a4352fd6eee7ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ef946fa10b66ff37820e8c886b86bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2ef946fa10b66ff37820e8c886b86bc"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SelfTestBus</b> (uint32_t id)=0</td></tr>
+<tr class="separator:af2ef946fa10b66ff37820e8c886b86bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9454e5488f69e0743b35df984db9b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9454e5488f69e0743b35df984db9b49"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsBusOff</b> () const =0</td></tr>
+<tr class="separator:ab9454e5488f69e0743b35df984db9b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa9ef9ecb33624499cae2f37ee3e8b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa9ef9ecb33624499cae2f37ee3e8b7"></a>
+virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetFrameErrorLocation</b> () const =0</td></tr>
+<tr class="separator:a2fa9ef9ecb33624499cae2f37ee3e8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a22752a762373b061f40387778e76b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76a22752a762373b061f40387778e76b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableBus</b> ()=0</td></tr>
 <tr class="separator:a76a22752a762373b061f40387778e76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f25f5b24944c128d5532655efd6e31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0f25f5b24944c128d5532655efd6e31"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (TxMessage_t *const kMessage, uint32_t id, std::initializer_list&lt; uint8_t &gt; payload)</td></tr>
+<tr class="separator:ab0f25f5b24944c128d5532655efd6e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../dd/d78/can_8hpp_source.html">can.hpp</a></li>

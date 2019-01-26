@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d4/d33/classrtos_1_1TaskInterface.html" title="rtos::TaskInterface" alt="" coords="5,5,144,32"/>
-<area shape="rect" id="node2" href="$d1/d0b/classrtos_1_1Task.html" title="rtos::Task\&lt; kStackSize \&gt;" alt="" coords="192,5,375,32"/>
+<area shape="rect" id="node1" href="$d1/d05/classPixelDisplayInterface.html" title="PixelDisplayInterface" alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node2" href="$d8/d40/classSsd1306.html" title="Ssd1306" alt="" coords="207,5,285,32"/>
 </map>

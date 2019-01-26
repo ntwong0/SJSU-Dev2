@@ -165,6 +165,7 @@ var searchData=
   ['st7066u',['St7066u',['../d2/db0/classSt7066u.html',1,'']]],
   ['st7066uinterface',['St7066uInterface',['../d9/d2b/classSt7066uInterface.html',1,'']]],
   ['stat',['STAT',['../d8/d12/structLPC__I2C__TypeDef.html#ad899053f412fa24b201a479017f04f5e',1,'LPC_I2C_TypeDef::STAT()'],['../d3/d95/structLPC__ADC__TypeDef.html#a1bdbd1fea2c9424fa59b47192fcf63d0',1,'LPC_ADC_TypeDef::STAT()']]],
+  ['staticqueueconfig_5ft',['StaticQueueConfig_t',['../db/d8a/structCan_1_1StaticQueueConfig__t.html',1,'Can']]],
   ['stir',['STIR',['../d9/deb/structNVIC__Type.html#a37de89637466e007171c6b135299bc75',1,'NVIC_Type']]],
   ['syncctrl',['SYNCCTRL',['../d9/d2d/structLPC__UART4__TypeDef.html#afcc9eceff2ec718d0a90d992fbd147dd',1,'LPC_UART4_TypeDef']]],
   ['sys_5ftick',['sys_tick',['../d7/da6/classSystemTimer.html#ace8faed9ff7cbb87ec3e5e76e44c06fc',1,'SystemTimer']]],
