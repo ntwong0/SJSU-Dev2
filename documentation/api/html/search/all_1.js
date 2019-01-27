@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['accelerometer',['Accelerometer',['../df/df2/classAccelerometer.html',1,'']]],
   ['accelerometerinterface',['AccelerometerInterface',['../dc/d04/classAccelerometerInterface.html',1,'']]],
   ['acpr',['ACPR',['../db/daf/structTPI__Type.html#a9e5e4421ef9c3d5b7ff8b24abd4e99b3',1,'TPI_Type']]],
   ['acr',['ACR',['../d9/d2d/structLPC__UART4__TypeDef.html#a67015ac014c209b729fd9bd94dff4864',1,'LPC_UART4_TypeDef']]],
