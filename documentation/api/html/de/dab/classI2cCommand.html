@@ -98,6 +98,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d6/d88/classI2cCommand-members.html">List of all members</a>  </div>
@@ -126,13 +128,58 @@ Collaboration diagram for I2cCommand:</div>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d18/structI2cCommand_1_1AddressString__t.html">AddressString_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d31/structI2cCommand_1_1Arguments__t.html">Arguments_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3d7eeeef33206d27c559e178891ce1b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d7eeeef33206d27c559e178891ce1b8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Args</b> { <br />
+&#160;&#160;<b>kName</b> = 0, 
+<b>kOperation</b> = 1, 
+<b>kDeviceAddress</b> = 2, 
+<b>kRegisterAddress</b> = 3, 
+<br />
+&#160;&#160;<b>kWriteStartByte</b> = 3, 
+<b>kLength</b> = 4
+<br />
+ }</td></tr>
+<tr class="separator:a3d7eeeef33206d27c559e178891ce1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa81feecb8a93c8fe4dd9b16a096bd90f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa81feecb8a93c8fe4dd9b16a096bd90f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td></tr>
+<tr class="separator:aa81feecb8a93c8fe4dd9b16a096bd90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2805efea1462f9676958f02da3a9e52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2805efea1462f9676958f02da3a9e52"></a>
+std::tuple&lt; uint8_t, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ParseByte</b> (const char *const kArgument, uint8_t radix)</td></tr>
+<tr class="separator:aa2805efea1462f9676958f02da3a9e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab771b40cfdf718b4ddd120c0411a1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ab771b40cfdf718b4ddd120c0411a1b"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetI2cOperation</b> (const char *const kOperationArgument)</td></tr>
+<tr class="separator:a8ab771b40cfdf718b4ddd120c0411a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25bca2e899156674a8cbe6634f9d79e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae25bca2e899156674a8cbe6634f9d79e"></a>
+<a class="el" href="../../d8/d31/structI2cCommand_1_1Arguments__t.html">Arguments_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParseArguments</b> (int, const char *const argv[])</td></tr>
+<tr class="separator:ae25bca2e899156674a8cbe6634f9d79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f640f5ad58107a04699ddda5451fb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0f640f5ad58107a04699ddda5451fb7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>I2cDiscover</b> ()</td></tr>
+<tr class="separator:af0f640f5ad58107a04699ddda5451fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da4ebddd6c473524323007c3064cd7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7da4ebddd6c473524323007c3064cd7e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>PerformReadOperation</b> (int argc, const char *const argv[])</td></tr>
+<tr class="separator:a7da4ebddd6c473524323007c3064cd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289d5a9378a96de19c0bc36bf29b3307"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a289d5a9378a96de19c0bc36bf29b3307"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>PerformWriteOperation</b> (int argc, const char *const argv[])</td></tr>
+<tr class="separator:a289d5a9378a96de19c0bc36bf29b3307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2335a89fb7c525c4421f6ad5e957d2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2335a89fb7c525c4421f6ad5e957d2c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>PerformDiscoveryOperation</b> ()</td></tr>
+<tr class="separator:ad2335a89fb7c525c4421f6ad5e957d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf25296ac3502b701932fff29c29268d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf25296ac3502b701932fff29c29268d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>AutoComplete</b> (int argc, const char *const argv[], const char *completion[], const size_t) overridefinal</td></tr>
+<tr class="separator:adf25296ac3502b701932fff29c29268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e0782ded74d16d115f16e3a86b7b5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dab/classI2cCommand.html#ae3e0782ded74d16d115f16e3a86b7b5e">Program</a> (int argc, const char *const argv[]) overridefinal</td></tr>
 <tr class="separator:ae3e0782ded74d16d115f16e3a86b7b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1266b49988dda3ae9b1b24c7a5efd9d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1266b49988dda3ae9b1b24c7a5efd9d9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>AutoComplete</b> (int argc, const char *const argv[], const char *completion[], const size_t kCompletionArrayLength) overridefinal</td></tr>
-<tr class="separator:a1266b49988dda3ae9b1b24c7a5efd9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCommand')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d9/d71/classCommand.html">Command</a></td></tr>
 <tr class="memitem:a825c7da8253a22ca7af9243b06549ec4 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d71/classCommand.html#a825c7da8253a22ca7af9243b06549ec4">Command</a> (const char *name, const char *description, CommandSignature program=DoNothingCommand)</td></tr>
 <tr class="separator:a825c7da8253a22ca7af9243b06549ec4 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +256,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="stringliteral">&quot;Read, write and discover devices on the i2c bus&quot;</span></div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= R<span class="stringliteral">&quot;(Read and write to the i2c bus.</span></div><div class="line"><span class="stringliteral">                i2c write &lt;device address&gt; &lt;register address&gt; &lt;data0&gt; ...</span></div><div class="line"><span class="stringliteral">                i2c read &lt;device address&gt; &lt;register address&gt; &lt;length&gt;</span></div><div class="line"><span class="stringliteral">                i2c discover</span></div><div class="line"><span class="stringliteral">  )&quot;</span></div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

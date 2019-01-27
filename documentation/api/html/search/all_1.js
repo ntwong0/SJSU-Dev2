@@ -9,6 +9,7 @@ var searchData=
   ['adcinterface',['AdcInterface',['../d0/d58/classAdcInterface.html',1,'']]],
   ['addcommand',['AddCommand',['../dd/d02/classCommandLine.html#ae879186bfea306986f19640a8cd4776e',1,'CommandLine']]],
   ['addperipheralid',['AddPeripheralID',['../d2/d17/classSystemControllerInterface_1_1AddPeripheralID.html',1,'SystemControllerInterface']]],
+  ['addressstring_5ft',['AddressString_t',['../d7/d18/structI2cCommand_1_1AddressString__t.html',1,'I2cCommand']]],
   ['adr',['ADR',['../d1/dd1/structSCB__Type.html#af084e1b2dad004a88668efea1dfe7fa1',1,'SCB_Type']]],
   ['adr0',['ADR0',['../d8/d12/structLPC__I2C__TypeDef.html#ac8ed8ecb80a084f3f10a82d7e29dc069',1,'LPC_I2C_TypeDef']]],
   ['adr1',['ADR1',['../d8/d12/structLPC__I2C__TypeDef.html#ab280cbe7965f098dd17a41ee2641710a',1,'LPC_I2C_TypeDef']]],
@@ -33,6 +34,7 @@ var searchData=
   ['apsr_5fv_5fpos',['APSR_V_Pos',['../d5/dea/group__CMSIS__CORE.html#gac62830f67679ccd11658c4172c3e6ea7',1,'core_cm4.h']]],
   ['apsr_5fz_5fmsk',['APSR_Z_Msk',['../d5/dea/group__CMSIS__CORE.html#ga1deb4d1aa72bb83d1f79329406f15711',1,'core_cm4.h']]],
   ['apsr_5fz_5fpos',['APSR_Z_Pos',['../d5/dea/group__CMSIS__CORE.html#ga3661286d108b1aca308d7445685eae3a',1,'core_cm4.h']]],
+  ['arguments_5ft',['Arguments_t',['../d8/d31/structI2cCommand_1_1Arguments__t.html',1,'I2cCommand']]],
   ['autocomplete',['AutoComplete',['../dc/d02/classCommandInterface.html#a19b65ed06e8478e9e9c99b93a6472cee',1,'CommandInterface']]],
   ['availablecolors',['AvailableColors',['../d8/d40/classSsd1306.html#a873ec4528f228d743e5f4e1f0d1e7390',1,'Ssd1306::AvailableColors()'],['../d1/d05/classPixelDisplayInterface.html#abf98b4dac4cae00dee5a4de3b2be33ac',1,'PixelDisplayInterface::AvailableColors()']]]
 ];
