@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['setmode',['SetMode',['../df/d34/classApds9960.html#a1e5898180863a64d817cc81ed89e6e7f',1,'Apds9960']]],
-  ['settickfrequency',['SetTickFrequency',['../d7/da6/classSystemTimer.html#a0251600e6b22d7aa14b62a28d2c15f7a',1,'SystemTimer']]],
-  ['ssp',['Ssp',['../db/d74/classSsp.html#a61067541fb55fdb4e18fb832234c1c45',1,'Ssp::Ssp()'],['../db/d74/classSsp.html#abe858ecd6d2fa2feef041777786917eb',1,'Ssp::Ssp(Peripheral set_pssp)'],['../db/d74/classSsp.html#a7af79fae11ebc76f8a764ac997938a32',1,'Ssp::Ssp(Peripheral pssp, PinInterface *mosi_pin, PinInterface *miso_pin, PinInterface *sck_pin)']]],
-  ['systemcoreclockupdate',['SystemCoreClockUpdate',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#ae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_LPC407x_8x_177x_8x.h']]],
-  ['systeminit',['SystemInit',['../dd/d93/system__LPC407x__8x__177x__8x_8h.html#a93f514700ccf00d08dbdcff7f1224eb2',1,'startup.cpp']]],
-  ['systick_5fconfig',['SysTick_Config',['../d2/d8f/group__CMSIS__Core__SysTickFunctions.html#gae4e8f0238527c69f522029b93c8e5b78',1,'core_cm4.h']]]
+  ['nvic_5fclearpendingirq',['NVIC_ClearPendingIRQ',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga332e10ef9605dc6eb10b9e14511930f8',1,'core_cm4.h']]],
+  ['nvic_5fdecodepriority',['NVIC_DecodePriority',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga3387607fd8a1a32cccd77d2ac672dd96',1,'core_cm4.h']]],
+  ['nvic_5fdisableirq',['NVIC_DisableIRQ',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga260fba04ac8346855c57f091d4ee1e71',1,'core_cm4.h']]],
+  ['nvic_5fenableirq',['NVIC_EnableIRQ',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga3349f2e3580d7ce22d6530b7294e5921',1,'core_cm4.h']]],
+  ['nvic_5fencodepriority',['NVIC_EncodePriority',['../de/da0/group__CMSIS__Core__NVICFunctions.html#gadb94ac5d892b376e4f3555ae0418ebac',1,'core_cm4.h']]],
+  ['nvic_5fgetactive',['NVIC_GetActive',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga47a0f52794068d076c9147aa3cb8d8a6',1,'core_cm4.h']]],
+  ['nvic_5fgetpendingirq',['NVIC_GetPendingIRQ',['../de/da0/group__CMSIS__Core__NVICFunctions.html#gafec8042db64c0f8ed432b6c8386a05d8',1,'core_cm4.h']]],
+  ['nvic_5fgetpriority',['NVIC_GetPriority',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga1cbaf8e6abd4aa4885828e7f24fcfeb4',1,'core_cm4.h']]],
+  ['nvic_5fgetprioritygrouping',['NVIC_GetPriorityGrouping',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga394f7ce2ca826c0da26284d17ac6524d',1,'core_cm4.h']]],
+  ['nvic_5fsetpendingirq',['NVIC_SetPendingIRQ',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga3ecf446519da33e1690deffbf5be505f',1,'core_cm4.h']]],
+  ['nvic_5fsetpriority',['NVIC_SetPriority',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga2305cbd44aaad792e3a4e538bdaf14f9',1,'core_cm4.h']]],
+  ['nvic_5fsetprioritygrouping',['NVIC_SetPriorityGrouping',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga77cfbb35a9d8027e392034321bed6904',1,'core_cm4.h']]],
+  ['nvic_5fsystemreset',['NVIC_SystemReset',['../de/da0/group__CMSIS__Core__NVICFunctions.html#ga1143dec48d60a3d6f238c4798a87759c',1,'core_cm4.h']]]
 ];

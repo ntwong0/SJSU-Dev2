@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['waitforinput',['WaitForInput',['../dd/d02/classCommandLine.html#a1de508cf6515128fb9d3d8f2f2d64bd3',1,'CommandLine']]]
+  ['readblock',['ReadBlock',['../dc/dd1/classSdInterface.html#a27f5e88e6203d8d98d81e040b7ea19c1',1,'SdInterface::ReadBlock()'],['../de/d4a/classSd.html#a57b7eb7e284328057f386fff15268b56',1,'Sd::ReadBlock()']]]
 ];

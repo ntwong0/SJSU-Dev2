@@ -9,6 +9,8 @@ var searchData=
   ['data_5ft',['Data_t',['../d2/de1/unionCanInterface_1_1Data__t.html',1,'CanInterface']]],
   ['dcrdr',['DCRDR',['../d6/d00/structCoreDebug__Type.html#aab3cc92ef07bc1f04b3a3aa6db2c2d55',1,'CoreDebug_Type']]],
   ['dcrsr',['DCRSR',['../d6/d00/structCoreDebug__Type.html#af907cf64577eaf927dac6787df6dd98b',1,'CoreDebug_Type']]],
+  ['debugsdcard_5ft',['DebugSdCard_t',['../d3/d01/structSd_1_1DebugSdCard__t.html',1,'Sd']]],
+  ['deleteblock',['DeleteBlock',['../dc/dd1/classSdInterface.html#a4ee8e255cf3ef3e58d16550b3bff4915',1,'SdInterface::DeleteBlock()'],['../de/d4a/classSd.html#af9c4499dc1c4ba7f22514160767a1dcc',1,'Sd::DeleteBlock()']]],
   ['demcr',['DEMCR',['../d6/d00/structCoreDebug__Type.html#aeb3126abc4c258a858f21f356c0df6ee',1,'CoreDebug_Type']]],
   ['device',['Device',['../d7/d94/classDevice.html',1,'']]],
   ['device_3c_20i2cdevice_3c_20i2c_2c_20kdeviceaddress_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e_2c_20endianess_2c_20apds9960interface_3a_3amemorymap_5ft_20_3e',['Device&lt; I2cDevice&lt; i2c, kDeviceAddress, endianess, Apds9960Interface::MemoryMap_t &gt;, endianess, Apds9960Interface::MemoryMap_t &gt;',['../d7/d94/classDevice.html',1,'']]],
