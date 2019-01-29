@@ -24,6 +24,8 @@ var searchData=
   ['tid1',['TID1',['../d1/dba/structLPC__CAN__TypeDef.html#ad941f092e33373988b99e82eb8da7b98',1,'LPC_CAN_TypeDef']]],
   ['tid2',['TID2',['../d1/dba/structLPC__CAN__TypeDef.html#aa5df91f305a251b272faf9ec198ec0e8',1,'LPC_CAN_TypeDef']]],
   ['tid3',['TID3',['../d1/dba/structLPC__CAN__TypeDef.html#a8ad7b5ae2f928f189fea5f021789e1e2',1,'LPC_CAN_TypeDef']]],
+  ['timer',['Timer',['../dc/dea/classTimer.html',1,'']]],
+  ['timerinterface',['TimerInterface',['../d3/d22/classTimerInterface.html',1,'']]],
   ['tpi',['TPI',['../d7/d12/group__CMSIS__core__base.html#ga8b4dd00016aed25a0ea54e9a9acd1239',1,'core_cm4.h']]],
   ['tpi_5facpr_5fprescaler_5fmsk',['TPI_ACPR_PRESCALER_Msk',['../d7/df6/group__CMSIS__TPI.html#ga4fcacd27208419929921aec8457a8c13',1,'core_cm4.h']]],
   ['tpi_5facpr_5fprescaler_5fpos',['TPI_ACPR_PRESCALER_Pos',['../d7/df6/group__CMSIS__TPI.html#ga5a82d274eb2df8b0c92dd4ed63535928',1,'core_cm4.h']]],

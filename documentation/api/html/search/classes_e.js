@@ -6,6 +6,8 @@ var searchData=
   ['taskschedulerinterface',['TaskSchedulerInterface',['../da/df5/classrtos_1_1TaskSchedulerInterface.html',1,'rtos']]],
   ['temperature',['Temperature',['../d4/d4f/classTemperature.html',1,'']]],
   ['temperatureinterface',['TemperatureInterface',['../db/deb/classTemperatureInterface.html',1,'']]],
+  ['timer',['Timer',['../dc/dea/classTimer.html',1,'']]],
+  ['timerinterface',['TimerInterface',['../d3/d22/classTimerInterface.html',1,'']]],
   ['tpi_5ftype',['TPI_Type',['../db/daf/structTPI__Type.html',1,'']]],
   ['transaction_5ft',['Transaction_t',['../da/de5/structI2cInterface_1_1Transaction__t.html',1,'I2cInterface']]]
 ];
