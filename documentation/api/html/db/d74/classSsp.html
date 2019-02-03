@@ -148,7 +148,10 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<b>kDividerBit</b> = 8, 
 <b>kMasterModeBit</b> = 2, 
-<b>kDataLineIdleBit</b> = 4
+<b>kDataLineIdleBit</b> = 4, 
+<b>kPrescalerBit</b> = 0, 
+<br />
+&#160;&#160;<b>kSspEnable</b> = 1
 <br />
  }</td></tr>
 <tr class="separator:a38fa3c0a54021c77840feaa0ffa4d8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,34 +193,34 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61067541fb55fdb4e18fb832234c1c45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61067541fb55fdb4e18fb832234c1c45"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a61067541fb55fdb4e18fb832234c1c45">Ssp</a> ()</td></tr>
-<tr class="memdesc:a61067541fb55fdb4e18fb832234c1c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor sets up SSP0 peripheral as SPI master. <br /></td></tr>
+<tr class="memitem:a61067541fb55fdb4e18fb832234c1c45"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a61067541fb55fdb4e18fb832234c1c45">Ssp</a> ()</td></tr>
 <tr class="separator:a61067541fb55fdb4e18fb832234c1c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe858ecd6d2fa2feef041777786917eb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#abe858ecd6d2fa2feef041777786917eb">Ssp</a> (<a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> set_pssp)</td></tr>
+<tr class="memitem:abe858ecd6d2fa2feef041777786917eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe858ecd6d2fa2feef041777786917eb"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#abe858ecd6d2fa2feef041777786917eb">Ssp</a> (<a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> set_pssp)</td></tr>
+<tr class="memdesc:abe858ecd6d2fa2feef041777786917eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">User modified constructor. Must be followed by Set functions. <br /></td></tr>
 <tr class="separator:abe858ecd6d2fa2feef041777786917eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7af79fae11ebc76f8a764ac997938a32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7af79fae11ebc76f8a764ac997938a32"></a>
 constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a7af79fae11ebc76f8a764ac997938a32">Ssp</a> (<a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a> pssp, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *mosi_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *miso_pin, <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *sck_pin)</td></tr>
-<tr class="memdesc:a7af79fae11ebc76f8a764ac997938a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to pass in your own pins. <br /></td></tr>
+<tr class="memdesc:a7af79fae11ebc76f8a764ac997938a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to pass in your own pins. Must be followed by Set functions. <br /></td></tr>
 <tr class="separator:a7af79fae11ebc76f8a764ac997938a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29f8f37aa9f3682c428c50e3593f3df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a29f8f37aa9f3682c428c50e3593f3df3">Initialize</a> () override</td></tr>
 <tr class="separator:a29f8f37aa9f3682c428c50e3593f3df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c3e42d8e1f169cf6722213ef4331d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53c3e42d8e1f169cf6722213ef4331d3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransferStatus</b> () override</td></tr>
-<tr class="separator:a53c3e42d8e1f169cf6722213ef4331d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafacf6282b449b8afad0fd08cee931c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafacf6282b449b8afad0fd08cee931c4"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (uint16_t data) override</td></tr>
+<tr class="memitem:aeda360fc438ca4621082dd33a5e999d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#aeda360fc438ca4621082dd33a5e999d6">IsTransferRegBusy</a> () override</td></tr>
+<tr class="separator:aeda360fc438ca4621082dd33a5e999d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafacf6282b449b8afad0fd08cee931c4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#aafacf6282b449b8afad0fd08cee931c4">Transfer</a> (uint16_t data) override</td></tr>
 <tr class="separator:aafacf6282b449b8afad0fd08cee931c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f392ff9d7e6170714e38d97641af81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51f392ff9d7e6170714e38d97641af81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralMode</b> (MasterSlaveMode mode, FrameMode frame, DataSize size) override</td></tr>
+<tr class="memitem:aacdedc8c954a3ae69d75af5782aba4f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacdedc8c954a3ae69d75af5782aba4f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#aacdedc8c954a3ae69d75af5782aba4f7">SetSpiMasterDefault</a> () override</td></tr>
+<tr class="memdesc:aacdedc8c954a3ae69d75af5782aba4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up SSP peripheral as SPI master. <br /></td></tr>
+<tr class="separator:aacdedc8c954a3ae69d75af5782aba4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f392ff9d7e6170714e38d97641af81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a51f392ff9d7e6170714e38d97641af81">SetPeripheralMode</a> (MasterSlaveMode mode, FrameMode frame, DataSize size) override</td></tr>
 <tr class="separator:a51f392ff9d7e6170714e38d97641af81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04b078d2f88e1d54e12f50f3b8b68bba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04b078d2f88e1d54e12f50f3b8b68bba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClock</b> (bool polarity, bool phase, uint8_t divider, uint8_t prescaler) override</td></tr>
+<tr class="memitem:a59321d7aef8dd66eaa9ea6756bc0f2db"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a59321d7aef8dd66eaa9ea6756bc0f2db">GetPeripheralMode</a> () override</td></tr>
+<tr class="separator:a59321d7aef8dd66eaa9ea6756bc0f2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b078d2f88e1d54e12f50f3b8b68bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#a04b078d2f88e1d54e12f50f3b8b68bba">SetClock</a> (bool polarity, bool phase, uint8_t divider, uint8_t prescaler) override</td></tr>
 <tr class="separator:a04b078d2f88e1d54e12f50f3b8b68bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classSspInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSspInterface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a></td></tr>
-<tr class="memitem:a184460c445217538c41e88bea3c027de inherit pub_methods_classSspInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184460c445217538c41e88bea3c027de"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPeripheralMode</b> (MasterSlaveMode mode, FrameMode frame, DataSize size)=0</td></tr>
-<tr class="separator:a184460c445217538c41e88bea3c027de inherit pub_methods_classSspInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbc2ad53f50952f591992f4660d86f4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classSsp.html#acfbc2ad53f50952f591992f4660d86f4">GetClock</a> () override</td></tr>
+<tr class="separator:acfbc2ad53f50952f591992f4660d86f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -347,7 +350,7 @@ static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_Type
 <tr class="separator:aba3b1577de9f7b331f246145c1c12f5d inherit pro_static_attribs_classLpc40xxSystemController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abe858ecd6d2fa2feef041777786917eb"></a>
+<a class="anchor" id="a61067541fb55fdb4e18fb832234c1c45"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -357,22 +360,73 @@ static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_Type
         <tr>
           <td class="memname">constexpr Ssp::Ssp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d74/classSsp.html#aee2a8b5258dfdb9e430ed2ed51cd2e4c">Peripheral</a>&#160;</td>
-          <td class="paramname"><em>set_pssp</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>User modified constructor. <b>MUST</b> be followed by the setter functions for Power, Clock, and Frame format found below. </p>
+<p>Default constructor sets up SSP0 peripheral as SPI master, should be followed by <a class="el" href="../../db/d74/classSsp.html#aacdedc8c954a3ae69d75af5782aba4f7" title="Sets up SSP peripheral as SPI master. ">SetSpiMasterDefault()</a> function. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acfbc2ad53f50952f591992f4660d86f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Ssp::GetClock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the Peripheral clock from registers </p><dl class="section return"><dt>Returns</dt><dd>- returns a 32-bit value as follows: 0000_0000 0000_0x0x xxxx_xxxx xxxx_xxxx polarity = 1-bit @ bit 18 phase = 1-bit @ bit 16 divider = 8-bits @ bit 8 prescaler = 8-bits @ bit 0 </dd></dl>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59321d7aef8dd66eaa9ea6756bc0f2db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ssp::GetPeripheralMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the Peripheral modes from registers </p><dl class="section return"><dt>Returns</dt><dd>- returns a 16-bit value as follows: 0000_000x 0xx0_xxxx MasterSlaveMode = 1-bit @ bit 8 FrameMode = 2-bit @ bit 5 DataSize = 4-bit @ bit 0 </dd></dl>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a29f8f37aa9f3682c428c50e3593f3df3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -395,6 +449,172 @@ static <a class="el" href="../../df/d8b/structLPC__SC__TypeDef.html">LPC_SC_Type
 </table>
 </div><div class="memdoc">
 <p>Powers on the peripheral, sets the peripheral clock, format, and data size, and enables the SSP pins for communication see and more. See page 601 of user manual UM10562 LPC408x/407x for more details. </p>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeda360fc438ca4621082dd33a5e999d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ssp::IsTransferRegBusy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the SSP controller is idle. </p><dl class="section return"><dt>Returns</dt><dd>true if the controller is sending or receving a data frame and false if it is idle. </dd></dl>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04b078d2f88e1d54e12f50f3b8b68bba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ssp::SetClock </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>polarity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>phase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>divider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>prescaler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the clock rate for the Peripheral </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polarity</td><td>- maintain bus on clock 0=low or 1=high between frames </td></tr>
+    <tr><td class="paramname">phase</td><td>- capture serial data on 0=first or 1=second clock cycle </td></tr>
+    <tr><td class="paramname">divider</td><td>- see notes in SSP_Interface above </td></tr>
+    <tr><td class="paramname">prescaler</td><td>- divides the PCLK, must be even value between 2-254 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a51f392ff9d7e6170714e38d97641af81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ssp::SetPeripheralMode </td>
+          <td>(</td>
+          <td class="paramtype">MasterSlaveMode&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameMode&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DataSize&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the various modes for the Peripheral </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>- master or slave mode </td></tr>
+    <tr><td class="paramname">frame</td><td>- format for Peripheral data to use </td></tr>
+    <tr><td class="paramname">size</td><td>- number of bits per frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafacf6282b449b8afad0fd08cee931c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Ssp::Transfer </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transfers a data frame to an external device using the SSP data register. This functions for both transmitting and receiving data. It is recommended this region be protected by a mutex. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- information to be placed in data register </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- received data from external device </dd></dl>
 
 <p>Implements <a class="el" href="../../d2/d6f/classSspInterface.html">SspInterface</a>.</p>
 

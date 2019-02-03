@@ -99,6 +99,7 @@ var searchData=
   ['tpi_5ftype',['TPI_Type',['../db/daf/structTPI__Type.html',1,'']]],
   ['tpr',['TPR',['../d8/da9/structITM__Type.html#ae907229ba50538bf370fbdfd54c099a2',1,'ITM_Type']]],
   ['transaction_5ft',['Transaction_t',['../da/de5/structI2cInterface_1_1Transaction__t.html',1,'I2cInterface']]],
+  ['transfer',['Transfer',['../db/d74/classSsp.html#aafacf6282b449b8afad0fd08cee931c4',1,'Ssp']]],
   ['trigger',['TRIGGER',['../db/daf/structTPI__Type.html#a4d4cd2357f72333a82a1313228287bbd',1,'TPI_Type']]],
   ['type',['Type',['../dc/dd1/classSdInterface.html#aa152f65ee2c31b2e97a0f47322cde4b4',1,'SdInterface']]]
 ];

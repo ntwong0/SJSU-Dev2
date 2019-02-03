@@ -36,6 +36,7 @@ var searchData=
   ['iser',['ISER',['../d9/deb/structNVIC__Type.html#a99fe3791941bf69b7c1edf13e0b5383a',1,'NVIC_Type']]],
   ['ispr',['ISPR',['../d9/deb/structNVIC__Type.html#a58a1d427f4f45aa4bba77115ec25a2f9',1,'NVIC_Type']]],
   ['isr',['ISR',['../d1/d5d/unionIPSR__Type.html#ab46e5f1b2f4d17cfb9aca4fffcbb2fa5',1,'IPSR_Type::ISR()'],['../d7/ddc/unionxPSR__Type.html#a3e9120dcf1a829fc8d2302b4d0673970',1,'xPSR_Type::ISR()']]],
+  ['istransferregbusy',['IsTransferRegBusy',['../db/d74/classSsp.html#aeda360fc438ca4621082dd33a5e999d6',1,'Ssp']]],
   ['it',['IT',['../d7/ddc/unionxPSR__Type.html#a3200966922a194d84425e2807a7f1328',1,'xPSR_Type']]],
   ['itatbctr0',['ITATBCTR0',['../db/daf/structTPI__Type.html#aaa573b2e073e76e93c51ecec79c616d0',1,'TPI_Type']]],
   ['itatbctr2',['ITATBCTR2',['../db/daf/structTPI__Type.html#ab358319b969d3fed0f89bbe33e9f1652',1,'TPI_Type']]],
