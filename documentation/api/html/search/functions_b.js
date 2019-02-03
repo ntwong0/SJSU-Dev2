@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sd',['Sd',['../de/d4a/classSd.html#a7705850863d449dcfbdaf1bee71bcf81',1,'Sd']]],
+  ['sd',['Sd',['../de/d4a/classSd.html#a2c504164bfafd03410d74d48c002374c',1,'Sd']]],
   ['sendcmd',['SendCmd',['../dc/dd1/classSdInterface.html#abe0639e39e9573396bee646efb874592',1,'SdInterface::SendCmd()'],['../de/d4a/classSd.html#a222877bd62b7ae483dc9bcc4003be54c',1,'Sd::SendCmd()']]],
   ['setclock',['SetClock',['../db/d74/classSsp.html#a04b078d2f88e1d54e12f50f3b8b68bba',1,'Ssp']]],
   ['setmode',['SetMode',['../df/d34/classApds9960.html#a1e5898180863a64d817cc81ed89e6e7f',1,'Apds9960']]],

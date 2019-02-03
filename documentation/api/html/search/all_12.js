@@ -142,7 +142,7 @@ var searchData=
   ['scr',['SCR',['../d9/d2d/structLPC__UART4__TypeDef.html#af44b7f3f374a51063f7a66606b7424b3',1,'LPC_UART4_TypeDef::SCR()'],['../d1/dd1/structSCB__Type.html#a3a4840c6fa4d1ee75544f4032c88ec34',1,'SCB_Type::SCR()']]],
   ['scs',['SCS',['../df/d8b/structLPC__SC__TypeDef.html#ac96ef5d474b2033cdfb8dac1cb1cb513',1,'LPC_SC_TypeDef']]],
   ['scs_5fbase',['SCS_BASE',['../d7/d12/group__CMSIS__core__base.html#ga3c14ed93192c8d9143322bbf77ebf770',1,'core_cm4.h']]],
-  ['sd',['Sd',['../de/d4a/classSd.html',1,'Sd'],['../de/d4a/classSd.html#a7705850863d449dcfbdaf1bee71bcf81',1,'Sd::Sd()']]],
+  ['sd',['Sd',['../de/d4a/classSd.html',1,'Sd'],['../de/d4a/classSd.html#a2c504164bfafd03410d74d48c002374c',1,'Sd::Sd()']]],
   ['sdinterface',['SdInterface',['../dc/dd1/classSdInterface.html',1,'']]],
   ['sendcmd',['SendCmd',['../dc/dd1/classSdInterface.html#abe0639e39e9573396bee646efb874592',1,'SdInterface::SendCmd()'],['../de/d4a/classSd.html#a222877bd62b7ae483dc9bcc4003be54c',1,'Sd::SendCmd()']]],
   ['setclock',['SetClock',['../db/d74/classSsp.html#a04b078d2f88e1d54e12f50f3b8b68bba',1,'Ssp']]],

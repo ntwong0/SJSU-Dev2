@@ -176,7 +176,11 @@ virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetClock<
 <tr class="separator:ade2c4f288c243127b7d637f6ba8e3aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>SSP provides the ability for serial communication over SPI, SSI, or Microwire on the LPC407x chipset. NOTE: The SSP2 peripheral is a selectable option in this driver, it is not currently available on the SJTwo board. Only one set of pins are available for either SSP0 or SSP1 as follows: Peripheral | MISO | MOSI | SCK SSP0 | P0.17 | P0.18 | P0.15 SSP1 | P0.8 | P0.9 | P0.7 Order of function calls should be as follows: constructor setter functions Initialize Note that all register modifications must be made before the SSP is enabled in the CR1 register (see page 612 of user manual UM10562) If changes are desired after the Initialize function is called, the peripheral must be disabled, and then re-enabled after changes are made. </p>
+<div class="textblock"><p>SSP provides the ability for serial communication over SPI, SSI, or Microwire on the LPC407x chipset. NOTE: The SSP2 peripheral is a selectable option in this driver, it is not currently available on the SJTwo board. Only one set of pins are available for either SSP0 or SSP1 as follows: Peripheral | MISO | MOSI | SCK SSP0 | P0.17 | P0.18 | P0.15 SSP1 | P0.8 | P0.9 | P0.7 Order of function calls should be as follows: </p><pre class="fragment">1. Constructor (create object)
+2. SetClock(...)
+3. SetPeripheralMode(...)
+4. Initialize()
+</pre><p>Note that all register modifications must be made before the SSP is enabled in the CR1 register (see page 612 of user manual UM10562) If changes are desired after the Initialize function is called, the peripheral must be disabled, and then re-enabled after changes are made. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../d2/d0e/ssp_8hpp_source.html">ssp.hpp</a></li>
 </ul>
