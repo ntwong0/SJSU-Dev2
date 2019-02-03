@@ -13,5 +13,6 @@ var searchData=
   ['rs485dly',['RS485DLY',['../d9/d2d/structLPC__UART4__TypeDef.html#af8df75cc75b5cb5726be4e773084bbe5',1,'LPC_UART4_TypeDef']]],
   ['rsid',['RSID',['../df/d8b/structLPC__SC__TypeDef.html#ae36341edb8867121c822553ff40befb4',1,'LPC_SC_TypeDef']]],
   ['rstcon0',['RSTCON0',['../df/d8b/structLPC__SC__TypeDef.html#a3969908883ca3acbb65b398b6ac44435',1,'LPC_SC_TypeDef']]],
-  ['rstcon1',['RSTCON1',['../df/d8b/structLPC__SC__TypeDef.html#aa5457d95980f74c556beba20002682cf',1,'LPC_SC_TypeDef']]]
+  ['rstcon1',['RSTCON1',['../df/d8b/structLPC__SC__TypeDef.html#aa5457d95980f74c556beba20002682cf',1,'LPC_SC_TypeDef']]],
+  ['rtoscommand',['RtosCommand',['../de/d84/classRtosCommand.html',1,'']]]
 ];

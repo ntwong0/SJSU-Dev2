@@ -127,10 +127,14 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a90ec3fe89cdddd9b1cdabc77b79339f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a754e9f9c3f9841a1eae55e93129b813f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a754e9f9c3f9841a1eae55e93129b813f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TimerPort</b> : uint8_t { <b>kTimer0</b> = 0, 
-<b>kTimer1</b> = 1, 
-<b>kTimer2</b> = 2, 
-<b>kTimer3</b> = 3
+<tr class="memitem:a754e9f9c3f9841a1eae55e93129b813f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a754e9f9c3f9841a1eae55e93129b813f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TimerPort</b> : uint8_t { <br />
+&#160;&#160;<b>kTimer0</b> = 0, 
+<b>kTimer1</b>, 
+<b>kTimer2</b>, 
+<b>kTimer3</b>, 
+<br />
+&#160;&#160;<b>kCount</b>
+<br />
  }</td></tr>
 <tr class="separator:a754e9f9c3f9841a1eae55e93129b813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993e3035a3f66387e058462204a721b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a993e3035a3f66387e058462204a721b7"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MatchControlRegister</b> : uint8_t { <b>kMat0</b> = 0, 
@@ -139,7 +143,7 @@ Public Types</h2></td></tr>
 <b>kMat3</b> = 9
  }</td></tr>
 <tr class="separator:a993e3035a3f66387e058462204a721b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1a17cfb73cc6b8b6542043397dab1fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1a17cfb73cc6b8b6542043397dab1fd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TimerSetting</b> : uint8_t { <br />
+<tr class="memitem:ab91ed6364353b691beae11f0ac6b0358"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab91ed6364353b691beae11f0ac6b0358"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TimerIsrCondition</b> : uint8_t { <br />
 &#160;&#160;<b>kInterrupt</b> = 0b001, 
 <b>kRestart</b> = 0b010, 
 <b>kStop</b> = 0b100, 
@@ -150,22 +154,19 @@ Public Types</h2></td></tr>
 <b>kInterruptRestartStop</b> = 0b111
 <br />
  }</td></tr>
-<tr class="separator:ac1a17cfb73cc6b8b6542043397dab1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ab91ed6364353b691beae11f0ac6b0358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a896ff016542b4bbdccfb36d38345461a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a896ff016542b4bbdccfb36d38345461a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (TimerPort timer, uint32_t us_per_tick, IsrPointer isr, int32_t priority)=0</td></tr>
-<tr class="separator:a896ff016542b4bbdccfb36d38345461a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f55ca7635c0d3808eee16fe47b058b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f55ca7635c0d3808eee16fe47b058b4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimer</b> (uint32_t time, MatchControlRegister reg, TimerSetting mode)=0</td></tr>
-<tr class="separator:a9f55ca7635c0d3808eee16fe47b058b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1962b28c80124e116a2857a8369ee8e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1962b28c80124e116a2857a8369ee8e3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t us_per_tick, IsrPointer isr, int32_t priority)=0</td></tr>
+<tr class="separator:a1962b28c80124e116a2857a8369ee8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9083530349fe09e3bda3df4d1a2cdb66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9083530349fe09e3bda3df4d1a2cdb66"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimer</b> (uint32_t time, TimerIsrCondition mode, MatchControlRegister reg=kMat0)=0</td></tr>
+<tr class="separator:a9083530349fe09e3bda3df4d1a2cdb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad008db80cd17d28c185f18e11e1165d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad008db80cd17d28c185f18e11e1165d1"></a>
 virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetTimer</b> ()=0</td></tr>
 <tr class="separator:ad008db80cd17d28c185f18e11e1165d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeac8f0bcb5826e333a1e5bddf17f450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeac8f0bcb5826e333a1e5bddf17f450"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearInterrupts</b> ()=0</td></tr>
-<tr class="separator:afeac8f0bcb5826e333a1e5bddf17f450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/kammce/SJSU-Dev2/firmware/library/L1_Drivers/<a class="el" href="../../df/d05/timer_8hpp_source.html">timer.hpp</a></li>

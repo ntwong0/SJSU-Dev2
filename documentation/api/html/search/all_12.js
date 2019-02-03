@@ -150,6 +150,7 @@ var searchData=
   ['setperipheralmode',['SetPeripheralMode',['../db/d74/classSsp.html#a51f392ff9d7e6170714e38d97641af81',1,'Ssp']]],
   ['setspimasterdefault',['SetSpiMasterDefault',['../db/d74/classSsp.html#aacdedc8c954a3ae69d75af5782aba4f7',1,'Ssp']]],
   ['settickfrequency',['SetTickFrequency',['../d7/da6/classSystemTimer.html#a0251600e6b22d7aa14b62a28d2c15f7a',1,'SystemTimer']]],
+  ['settimer',['SetTimer',['../dc/dea/classTimer.html#aff12b74dbee546d45d9cfc5fcf95a041',1,'Timer']]],
   ['sff_5fgrp_5fsa',['SFF_GRP_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a372d5dfdf917983f56e4b337dba0cbba',1,'LPC_CANAF_TypeDef']]],
   ['sff_5fsa',['SFF_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a55cb93958630b8b11dc10c682d7ede3a',1,'LPC_CANAF_TypeDef']]],
   ['shcsr',['SHCSR',['../d1/dd1/structSCB__Type.html#a7b5ae9741a99808043394c4743b635c4',1,'SCB_Type']]],
