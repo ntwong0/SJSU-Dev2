@@ -109,6 +109,7 @@ var searchData=
   ['coredebug_5fdhcsr_5fs_5fsleep_5fmsk',['CoreDebug_DHCSR_S_SLEEP_Msk',['../d1/d4e/group__CMSIS__CoreDebug.html#ga98d51538e645c2c1a422279cd85a0a25',1,'core_cm4.h']]],
   ['coredebug_5fdhcsr_5fs_5fsleep_5fpos',['CoreDebug_DHCSR_S_SLEEP_Pos',['../d1/d4e/group__CMSIS__CoreDebug.html#ga349ccea33accc705595624c2d334fbcb',1,'core_cm4.h']]],
   ['coredebug_5ftype',['CoreDebug_Type',['../d6/d00/structCoreDebug__Type.html',1,'']]],
+  ['counters_5f',['counters_',['../df/d46/classrtos_1_1PeriodicScheduler.html#a9d69f745ce16a81891abd90636faa6e0',1,'rtos::PeriodicScheduler']]],
   ['cpacr',['CPACR',['../d1/dd1/structSCB__Type.html#ac6a860c1b8d8154a1f00d99d23b67764',1,'SCB_Type']]],
   ['cpicnt',['CPICNT',['../d5/db5/structDWT__Type.html#a2c08096c82abe245c0fa97badc458154',1,'DWT_Type']]],
   ['cpsr',['CPSR',['../d2/d47/structLPC__SSP__TypeDef.html#a454a4d1a09ccb43c3f3a8965a8b30087',1,'LPC_SSP_TypeDef']]],

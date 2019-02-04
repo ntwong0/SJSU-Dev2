@@ -5,6 +5,8 @@ var searchData=
   ['scll',['SCLL',['../d8/d12/structLPC__I2C__TypeDef.html#af1ecc95ca301033c54b4f860858050c7',1,'LPC_I2C_TypeDef']]],
   ['scr',['SCR',['../d9/d2d/structLPC__UART4__TypeDef.html#af44b7f3f374a51063f7a66606b7424b3',1,'LPC_UART4_TypeDef::SCR()'],['../d1/dd1/structSCB__Type.html#a3a4840c6fa4d1ee75544f4032c88ec34',1,'SCB_Type::SCR()']]],
   ['scs',['SCS',['../df/d8b/structLPC__SC__TypeDef.html#ac96ef5d474b2033cdfb8dac1cb1cb513',1,'LPC_SC_TypeDef']]],
+  ['semaphore_5f',['semaphore_',['../d6/dda/classrtos_1_1PeriodicTask.html#a9a370d91f95fcee1951bc8631c0f450b',1,'rtos::PeriodicTask']]],
+  ['semaphore_5fbuffer_5f',['semaphore_buffer_',['../d6/dda/classrtos_1_1PeriodicTask.html#aa4ad5d68bdc663174c874be613662ba2',1,'rtos::PeriodicTask']]],
   ['sff_5fgrp_5fsa',['SFF_GRP_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a372d5dfdf917983f56e4b337dba0cbba',1,'LPC_CANAF_TypeDef']]],
   ['sff_5fsa',['SFF_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a55cb93958630b8b11dc10c682d7ede3a',1,'LPC_CANAF_TypeDef']]],
   ['shcsr',['SHCSR',['../d1/dd1/structSCB__Type.html#a7b5ae9741a99808043394c4743b635c4',1,'SCB_Type']]],
