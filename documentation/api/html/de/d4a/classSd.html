@@ -148,10 +148,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WaitToReadBlock</b> (
 <tr class="memitem:ad918a83084e838ac32829e4e403243a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad918a83084e838ac32829e4e403243a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>WaitWhileBusy</b> ()</td></tr>
 <tr class="separator:ad918a83084e838ac32829e4e403243a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57b7eb7e284328057f386fff15268b56"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#a57b7eb7e284328057f386fff15268b56">ReadBlock</a> (uint32_t address, uint8_t *array, uint16_t blocks=1) override</td></tr>
-<tr class="separator:a57b7eb7e284328057f386fff15268b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3976382b2c0ffe954414623ddf89e793"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#a3976382b2c0ffe954414623ddf89e793">WriteBlock</a> (uint32_t address, const uint8_t *array, uint16_t blocks=1) override</td></tr>
-<tr class="separator:a3976382b2c0ffe954414623ddf89e793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75819cc2d6f9b4da51805061f72fa26"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#af75819cc2d6f9b4da51805061f72fa26">ReadBlock</a> (uint32_t address, uint8_t *array, uint32_t blocks=1) override</td></tr>
+<tr class="separator:af75819cc2d6f9b4da51805061f72fa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec73b401385550357513297b28e491b4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#aec73b401385550357513297b28e491b4">WriteBlock</a> (uint32_t address, const uint8_t *array, uint32_t blocks=1) override</td></tr>
+<tr class="separator:aec73b401385550357513297b28e491b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c4499dc1c4ba7f22514160767a1dcc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#af9c4499dc1c4ba7f22514160767a1dcc">DeleteBlock</a> (uint32_t start, uint32_t end) override</td></tr>
 <tr class="separator:af9c4499dc1c4ba7f22514160767a1dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a222877bd62b7ae483dc9bcc4003be54c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4a/classSd.html#a222877bd62b7ae483dc9bcc4003be54c">SendCmd</a> (<a class="el" href="../../dc/dd1/classSdInterface.html#af63a98381400ac3035a2161d1ed1aa12">Command</a> sdc, uint32_t arg, uint8_t response_buffer[], uint32_t delay, <a class="el" href="../../dc/dd1/classSdInterface.html#a4a9ab1b4b08fbb2c7e4f00610b1a0c0f">KeepAlive</a> keep_alive) override</td></tr>
@@ -446,7 +446,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a57b7eb7e284328057f386fff15268b56"></a>
+<a class="anchor" id="af75819cc2d6f9b4da51805061f72fa26"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -468,7 +468,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>blocks</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -485,7 +485,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>reads any number of 512-byte blocks from the SD Card and returns the received block This function assumes the block length is locked to 512-bytes (as is the case for SDHC/SDXC cards). SD <a class="el" href="../../d9/d71/classCommand.html">Command</a> 17 and 18 are are used for single and multi block reads, respectively.  address The address of the starting block to read from. Note that this address must be aligned with a block boundary. By assuming block size of 512- bytes, valid addresses must be multiples of 512. Some Valid Examples: 0x00000000 &ndash;&gt; byte addr 0 0x00000200 &ndash;&gt; byte addr 512 0x00000400 &ndash;&gt; byte addr 1024 0x00000600 &ndash;&gt; byte addr 1536 Some Invalid Examples: 0x00000001 &ndash;&gt; byte addr 1 0x000001FF &ndash;&gt; byte addr 511 0x00000300 &ndash;&gt; byte addr 768  array A pointer to an array where the bytes read will be stored. The array must be able to hold a multiple 512 bytes (the SD standard size of blocks).  blocks The number of blocks to read. Inherently, this number should be the number of 512-byte blocks that the above array can store. If omitted, this defaults to 1 (i.e. a single 512-byte block). </p><dl class="section return"><dt>Returns</dt><dd>status Returns the R1-type command response byte returned from the card after the initial read command is sent. See the official SD documentation for details on what these flags mean. </dd></dl>
 
-<p>Implements <a class="el" href="../../dc/dd1/classSdInterface.html#a27f5e88e6203d8d98d81e040b7ea19c1">SdInterface</a>.</p>
+<p>Implements <a class="el" href="../../dc/dd1/classSdInterface.html#a5add880209c4f74a187e4bb1aebc8741">SdInterface</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3976382b2c0ffe954414623ddf89e793"></a>
+<a class="anchor" id="aec73b401385550357513297b28e491b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -566,7 +566,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>blocks</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -583,7 +583,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>writes any number of 512-byte blocks to the SD Card and returns the status of the operation. This function assumes the block length is locked to 512-bytes (as is the case for SDHC/SDXC cards).  address The address of the starting block to write to. Note that this address must be aligned with a block boundary. By assuming block size of 512- bytes, valid addresses must be multiples of 512. Some Valid Examples: 0x00000000 &ndash;&gt; byte addr 0 0x00000200 &ndash;&gt; byte addr 512 0x00000400 &ndash;&gt; byte addr 1024 0x00000600 &ndash;&gt; byte addr 1536 Some Invalid Examples: 0x00000001 &ndash;&gt; byte addr 1 0x000001FF &ndash;&gt; byte addr 511 0x00000300 &ndash;&gt; byte addr 768  array A pointer to an array where the bytes to write are stored. The array must be able to hold a multiple 512 bytes (the SD standard size of blocks).  blocks The number of blocks to write. Inherently, this number should be the number of 512-byte blocks that the above array stores. If omitted, this will default to 1 (i.e. a single 512-byte block). </p><dl class="section return"><dt>Returns</dt><dd>status Returns the R1-type command reponse byte returned from the card after the initial write command is sent. See the official SD documentation for details on what these flags mean. </dd></dl>
 
-<p>Implements <a class="el" href="../../dc/dd1/classSdInterface.html#aaf24a574d4eb094b86db006619f52140">SdInterface</a>.</p>
+<p>Implements <a class="el" href="../../dc/dd1/classSdInterface.html#a7dc1f182b9791242d88e7374d5c082d9">SdInterface</a>.</p>
 
 </div>
 </div>
