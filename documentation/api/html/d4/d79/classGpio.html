@@ -98,7 +98,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d0/dab/classGpio-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -118,11 +120,17 @@ Collaboration diagram for Gpio:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d6b/classGpio__coll__graph.png" border="0" usemap="#Gpio_coll__map" alt="Collaboration graph"/></div>
 <map name="Gpio_coll__map" id="Gpio_coll__map">
-<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node3" href="../../d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="136,5,277,32"/>
+<area shape="rect" id="node2" href="../../d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,13,112,39"/>
+<area shape="rect" id="node3" href="../../dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html" title="Gpio::GpioInterruptRegister\lMap_t" alt="" coords="136,5,331,47"/>
+<area shape="rect" id="node4" href="../../d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="355,13,496,39"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html">GpioInterruptRegisterMap_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a173becb13c28984a0c3cce12219ec627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a173becb13c28984a0c3cce12219ec627"></a>
@@ -161,14 +169,61 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (void) overr
 <tr class="memitem:a1d99c8daa182a418972d2853f3d3e52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d99c8daa182a418972d2853f3d3e52f"></a>
 <a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPin</b> () override</td></tr>
 <tr class="separator:a1d99c8daa182a418972d2853f3d3e52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50696fb69bc2dc5c1d8f8810599eb9b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50696fb69bc2dc5c1d8f8810599eb9b4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ValidPortCheck</b> ()</td></tr>
+<tr class="separator:a50696fb69bc2dc5c1d8f8810599eb9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d288888d64fa0e10a59a9b4e553d19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54d288888d64fa0e10a59a9b4e553d19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInterruptRoutine</b> (IsrPointer function) override</td></tr>
+<tr class="separator:a54d288888d64fa0e10a59a9b4e553d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95841381ffc0c2deaa4c97292284dd8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95841381ffc0c2deaa4c97292284dd8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearInterruptRoutine</b> () override</td></tr>
+<tr class="separator:a95841381ffc0c2deaa4c97292284dd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5759b163f7ef699c28014eff2128031"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5759b163f7ef699c28014eff2128031"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInterruptEdge</b> (Edge edge) override</td></tr>
+<tr class="separator:ae5759b163f7ef699c28014eff2128031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966cbad072cf4607e490b9701b7954ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a966cbad072cf4607e490b9701b7954ff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearInterruptEdge</b> (Edge edge) override</td></tr>
+<tr class="separator:a966cbad072cf4607e490b9701b7954ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97e8fe4d48bfb024bcb55847289cc60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa97e8fe4d48bfb024bcb55847289cc60"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AttachInterrupt</b> (IsrPointer function, Edge edge) override</td></tr>
+<tr class="separator:aa97e8fe4d48bfb024bcb55847289cc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeff90267235bb37924837aa258c7830"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abeff90267235bb37924837aa258c7830"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DetachInterrupt</b> () override</td></tr>
+<tr class="separator:abeff90267235bb37924837aa258c7830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac5bae6f92b30e732d714a60b6f3d8718"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5bae6f92b30e732d714a60b6f3d8718"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableInterrupts</b> ()</td></tr>
+<tr class="separator:ac5bae6f92b30e732d714a60b6f3d8718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f57be3d8da54915e20c96596122957"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2f57be3d8da54915e20c96596122957"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableInterrupts</b> ()</td></tr>
+<tr class="separator:ae2f57be3d8da54915e20c96596122957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f69b6196068d4537dd2aab4ca434509"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f69b6196068d4537dd2aab4ca434509"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>InterruptHandler</b> ()</td></tr>
+<tr class="separator:a2f69b6196068d4537dd2aab4ca434509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a7ba0890c14de0b9e81f06e6ce6043812"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ba0890c14de0b9e81f06e6ce6043812"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kNumberOfPins</b> = 32</td></tr>
+<tr class="separator:a7ba0890c14de0b9e81f06e6ce6043812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0964fe77f143debd49d0220990b3d9d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0964fe77f143debd49d0220990b3d9d9"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kNumberOfPorts</b> = 2</td></tr>
+<tr class="separator:a0964fe77f143debd49d0220990b3d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240c8b0269e52923cdfe2f69ac692086"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a240c8b0269e52923cdfe2f69ac692086"></a>
 static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>kGpioFunction</b> = 0</td></tr>
 <tr class="separator:a240c8b0269e52923cdfe2f69ac692086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aede45b9403243f14a7b07e31dbc731b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d56/structLPC__GPIO__TypeDef.html">LPC_GPIO_TypeDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_port</b> [6]</td></tr>
 <tr class="separator:aede45b9403243f14a7b07e31dbc731b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5479ad19e6630916a879e43de26ef515"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5479ad19e6630916a879e43de26ef515"></a>
+static IsrPointer&#160;</td><td class="memItemRight" valign="bottom"><b>interrupthandlers</b> [kNumberOfPorts][kNumberOfPins]</td></tr>
+<tr class="separator:a5479ad19e6630916a879e43de26ef515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35bba19a7360b8e4d9db64812e94ee6f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html">GpioInterruptRegisterMap_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>interrupt</b> [kNumberOfPorts]</td></tr>
+<tr class="separator:a35bba19a7360b8e4d9db64812e94ee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabaa308a5a49eec39519527da9cfa749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabaa308a5a49eec39519527da9cfa749"></a>
+static volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><b>port_status</b> = &amp;(LPC_GPIOINT-&gt;IntStatus)</td></tr>
+<tr class="separator:aabaa308a5a49eec39519527da9cfa749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -181,6 +236,11 @@ Additional Inherited Members</h2></td></tr>
 <b>kHigh</b> = 1
  }</td></tr>
 <tr class="separator:ac0ac70102893834fb69f5b7692ad5a0a inherit pub_types_classGpioInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24506d6d8442b2eec1aee5aa90a39a42 inherit pub_types_classGpioInterface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24506d6d8442b2eec1aee5aa90a39a42"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Edge</b> : uint8_t { <b>kEdgeRising</b> = 0, 
+<b>kEdgeFalling</b> = 1, 
+<b>kEdgeBoth</b> = 2
+ }</td></tr>
+<tr class="separator:a24506d6d8442b2eec1aee5aa90a39a42 inherit pub_types_classGpioInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="aede45b9403243f14a7b07e31dbc731b1"></a>
@@ -201,6 +261,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    LPC_GPIO0, LPC_GPIO1, LPC_GPIO2, LPC_GPIO3, LPC_GPIO4, LPC_GPIO5</div><div class="line">  }</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a35bba19a7360b8e4d9db64812e94ee6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html">GpioInterruptRegisterMap_t</a> Gpio::interrupt[kNumberOfPorts]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    { .rising_edge_status  = &amp;(LPC_GPIOINT-&gt;IO0IntStatR),</div><div class="line">      .falling_edge_status = &amp;(LPC_GPIOINT-&gt;IO0IntStatF),</div><div class="line">      .clear               = &amp;(LPC_GPIOINT-&gt;IO0IntClr),</div><div class="line">      .enable_rising_edge  = &amp;(LPC_GPIOINT-&gt;IO0IntEnR),</div><div class="line">      .enable_falling_edge = &amp;(LPC_GPIOINT-&gt;IO0IntEnF) },</div><div class="line">    { .rising_edge_status  = &amp;(LPC_GPIOINT-&gt;IO2IntStatR),</div><div class="line">      .falling_edge_status = &amp;(LPC_GPIOINT-&gt;IO2IntStatF),</div><div class="line">      .clear               = &amp;(LPC_GPIOINT-&gt;IO2IntClr),</div><div class="line">      .enable_rising_edge  = &amp;(LPC_GPIOINT-&gt;IO2IntEnR),</div><div class="line">      .enable_falling_edge = &amp;(LPC_GPIOINT-&gt;IO2IntEnF) }</div><div class="line">  }</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

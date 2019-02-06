@@ -1,4 +1,5 @@
 <map id="Gpio" name="Gpio">
-<area shape="rect" id="node2" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node3" href="$d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="136,5,277,32"/>
+<area shape="rect" id="node2" href="$d9/d4e/classGpioInterface.html" title="GpioInterface" alt="" coords="5,13,112,39"/>
+<area shape="rect" id="node3" href="$dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html" title="Gpio::GpioInterruptRegister\lMap_t" alt="" coords="136,5,331,47"/>
+<area shape="rect" id="node4" href="$d8/d56/structLPC__GPIO__TypeDef.html" title="LPC_GPIO_TypeDef" alt="" coords="355,13,496,39"/>
 </map>
