@@ -158,7 +158,6 @@ var searchData=
   ['sff_5fsa',['SFF_sa',['../d5/d2b/structLPC__CANAF__TypeDef.html#a55cb93958630b8b11dc10c682d7ede3a',1,'LPC_CANAF_TypeDef']]],
   ['shcsr',['SHCSR',['../d1/dd1/structSCB__Type.html#a7b5ae9741a99808043394c4743b635c4',1,'SCB_Type']]],
   ['shp',['SHP',['../d1/dd1/structSCB__Type.html#a9b05f74580fc93daa7fe2f0e1c9c5663',1,'SCB_Type']]],
-  ['sj2_5falias',['SJ2_ALIAS',['../d3/deb/group__Macros.html#gafc93aeceb59fe9af53a5d847d1e19a0d',1,'macros.hpp']]],
   ['sj2_5fpacked',['SJ2_PACKED',['../d3/deb/group__Macros.html#ga3bad8d88b6328d998ff5df3d9266447e',1,'macros.hpp']]],
   ['sj2_5fstringify',['SJ2_STRINGIFY',['../d3/deb/group__Macros.html#ga13324cd98c1a46b0d1b943cb649b3c21',1,'macros.hpp']]],
   ['sj2_5fweak',['SJ2_WEAK',['../d3/deb/group__Macros.html#ga5cf9ee28fa3e0c027a9514a73ba3f0ac',1,'macros.hpp']]],

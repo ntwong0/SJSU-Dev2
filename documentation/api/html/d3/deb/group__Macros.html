@@ -111,9 +111,6 @@ Collaboration diagram for Utility Macros:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gafafbed24c2c3acc1728c06c9bcfbad89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafafbed24c2c3acc1728c06c9bcfbad89"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_FUNCTION_INLINE</b>(function)&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((always_inline))</td></tr>
-<tr class="separator:gafafbed24c2c3acc1728c06c9bcfbad89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf5d9d5aecf1c18b835d0eca11d142858"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf5d9d5aecf1c18b835d0eca11d142858"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_SECTION</b>(section_name)&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((used, section(section_name)))</td></tr>
 <tr class="separator:gaf5d9d5aecf1c18b835d0eca11d142858"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,13 +124,11 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SJ2_STRINGIFY2</b>(s)&#160;&#160;&#160;#s</td></tr>
 <tr class="separator:ga172be480997b343ffcecc0e65a41f55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3bad8d88b6328d998ff5df3d9266447e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3bad8d88b6328d998ff5df3d9266447e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga3bad8d88b6328d998ff5df3d9266447e">SJ2_PACKED</a>(type)&#160;&#160;&#160;type <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((packed))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga3bad8d88b6328d998ff5df3d9266447e">SJ2_PACKED</a>(type)&#160;&#160;&#160;type [[gnu::packed]]</td></tr>
 <tr class="memdesc:ga3bad8d88b6328d998ff5df3d9266447e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJ2_PACKED give a specified type a packed attribute. <br /></td></tr>
 <tr class="separator:ga3bad8d88b6328d998ff5df3d9266447e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5cf9ee28fa3e0c027a9514a73ba3f0ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga5cf9ee28fa3e0c027a9514a73ba3f0ac">SJ2_WEAK</a>(function)&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td></tr>
+<tr class="memitem:ga5cf9ee28fa3e0c027a9514a73ba3f0ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#ga5cf9ee28fa3e0c027a9514a73ba3f0ac">SJ2_WEAK</a>(function)&#160;&#160;&#160;[[gnu::weak]] function</td></tr>
 <tr class="separator:ga5cf9ee28fa3e0c027a9514a73ba3f0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc93aeceb59fe9af53a5d847d1e19a0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/group__Macros.html#gafc93aeceb59fe9af53a5d847d1e19a0d">SJ2_ALIAS</a>(f)&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak, alias(#f), no_instrument_function))</td></tr>
-<tr class="separator:gafc93aeceb59fe9af53a5d847d1e19a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -157,23 +152,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>DO NOT USE this macro directly. Use the C++17 attribute [[maybe_unused]] instead. _SJ2_USED will use void casting as a means to convince the compiler that the variable has been used in the software, to remove compiler warnings about unused variables. NOTE: this will not stop the compiler from optimizing this variable out. </p>
-
-</div>
-</div>
-<a class="anchor" id="gafc93aeceb59fe9af53a5d847d1e19a0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SJ2_ALIAS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">f</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak, alias(#f), no_instrument_function))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Similar to the weak attribute, but also gives each function the implementation of the function f. </p>
 
 </div>
 </div>
@@ -207,7 +185,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<span class="keyword">false</span>)                           \</div><div class="line">  {                                    <a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">\</a></div><div class="line"><a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">    UsedVariadicFunction</a>(__VA_ARGS__); \</div><div class="line">  }</div><div class="ttc" id="group__Macros_html_ga4929073c0c56a9cf86a6c49aa637f83d"><div class="ttname"><a href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">UsedVariadicFunction</a></div><div class="ttdeci">void UsedVariadicFunction(...)</div><div class="ttdef"><b>Definition:</b> macros.hpp:32</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<span class="keyword">false</span>)                           \</div><div class="line">  {                                    <a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">\</a></div><div class="line"><a class="code" href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">    UsedVariadicFunction</a>(__VA_ARGS__); \</div><div class="line">  }</div><div class="ttc" id="group__Macros_html_ga4929073c0c56a9cf86a6c49aa637f83d"><div class="ttname"><a href="../../d3/deb/group__Macros.html#ga4929073c0c56a9cf86a6c49aa637f83d">UsedVariadicFunction</a></div><div class="ttdeci">void UsedVariadicFunction(...)</div><div class="ttdef"><b>Definition:</b> macros.hpp:27</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,7 +198,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">function </td><td>)</td>
-          <td>&#160;&#160;&#160;function <a class="el" href="../../dd/dfe/group__CMSIS__Core__RegAccFunctions.html#ga671b4fa3b3ab3dbc685a5473f3fc76aa">__attribute__</a>((weak))</td>
+          <td>&#160;&#160;&#160;[[gnu::weak]] function</td>
         </tr>
       </table>
 </div><div class="memdoc">
