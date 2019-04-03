@@ -11,6 +11,7 @@ var searchData=
   ['getperipheralmode',['GetPeripheralMode',['../db/d74/classSsp.html#a59321d7aef8dd66eaa9ea6756bc0f2db',1,'Ssp']]],
   ['getruncount',['GetRunCount',['../d6/dda/classrtos_1_1PeriodicTask.html#a7fb97ba87b22e0ecd533a57fc4da2f28',1,'rtos::PeriodicTask']]],
   ['gettask',['GetTask',['../df/d46/classrtos_1_1PeriodicScheduler.html#a93b3be7b0d40377910380513b2f99aa9',1,'rtos::PeriodicScheduler']]],
+  ['globaldataregister_5ft',['GlobalDataRegister_t',['../d3/dfb/unionAdc_1_1GlobalDataRegister__t.html',1,'Adc']]],
   ['gpio',['Gpio',['../d4/d79/classGpio.html',1,'']]],
   ['gpiointerface',['GpioInterface',['../d9/d4e/classGpioInterface.html',1,'']]],
   ['gpiointerruptregistermap_5ft',['GpioInterruptRegisterMap_t',['../dd/d9b/structGpio_1_1GpioInterruptRegisterMap__t.html',1,'Gpio']]],

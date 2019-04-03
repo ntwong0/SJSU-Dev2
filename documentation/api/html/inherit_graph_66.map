@@ -1,9 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d4/d53/classrtos_1_1PeriodicTaskInterface.html" title="rtos::PeriodicTaskInterface" alt="" coords="203,5,391,32"/>
-<area shape="rect" id="node2" href="$d6/dda/classrtos_1_1PeriodicTask.html" title="rtos::PeriodicTask\l\&lt; kTaskStackSize \&gt;" alt="" coords="459,45,609,86"/>
-<area shape="rect" id="node3" href="$d4/d33/classrtos_1_1TaskInterface.html" title="rtos::TaskInterface" alt="" coords="5,107,144,133"/>
-<area shape="rect" id="node4" href="$d1/d0b/classrtos_1_1Task.html" title="rtos::Task\&lt; kStackSize \&gt;" alt="" coords="205,56,388,83"/>
-<area shape="rect" id="node5" href="$d1/d0b/classrtos_1_1Task.html" title="rtos::Task\&lt; 512 \&gt;" alt="" coords="229,157,365,184"/>
-<area shape="rect" id="node7" href="$d1/d0b/classrtos_1_1Task.html" title="rtos::Task\&lt; kTaskStackSize \&gt;" alt="" coords="192,107,401,133"/>
-<area shape="rect" id="node6" href="$df/d46/classrtos_1_1PeriodicScheduler.html" title="rtos::PeriodicScheduler" alt="" coords="449,157,619,184"/>
+<area shape="rect" id="node1" href="$d5/d71/classPinInterface.html" title="PinInterface" alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node2" href="$da/da0/classPin.html" title="Pin" alt="" coords="151,5,192,32"/>
 </map>

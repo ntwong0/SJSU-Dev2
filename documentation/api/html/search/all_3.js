@@ -48,6 +48,7 @@ var searchData=
   ['control_5fspsel_5fpos',['CONTROL_SPSEL_Pos',['../d5/dea/group__CMSIS__CORE.html#ga07eafc53e609895342c6a530e9d01310',1,'core_cm4.h']]],
   ['control_5ftype',['CONTROL_Type',['../d0/dc5/unionCONTROL__Type.html',1,'']]],
   ['controlpins_5ft',['ControlPins_t',['../dc/d85/structSt7066u_1_1ControlPins__t.html',1,'St7066u']]],
+  ['controlregister_5ft',['ControlRegister_t',['../de/dbe/unionAdc_1_1ControlRegister__t.html',1,'Adc']]],
   ['core_5fcm4_2eh',['core_cm4.h',['../d5/d35/core__cm4_8h.html',1,'']]],
   ['core_5fcmfunc_2eh',['core_cmFunc.h',['../df/d74/core__cmFunc_8h.html',1,'']]],
   ['core_5fcminstr_2eh',['core_cmInstr.h',['../da/dc3/core__cmInstr_8h.html',1,'']]],

@@ -9,6 +9,7 @@ var searchData=
   ['commandlist_5ft',['CommandList_t',['../dd/d93/structCommandList__t.html',1,'']]],
   ['control_5ftype',['CONTROL_Type',['../d0/dc5/unionCONTROL__Type.html',1,'']]],
   ['controlpins_5ft',['ControlPins_t',['../dc/d85/structSt7066u_1_1ControlPins__t.html',1,'St7066u']]],
+  ['controlregister_5ft',['ControlRegister_t',['../de/dbe/unionAdc_1_1ControlRegister__t.html',1,'Adc']]],
   ['coredebug_5ftype',['CoreDebug_Type',['../d6/d00/structCoreDebug__Type.html',1,'']]],
   ['crctableconfig_5ft',['CrcTableConfig_t',['../dd/db3/structSdInterface_1_1CrcTableConfig__t.html',1,'SdInterface']]],
   ['cursorposition_5ft',['CursorPosition_t',['../d8/d0e/structSt7066uInterface_1_1CursorPosition__t.html',1,'St7066uInterface']]]

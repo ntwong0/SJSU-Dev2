@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -131,6 +132,13 @@ Collaboration diagram for Adc:</div>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbe/unionAdc_1_1ControlRegister__t.html">ControlRegister_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/unionAdc_1_1GlobalDataRegister__t.html">GlobalDataRegister_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a27d7cbff963d47eee4bacdf245a76d79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27d7cbff963d47eee4bacdf245a76d79"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Channel</b> : uint8_t { <br />
@@ -186,15 +194,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a234fb1beff4f6f3bbca0aea3ca4a8901"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a234fb1beff4f6f3bbca0aea3ca4a8901"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Adc</b> (Adc::Channel channel_bit)</td></tr>
-<tr class="separator:a234fb1beff4f6f3bbca0aea3ca4a8901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cde30893380e31c6d7939ed562f00d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cde30893380e31c6d7939ed562f00d5"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Adc</b> (<a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *adc_pin)</td></tr>
-<tr class="separator:a5cde30893380e31c6d7939ed562f00d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1749c6a944c2d844dead966768ab85cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1749c6a944c2d844dead966768ab85cb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t adc_clk_hz=1'000'000) override</td></tr>
-<tr class="separator:a1749c6a944c2d844dead966768ab85cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ace26bc75402b8a35fcb6a57b8c781"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56ace26bc75402b8a35fcb6a57b8c781"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Adc</b> (Channel channel)</td></tr>
+<tr class="separator:a56ace26bc75402b8a35fcb6a57b8c781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b9ba45523e291c7f46232d4866572b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2b9ba45523e291c7f46232d4866572b"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Adc</b> (<a class="el" href="../../d5/d71/classPinInterface.html">PinInterface</a> *adc_pin, Channel channel)</td></tr>
+<tr class="separator:ab2b9ba45523e291c7f46232d4866572b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f5aa6209cec59e3f229bf9f5d8e9e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2f5aa6209cec59e3f229bf9f5d8e9e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (uint32_t adc_clock_freq=1'000'000) override</td></tr>
+<tr class="separator:ab2f5aa6209cec59e3f229bf9f5d8e9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90837069ac21e20ea4502cb35cdfdfb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90837069ac21e20ea4502cb35cdfdfb5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Conversion</b> () override</td></tr>
 <tr class="separator:a90837069ac21e20ea4502cb35cdfdfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,9 +215,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>FinishedConversion</b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c654f19aebee043d8b3aa8703ba73c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c654f19aebee043d8b3aa8703ba73c6"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>BurstMode</b> (bool burst_mode_is_on=false)</td></tr>
-<tr class="separator:a6c654f19aebee043d8b3aa8703ba73c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61dd95aac5f10db5f65212ce9c5d7fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac61dd95aac5f10db5f65212ce9c5d7fe"></a>
+static volatile <a class="el" href="../../de/dbe/unionAdc_1_1ControlRegister__t.html">ControlRegister_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetControlRegister</b> ()</td></tr>
+<tr class="separator:ac61dd95aac5f10db5f65212ce9c5d7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2514b7478e2f9b1887977b2ea26951e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2514b7478e2f9b1887977b2ea26951e"></a>
+static volatile <a class="el" href="../../d3/dfb/unionAdc_1_1GlobalDataRegister__t.html">GlobalDataRegister_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalDataRegister</b> ()</td></tr>
+<tr class="separator:aa2514b7478e2f9b1887977b2ea26951e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab841e902c784d532288701825ffc1b85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab841e902c784d532288701825ffc1b85"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>BurstMode</b> (bool burst_mode_is_on=true)</td></tr>
+<tr class="separator:ab841e902c784d532288701825ffc1b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
