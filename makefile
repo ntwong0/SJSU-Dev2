@@ -398,7 +398,7 @@ flash:
 	make --quiet application
 	@bash -c "\
 	source $(TOOLS_DIR)/Hyperload/modules/bin/activate && \
-	python $(TOOLS_DIR)/Hyperload/hyperload.py \
+	python3 $(TOOLS_DIR)/Hyperload/hyperload.py \
 	--baud=576000 --animation=clocks --clockspeed=48000000 \
 	--device=\"$(SJDEV)\" \"$(BINARY)\""
 # ====================================================================
@@ -453,7 +453,7 @@ run-test:
 # ====================================================================
 # Evaluate library files and check them for linting errors.
 lint:
-	@python2.7 $(TOOLS_DIR)/cpplint/cpplint.py $(LINT_FILES)
+	@python3 $(TOOLS_DIR)/cpplint/cpplint.py $(LINT_FILES)
 # Evaluate library files for proper code naming conventions
 tidy: $(TIDY_FILES_PHONY)
 	@printf '$(GREEN)Tidy Evaluation Complete. Everything clear!$(RESET)\n'
@@ -556,7 +556,7 @@ $(OBJECT_DIR)/%.o: %
 
 $(DBC_BUILD):
 	@mkdir -p "$(dir $@)"
-	python2.7 "$(LIB_DIR)/$(DBC_DIR)/dbc_parse.py" -i "$(LIB_DIR)/$(DBC_DIR)/243.dbc" -s $(ENTITY) > $(DBC_BUILD)
+	python3 "$(LIB_DIR)/$(DBC_DIR)/dbc_parse.py" -i "$(LIB_DIR)/$(DBC_DIR)/243.dbc" -s $(ENTITY) > $(DBC_BUILD)
 
 $(TEST_EXEC): $(OBJECTS)
 	@printf '$(YELLOW)Linking Test Executable $(RESET) : $@ '
