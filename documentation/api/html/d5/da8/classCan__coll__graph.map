@@ -1,8 +1,0 @@
-<map id="Can" name="Can">
-<area shape="rect" id="node2" href="$d6/d1b/classCanInterface.html" title="CanInterface" alt="" coords="5,95,108,121"/>
-<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="132,95,317,121"/>
-<area shape="rect" id="node4" href="$d0/df2/classSystemControllerInterface.html" title="SystemControllerInterface" alt="" coords="39,5,229,32"/>
-<area shape="rect" id="node5" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="253,5,381,32"/>
-<area shape="rect" id="node6" href="$d5/d2b/structLPC__CANAF__TypeDef.html" title="LPC_CANAF_TypeDef" alt="" coords="342,95,497,121"/>
-<area shape="rect" id="node7" href="$d1/dba/structLPC__CAN__TypeDef.html" title="LPC_CAN_TypeDef" alt="" coords="522,95,661,121"/>
-</map>

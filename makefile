@@ -6,12 +6,9 @@
 # on mac.
 YELLOW=$(shell echo "\x1B[33;1m")
 RED=$(shell echo "\x1B[31;1m")
+MAGENTA=$(shell echo "\x1B[35;1m")
 RESET=$(shell echo "\x1B[0m")
 GREEN=$(shell echo "\x1B[32;1m")
-# ============================
-# Environment Flags
-# ============================
-include env.mk
 # ============================
 # Modifying make Flags
 # ============================
@@ -40,18 +37,35 @@ ifneq ($(MAKECMDGOALS), presubmit)
 MAKEFLAGS += --jobs=$(NPROCS)
 endif
 
-#
-# Updating the LD_LIBRARY_PATH used to run executables using the clang libc++
+# ============================
+# SJSU-Dev2 Toolchain Paths
+# ============================
+# Path to CLANG compiler
+SJCLANG_PATH   = $(SJSU_DEV2_BASE)/tools/clang+llvm-*/
+SJCLANG        = $(shell cd $(SJCLANG_PATH) ; pwd)
+# Path to ARM GCC compiler
+SJARMGCC_PATH  = $(SJSU_DEV2_BASE)/tools/gcc-arm-none-eabi-*/
+SJARMGCC       = $(shell cd $(SJARMGCC_PATH) ; pwd)
+# Path to Openocd compiler
+SJOPENOCD = $(SJSU_DEV2_BASE)/tools/openocd
+# Compiler and library settings:
+SJLIBDIR  = $(SJSU_DEV2_BASE)/firmware/library
+
+# =================================
+# Updating the LD_LIBRARY_PATH
+# =================================
+# used to run executables using the clang libc++
 # linked library which are creatd via the "test" target
-#
-LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):$(SJCLANG)/../lib/
+LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):$(SJCLANG)/lib/
 # ============================
 # User Flags
 # ============================
-# Allow settiing a project name from the environment, default to firmware.
+# Allow setting a project name from the environment, default to firmware.
 # Only affects the name of the generated binary.
 # TODO(#82): Set this from the directory this makefile is stored in
-PROJ    ?= firmware
+PROJ     ?= firmware
+# Allow user to change which platform they are building for
+PLATFORM ?= lpc40xx
 # Specifies which entity in the DBC your application will represent.
 # The example below will generate a DBC where this particular application is
 # the NAVIGATION entity on the CANBUS.
@@ -89,26 +103,31 @@ OPT    ?= 0
 #
 TEST_ARGS ?=
 # ============================
-# Compilation Flags
+# Compilation Tools
 # ============================
-# IMPORTANT: Be sure to source env.sh to access these via the PATH variable.
-DEVICE_CC      = arm-none-eabi-gcc
-DEVICE_CPPC    = arm-none-eabi-g++
-DEVICE_OBJDUMP = arm-none-eabi-objdump
-DEVICE_SIZEC   = arm-none-eabi-size
-DEVICE_OBJCOPY = arm-none-eabi-objcopy
-DEVICE_NM      = arm-none-eabi-nm
+DEVICE_CC        = $(SJARMGCC)/bin/arm-none-eabi-gcc
+DEVICE_CPPC      = $(SJARMGCC)/bin/arm-none-eabi-g++
+DEVICE_OBJDUMP   = $(SJARMGCC)/bin/arm-none-eabi-objdump
+DEVICE_SIZEC     = $(SJARMGCC)/bin/arm-none-eabi-size
+DEVICE_OBJCOPY   = $(SJARMGCC)/bin/arm-none-eabi-objcopy
+DEVICE_NM        = $(SJARMGCC)/bin/arm-none-eabi-nm
+DEVICE_AR        = $(SJARMGCC)/bin/arm-none-eabi-ar
+DEVICE_RANLIB    = $(SJARMGCC)/bin/arm-none-eabi-ranlib
+DEVICE_ADDR2LINE = $(SJARMGCC)/bin/arm-none-eabi-addr2line
+DEVICE_GDB       = $(SJARMGCC)/bin/arm-none-eabi-gdb
 # Cause compiler warnings to become errors.
 # Used in presubmit checks to make sure that the codebase does not include
 # warnings
 WARNINGS_ARE_ERRORS ?=
 # IMPORTANT: GCC must be accessible via the PATH environment variable
-HOST_CC        = clang
-HOST_CPPC      = clang++
-HOST_OBJDUMP   = llvm-objdump
-HOST_SIZEC     = llvm-size
-HOST_OBJCOPY   = llvm-objcopy
-HOST_NM        = llvm-nm
+HOST_CC        = $(SJCLANG)/bin/clang
+HOST_CPPC      = $(SJCLANG)/bin/clang++
+HOST_OBJDUMP   = $(SJCLANG)/bin/llvm-objdump
+HOST_SIZEC     = $(SJCLANG)/bin/llvm-size
+HOST_OBJCOPY   = $(SJCLANG)/bin/llvm-objcopy
+HOST_NM        = $(SJCLANG)/bin/llvm-nm
+HOST_COV       = $(SJCLANG)/bin/llvm-cov
+CLANG_TIDY     = $(SJCLANG)/bin/clang-tidy
 # Mux between using the firmware compiler executables or the host compiler
 ifeq ($(MAKECMDGOALS), $(filter $(MAKECMDGOALS), test user-test))
 CC      = $(HOST_CC)
@@ -133,35 +152,38 @@ endif
 BUILD_DIRECTORY_NAME = build
 # "make application"'s build directory becomes "build/application"
 # "make test"'s build directory becomes "build/test"
-ifeq ($(MAKECMDGOALS), $(filter $(MAKECMDGOALS), flash stacktrace-application))
+ifeq ($(MAKECMDGOALS), $(filter $(MAKECMDGOALS), flash stacktrace-application multi-debug debug))
 BUILD_SUBDIRECTORY_NAME = application
 else ifeq ($(MAKECMDGOALS), \
-	$(filter $(MAKECMDGOALS), burn stacktrace-bootloader))
+	$(filter $(MAKECMDGOALS), burn stacktrace-bootloader multi-debug-bootloader))
 BUILD_SUBDIRECTORY_NAME = bootloader
 else
 BUILD_SUBDIRECTORY_NAME = $(MAKECMDGOALS)
 endif
 
-BUILD_DIR     = $(BUILD_DIRECTORY_NAME)/$(BUILD_SUBDIRECTORY_NAME)
-OBJECT_DIR    = $(BUILD_DIR)/compiled
-DBC_DIR       = $(BUILD_DIR)/can-dbc
-COVERAGE_DIR  = $(BUILD_DIR)/coverage
-FIRMWARE_DIR  = $(SJBASE)/firmware
-LIB_DIR       = $(FIRMWARE_DIR)/library
-TOOLS_DIR     = $(SJBASE)/tools
-SOURCE_DIR    = source
-COMPILED_HEADERS_DIR  = $(BUILD_DIR)/headers # NOTE: Actually use this!
-CURRENT_DIRECTORY	    = $(shell pwd)
-COVERAGE_FILES        = $(shell find build -name "*.gcda")
+BUILD_DIR       = $(BUILD_DIRECTORY_NAME)/$(BUILD_SUBDIRECTORY_NAME)/$(PLATFORM)
+OBJECT_DIR                  = $(BUILD_DIR)/compiled
+DBC_DIR                     = $(BUILD_DIR)/can-dbc
+COVERAGE_DIR                = $(BUILD_DIR)/coverage
+LIBRARY_DIR                 = $(SJSU_DEV2_BASE)/library
+PROJECTS_DIR                = $(SJSU_DEV2_BASE)/projects
+DEMOS_DIR                   = $(SJSU_DEV2_BASE)/demos
+STATIC_LIBRARY_DIR          = $(LIBRARY_DIR)/static_libraries
+PLATFORM_STATIC_LIBRARY_DIR = $(STATIC_LIBRARY_DIR)/$(PLATFORM)
+TOOLS_DIR                   = $(SJSU_DEV2_BASE)/tools
+SOURCE_DIR                  = source
+COMPILED_HEADERS_DIR        = $(BUILD_DIR)/headers # NOTE: Actually use this!
+CURRENT_DIRECTORY	          = $(shell pwd)
+COVERAGE_FILES              = $(shell find build -name "*.gcda")
 # ===========================
 # Gathering Source Files
 # ===========================
 DBC_BUILD = $(DBC_DIR)/generated_can.h
 # Set of directories to be added to the direct include list
-INCLUDES = $(CURRENT_DIRECTORY) $(SOURCE_DIR)
+INCLUDES += $(CURRENT_DIRECTORY) $(SOURCE_DIR)
 # System includes are files that we do not want to show diagnostic information
 # about. This is typically used for third party code.
-SYSTEM_INCLUDES =
+SYSTEM_INCLUDES ?=
 # Set of all source files to compile (.c, .cpp)
 # By default, all source files included within the source directory of a
 # project are included. The search below is recursive, so subdirectories within
@@ -182,6 +204,30 @@ $(info +---------------------------------------------------------------+)
 $(info $(shell printf '$(RESET)'))
 $(error )
 endif
+
+# Precompiled LIBARY files to link into project
+CORE_STATIC_LIBRARY = $(OBJECT_DIR)/libsjsudev2.a
+LIBRARIES ?=
+
+define BUILD_LIRBARY
+
+LIBRARIES += $(PLATFORM_STATIC_LIBRARY_DIR)/$(1).a
+
+$(1)_OBJECTS = $$(addprefix $(OBJECT_DIR)/, $$($(2):=.o))
+
+.SECONDARY: $$($(1)_OBJECTS)
+
+-include    $$($(1)_OBJECTS:.o=.d) # DEPENDENCIES
+
+$(PLATFORM_STATIC_LIBRARY_DIR)/$(1).a: $$($(1)_OBJECTS)
+	@mkdir -p "$(PLATFORM_STATIC_LIBRARY_DIR)"
+	@printf '$(YELLOW)Library  file ( A ) $(RESET): $$@ '
+	@rm -f "$@"
+	@$(DEVICE_AR) rcs "$$@" $$^
+	@$(DEVICE_RANLIB) "$$@"
+	@printf '$(GREEN)DONE!$(RESET)\n'
+
+endef
 # Set of ALL compilable test files in the current library.
 # This also includes any source AND test to be tested.
 # MUST NOT contain source files that contain a "main()" implementation
@@ -190,6 +236,12 @@ TESTS ?=
 # This also includes any source AND test to be tested.
 # MUST NOT contain source files that contain a "main()" implementation
 USER_TESTS ?=
+# Set of common flags to build software
+COMMON_FLAGS ?=
+# List of folder or files that should be excluded from lint analysis
+LINT_FILTER ?=
+# Openocd configuration file
+OPENOCD_CONFIG ?=
 # Include a project specific makefile. Using -include to keep make form exiting
 # if the project.mk file does not exist.
 -include project.mk
@@ -197,7 +249,7 @@ USER_TESTS ?=
 # the library/library.mk makefile.
 # This is where a lot of the magic happens. This makefile will call more sub
 # makefiles until all of the included library source files have been found.
-include $(FIRMWARE_DIR)/library/library.mk
+include $(LIBRARY_DIR)/library.mk
 # A bit of post processing on the source variables
 ifeq ($(MAKECMDGOALS), test)
 COMPILABLES = $(TESTS)
@@ -214,8 +266,6 @@ OBJECTS           = $(addprefix $(OBJECT_DIR)/, $(COMPILABLES:=.o))
 # ===========================
 # Compilation Flags
 # ===========================
-CORTEX_M4F = -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 \
-			       -fabi-version=0 -mtpcs-frame -mtpcs-leaf-frame
 OPTIMIZE  = -O$(OPT) -fmessage-length=0 -ffunction-sections -fdata-sections \
             -fno-exceptions -fno-omit-frame-pointer \
             -fasynchronous-unwind-tables
@@ -228,19 +278,20 @@ WARNINGS  = -Wall -Wextra -Wshadow -Wlogical-op -Wfloat-equal \
             -Wsuggest-final-methods $(WARNINGS_ARE_ERRORS)
 CPPWARNINGS = -Wold-style-cast -Woverloaded-virtual -Wsuggest-override \
               -Wuseless-cast $(WARNINGS_ARE_ERRORS)
-DEFINES   = -DARM_MATH_CM4=1 -D__FPU_PRESENT=1U -DELF_FILE=\"$(EXECUTABLE)\"
+DEFINES   = -D ARM_MATH_CM4=1 -D ELF_FILE=\"$(EXECUTABLE)\" \
+            -D PLATFORM=$(PLATFORM) -D __FPU_PRESENT=1U
 DISABLED_WARNINGS = -Wno-main -Wno-variadic-macros
 # Combine all of the flags together
-COMMON_FLAGS = $(CORTEX_M4F) $(OPTIMIZE) $(DEBUG) $(WARNINGS) $(DEFINES) \
+COMMON_FLAGS += $(OPTIMIZE) $(DEBUG) $(WARNINGS) $(DEFINES) \
                $(DISABLED_WARNINGS) -fdiagnostics-color
 # Add the last touch for object files
 CFLAGS_COMMON = $(COMMON_FLAGS) $(INCLUDES) $(SYSTEM_INCLUDES) -MMD -MP -c
 LINKFLAGS = $(COMMON_FLAGS) -T $(LINKER) -specs=nano.specs \
-						-Wl,--gc-sections -Wl,-Map,"$(MAP)" \
+						-Wl,--gc-sections -Wl,-Map,"$(MAP)"
 
 # Enable specific flags for building a bootloader
 ifeq ($(MAKECMDGOALS), bootloader)
-LINKER = $(LIB_DIR)/LPC4078_bootloader.ld
+LINKER = $(LIBRARY_DIR)/L0_Platform/$(PLATFORM)/bootloader.ld
 CFLAGS_COMMON += -D TARGET=Bootloader
 endif
 # NOTE: DO NOT LINK -finstrument-functions into test build when using clang and
@@ -250,7 +301,7 @@ endif
 # etc and if so, this ifeq will become true
 ifeq ($(MAKECMDGOALS), $(filter \
 			$(MAKECMDGOALS), application flash build cleaninstall))
-LINKER = $(LIB_DIR)/LPC4078_application.ld
+LINKER = $(LIBRARY_DIR)/L0_Platform/$(PLATFORM)/application.ld
 CFLAGS_COMMON += -D TARGET=Application
 endif
 
@@ -283,23 +334,26 @@ endif
 # Lint variables
 # ===========================
 # Files to ignore in the linting and tidy process
-FILE_EXCLUDES = grep -v  \
-				-e "$(LIB_DIR)/third_party/" \
-				-e "$(LIB_DIR)/L0_LowLevel/SystemFiles" \
-				-e "$(LIB_DIR)/L0_LowLevel/LPC40xx.h" \
-				-e "$(LIB_DIR)/L0_LowLevel/FreeRTOSConfig.h"
+# FILE_EXCLUDES entry resembles:
+#   grep -v -e path/to/excluded/file
+#   grep -v -e path/to/excluded/directory/
+FILE_EXCLUDES = grep -v $(addprefix -e ,$(LINT_FILTER))
+
 # Find all files within the firmware directory to be evaluated
-LINT_FILES  = $(shell find $(FIRMWARE_DIR) \
+LINT_FILES  = $(shell find $(PROJECTS_DIR)/hello_world \
+                      $(PROJECTS_DIR)/hyperload \
+                      $(LIBRARY_DIR) $(DEMOS_DIR) \
                       -name "*.h"   -o \
                       -name "*.hpp" -o \
                       -name "*.c"   -o \
-                      -name "*.cpp" | \
-					            $(FILE_EXCLUDES) \
+                      -name "*.cpp" |  \
+                      $(FILE_EXCLUDES) \
                       2> /dev/null)
+
 # TODO(kammce): Add these phony files back to make linting and tiding up
 # remember which files have already been linted/tidied.
 LINT_FILES_PHONY = $(LINT_FILES:=.lint)
-TIDY_FILES_PHONY = $(LINT_FILES:=.tidy)
+TIDY_FILES_PHONY = $(addprefix $(OBJECT_DIR)/, $(LINT_FILES:=.tidy))
 # ===========================
 # Firmware final products
 # ===========================
@@ -311,7 +365,7 @@ SIZE       = $(EXECUTABLE:.elf=.siz)
 MAP        = $(EXECUTABLE:.elf=.map)
 TEST_EXEC  = $(BUILD_DIRECTORY_NAME)/test/tests.exe
 # TODO(kammce): Add header file precompilation back later
-# TEST_FRAMEWORK = $(LIB_DIR)/L4_Testing/testing_frameworks.hpp.gch
+# TEST_FRAMEWORK = $(LIBRARY_DIR)/L4_Testing/testing_frameworks.hpp.gch
 
 # This line allows the make to rebuild if header file changes.
 # This is feature and not a bug, otherwise updates to header files do not
@@ -323,7 +377,7 @@ TEST_EXEC  = $(BUILD_DIRECTORY_NAME)/test/tests.exe
 .DEFAULT_GOAL := default
 # Tell make that these recipes don't have a end product
 .PHONY: build cleaninstall telemetry monitor show-lists clean flash telemetry \
-        presubmit openocd debug multi-debug default
+        presubmit openocd debug multi-debug default library-clean purge
 print-%  : ; @echo $* = $($*)
 # ====================================================================
 # When the user types just "make" or "help" this should appear to them
@@ -377,7 +431,20 @@ flash:
 # Clean working build directory by deleting the build folder
 # ====================================================================
 clean:
-	rm -fR $(BUILD_DIRECTORY_NAME)
+	@rm -fR $(BUILD_DIRECTORY_NAME)
+	@printf '$(MAGENTA)Build directory deleted$(RESET)\n'
+# ====================================================================
+# Remove precompiled libraries
+# ====================================================================
+library-clean:
+	@rm -f $(LIBRARIES) $(CORE_STATIC_LIBRARY)
+	@printf '$(MAGENTA)Libraries cleared$(RESET)\n'
+# ====================================================================
+# Remove precompiled libraries and current build folder
+# ====================================================================
+purge: clean
+	@rm -rf $(STATIC_LIBRARY_DIR)
+	@printf '$(MAGENTA)Cleared All Libraries$(RESET)\n'
 # ====================================================================
 # Open Browser to Telemetry website
 # ====================================================================
@@ -403,11 +470,11 @@ run-test:
 	@export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH) && \
 		$(TEST_EXEC) $(TEST_ARGS) --use-colour="yes"
 	@mkdir -p "$(COVERAGE_DIR)"
-	@gcovr --root="$(FIRMWARE_DIR)/" --keep --object-directory="$(BUILD_DIR)/" \
-		-e "$(LIB_DIR)/newlib" \
-		-e "$(LIB_DIR)/third_party" \
-		-e "$(LIB_DIR)/L4_Testing" \
-		--html --html-details --gcov-executable="llvm-cov gcov" \
+	@gcovr --root="$(LIBRARY_DIR)/" --object-directory="$(BUILD_DIR)/" \
+		-e "$(LIBRARY_DIR)/newlib" \
+		-e "$(LIBRARY_DIR)/third_party" \
+		-e "$(LIBRARY_DIR)/L4_Testing" \
+		--html --html-details --gcov-executable="$(HOST_COV) gcov" \
 		-o $(COVERAGE_DIR)/coverage.html
 # ====================================================================
 # Source Code Linting
@@ -425,20 +492,22 @@ presubmit:
 # Microcontroller Debugging
 # ====================================================================
 stacktrace-application:
-	@arm-none-eabi-addr2line -e $(EXECUTABLE) $(TRACES)
+	@$(DEVICE_ADDR2LINE) -e $(EXECUTABLE) $(TRACES)
 stacktrace-bootloader:
-	@arm-none-eabi-addr2line -e $(EXECUTABLE)
+	@$(DEVICE_ADDR2LINE) -e $(EXECUTABLE)
 # Start an openocd jtag debug session for the sjtwo development board
 openocd:
-	openocd -f $(FIRMWARE_DIR)/debug/sjtwo.cfg
+	$(SJOPENOCD)/bin/openocd -f $(OPENOCD_CONFIG)
 # Start gdb for arm and connect to openocd jtag debugging session
 debug:
-	arm-none-eabi-gdb -ex "target remote :3333" $(EXECUTABLE)
+	$(DEVICE_GDB) -ex "target remote :3333" $(EXECUTABLE)
 debug-user-test:
 	export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH) && gdb build/test/tests.exe
 # Start gdb just like the debug target, but using gdb-multiarch
 # gdb-multiarch is perferable since it supports python in its .gdbinit file
 multi-debug:
+	gdb-multiarch -ex "target remote :3333" $(EXECUTABLE)
+multi-debug-bootloader:
 	gdb-multiarch -ex "target remote :3333" $(EXECUTABLE)
 # ====================================================================
 # Makefile debug
@@ -462,6 +531,10 @@ show-lists:
 	@echo $(TEST_CFLAGS)
 	@echo "=========== COVERAGE FILES =============="
 	@echo $(COVERAGE_FILES)
+	@echo "=========== LIBRARIES =============="
+	@echo $(LIBRARIES)
+	@echo "=========== LINT =============="
+	@echo $(LINT_FILES)
 
 # ====================================================================
 # Recipes to Compile Source Code
@@ -488,10 +561,17 @@ $(LIST): $(EXECUTABLE)
 	@$(OBJDUMP) --disassemble --all-headers --source --demangle --wide "$<" > "$@"
 	@printf '$(GREEN)Disassembly Generated!$(RESET)\n'
 
-$(EXECUTABLE): $(OBJECTS)
+$(CORE_STATIC_LIBRARY): $(LIBRARIES)
+	@printf '$(YELLOW)Final Library file ( A ) $(RESET): $@ '
+	@rm -f "$@"
+	@$(DEVICE_AR) -rcT "$@" $^
+	@$(DEVICE_RANLIB) "$@"
+	@printf '$(GREEN)DONE!$(RESET)\n'
+
+$(EXECUTABLE): $(OBJECTS) $(CORE_STATIC_LIBRARY)
 	@printf '$(YELLOW)Linking Executable $(RESET)     : $@ '
 	@mkdir -p "$(dir $@)"
-	@$(CPPC) $(LINKFLAGS) -o "$@" $(OBJECTS)
+	@$(CPPC) $(LINKFLAGS) -o "$@" $(OBJECTS) $(CORE_STATIC_LIBRARY)
 	@printf '$(GREEN)Executable Generated!$(RESET)\n'
 
 $(OBJECT_DIR)/%.c.o: %.c
@@ -508,7 +588,7 @@ $(OBJECT_DIR)/%.o: %
 
 $(DBC_BUILD):
 	@mkdir -p "$(dir $@)"
-	python2.7 "$(LIB_DIR)/$(DBC_DIR)/dbc_parse.py" -i "$(LIB_DIR)/$(DBC_DIR)/243.dbc" -s $(ENTITY) > $(DBC_BUILD)
+	python2.7 "$(LIBRARY_DIR)/$(DBC_DIR)/dbc_parse.py" -i "$(LIBRARY_DIR)/$(DBC_DIR)/243.dbc" -s $(ENTITY) > $(DBC_BUILD)
 
 $(TEST_EXEC): $(OBJECTS)
 	@printf '$(YELLOW)Linking Test Executable $(RESET) : $@ '
@@ -521,11 +601,12 @@ $(TEST_EXEC): $(OBJECTS)
 					 -o $(TEST_EXEC) $(OBJECTS)
 	@printf '$(GREEN)Test Executable Generated!$(RESET)\n'
 
-%.tidy: %
+$(OBJECT_DIR)/%.tidy: %
 	@printf '$(YELLOW)Evaluating file: $(RESET)$< '
-	@clang-tidy $(if $(or $(findstring .hpp,$<), $(findstring .cpp,$<)), \
+	@mkdir -p "$(dir $@)"
+	@$(CLANG_TIDY) $(if $(or $(findstring .hpp,$<), $(findstring .cpp,$<)), \
 		-extra-arg="-std=c++17") "$<"  -- \
 		-D TARGET=HostTest -D HOST_TEST=1 \
-		-isystem"$(SJCLANG)/../include/c++/v1/" \
-		-stdlib=libc++ $(INCLUDES) $(SYSTEM_INCLUDES) 2> /dev/null
+		-isystem"$(SJCLANG)/include/c++/v1/" \
+		-stdlib=libc++ $(INCLUDES) $(SYSTEM_INCLUDES) 2> $@
 	@printf '$(GREEN)DONE!$(RESET)\n'

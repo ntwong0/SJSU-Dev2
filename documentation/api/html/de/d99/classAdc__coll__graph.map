@@ -1,7 +1,0 @@
-<map id="Adc" name="Adc">
-<area shape="rect" id="node2" href="$d0/d58/classAdcInterface.html" title="AdcInterface" alt="" coords="5,95,108,121"/>
-<area shape="rect" id="node3" href="$df/d59/classLpc40xxSystemController.html" title="Lpc40xxSystemController" alt="" coords="132,95,317,121"/>
-<area shape="rect" id="node4" href="$d0/df2/classSystemControllerInterface.html" title="SystemControllerInterface" alt="" coords="39,5,229,32"/>
-<area shape="rect" id="node5" href="$df/d8b/structLPC__SC__TypeDef.html" title="LPC_SC_TypeDef" alt="" coords="253,5,381,32"/>
-<area shape="rect" id="node6" href="$d3/d95/structLPC__ADC__TypeDef.html" title="LPC_ADC_TypeDef" alt="" coords="342,95,481,121"/>
-</map>

@@ -1,0 +1,86 @@
+#pragma once
+
+#include <cstdint>
+
+#include "utility/macros.hpp"
+#include "utility/status.hpp"
+
+namespace sjsu
+{
+using UptimeFunction = uint64_t (*)();
+inline uint64_t DefaultUptime() { return 0; }
+// Returns the system uptime in microseconds.
+inline UptimeFunction Uptime = DefaultUptime;  // NOLINT
+// Max wait time in microseconds.
+constexpr uint64_t kMaxWait = 0xFFFFFFFFFFFFFFFF;
+// Returns the system uptime in microseconds, do not use this function directly
+inline void SetUptimeFunction(UptimeFunction uptime_function)
+{
+  Uptime = uptime_function;
+}
+// Get system uptime in milliseconds as a 64-bit integer
+inline uint64_t Milliseconds()
+{
+  return Uptime();
+}
+// Get system uptime in seconds as a 64-bit integer
+inline uint64_t Seconds()
+{
+  return Uptime() / 1'000;
+}
+// Wait will until the is_done parameter returns true
+//
+// @param timeout the maximum amount of time to wait for the is_done to
+//        return true.
+// @param is_done will be run in a tight loop until it returns true or the
+//        timeout time has elapsed.
+template <typename F>
+[[gnu::always_inline]] inline Status Wait(uint64_t timeout, F is_done);
+template <typename F>
+inline Status Wait(uint64_t timeout, F is_done)
+{
+  uint64_t timeout_time = 0;
+  if (timeout == kMaxWait)
+  {
+    timeout_time = kMaxWait;
+  }
+  else
+  {
+    timeout_time = Milliseconds() + timeout;
+  }
+
+  Status status = Status::kTimedOut;
+  while (Milliseconds() < timeout_time)
+  {
+    if (is_done())
+    {
+      status = Status::kSuccess;
+      break;
+    }
+  }
+  return status;
+}
+
+inline Status Wait(uint64_t timeout)
+{
+  return Wait(timeout, []() -> bool { return false; });
+}
+
+// Delay the system for a duration of time
+inline void Delay([[maybe_unused]] uint64_t delay_time_ms)
+{
+#if defined(HOST_TEST)
+  return;
+#else
+  Wait(delay_time_ms);
+#endif  // HOST_TEST
+}
+// Halt system by putting it into infinite loop
+[[gnu::always_inline]] inline void Halt()
+{
+  while (true)
+  {
+    continue;
+  }
+}
+}  // namespace sjsu

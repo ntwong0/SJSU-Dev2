@@ -7,13 +7,13 @@ matrix:
           after_success:
             - cd ../../
             - coveralls --gcov "$(pwd)/tools/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04/bin/llvm-cov gcov"
-              --include "firmware/library/L0_LowLevel"
-              --include "firmware/library/L1_Drivers"
-              --include "firmware/library/Utility"
-              --include "firmware/library/L2_HAL"
-              --include "firmware/library/L3_Application"
+              --include "library/L0_Platform"
+              --include "library/L1_Peripheral"
+              --include "library/Utility"
+              --include "library/L2_HAL"
+              --include "library/L3_Application"
             - sudo apt-get -y install doxygen graphviz
-            - cd documentation/api/
+            - cd api/
             - doxygen sjsu-dev2-doxygen.conf
           deploy:
             provider: pages
@@ -27,5 +27,5 @@ matrix:
 before_install: pip install --user cpp-coveralls
 install: ./setup
 script:
-  - cd firmware/HelloWorld/
+  - cd projects/hello_world/
   - make presubmit

@@ -1,6 +1,0 @@
-<map id="Command" name="Command">
-<area shape="rect" id="node3" href="$de/dab/classI2cCommand.html" title="I2cCommand" alt="" coords="5,155,112,181"/>
-<area shape="rect" id="node4" href="$d2/d18/classLpcSystemInfoCommand.html" title="The SystemInfoCommand allows the user to get runtime stats about the. " alt="" coords="137,155,319,181"/>
-<area shape="rect" id="node5" href="$de/d84/classRtosCommand.html" title="RtosCommand" alt="" coords="344,155,461,181"/>
-<area shape="rect" id="node2" href="$dc/d02/classCommandInterface.html" title="CommandInterface is the set of methods that every command must support. " alt="" coords="155,5,301,32"/>
-</map>
