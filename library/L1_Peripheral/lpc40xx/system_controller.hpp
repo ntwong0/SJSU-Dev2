@@ -7,6 +7,7 @@
 
 #include "L0_Platform/lpc40xx/LPC40xx.h"
 #include "L1_Peripheral/system_controller.hpp"
+#include "utility/bit.hpp"
 #include "utility/build_info.hpp"
 #include "utility/enum.hpp"
 #include "utility/log.hpp"
@@ -16,33 +17,33 @@ namespace sjsu
 {
 namespace lpc40xx
 {
-class SystemController : public sjsu::SystemController
+class SystemController final : public sjsu::SystemController
 {
  public:
   enum class UsbSource : uint16_t
   {
-    kBaseClock         = (0b00 << 8),
-    kMainPllClock      = (0b01 << 8),
-    kALternatePllClock = (0b10 << 8)
+    kBaseClock         = 0b00,
+    kMainPllClock      = 0b01,
+    kALternatePllClock = 0b10,
   };
 
   enum class SpifiSource : uint16_t
   {
-    kBaseClock         = (0b00 << 8),
-    kMainPllClock      = (0b01 << 8),
-    kALternatePllClock = (0b10 << 8)
+    kBaseClock         = 0b00,
+    kMainPllClock      = 0b01,
+    kALternatePllClock = 0b10,
   };
 
   enum class OscillatorSource : uint16_t
   {
     kIrc  = 0b0,
-    kMain = 0b1
+    kMain = 0b1,
   };
 
   enum class MainClockSource : uint16_t
   {
-    kBaseClock = (0b0 << 8),
-    kPllClock  = (0b1 << 8)
+    kBaseClock = 0b0,
+    kPllClock  = 0b1,
   };
 
   enum class PllInput : uint16_t
@@ -50,13 +51,13 @@ class SystemController : public sjsu::SystemController
     kIrc    = 12,
     kF12MHz = 12,
     kF16MHz = 16,
-    kF24MHz = 24
+    kF24MHz = 24,
   };
 
   enum class EmcDivider : uint8_t
   {
-    kSameSpeedAsCpu,
-    kHalfTheSpeedOfCpu
+    kSameSpeedAsCpu    = 0,
+    kHalfTheSpeedOfCpu = 1,
   };
 
   enum class UsbDivider : uint8_t
@@ -64,7 +65,7 @@ class SystemController : public sjsu::SystemController
     kDivideBy1 = 0,
     kDivideBy2,
     kDivideBy3,
-    kDivideBy4
+    kDivideBy4,
   };
 
   // LPC40xx Peripheral Power On Values:
@@ -107,25 +108,51 @@ class SystemController : public sjsu::SystemController
     static constexpr auto kUsb               = AddPeripheralID<31>();
   };
 
-  static constexpr uint32_t kOscillatorSelect       = (1 << 0);
-  static constexpr uint32_t kBaseClockSelect        = (1 << 8);
-  static constexpr uint32_t kUsbClockSource         = (0b11 << 8);
-  static constexpr uint32_t kSpifiClockSource       = (0b11 << 8);
   static constexpr uint32_t kEnablePll              = (0b1 << 0);
   static constexpr uint32_t kPlock                  = 10;
-  static constexpr uint32_t kDivideInputBy1         = 1;
   static constexpr uint32_t kClearPllMultiplier     = (0x1f << 0);
   static constexpr uint32_t kClearPllDivider        = (0b11 << 5);
-  static constexpr uint32_t kClearCpuDivider        = (0x1F << 0);
-  static constexpr uint32_t kClearEmcDivider        = (1 << 0);
   static constexpr uint32_t kClearPeripheralDivider = (0b1'1111);
-  static constexpr uint32_t kClearUsbDivider        = (0x1F << 0);
   static constexpr uint32_t kDefaultIRCFrequency    = 12'000'000;
   static constexpr uint32_t kDefaultTimeout         = 1'000;  // ms
 
+  struct Oscillator  // NOLINT
+  {
+    static constexpr bit::Mask kSelect = bit::CreateMaskFromRange(0);
+  };
+
+  struct EmcClock  // NOLINT
+  {
+    static constexpr bit::Mask kDivider = bit::CreateMaskFromRange(0);
+  };
+
+  struct CpuClock  // NOLINT
+  {
+    static constexpr bit::Mask kDivider = bit::CreateMaskFromRange(0, 4);
+    static constexpr bit::Mask kSelect  = bit::CreateMaskFromRange(8);
+  };
+
+  struct UsbClock  // NOLINT
+  {
+    static constexpr bit::Mask kDivider = bit::CreateMaskFromRange(0, 4);
+    static constexpr bit::Mask kSelect  = bit::CreateMaskFromRange(8, 9);
+  };
+
+  struct PeripheralClock  // NOLINT
+  {
+    static constexpr bit::Mask kDivider = bit::CreateMaskFromRange(0, 4);
+  };
+
+  struct SpiFiClock  // NOLINT
+  {
+    static constexpr bit::Mask kDivider = bit::CreateMaskFromRange(0, 4);
+    static constexpr bit::Mask kSelect  = bit::CreateMaskFromRange(8, 9);
+  };
+
   inline static LPC_SC_TypeDef * system_controller = LPC_SC;
 
-  uint32_t SetClockFrequency(uint8_t frequency_in_mhz) const final override
+  uint32_t SetSystemClockFrequency(
+      uint8_t frequency_in_mhz) const override
   {
     uint32_t offset = 0;
     SelectOscillatorSource(OscillatorSource::kIrc);
@@ -140,58 +167,34 @@ class SystemController : public sjsu::SystemController
       SelectMainClockSource(MainClockSource::kBaseClock);
       speed_in_hertz = kDefaultIRCFrequency;
     }
-    SetCpuClockDivider(kDivideInputBy1);
-    SetPeripheralClockDivider(kDivideInputBy1);
+    SetCpuClockDivider(1);
+    SetPeripheralClockDivider({}, 1);
     SetEmcClockDivider(EmcDivider::kSameSpeedAsCpu);
     return offset;
   }
 
   void SetPeripheralClockDivider(
-      uint8_t peripheral_divider) const final override
+      const PeripheralID &, uint8_t peripheral_divider) const override
   {
     SJ2_ASSERT_FATAL(peripheral_divider <= 4, "Divider mustn't exceed 32");
     system_controller->PCLKSEL = peripheral_divider;
   }
 
-  uint32_t GetPeripheralClockDivider() const final override
+  uint32_t GetPeripheralClockDivider(const PeripheralID &) const override
   {
-    if constexpr (build::kTarget == build::Target::HostTest)
-    {
-      return 1;
-    }
-    else
-    {
-      return system_controller->PCLKSEL;
-    }
+    return system_controller->PCLKSEL;
   }
 
-  uint32_t GetSystemFrequency() const final override
+  uint32_t GetSystemFrequency() const override
   {
-    if constexpr (build::kTarget == build::Target::HostTest)
-    {
-      return config::kSystemClockRate;
-    }
-    else
-    {
-      return speed_in_hertz;
-    }
+    return speed_in_hertz;
   }
 
-  uint32_t GetPeripheralFrequency() const final override
-  {
-    uint32_t peripheral_clock_divider = GetPeripheralClockDivider();
-    uint32_t result = 0;  // return 0 if peripheral_clock_divider == 0
-    if (peripheral_clock_divider != 0)
-    {
-      result = GetSystemFrequency() / peripheral_clock_divider;
-    }
-    return result;
-  }
   /// Check if a peripheral is powered up by checking the power connection
   /// register. Should typically only be used for unit testing code and
   /// debugging.
   bool IsPeripheralPoweredUp(
-      const PeripheralID & peripheral_select) const final override
+      const PeripheralID & peripheral_select) const override
   {
     bool peripheral_is_powered_on =
         system_controller->PCONP & (1 << peripheral_select.device_id);
@@ -199,51 +202,44 @@ class SystemController : public sjsu::SystemController
     return peripheral_is_powered_on;
   }
   void PowerUpPeripheral(
-      const PeripheralID & peripheral_select) const final override
+      const PeripheralID & peripheral_select) const override
   {
-    auto power_connection_with_enabled_peripheral =
-        system_controller->PCONP | (1 << peripheral_select.device_id);
-
-    system_controller->PCONP = power_connection_with_enabled_peripheral;
+    system_controller->PCONP =
+        bit::Set(system_controller->PCONP, peripheral_select.device_id);
   }
   void PowerDownPeripheral(
-      const PeripheralID & peripheral_select) const final override
+      const PeripheralID & peripheral_select) const override
   {
-    auto power_connection_without_enabled_peripheral =
-        system_controller->PCONP & (1 << peripheral_select.device_id);
-
-    system_controller->PCONP = power_connection_without_enabled_peripheral;
+    system_controller->PCONP =
+        bit::Clear(system_controller->PCONP, peripheral_select.device_id);
   }
 
  private:
   void SelectOscillatorSource(OscillatorSource source) const
   {
-    uint32_t source_bit = static_cast<uint32_t>(source);
-    system_controller->CLKSRCSEL =
-        (system_controller->CLKSRCSEL & ~(kOscillatorSelect)) | source_bit;
+    system_controller->CLKSRCSEL = bit::Insert(system_controller->CLKSRCSEL,
+                                               static_cast<uint32_t>(source),
+                                               Oscillator::kSelect);
   }
-
   void SelectMainClockSource(MainClockSource source) const
   {
-    system_controller->CCLKSEL =
-        (system_controller->CCLKSEL & ~(kBaseClockSelect)) |
-        static_cast<uint32_t>(source);
+    system_controller->CCLKSEL = bit::Insert(system_controller->CCLKSEL,
+                                             static_cast<uint32_t>(source),
+                                             CpuClock::kSelect);
   }
-
   void SelectUsbClockSource(UsbSource usb_clock) const
   {
-    system_controller->USBCLKSEL =
-        (system_controller->USBCLKSEL & ~(kUsbClockSource)) |
-        static_cast<uint32_t>(usb_clock);
+    system_controller->USBCLKSEL = bit::Insert(system_controller->USBCLKSEL,
+                                               static_cast<uint32_t>(usb_clock),
+                                               UsbClock::kSelect);
   }
-
   void SelectSpifiClockSource(SpifiSource spifi_clock) const
   {
     system_controller->SPIFISEL =
-        (system_controller->SPIFISEL & ~(kSpifiClockSource)) |
-        static_cast<uint32_t>(spifi_clock);
+        bit::Insert(system_controller->SPIFISEL,
+                    static_cast<uint32_t>(spifi_clock),
+                    SpiFiClock::kSelect);
   }
-
   uint32_t CalculatePll(PllInput input_frequency,
                         uint16_t desired_speed_in_mhz) const
   {
@@ -363,15 +359,17 @@ class SystemController : public sjsu::SystemController
   void SetCpuClockDivider(uint8_t cpu_divider) const
   {
     SJ2_ASSERT_FATAL(cpu_divider < 32, "Divider mustn't exceed 32");
-    system_controller->CCLKSEL =
-        (system_controller->CCLKSEL & ~kClearCpuDivider) | cpu_divider;
+
+    system_controller->CCLKSEL = bit::Insert(
+        system_controller->CCLKSEL, cpu_divider, CpuClock::kDivider);
   }
 
   void SetEmcClockDivider(EmcDivider emc_divider) const
   {
     system_controller->EMCCLKSEL =
-        (system_controller->EMCCLKSEL & ~kClearEmcDivider) |
-        static_cast<uint8_t>(emc_divider);
+        bit::Insert(system_controller->EMCCLKSEL,
+                    static_cast<uint32_t>(emc_divider),
+                    EmcClock::kDivider);
   }
   // TODO(#181): Set USB and Spifi clock rates
   inline static uint32_t speed_in_hertz = kDefaultIRCFrequency;

@@ -12,7 +12,7 @@ namespace sjsu
 {
 namespace lpc40xx
 {
-class Dac final : public sjsu::Dac, protected sjsu::lpc40xx::SystemController
+class Dac final : public sjsu::Dac
 {
  public:
   enum Bit : uint8_t
@@ -26,18 +26,16 @@ class Dac final : public sjsu::Dac, protected sjsu::lpc40xx::SystemController
     kLow  = 1
   };
 
-  union [[gnu::packed]] ControlRegister {
-    uint32_t data;
-    struct
-    {
-      uint8_t reserved0 : 6;
-      uint16_t value : 10;
-      bool bias : 1;
-    } bits;
+  struct Control  // NOLINT
+  {
+    static constexpr bit::Mask kValue = bit::CreateMaskFromRange(6, 15);
+    static constexpr bit::Mask kBias  = bit::CreateMaskFromRange(16);
   };
 
   static constexpr sjsu::lpc40xx::Pin kDacPin = Pin::CreatePin<0, 26>();
-  static constexpr float kVref = 3.3f;
+  static constexpr float kVref                = 3.3f;
+  static constexpr uint8_t kActiveBits        = 10;
+  static constexpr uint32_t kMaximumValue     = (1 << kActiveBits) - 1;
 
   inline static LPC_DAC_TypeDef * dac_register = LPC_DAC;
 
@@ -48,10 +46,13 @@ class Dac final : public sjsu::Dac, protected sjsu::lpc40xx::SystemController
   {
     static constexpr uint8_t kDacMode = 0b010;
     dac_pin_.SetPinFunction(kDacMode);
-    // Temporally convert
-    reinterpret_cast<const Pin *>(&dac_pin_)->EnableDac();
+    // Temporally convert dac_pin to a lpc40xx::Pin so we can use the
+    // EnableDacs() method featured in the LPC40xx pin object.
+    const sjsu::lpc40xx::Pin & lpc40xx_dac_pin =
+        reinterpret_cast<const sjsu::lpc40xx::Pin &>(dac_pin_);
+    lpc40xx_dac_pin.EnableDac();
     dac_pin_.SetAsAnalogMode();
-    dac_pin_.SetMode(Pin::Mode::kInactive);
+    dac_pin_.SetPull(Pin::Resistor::kNone);
     // Disable interrupt and DMA
     dac_register->CTRL = 0;
     // Set Update Rate to 1MHz
@@ -64,16 +65,17 @@ class Dac final : public sjsu::Dac, protected sjsu::lpc40xx::SystemController
   {
     // The DAC output is a 10 bit input and thus it is necessary to
     // ensure dac_output is less than 1024 (largest 10-bit number)
-    SJ2_ASSERT_FATAL(dac_output < 1023,
+    SJ2_ASSERT_FATAL(dac_output < kMaximumValue,
                      "DAC output set above 1023. Must be between 0-1023.");
-    GetControlRegister()->bits.value = dac_output & 0b11'1111'1111;
+    dac_register->CR =
+        bit::Insert(dac_register->CR, dac_output, Control::kValue);
   }
   /// Takes an input voltage and converts the float value and calculates
   /// the conversion necessary and then typecasts it to an integer.
   /// If the voltage value is greater than 3.3 it will fail and end.
   void SetVoltage(float voltage) const override
   {
-    float value         = (voltage * 1024.0f) / kVref;
+    float value         = (voltage * kMaximumValue) / kVref;
     uint32_t conversion = static_cast<uint32_t>(value);
     SJ2_ASSERT_FATAL(
         voltage < kVref,
@@ -84,15 +86,15 @@ class Dac final : public sjsu::Dac, protected sjsu::lpc40xx::SystemController
   /// current, and the allowed maximum update rate
   void SetBias(Bias bias_level) const
   {
-    bool bias                       = static_cast<bool>(bias_level);
-    GetControlRegister()->bits.bias = bias;
+    bool bias        = static_cast<bool>(bias_level);
+    dac_register->CR = bit::Insert(dac_register->CR, bias, Control::kBias);
+  }
+  uint8_t GetActiveBits() const override
+  {
+    return kActiveBits;
   }
 
  private:
-  volatile ControlRegister * GetControlRegister() const
-  {
-    return reinterpret_cast<volatile ControlRegister *>(&dac_register->CR);
-  }
   const sjsu::Pin & dac_pin_;
 };
 }  // namespace lpc40xx

@@ -3,7 +3,7 @@
 #include <cinttypes>
 #include <iterator>
 
-#include "L0_Platform/lpc40xx/interrupt.hpp"
+#include "L1_Peripheral/cortex/interrupt.hpp"
 #include "L0_Platform/ram.hpp"
 #include "L1_Peripheral/lpc40xx/system_controller.hpp"
 #include "L3_Application/commandline.hpp"
@@ -11,9 +11,10 @@
 
 namespace sjsu
 {
+extern "C" void StackTop(void);
 /// The SystemInfoCommand allows the user to get runtime stats about the
 // processor like, memory left, heap left, etc ...
-class LpcSystemInfoCommand : public Command
+class LpcSystemInfoCommand final : public Command
 {
  public:
   static constexpr char kDescription[] =
@@ -22,14 +23,14 @@ class LpcSystemInfoCommand : public Command
 
   constexpr LpcSystemInfoCommand() : Command("info", kDescription) {}
 
-  int Program(int, const char * const[]) override final
+  int Program(int, const char * const[]) override
   {
     sjsu::lpc40xx::SystemController system;
     uint32_t system_frequency     = system.GetSystemFrequency() / 1000;
-    uint32_t peripheral_frequency = system.GetPeripheralFrequency() / 1000;
+    uint32_t peripheral_frequency = system.GetPeripheralFrequency({}) / 1000;
 
     intptr_t top_of_stack         = reinterpret_cast<intptr_t>(&StackTop);
-    intptr_t master_stack_pointer = sjsu::lpc40xx::__get_MSP();
+    intptr_t master_stack_pointer = sjsu::cortex::__get_MSP();
     intptr_t used_stack           = top_of_stack - master_stack_pointer;
     intptr_t remaining_stack      = 0x10000 - used_stack;
     intptr_t head_used            = heap_position - &heap;

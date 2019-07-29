@@ -1,4 +1,5 @@
 #include "L1_Peripheral/cortex/system_timer.hpp"
+#include "L1_Peripheral/inactive.hpp"
 #include "L1_Peripheral/system_controller.hpp"
 #include "utility/log.hpp"
 
@@ -11,7 +12,9 @@ void DemoSystemIsr()
 int main()
 {
   LOG_INFO("System Timer Application Starting...");
-  sjsu::cortex::SystemTimer system_timer;
+  sjsu::cortex::SystemTimer system_timer(
+      sjsu::GetInactive<sjsu::SystemController>());
+
   system_timer.SetInterrupt(DemoSystemIsr);
   system_timer.SetTickFrequency(10 /* Hz */);
   system_timer.StartTimer();

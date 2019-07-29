@@ -12,14 +12,19 @@ TEST_CASE("Testing lpc40xx PWM instantiation", "[lpc40xx-pwm]")
 {
   // Creating local instances of register structures
   LPC_PWM_TypeDef local_pwm;
-  LPC_SC_TypeDef local_sc;
-
   // Setting local register structures to all zeros
   memset(&local_pwm, 0, sizeof(local_pwm));
-  memset(&local_sc, 0, sizeof(local_sc));
 
-  // Set system controller pointer to local register
-  sjsu::lpc40xx::SystemController::system_controller = &local_sc;
+  // Set mock for sjsu::SystemController
+  constexpr uint32_t kDummySystemControllerClockFrequency = 12'000'000;
+  Mock<sjsu::SystemController> mock_system_controller;
+  Fake(Method(mock_system_controller, PowerUpPeripheral));
+  When(Method(mock_system_controller, GetSystemFrequency))
+      .AlwaysReturn(kDummySystemControllerClockFrequency);
+  When(Method(mock_system_controller, GetPeripheralClockDivider))
+      .AlwaysReturn(1);
+  When(Method(mock_system_controller, GetPeripheralFrequency))
+      .AlwaysReturn(kDummySystemControllerClockFrequency);
 
   // Creating mock of Pin class
   Mock<sjsu::Pin> mock_pwm_pin;
@@ -30,7 +35,6 @@ TEST_CASE("Testing lpc40xx PWM instantiation", "[lpc40xx-pwm]")
   Pwm::Peripheral_t mock_peripheral = {
     .registers       = &local_pwm,
     .power_on_id     = sjsu::lpc40xx::SystemController::Peripherals::kPwm0,
-    .pin_function_id = 0b101,
   };
 
   // Creating mock channel configuration
@@ -38,32 +42,36 @@ TEST_CASE("Testing lpc40xx PWM instantiation", "[lpc40xx-pwm]")
     .peripheral = mock_peripheral,
     .pin        = mock_pwm_pin.get(),
     .channel    = 1,
+    .pin_function_id = 0b101,
   };
 
-  Pwm test_pwm(mock_channel);
-
-  constexpr uint8_t kResetMr0                  = (1 << 1);
-  constexpr uint8_t kCounterEnable             = (1 << 0);
-  constexpr uint8_t kTimerMode                 = (0b11 << 0);
-  constexpr uint8_t kPwmEnable                 = (1 << 3);
-  constexpr uint32_t kChannelEnable            = 1;
-  constexpr uint32_t kChannelEnableBitPosition = 10;
+  Pwm test_pwm(mock_channel, mock_system_controller.get());
 
   SECTION("Initialization values")
   {
     test_pwm.Initialize();
+    Verify(Method(mock_system_controller, PowerUpPeripheral)
+               .Matching([](sjsu::SystemController::PeripheralID id) {
+                 return sjsu::lpc40xx::SystemController::Peripherals::kPwm0
+                            .device_id == id.device_id;
+               }));
 
-    sjsu::lpc40xx::SystemController system_controller;
-    CHECK(system_controller.IsPeripheralPoweredUp(
-        sjsu::lpc40xx::SystemController::Peripherals::kPwm0));
-    CHECK((local_pwm.MCR & 0b11) == (kResetMr0 & 0b11));
-    CHECK((local_pwm.TCR & 0b1111) == ((kCounterEnable | kPwmEnable) & 0b1111));
-    CHECK((local_pwm.CTCR & 0b11) == (~kTimerMode & 0b11));
-    CHECK(((local_pwm.PCR >> kChannelEnableBitPosition) & 0b11'1111) ==
-          kChannelEnable);
+    // PWM Count Control Register should be all zeros
+    CHECK(0 == local_pwm.CTCR);
+    // Check that Match Control Register reset for PWM0 has been set
+    CHECK(0b1 == bit::Read(local_pwm.MCR, 1));
+    // Timer Control Register
+    constexpr uint32_t kCounterEnable = 0;
+    constexpr uint8_t kCounterReset   = 1;
+    constexpr uint8_t kPwmEnable      = 3;
+    CHECK(0b1 == bit::Read(local_pwm.TCR, kCounterEnable));
+    CHECK(0b0 == bit::Read(local_pwm.TCR, kCounterReset));
+    CHECK(0b1 == bit::Read(local_pwm.TCR, kPwmEnable));
+
+    CHECK(0b1 == bit::Extract(local_pwm.PCR, mock_channel.channel + 8));
 
     Verify(Method(mock_pwm_pin, SetPinFunction)
-               .Using(mock_channel.peripheral.pin_function_id))
+               .Using(mock_channel.pin_function_id))
         .Once();
 
     CHECK(Pwm::kDefaultFrequency == test_pwm.GetFrequency());
@@ -91,7 +99,7 @@ TEST_CASE("Testing lpc40xx PWM instantiation", "[lpc40xx-pwm]")
   {
     test_pwm.SetDutyCycle(0.5f);
     test_pwm.SetFrequency(2000);
-    CHECK(config::kSystemClockRate / local_pwm.MR0 == 2000);
+    CHECK(kDummySystemControllerClockFrequency / local_pwm.MR0 == 2000);
     CHECK(test_pwm.GetFrequency() == 2000);
   }
 

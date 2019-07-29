@@ -25,7 +25,7 @@ class Pin final : public sjsu::Pin
   inline static volatile PinTable_t * function_map =
       reinterpret_cast<volatile PinTable_t *>(&LPC_PINCON->PINSEL0);
 
-  inline static volatile PinTable_t * mode_map =
+  inline static volatile PinTable_t * resistor_map =
       reinterpret_cast<volatile PinTable_t *>(&LPC_PINCON->PINMODE0);
 
   inline static volatile PinTable_t * open_drain_map =
@@ -48,9 +48,16 @@ class Pin final : public sjsu::Pin
     return Pin(5, 4);
   }
 
-  constexpr Pin(uint8_t port, uint8_t pin) : sjsu::Pin(port, pin) {}
+  constexpr Pin(uint8_t port, uint8_t pin)
+      : sjsu::Pin(port, pin),
+        kPinMask{
+          .position = static_cast<uint8_t>(pin_ * 2),
+          .width    = 2,
+        }
+  {
+  }
 
-  uint32_t PinSelectRegister() const
+  uint32_t PinRegisterLookup() const
   {
     uint32_t odd_register = (pin_ > 15) ? 1 : 0;
     return (port_ * 2) + odd_register;
@@ -58,22 +65,23 @@ class Pin final : public sjsu::Pin
 
   void SetPinFunction(uint8_t function) const override
   {
-    uint32_t pin_reg_select = PinSelectRegister();
+    uint32_t pin_reg_select = PinRegisterLookup();
     function_map->pin[pin_reg_select] =
-        bit::Insert(function_map->pin[pin_reg_select], function, pin_ * 2, 2);
+        bit::Insert(function_map->pin[pin_reg_select], function, kPinMask);
   }
   static constexpr uint8_t kResistorModes[4] = {
-    0b10,  // kInactive [0]
+    0b10,  // kNone [0]
     0b11,  // kPullDown [1]
     0b00,  // kPullUp   [2]
     0b01,  // kRepeater [3]
   };
-  void SetMode(Mode mode) const override
+  void SetPull(Resistor resistor) const override
   {
-    uint32_t pin_reg_select = PinSelectRegister();
-    mode_map->pin[pin_reg_select] =
-        bit::Insert(mode_map->pin[pin_reg_select],
-                    kResistorModes[util::Value(mode)], pin_ * 2, 2);
+    uint32_t pin_reg_select = PinRegisterLookup();
+    resistor_map->pin[pin_reg_select] =
+        bit::Insert(resistor_map->pin[pin_reg_select],
+                    kResistorModes[util::Value(resistor)],
+                    kPinMask);
   }
   [[deprecated]] void SetAsAnalogMode(
       [[maybe_unused]] bool set_as_analog = true) const override {
@@ -82,9 +90,14 @@ class Pin final : public sjsu::Pin
 
   void SetAsOpenDrain(bool set_as_open_drain = true) const override
   {
-    open_drain_map->pin[port_] =
-        bit::Insert(open_drain_map->pin[port_], set_as_open_drain, pin_, 1);
+    open_drain_map->pin[port_] = bit::Insert(open_drain_map->pin[port_],
+                                             set_as_open_drain,
+                                             {
+                                                 .position = pin_,
+                                                 .width    = 1,
+                                             });
   }
+  const bit::Mask kPinMask;
 };
 }  // namespace lpc17xx
 }  // namespace sjsu

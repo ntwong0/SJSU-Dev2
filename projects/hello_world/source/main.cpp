@@ -1,5 +1,3 @@
-#include <project_config.hpp>
-
 #include <cstdint>
 #include <iterator>
 
@@ -18,5 +16,5 @@ int main()
     }
   }
 
-  return 0;
+  return -1;
 }

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "L1_Peripheral/lpc40xx/gpio.hpp"
 #include "L1_Peripheral/lpc40xx/i2c.hpp"
 #include "L1_Peripheral/lpc40xx/spi.hpp"
@@ -82,9 +84,8 @@ class FactoryTest
     cs.SetAsOutput();
     cs.SetHigh();
 
-    spi2.SetPeripheralMode(Spi::MasterSlaveMode::kMaster,
-                           Spi::DataSize::kEight);
-    spi2.SetClock(false, false, 100, 48);
+    spi2.SetDataSize(Spi::DataSize::kEight);
+    spi2.SetClock(100'000);
     spi2.Initialize();
 
     uint8_t array[5];
@@ -109,8 +110,10 @@ class FactoryTest
     return result;
   }
 
-  void OnBoardLedTest(bool gesture_test, bool accelerometer_test,
-                      bool temp_test, bool flash_test)
+  void OnBoardLedTest(bool gesture_test,
+                      bool accelerometer_test,
+                      bool temp_test,
+                      bool flash_test)
   {
     // Turn on all LEDs if all tests pass else none.
     // LED Test
@@ -187,7 +190,8 @@ class FactoryTest
     return (id_test_result && temp_test_result);
   }
 
-  bool CheckDeviceId(uint8_t device_address, uint8_t id_register_address,
+  bool CheckDeviceId(uint8_t device_address,
+                     uint8_t id_register_address,
                      uint8_t expected_id)
   {
     uint8_t device_id = 0x00;

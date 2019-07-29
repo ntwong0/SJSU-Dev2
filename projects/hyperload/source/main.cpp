@@ -1,6 +1,4 @@
 // SJTwo Hyperload Version 1.0
-#include <project_config.hpp>
-
 #include <cmath>
 #include <cstdarg>
 #include <cstdint>
@@ -9,8 +7,9 @@
 #include <cstring>
 #include <iterator>
 
+#include <project_config.hpp>
+
 #include "config.hpp"
-#include "L0_Platform/lpc40xx/interrupt.hpp"
 #include "L0_Platform/lpc40xx/LPC40xx.h"
 #include "L1_Peripheral/cortex/system_timer.hpp"
 #include "L1_Peripheral/lpc40xx/uart.hpp"
@@ -20,17 +19,6 @@
 #include "utility/debug.hpp"
 #include "utility/macros.hpp"
 #include "utility/time.hpp"
-
-// Only allow this file to be compiled if the BOOTLOADER or CLANG_TIDY defines
-// have been defined.
-//    BOOTLOADER is defined when using "make bootloader"
-//    CLANG_TIDY is defined when using "make tidy"
-
-static_assert(
-    sjsu::build::kTarget == sjsu::build::Target::Bootloader ||
-        sjsu::build::kTarget == sjsu::build::Target::HostTest,
-    "Hyperload must be built as a 'bootloader' and not as an application or "
-    "test. Please build this software using 'make bootloader'");
 
 namespace
 {
@@ -232,19 +220,20 @@ void SetFlashAcceleratorSpeed(int32_t clocks_per_flash_access)
 
 int main()
 {
-  sjsu::cortex::SystemTimer system_timer;
+  const sjsu::lpc40xx::SystemController kLpc40xxSystemController;
+  sjsu::cortex::SystemTimer system_timer(kLpc40xxSystemController);
   sjsu::lpc40xx::Gpio button0(1, 19);
   sjsu::lpc40xx::Gpio button1(1, 15);
   sjsu::lpc40xx::Gpio button2(0, 30);
   sjsu::lpc40xx::Gpio button3(0, 29);
 
-  button0.GetPin().SetMode(sjsu::lpc40xx::Pin::Mode::kPullDown);
+  button0.GetPin().SetPull(sjsu::lpc40xx::Pin::Resistor::kPullDown);
   button0.SetAsInput();
-  button1.GetPin().SetMode(sjsu::lpc40xx::Pin::Mode::kPullDown);
+  button1.GetPin().SetPull(sjsu::lpc40xx::Pin::Resistor::kPullDown);
   button1.SetAsInput();
-  button2.GetPin().SetMode(sjsu::lpc40xx::Pin::Mode::kPullDown);
+  button2.GetPin().SetPull(sjsu::lpc40xx::Pin::Resistor::kPullDown);
   button2.SetAsInput();
-  button3.GetPin().SetMode(sjsu::lpc40xx::Pin::Mode::kPullDown);
+  button3.GetPin().SetPull(sjsu::lpc40xx::Pin::Resistor::kPullDown);
   button3.SetAsInput();
 
   debug_print_button_was_pressed = button3.Read();
@@ -324,9 +313,11 @@ int main()
   // monitor for the final bootloader message and application messages.
   uart0.Initialize(config::kBaudRate);
 
-  IsrPointer * application_vector_table =
-      reinterpret_cast<IsrPointer *>(&(flash->application));
-  IsrPointer application_entry_isr = application_vector_table[1];
+  using ResetFunction = void(*)(void);
+
+  ResetFunction * application_vector_table =
+      reinterpret_cast<ResetFunction *>(&(flash->application));
+  ResetFunction application_entry_isr = application_vector_table[1];
 
   printf("Hyperload Version (%d.%d)\n", kHyperload.major, kHyperload.minor);
   // If button0 is held down, display hexdump of the first 16kb of application
@@ -360,7 +351,7 @@ int main()
   // depending on the how the application is written.
   system_timer.DisableTimer();
   // Move the interrupt vector table register address to the application's IVT
-  using sjsu::lpc40xx::SCB_Type;
+  using sjsu::cortex::SCB_Type;
   SCB->VTOR = reinterpret_cast<intptr_t>(application_vector_table);
   // Jump to application code
   puts("Booting Application...");
