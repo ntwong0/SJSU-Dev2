@@ -8,8 +8,10 @@ namespace sjsu
 class Pca9535 final
 {
  public:
-  // static constexpr uint8_t kDevI2CBaseAddr         = 0x40; // 8 bit width, lsb is r/w
-  static constexpr uint8_t kDevI2CBaseAddr         = 0x40 >> 1; // 8 bit width, lsb is r/w
+  // Note: The 8 bit slave addr following the start bit at the start of every I2C transaction
+  //       has the following structure: 
+  //               (uint8_t)(kDevI2CBaseAddr << 1 | i2c_read_or_nwrite_bit)
+  static constexpr uint8_t kDevI2CBaseAddr         = 0x20; // 7 bit width (r/w excluded, ignore msb)
   
   // bitwise association to pca9535's io port: msb is pin7 -> lsb is pin0
   // Input Port reg values reflect voltage levels
@@ -40,10 +42,34 @@ class Pca9535 final
   {
   }
 
+  // The following is specific to the sjone board
+  // @todo migrate to sjone.hpp
+  // @todo write a constexpr to parse "8'bxxxx_xxxx" into uint8_t
+  static constexpr uint8_t kSevenSegCharMap[16] =
+  {
+           //       PGFE_DCBA
+    0x3f,  // 0: 8'b0011_1111
+    0x06,  // 1: 8'b0000_0110
+    0x5b,  // 2: 8'b0101_1011
+    0x4f,  // 3: 8'b0100_1111
+    0x66,  // 4: 8'b0110_0110
+    0x6d,  // 5: 8'b0110_1101
+    0x7d,  // 6: 8'b0111_1101
+    0x07,  // 7: 8'b0000_0111
+    0x7f,  // 8: 8'b0111_1111
+    0x67,  // 9: 8'b0110_0111
+    0x77,  // a: 8'b0111_0111
+    0x7c,  // b: 8'b0111_1100
+    0x58,  // c: 8'b0101_1000
+    0x5e,  // d: 8'b0101_1110
+    0x79,  // e: 8'b0111_1001
+    0x71   // f: 8'b0111_0001
+  };
+
   Status Initialize()
   {
     i2c_.Initialize();
-    return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, 0x0f, 0xf0 }, 1000U);
+    return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, 0x00, 0x00 });
   }
 
   void SetOutputs(uint8_t value_port0, uint8_t value_port1)
@@ -59,45 +85,6 @@ class Pca9535 final
     i2c_.Read(address_, &value_port1, 1);
     return (uint16_t)((value_port0 << 8) | value_port1);
   }
-
-  // float GetCelsius()
-  // {
-  //   // Note that: 1 << 14 = 2^14 = 16384
-  //   constexpr int32_t kSubtractTemperatureData = 1 << 14;
-
-  //   uint8_t most_significant_register;
-  //   uint8_t least_significant_register;
-  //   // The register will enable the device to collect data once
-  //   // and automatically sets the stop bit to 0 (2nd bit).
-  //   i2c_.Write(address_, { kOneBurstRegister, 0x04 }, 2);
-  //   // Auto increments I2c register address pointer.
-  //   i2c_.Write(address_, { kAutomaticBitRegister, 0x01 }, 2);
-  //   i2c_.WriteThenRead(
-  //       address_, { kMostSignificantRegister }, &most_significant_register, 1);
-  //   i2c_.Read(address_, &least_significant_register, 1);
-
-  //   // The write and read operation sets the most significant bit to one,
-  //   // telling the register that the data has been read.
-  //   // Therefore must clear the most significant bit from above.
-  //   most_significant_register = bit::Clear(most_significant_register, 7);
-  //   // Combine temperature register data
-  //   int32_t temperature_data =
-  //       (most_significant_register << 8) | least_significant_register;
-  //   // The required computation after bit shifting.
-  //   // Formula can be found below, see page 4:
-  //   // datasheets/Temperature-Sensor/si7060-datasheets.pdf
-  //   float temperature =
-  //       static_cast<float>(temperature_data - kSubtractTemperatureData);
-  //   temperature = (temperature / 160.0f) + 55.0f;
-
-  //   return temperature;
-  // }
-
-  // float GetFahrenheit() override
-  // {
-  //   // General formula used to convert Celsius to Fahrenheit
-  //   return (((GetCelsius() * 9.0f) / 5.0f) - 32.0f);
-  // }
 
  private:
   const I2c & i2c_;

@@ -81,7 +81,8 @@ LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):$(SJCLANG)/lib/
 # TODO(#82): Set this from the directory this makefile is stored in
 PROJ     ?= firmware
 # Allow user to change which platform they are building for
-PLATFORM ?= lpc40xx
+# PLATFORM ?= lpc40xx
+PLATFORM ?= lpc17xx
 # Specifies which entity in the DBC your application will represent.
 # The example below will generate a DBC where this particular application is
 # the NAVIGATION entity on the CANBUS.
@@ -94,7 +95,8 @@ ENTITY  ?= DBG
 #
 #     make flash DEVICE="/dev/ttyUSB0"
 #
-DEVICE ?=
+DEVICE ?="/dev/ttyUSB0"
+# DEVICE ?=
 # Set the optimization level of the compiler. Default is optimization level 0.
 # Available optimization levels for GCC are:
 #     0: Low to no optimization. Only trivial and quick optimizations will be
