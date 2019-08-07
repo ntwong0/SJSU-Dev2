@@ -72,18 +72,30 @@ class Pca9535 final
     return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, 0x00, 0x00 });
   }
 
-  void SetOutputs(uint8_t value_port0, uint8_t value_port1)
+  // Set pins as inputs or outputs
+  Status SetConfig(uint8_t config0, uint8_t config1)
   {
-    i2c_.Write(address_, { kCtrlRegAddrOutputPort0, value_port0, value_port1 });
+    return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, config0, config1 });
   }
 
-  uint16_t GetInputs()
+  Status SetPolarity(uint8_t pol0, uint8_t pol1)
   {
-    uint8_t value_port0 = 0;
-    uint8_t value_port1 = 0;
-    i2c_.WriteThenRead(address_, { kCtrlRegAddrInputPort0 }, &value_port0, 2);
-    i2c_.Read(address_, &value_port1, 1);
-    return (uint16_t)((value_port0 << 8) | value_port1);
+    return i2c_.Write(address_, { kCtrlRegAddrPolInvPort0, pol0, pol1 });
+  }
+
+  Status SetOutputs(uint8_t outval0, uint8_t outval1)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrOutputPort0, outval0, outval1 });
+  }
+
+  Status GetInputs(uint8_t &inval0, uint8_t inval1)
+  {
+    uint8_t inputs[2];
+    i2c_.Write(address_, { kCtrlRegAddrInputPort0 });
+    Status retval = i2c_.Read(address_, inputs, 2);
+    inval0 = inputs[0];
+    inval1 = inputs[1];
+    return retval;
   }
 
  private:
