@@ -1,11 +1,10 @@
 #pragma once
 
 #include "L1_Peripheral/i2c.hpp"
-// #include "utility/bit.hpp"
 
 namespace sjsu
 {
-class Pca9535 final
+class Pca9535
 {
  public:
   // Note: The 8 bit slave addr following the start bit at the start of every I2C transaction
@@ -42,30 +41,6 @@ class Pca9535 final
   {
   }
 
-  // The following is specific to the sjone board
-  // @todo migrate to sjone.hpp
-  // @todo write a constexpr to parse "8'bxxxx_xxxx" into uint8_t
-  static constexpr uint8_t kSevenSegCharMap[16] =
-  {
-           //       PGFE_DCBA
-    0x3f,  // 0: 8'b0011_1111
-    0x06,  // 1: 8'b0000_0110
-    0x5b,  // 2: 8'b0101_1011
-    0x4f,  // 3: 8'b0100_1111
-    0x66,  // 4: 8'b0110_0110
-    0x6d,  // 5: 8'b0110_1101
-    0x7d,  // 6: 8'b0111_1101
-    0x07,  // 7: 8'b0000_0111
-    0x7f,  // 8: 8'b0111_1111
-    0x67,  // 9: 8'b0110_0111
-    0x77,  // a: 8'b0111_0111
-    0x7c,  // b: 8'b0111_1100
-    0x58,  // c: 8'b0101_1000
-    0x5e,  // d: 8'b0101_1110
-    0x79,  // e: 8'b0111_1001
-    0x71   // f: 8'b0111_0001
-  };
-
   Status Initialize()
   {
     i2c_.Initialize();
@@ -73,29 +48,80 @@ class Pca9535 final
   }
 
   // Set pins as inputs or outputs
-  Status SetConfig(uint8_t config0, uint8_t config1)
+  Status SetConfigPorts(uint8_t config0, uint8_t config1)
   {
     return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, config0, config1 });
   }
 
-  Status SetPolarity(uint8_t pol0, uint8_t pol1)
+  Status SetConfigPort0(uint8_t config0)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrConfigPort0, config0 });
+  }
+
+  Status SetConfigPort1(uint8_t config1)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrConfigPort1, config1 });
+  }
+
+  Status SetPolarityPorts(uint8_t pol0, uint8_t pol1)
   {
     return i2c_.Write(address_, { kCtrlRegAddrPolInvPort0, pol0, pol1 });
   }
 
-  Status SetOutputs(uint8_t outval0, uint8_t outval1)
+  Status SetPolarityPort0(uint8_t pol0)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrPolInvPort0, pol0 });
+  }
+
+  Status SetPolarityPort1(uint8_t pol1)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrPolInvPort1, pol1 });
+  }
+
+  Status SetOutputPorts(uint8_t outval0, uint8_t outval1)
   {
     return i2c_.Write(address_, { kCtrlRegAddrOutputPort0, outval0, outval1 });
   }
 
-  Status GetInputs(uint8_t &inval0, uint8_t inval1)
+  Status SetOutputPort0(uint8_t outval0)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrOutputPort0, outval0 });
+  }
+
+  Status SetOutputPort1(uint8_t outval1)
+  {
+    return i2c_.Write(address_, { kCtrlRegAddrOutputPort1, outval1 });
+  }
+
+  Status GetInputPorts(uint16_t *inval)
   {
     uint8_t inputs[2];
     i2c_.Write(address_, { kCtrlRegAddrInputPort0 });
     Status retval = i2c_.Read(address_, inputs, 2);
-    inval0 = inputs[0];
-    inval1 = inputs[1];
+    *inval = static_cast<uint16_t>(inputs[0]) | static_cast<uint16_t>(inputs[1]) << 8;
     return retval;
+  }
+
+  Status GetInputPorts(uint8_t *inval0, uint8_t *inval1)
+  {
+    uint8_t inputs[2];
+    i2c_.Write(address_, { kCtrlRegAddrInputPort0 });
+    Status retval = i2c_.Read(address_, inputs, 2);
+    *inval0 = inputs[0];
+    *inval1 = inputs[1];
+    return retval;
+  }
+
+  Status GetInputPort0(uint8_t *inval0)
+  {
+    i2c_.Write(address_, { kCtrlRegAddrInputPort0 });
+    return i2c_.Read(address_, inval0, 1);
+  }
+
+  Status GetInputPort1(uint8_t *inval1)
+  {
+    i2c_.Write(address_, { kCtrlRegAddrInputPort1 });
+    return i2c_.Read(address_, inval1, 1);
   }
 
  private:

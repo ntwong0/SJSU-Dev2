@@ -6,7 +6,8 @@
 
 #include "L2_HAL/displays/led/onboard_led.hpp"
 // #include "L2_HAL/displays/oled/ssd1306.hpp"
-#include "L2_HAL/displays/seven_seg/pca9535.hpp"
+// #include "L2_HAL/displays/seven_seg/pca9535.hpp"
+#include "L2_HAL/displays/seven_seg/sjone_seven_seg.hpp"
 #include "L2_HAL/memory/sd.hpp"
 #include "L2_HAL/sensors/environment/temperature/si7060.hpp"
 #include "L2_HAL/sensors/movement/accelerometer/mma8452q.hpp"
@@ -16,6 +17,9 @@
 
 struct sjone // NOLINT
 {
+  static constexpr sjsu::lpc17xx::SystemController kLpc17xxSystemController =
+      sjsu::lpc17xx::SystemController();
+
   inline static sjsu::lpc17xx::Spi spi0 =
       sjsu::lpc17xx::Spi(sjsu::lpc17xx::Spi::Bus::kSpi0);
   inline static sjsu::lpc17xx::Spi spi1 =
@@ -27,8 +31,8 @@ struct sjone // NOLINT
       sjsu::lpc17xx::I2c(sjsu::lpc17xx::I2c::Bus::kI2c0);
   inline static sjsu::lpc17xx::I2c i2c1 =
       sjsu::lpc17xx::I2c(sjsu::lpc17xx::I2c::Bus::kI2c1);
-//   inline static sjsu::lpc17xx::I2c i2c2 =
-//       sjsu::lpc17xx::I2c(sjsu::lpc17xx::I2c::Bus::kI2c2);
+  inline static sjsu::lpc17xx::I2c i2c2 =
+      sjsu::lpc17xx::I2c(sjsu::lpc17xx::I2c::Bus::kI2c2, kLpc17xxSystemController);
 
   // [[gnu::always_inline]] inline static sjsu::Graphics & Oled()
   // {
@@ -45,11 +49,11 @@ struct sjone // NOLINT
     return leds;
   }
 
-//   [[gnu::always_inline]] inline static sjsu::Pca9535 & SevenSeg()
-//   {
-//       static sjsu::Pca9535 seven_seg(i2c2);
-//       return seven_seg;
-//   }
+  [[gnu::always_inline]] inline static sjsu::SJOneSevenSeg & SevenSeg()
+  {
+      static sjsu::SJOneSevenSeg seven_seg(i2c2);
+      return seven_seg;
+  }
 
 //   [[gnu::always_inline]] inline static sjsu::Mma8452q & Accelerometer()
 //   {
