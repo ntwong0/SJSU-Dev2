@@ -6,6 +6,8 @@
 #include "L1_Peripheral/inactive.hpp"
 #include "utility/bit.hpp"
 
+#include "utility/log.hpp"
+
 namespace sjsu
 {
 namespace pca9535
@@ -197,6 +199,7 @@ Status SetPolarityPort1(const I2c &i2c, uint8_t address, uint8_t pol1)
 
   Status GetOutputPort0(const I2c &i2c, uint8_t address, uint8_t *inval0)
   {
+    LOG_INFO("In GetOutputPort0");
     i2c.Write(address, { kCtrlRegAddrOutputPort0 });
     return i2c.Read(address, inval0, 1);
   }
@@ -257,50 +260,55 @@ class Gpio final : public sjsu::Gpio
     {
       uint8_t val = 0;
       GetConfigPort1(i2c_, address_, &val);
-      direction == kInput ? bit::Set(val, pin_) : bit::Clear(val, pin_);
+      val = direction == kInput ? bit::Set(val, pin_) : bit::Clear(val, pin_);
       SetConfigPort1(i2c_, address_, val);
     }
     else // Port0
     {
       uint8_t val = 0;
       GetConfigPort0(i2c_, address_, &val);
-      direction == kInput ? bit::Set(val, pin_) : bit::Clear(val, pin_);
+      val = direction == kInput ? bit::Set(val, pin_) : bit::Clear(val, pin_);
       SetConfigPort0(i2c_, address_, val);
     }
   }
 
   void Set(State output) const override
   {
+    LOG_INFO("In Set(): port value is %x", port_);
     if(port_) // Port1
     {
       uint8_t val = 0;
       GetOutputPort1(i2c_, address_, &val);
-      output == kHigh ? bit::Set(val, pin_) : bit::Clear(val, pin_);
+      val = output == kHigh ? bit::Set(val, pin_) : bit::Clear(val, pin_);
       SetOutputPort1(i2c_, address_, val);
     }  
     else // Port0
     {
+      LOG_INFO("In Set() else");
       uint8_t val = 0;
       GetOutputPort0(i2c_, address_, &val);
-      output == kHigh ? bit::Set(val, pin_) : bit::Clear(val, pin_);
+      val = output == kHigh ? bit::Set(val, pin_) : bit::Clear(val, pin_);
       SetOutputPort0(i2c_, address_, val);
     }
   }
 
   void Toggle() const override
   {
+    LOG_INFO("In Toggle(): port value is %x, pin values is %x", port_, pin_);
     if(port_) // Port1
     {
       uint8_t val = 0;
       GetOutputPort1(i2c_, address_, &val);
-      bit::Read(val, pin_) ? bit::Clear(val, pin_) : bit::Set(val, pin_);
+      val = bit::Read(val, pin_) ? bit::Clear(val, pin_) : bit::Set(val, pin_);
       SetOutputPort1(i2c_, address_, val);
     }  
     else // Port0
     {
       uint8_t val = 0;
       GetOutputPort0(i2c_, address_, &val);
-      bit::Read(val, pin_) ? bit::Clear(val, pin_) : bit::Set(val, pin_);
+      LOG_INFO("  got value %x", val);
+      val = bit::Read(val, pin_) ? bit::Clear(val, pin_) : bit::Set(val, pin_);
+      LOG_INFO("  sending value %x", val);
       SetOutputPort0(i2c_, address_, val);
     }
   }
@@ -333,6 +341,28 @@ class Gpio final : public sjsu::Gpio
   void AttachInterrupt(IsrPointer function, Edge edge) const override { return; }
   void DetachInterrupt() const override                               { return; }
 
+  // ===
+  // reimplement utilities
+  // ===
+
+  void SetHigh() const
+  {
+    LOG_INFO("In SetHigh()");
+    Set(State::kHigh);
+  }
+  void SetLow() const
+  {
+    Set(State::kLow);
+  }
+  void SetAsInput() const
+  {
+    SetDirection(Direction::kInput);
+  }
+  void SetAsOutput() const
+  {
+    SetDirection(Direction::kOutput);
+  }
+
  private:
   const I2c & i2c_;
   uint8_t address_;
@@ -340,17 +370,18 @@ class Gpio final : public sjsu::Gpio
   uint8_t pin_;
 };
 
-class Pca9535_2
+class Pca9535
 {
   public:
-    Pca9535_2(const I2c & i2c, uint8_t address = kDevI2CBaseAddr)
+    Pca9535(const I2c & i2c, uint8_t address = kDevI2CBaseAddr)
     : i2c_(i2c), address_(address)
     {}
 
     const sjsu::pca9535::Gpio & GetGpio(uint8_t port, uint8_t pin)
     {
+      LOG_INFO("In GetGpio");
       // TODO assertion check port and pin values
-      return sjsu::pca9535::Gpio(port, pin, i2c_, address_);
+      return sjsu::pca9535::Gpio(port, pin, i2c_, address_); // scope tho, bro
     }  
 
     Status Initialize()
@@ -368,20 +399,26 @@ class Pca9535_2
         return SetConfigPorts(i2c_, address_, 0xFF, 0xFF);
     }
 
-    Status SetAll()
+    Status SetAll(Gpio::State level)
     {
-        return SetOutputPorts(i2c_, address_, 0xFF, 0xFF);
-    }
-
-    Status ClearAll()
-    {
-        return SetOutputPorts(i2c_, address_, 0x00, 0x00);
+        return (level == Gpio::State::kHigh) ?
+                SetOutputPorts(i2c_, address_, 0xFF, 0xFF) :
+                SetOutputPorts(i2c_, address_, 0x00, 0x00);
     }
 
   private:
     const I2c & i2c_;
     uint8_t address_;
-}; // class Pca9535_2
+}; // class Pca9535
+
+typedef sjsu::pca9535::Gpio GpioParallelBus[];
+
+// class GpioParallelBus 
+// {
+//   public:
+//   private:
+//     sjsu::pca9535::Gpio **pins;
+// };
 
 }  // namespace pca9535
 }  // namespace sjsu
