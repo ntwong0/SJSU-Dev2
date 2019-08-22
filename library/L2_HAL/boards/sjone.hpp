@@ -5,7 +5,7 @@
 #include "L1_Peripheral/lpc17xx/spi.hpp"
 
 #include "L2_HAL/displays/led/onboard_led.hpp"
-#include "L2_HAL/displays/seven_seg/pca9535_2.hpp"
+#include "L2_HAL/displays/seven_seg/pca9535.hpp"
 #include "L2_HAL/memory/sd.hpp"
 #include "L2_HAL/sensors/environment/temperature/si7060.hpp"
 #include "L2_HAL/sensors/movement/accelerometer/mma8452q.hpp"

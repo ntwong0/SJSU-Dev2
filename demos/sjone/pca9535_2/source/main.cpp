@@ -5,7 +5,7 @@
 #include "utility/time.hpp"
 #include "L0_Platform/lpc17xx/LPC17xx.h"
 #include "L2_HAL/boards/sjone.hpp"
-#include "L2_HAL/displays/seven_seg/pca9535_2.hpp"
+#include "L2_HAL/displays/seven_seg/pca9535.hpp"
 
 int main()
 {
