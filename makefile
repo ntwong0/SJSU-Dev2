@@ -253,7 +253,7 @@ TESTS ?=
 # Set of compilable test files specified by the user.
 # This also includes any source AND test to be tested.
 # MUST NOT contain source files that contain a "main()" implementation
-USER_TESTS ?=
+USER_TESTS += /home/fishie2610/Workspace/SJSU-Dev2/library/L2_HAL/displays/seven_seg/test/pca9535_test.cpp
 # Set of common flags to build software
 COMMON_FLAGS ?=
 # List of folder or files that should be excluded from lint analysis
