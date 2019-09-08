@@ -24,6 +24,8 @@ int main()
   auto retval = sjsu::Stringify(board.SevenSeg().Initialize());
   LOG_INFO("seven_seg init: %s", retval);
 
+  board.SevenSeg().ConfigAllToOutput();
+
   while (true)
   {
     for (uint8_t i = 0; i < 16; i++)

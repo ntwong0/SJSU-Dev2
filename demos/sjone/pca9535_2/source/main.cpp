@@ -20,7 +20,7 @@ int main()
     = (( sjsu::lpc17xx::LPC_PINCON_TypeDef *) LPC_PINCON_BASE );
   LOG_INFO("PINSEL0: 0x%X", pin_configurator->PINSEL0); // check bit 23:20, should be 4'b1010
   
-  board.SevenSeg().ConfigToOutput();
+  board.SevenSeg().ConfigAllToOutput();
 
   sjsu::Pca9535::GpioParallelBus seg_bus = {
     board.SevenSeg().GetGpio(0,0),

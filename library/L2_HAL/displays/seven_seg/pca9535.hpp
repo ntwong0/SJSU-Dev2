@@ -57,7 +57,13 @@ class Pca9535
     static Status Initialize(const I2c &i2c, uint8_t address) 
     {
       i2c.Initialize();
-      return i2c.Write(address, { kCtrlRegAddrConfigPort0, 0x00, 0x00 });
+      uint8_t vals_from_config_ports[kNumberOfPorts];
+      Status retval =
+        i2c.WriteThenRead(address, { kCtrlRegAddrConfigPort0 }, &vals_from_config_ports[0], kNumberOfPorts);
+      // // confirm pins are defaulted as inputs - return error if this is not the case
+      if(vals_from_config_ports[0] != 0xFF || vals_from_config_ports[1] != 0xFF)
+        retval = Status::kBusError;
+      return retval;
     }
 
     // Set pins as inputs or outputs
@@ -382,12 +388,12 @@ class Pca9535
         return Initialize(i2c_, address_);
     }
 
-    Status ConfigToOutput()
+    Status ConfigAllToOutput()
     {
         return SetConfigPorts(i2c_, address_, 0x00, 0x00);
     }
     
-    Status ConfigToInput()
+    Status ConfigAllToInput()
     {
         return SetConfigPorts(i2c_, address_, 0xFF, 0xFF);
     }
