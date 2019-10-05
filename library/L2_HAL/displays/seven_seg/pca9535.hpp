@@ -48,7 +48,7 @@ class Pca9535
 
     // Specifies number of ports and pins that can be used
     static constexpr uint8_t kNumberOfPins  = 8;
-    static constexpr uint8_t kNumberOfPorts = 2;
+    static constexpr size_t kNumberOfPorts = 2;
 
     // =====
     // PCA9535-specific I2C methods
@@ -60,7 +60,7 @@ class Pca9535
       uint8_t vals_from_config_ports[kNumberOfPorts];
       Status retval =
         i2c.WriteThenRead(address, { kCtrlRegAddrConfigPort0 }, &vals_from_config_ports[0], kNumberOfPorts);
-      // // confirm pins are defaulted as inputs - return error if this is not the case
+      // confirm pins are defaulted as inputs - return error if this is not the case
       if(vals_from_config_ports[0] != 0xFF || vals_from_config_ports[1] != 0xFF)
         retval = Status::kBusError;
       return retval;
