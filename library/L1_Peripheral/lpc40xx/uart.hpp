@@ -20,15 +20,23 @@ namespace lpc40xx
 {
 namespace uart
 {
-constexpr float kThreshold = 0.05f;
-
+/// UART baud error threshold. Used to check if a fractional value is reasonable
+/// close to the desired value.
+constexpr float kThreshold = 0.01f;
+/// Structure containing all of the information that a lpc40xx UART needs to
+/// achieve its desired baud rate.
 struct UartCalibration_t
 {
+  /// Main clock divider
   uint32_t divide_latch = 0;
-  uint32_t divide_add   = 0;
-  uint32_t multiply     = 1;
+  /// Fractional divisor to trim the UART baud rate into the proper rate
+  uint32_t divide_add = 0;
+  /// Fractional numerator to trim the UART baud rate into the proper rate.
+  uint32_t multiply = 1;
 };
-
+/// @param decimal - the number to approximate.
+/// @return Will generate a UartCalibration_t that attempts to find a fractional
+/// value that closely matches the input decimal number as much as possible.
 constexpr UartCalibration_t FindClosestFractional(float decimal)
 {
   UartCalibration_t result;
@@ -51,7 +59,11 @@ constexpr UartCalibration_t FindClosestFractional(float decimal)
   }
   return result;
 }
-
+/// @param baud_rate - desired baud rate.
+/// @param fraction_estimate - corrissponds to the result of UartCalibration_t
+///        divide_add/multiply.
+/// @param peripheral_frequency - input source frequency.
+/// @return an estimate for the baud rate divider
 constexpr float DividerEstimate(float baud_rate,
                                 float fraction_estimate       = 1,
                                 uint32_t peripheral_frequency = 1)
@@ -59,7 +71,11 @@ constexpr float DividerEstimate(float baud_rate,
   float clock_frequency = static_cast<float>(peripheral_frequency);
   return clock_frequency / (16.0f * baud_rate * fraction_estimate);
 }
-
+/// @param baud_rate - desired baud rate.
+/// @param divider - clock divider for the baud rate.
+/// @param peripheral_frequency - input source frequency.
+/// @return a fraction that would get the baud rate as close to desired baud
+///         rate, given the input divider.
 constexpr float FractionalEstimate(float baud_rate,
                                    float divider,
                                    uint32_t peripheral_frequency)
@@ -67,13 +83,16 @@ constexpr float FractionalEstimate(float baud_rate,
   float clock_frequency = static_cast<float>(peripheral_frequency);
   return clock_frequency / (16.0f * baud_rate * divider);
 }
-
+/// @param value - value to round
+/// @return rounded up and truncated value
 constexpr float RoundFloat(float value)
 {
   return static_cast<float>(static_cast<int>(value + 0.5f));
 }
-
-constexpr bool IsDecmial(float value)
+/// @param value input float value.
+/// @return true if value is within our threshold of a decimal number, false
+///         otherwise.
+constexpr bool IsDecimal(float value)
 {
   bool result         = false;
   float rounded_value = RoundFloat(value);
@@ -84,7 +103,7 @@ constexpr bool IsDecmial(float value)
   }
   return result;
 }
-
+/// States for the uart calibration state machine.
 enum class States
 {
   kCalculateIntegerDivideLatch,
@@ -93,10 +112,15 @@ enum class States
   kGenerateFractionFromDecimal,
   kDone
 };
-
+/// @param baud_rate - desire baud rate
+/// @param peripheral_frequency - input clock source frequency
+/// @return UartCalibration_t that will get the output baud rate as close to the
+///         desired baud_rate as possible.
 constexpr static UartCalibration_t GenerateUartCalibration(
-    uint32_t baud_rate, uint32_t peripheral_frequency)
+    uint32_t baud_rate, units::frequency::hertz_t peripheral_frequency)
 {
+  uint32_t integer_peripheral_frequency =
+      units::unit_cast<uint32_t>(peripheral_frequency);
   States state = States::kCalculateIntegerDivideLatch;
   UartCalibration_t uart_calibration;
   float baud_rate_float = static_cast<float>(baud_rate);
@@ -111,14 +135,14 @@ constexpr static UartCalibration_t GenerateUartCalibration(
       case States::kCalculateIntegerDivideLatch:
       {
         divide_estimate =
-            DividerEstimate(baud_rate_float, 1, peripheral_frequency);
+            DividerEstimate(baud_rate_float, 1, integer_peripheral_frequency);
 
         if (divide_estimate < 1.0f)
         {
           uart_calibration.divide_latch = 0;
           state                         = States::kDone;
         }
-        else if (IsDecmial(divide_estimate))
+        else if (IsDecimal(divide_estimate))
         {
           uart_calibration.divide_latch =
               static_cast<uint32_t>(divide_estimate);
@@ -132,10 +156,10 @@ constexpr static UartCalibration_t GenerateUartCalibration(
       }
       case States::kCalculateDivideLatchWithDecimal:
       {
-        divide_estimate = RoundFloat(
-            DividerEstimate(baud_rate_float, decimal, peripheral_frequency));
-        decimal = FractionalEstimate(
-            baud_rate_float, divide_estimate, peripheral_frequency);
+        divide_estimate = RoundFloat(DividerEstimate(
+            baud_rate_float, decimal, integer_peripheral_frequency));
+        decimal         = FractionalEstimate(
+            baud_rate_float, divide_estimate, integer_peripheral_frequency);
         if (1.1f <= decimal && decimal <= 1.9f)
         {
           state = States::kGenerateFractionFromDecimal;
@@ -171,33 +195,41 @@ constexpr static UartCalibration_t GenerateUartCalibration(
         state                         = States::kDone;
         break;
       }
-      case States::kDone: { break;
-      }
-      default: { break;
-      }
+      case States::kDone:
+      default: break;
     }
   }
   return uart_calibration;
 }
 }  // namespace uart
 
+/// Implementation of the UART interface for the LPC40xx family of
+/// microcontrollers.
 class Uart final : public sjsu::Uart
 {
  public:
   using sjsu::Uart::Read;
   using sjsu::Uart::Write;
-
+  /// Code for enabling standard uart mode.
   static constexpr uint8_t kStandardUart = 0b011;
+  /// Port contains all of the information that the lpc40xx uart port needs to
+  /// operate.
   struct Port_t
   {
+    /// Address of the LPC_UART peripheral in memory
     LPC_UART_TypeDef * registers;
+    /// PeripheralID of the UART peripheral to power on at initialization.
     sjsu::SystemController::PeripheralID power_on_id;
+    /// Refernce to a uart transmitter pin
     const sjsu::Pin & tx;
+    /// Refernce to a uart receiver pin
     const sjsu::Pin & rx;
+    /// Function code to set the transmit pin to uart transmitter
     uint8_t tx_function_id : 3;
+    /// Function code to set the receive pin to uart receiver
     uint8_t rx_function_id : 3;
   };
-
+  /// Structure used as a namespace for predefined Port_t definitions.
   struct Port  // NOLINT
   {
    private:
@@ -214,6 +246,7 @@ class Uart final : public sjsu::Uart
     inline static const Pin kUart4Rx = Pin(2, 9);
 
    public:
+    /// Definition for uart port 0 for lpc40xx.
     inline static const Port_t kUart0 = {
       // NOTE: required since LPC_UART0 is of type LPC_UART0_TypeDef in lpc17xx
       // and LPC_UART_TypeDef in lpc40xx causing a "useless cast" warning when
@@ -226,7 +259,7 @@ class Uart final : public sjsu::Uart
       .tx_function_id = 0b001,
       .rx_function_id = 0b001,
     };
-
+    /// Definition for uart port 1 for lpc40xx.
     inline static const Port_t kUart2 = {
       .registers      = LPC_UART2,
       .power_on_id    = sjsu::lpc40xx::SystemController::Peripherals::kUart2,
@@ -235,7 +268,7 @@ class Uart final : public sjsu::Uart
       .tx_function_id = 0b010,
       .rx_function_id = 0b010,
     };
-
+    /// Definition for uart port 2 for lpc40xx.
     inline static const Port_t kUart3 = {
       .registers      = LPC_UART3,
       .power_on_id    = sjsu::lpc40xx::SystemController::Peripherals::kUart3,
@@ -244,7 +277,7 @@ class Uart final : public sjsu::Uart
       .tx_function_id = 0b010,
       .rx_function_id = 0b010,
     };
-
+    /// Definition for uart port 3 for lpc40xx.
     inline static const Port_t kUart4 = {
       .registers      = reinterpret_cast<LPC_UART_TypeDef *>(LPC_UART4),
       .power_on_id    = sjsu::lpc40xx::SystemController::Peripherals::kUart4,
@@ -254,27 +287,22 @@ class Uart final : public sjsu::Uart
       .rx_function_id = 0b011,
     };
   };
-  static constexpr sjsu::lpc40xx::SystemController kLpc40xxSystemController =
-      sjsu::lpc40xx::SystemController();
 
-  explicit constexpr Uart(const Port_t & port,
-                          const sjsu::SystemController & system_controller =
-                              kLpc40xxSystemController)
-      : port_(port), system_controller_(system_controller)
-  {
-  }
+  /// @param port - a reference to a constant lpc40xx::Uart::Port_t definition
+  explicit constexpr Uart(const Port_t & port) : port_(port) {}
 
   Status Initialize(uint32_t baud_rate) const override
   {
     constexpr uint8_t kFIFOEnableAndReset = 0b111;
-    system_controller_.PowerUpPeripheral(port_.power_on_id);
+    sjsu::SystemController::GetPlatformController().PowerUpPeripheral(
+        port_.power_on_id);
 
     SetBaudRate(baud_rate);
 
     port_.rx.SetPinFunction(port_.rx_function_id);
     port_.tx.SetPinFunction(port_.tx_function_id);
-    port_.rx.SetPull(sjsu::Pin::Resistor::kPullUp);
-    port_.tx.SetPull(sjsu::Pin::Resistor::kPullUp);
+    port_.rx.PullUp();
+    port_.tx.PullUp();
     port_.registers->FCR |= kFIFOEnableAndReset;
 
     return Status::kSuccess;
@@ -282,9 +310,12 @@ class Uart final : public sjsu::Uart
 
   bool SetBaudRate(uint32_t baud_rate) const override
   {
-    uart::UartCalibration_t calibration = uart::GenerateUartCalibration(
-        baud_rate,
-        system_controller_.GetPeripheralFrequency(port_.power_on_id));
+    auto peripheral_frequency =
+        sjsu::SystemController::GetPlatformController().GetPeripheralFrequency(
+            port_.power_on_id);
+
+    uart::UartCalibration_t calibration =
+        uart::GenerateUartCalibration(baud_rate, peripheral_frequency);
 
     constexpr uint8_t kDlabBit = (1 << 7);
 
@@ -301,11 +332,12 @@ class Uart final : public sjsu::Uart
     return true;
   }
 
-  void Write(const uint8_t * data, size_t size) const override
+  void Write(const void * data, size_t size) const override
   {
+    const uint8_t * data_buffer = reinterpret_cast<const uint8_t *>(data);
     for (size_t i = 0; i < size; i++)
     {
-      port_.registers->THR = data[i];
+      port_.registers->THR = data_buffer[i];
       while (!TransmissionComplete())
       {
         continue;
@@ -313,42 +345,39 @@ class Uart final : public sjsu::Uart
     }
   }
 
-  Status Read(
-      uint8_t * data,
-      size_t size,
-      uint32_t timeout = std::numeric_limits<uint32_t>::max()) const override
+  size_t Read(void * data, size_t size) const override
   {
-    // NOTE: Consider changing this to using a Wait() call.
-    Status status       = Status::kTimedOut;
-    uint64_t start_time = Milliseconds();
-    size_t position     = 0;
-    while (Milliseconds() < (start_time + timeout))
+    uint8_t * data_buffer = reinterpret_cast<uint8_t *>(data);
+    size_t index          = 0;
+    while (FifoHasData())
     {
-      if (HasData())
+      if (index >= size)
       {
-        data[position++] = static_cast<uint8_t>(port_.registers->RBR);
-      }
-      if (position >= size)
-      {
-        status = Status::kSuccess;
         break;
       }
+      data_buffer[index++] = port_.registers->RBR;
     }
-    return status;
+    return index;
   }
+
   bool HasData() const override
   {
-    return bit::Read(port_.registers->LSR, 0);
+    return FifoHasData();
   }
 
  private:
+  /// @return true if port is still sending the byte.
   bool TransmissionComplete() const
   {
     return bit::Read(port_.registers->LSR, 5);
   }
-
+  /// @return true if fifo contains receive data.
+  bool FifoHasData() const
+  {
+    return bit::Read(port_.registers->LSR, 0);
+  }
+  /// const reference to lpc40xx::Uart::Port_t definition
   const Port_t & port_;
-  const sjsu::SystemController & system_controller_;
-};
+};  // namespace lpc40xx
 }  // namespace lpc40xx
 }  // namespace sjsu

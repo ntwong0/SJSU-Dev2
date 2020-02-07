@@ -13,7 +13,6 @@ namespace sjsu
 {
 namespace example
 {
-using sjsu::lpc40xx::LPC_IOCON_TypeDef;
 // 1. All L1_Peripherals must be final
 // L1_Peripherals implementations should not be inherited further.
 // This promotes object composition (HAS-A relationship) vs inheritance (IS-A)
@@ -49,7 +48,7 @@ class Example final : public sjsu::Example
   // The predefined structures can be used to create a channel profile that
   // isn't already included in this set of Channel_t within the Channel struct.
   //
-  // The structure is also an injetion point. You can have, in this case below,
+  // The structure is also an injection point. You can have, in this case below,
   // the iocon pointer, point to a local version of LPC_IOCON_TypeDef and check
   // that it maniuplates the registers correctly.
   struct Channel_t
@@ -67,7 +66,8 @@ class Example final : public sjsu::Example
     inline static const sjsu::lpc40xx::Pin kExamplePinClock =
         sjsu::lpc40xx::Pin(4, 6);
 
-    inline static const Channel_t kExample0 = { .iocon = LPC_IOCON,
+    inline static const Channel_t kExample0 = { .iocon =
+                                                    sjsu::lpc40xx::LPC_IOCON,
                                                 .data  = kExamplePinData,
                                                 .clock = kExamplePinClock,
                                                 .data_pin_function  = 0b100,

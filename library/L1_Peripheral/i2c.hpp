@@ -6,27 +6,36 @@
 #include "config.hpp"
 
 #include "utility/status.hpp"
+#include "utility/units.hpp"
 
 namespace sjsu
 {
+/// An abstract interface for hardware that implements the Inter-integrated
+/// Circuit (I2C) or Two Wire Interface (TWI) hardware communication Protocol.
+/// @ingroup l1_peripheral
 class I2c
 {
  public:
   // ==============================
   // Interface Defintions
   // ==============================
+
+  /// Operation defines the types of operations that can occur in an I2C
+  /// transaction.
   enum Operation : uint8_t
   {
     kWrite = 0,
     kRead  = 1,
   };
-
-  static constexpr uint32_t kI2cTimeout = 100;  // units milliseconds
-
+  /// Default timeout time for I2C if you choose to not supply your own timeout
+  /// time.
+  static constexpr std::chrono::milliseconds kI2cTimeout = 100ms;
+  /// A common structure for holding the information needed for I2C
+  /// transactions.
   struct Transaction_t
   {
-    // Returns an 8-bit I2C address with the 0th bit set if the i2c operation
-    // is kRead.
+    /// Returns an 8-bit I2C address with the 0th bit set if the i2c operation
+    /// is kRead.
     constexpr uint8_t GetProperAddress()
     {
       uint8_t address_8bit = static_cast<uint8_t>(address << 1);
@@ -36,17 +45,41 @@ class I2c
       }
       return address_8bit;
     }
-    Operation operation      = Operation::kWrite;
-    uint8_t address          = 0xFF;
+    /// Defines the starting operation of this transaction. The use of the word
+    /// "starting", refers to the fact that, the operation can change from Read
+    /// -> Write if a WriteThenRead() function was called on this structure. In
+    /// that case, the transaction will start from a Write and then transition
+    /// to a Read after the necessary number of bytes have been written to the
+    /// bus.
+    /// Read operations never transition to Write.
+    Operation operation = Operation::kWrite;
+    /// The 7-bit I2C address of the device to communicate with.
+    uint8_t address = 0xFF;
+    /// Pointer to a buffer of bytes to write to the device.
     const uint8_t * data_out = nullptr;
-    size_t out_length        = 0;
-    uint8_t * data_in        = nullptr;
-    size_t in_length         = 0;
-    size_t position          = 0;
-    bool repeated            = false;
-    bool busy                = false;
-    uint64_t timeout         = kI2cTimeout;
-    Status status            = Status::kSuccess;
+    /// The number of bytes to write to the device.
+    size_t out_length = 0;
+    /// Pointer to a buffer to store retrieved bytes into.
+    uint8_t * data_in = nullptr;
+    /// The number of bytes to read from the device.
+    size_t in_length = 0;
+    /// The current position in the out or in buffer.
+    size_t position = 0;
+    /// This flag determins if a "repeat start" condition should be emitted on
+    /// the bus. This flag being set will transition the hardware from Write to
+    /// Read mode. If this flag is true, data_out and data_in must be set to an
+    /// actual buffer (cannot be nullptr).
+    bool repeated = false;
+    /// This flag indicates to the driver whether or not the I2C transaction is
+    /// still occuring. Use this to break out of a while loop if your I2C
+    /// implementation is interrupt based.
+    bool busy = false;
+    /// How long should the calling code wait before timing out and moving on
+    /// without a result.
+    std::chrono::milliseconds timeout = kI2cTimeout;
+    /// The status of the transaction after it is completed, fails, or times
+    /// out.
+    Status status = Status::kSuccess;
   };
 
   // ==============================
@@ -81,7 +114,7 @@ class I2c
   Status Read(uint8_t address,
               uint8_t * transmit_buffer,
               size_t transmit_buffer_length,
-              uint32_t timeout = kI2cTimeout) const
+              std::chrono::milliseconds timeout = kI2cTimeout) const
   {
     return Transaction({
         .operation  = Operation::kRead,
@@ -108,7 +141,7 @@ class I2c
   Status Write(uint8_t address,
                const uint8_t * receive_buffer,
                size_t receive_buffer_length,
-               uint32_t timeout = kI2cTimeout) const
+               std::chrono::milliseconds timeout = kI2cTimeout) const
   {
     return Transaction({
         .operation  = Operation::kWrite,
@@ -124,11 +157,12 @@ class I2c
         .status     = Status::kSuccess,
     });
   }
+
   /// Write to a device on the I2C bus
   ///
   /// Usage:
   ///
-  ///    i2c.Write(0x29, {0x01, 0x2a, 0x10});
+  ///     i2c.Write(0x29, {0x01, 0x2a, 0x10});
   ///
   /// @param address - device address
   /// @param transmit - array literal to send to device
@@ -136,10 +170,11 @@ class I2c
   ///        bailing out.
   Status Write(uint8_t address,
                std::initializer_list<uint8_t> transmit,
-               uint32_t timeout = kI2cTimeout) const
+               std::chrono::milliseconds timeout = kI2cTimeout) const
   {
     return Write(address, transmit.begin(), transmit.size(), timeout);
   }
+
   /// Write to a device on the I2C bus, then read from that device.
   ///
   /// This is very common for most I2C devices, where the microcontroller must
@@ -159,7 +194,7 @@ class I2c
                        size_t transmit_buffer_length,
                        uint8_t * receive_buffer,
                        size_t receive_buffer_length,
-                       uint32_t timeout = kI2cTimeout) const
+                       std::chrono::milliseconds timeout = kI2cTimeout) const
   {
     return Transaction({
         .operation  = Operation::kWrite,
@@ -193,7 +228,7 @@ class I2c
                        std::initializer_list<uint8_t> transmit,
                        uint8_t * receive_buffer,
                        size_t receive_buffer_length,
-                       uint32_t timeout = kI2cTimeout) const
+                       std::chrono::milliseconds timeout = kI2cTimeout) const
   {
     return WriteThenRead(address,
                          transmit.begin(),

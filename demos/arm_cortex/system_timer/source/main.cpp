@@ -12,11 +12,10 @@ void DemoSystemIsr()
 int main()
 {
   LOG_INFO("System Timer Application Starting...");
-  sjsu::cortex::SystemTimer system_timer(
-      sjsu::GetInactive<sjsu::SystemController>());
+  sjsu::cortex::SystemTimer system_timer;
 
-  system_timer.SetInterrupt(DemoSystemIsr);
-  system_timer.SetTickFrequency(10 /* Hz */);
+  system_timer.SetCallback(DemoSystemIsr);
+  system_timer.SetTickFrequency(10_Hz);
   system_timer.StartTimer();
 
   LOG_INFO("Halting any action.");

@@ -2,6 +2,7 @@
 
 namespace sjsu
 {
+/// Status error codes returned by functions throughout the SJSU-Dev2 code base.
 enum class Status
 {
   kSuccess,
@@ -11,8 +12,12 @@ enum class Status
   kInvalidSettings,
   kNotImplemented,
   kNotReadyYet,
+  kInvalidParameters,
+  kUnfinished,
+  kUnknown,
 };
-
+/// @param status - the status code to convert to a string
+/// @return a string representation of the status code.
 constexpr const char * Stringify(Status status)
 {
   const char * result = "";
@@ -26,5 +31,12 @@ constexpr const char * Stringify(Status status)
     default: break;
   }
   return result;
+}
+
+/// @param status - status to check
+/// @return true if the status is equal to kSuccess.
+constexpr bool IsOk(Status status)
+{
+  return status == Status::kSuccess;
 }
 }  // namespace sjsu

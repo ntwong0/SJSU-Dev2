@@ -1,32 +1,48 @@
 #pragma once
 
-#if !defined(TARGET)
-#define TARGET Application
+#if !defined(PLATFORM)
+#define PLATFORM lpc40xx
 #endif
 
 namespace sjsu
 {
 namespace build
 {
-enum class Target
+/// Defines the list of build platforms that SJSU-Dev2 can build applications
+/// for.
+enum class Platform
 {
-  Application = 0,  // NOLINT
-  HostTest,         // NOLINT
+  host,       // NOLINT
+  lpc17xx,    // NOLINT
+  lpc40xx,    // NOLINT
+  linux,      // NOLINT
+  stm32f10x,  // NOLINT
+  stm32f4xx,  // NOLINT
 };
 
-constexpr const Target kTarget = Target::TARGET;
+constexpr const Platform kPlatform = Platform::PLATFORM;
 
-constexpr const char * Stringify(Target target)
+constexpr bool IsPlatform(Platform platform)
+{
+  return kPlatform == platform;
+}
+
+/// @param platform - the platform to convert to a string
+/// @return a string representation of the platform.
+constexpr const char * Stringify(Platform platform)
 {
   const char * result = "invalid";
-  switch (target)
+  switch (platform)
   {
-    case Target::Application: result = "application"; break;
-    case Target::HostTest: result = "host test"; break;
+    case Platform::host: result = "host"; break;
+    case Platform::lpc17xx: result = "lpc17xx"; break;
+    case Platform::lpc40xx: result = "lpc40xx"; break;
+    case Platform::linux: result = "linux"; break;
+    case Platform::stm32f10x: result = "stm32f10x"; break;
+    case Platform::stm32f4xx: result = "stm32f4xx"; break;
     default: break;
   }
   return result;
 }
-
 }  // namespace build
 }  // namespace sjsu

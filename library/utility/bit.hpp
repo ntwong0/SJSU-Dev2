@@ -1,11 +1,7 @@
-// @ingroup SJSU-Dev2
-// @defgroup Bit manipulation library
-// @brief This library contains helper methods for manipulating or extracting
-// bits from a numeric values.
-// @{
 #pragma once
 
 #include <cstdint>
+#include <cstddef>
 #include <limits>
 #include <type_traits>
 
@@ -13,11 +9,20 @@ namespace sjsu
 {
 namespace bit
 {
+/// Definition of a bit mask. Can be used in various bit manipulation functions
+/// to specify which bits to be modified.
 struct Mask  // NOLINT
 {
+  /// Starting position of the bitfield
   uint8_t position;
+  /// Number of bits of the bitfield
   uint8_t width;
 };
+/// @param low_bit_position - the starting bit of the bit field.
+/// @param high_bit_position - the last bit of the bit field.
+/// @return constexpr Mask from the low bit position to the high bit position.
+///         If the low_bit_position > high_bit_position, the result is
+///         undefined.
 constexpr Mask CreateMaskFromRange(uint8_t low_bit_position,
                                    uint8_t high_bit_position)
 {
@@ -26,6 +31,8 @@ constexpr Mask CreateMaskFromRange(uint8_t low_bit_position,
       .width = static_cast<uint8_t>(1 + (high_bit_position - low_bit_position)),
   });
 }
+/// @param bit_position - bit field composed of a single bit with bit width 1.
+/// @return a bit mask with of width 1 and position = bit_position.
 constexpr Mask CreateMaskFromRange(uint8_t bit_position)
 {
   return Mask({
@@ -76,7 +83,7 @@ template <typename T>
 {
   return Extract(target, bitmask.position, bitmask.width);
 }
-/// Insert a set of continguous bits into a target value.
+/// Insert a set of contiguous bits into a target value.
 ///
 /// target   =        0xXXXX'XXXX
 ///                        ^
@@ -191,7 +198,6 @@ template <typename T>
                 "Toggle only accepts intergers.");
   return static_cast<T>(target ^ (1 << position));
 }
-
 /// Read a bit from the target value at the position specifed.
 /// If the bit is 1 at the position given, return true.
 /// If the bit is 0 at the position given, return false.
@@ -214,6 +220,36 @@ template <typename T>
                 "Read only accepts intergers.");
   return static_cast<bool>(target & (1 << position));
 }
+
+/// @returns a value that is the target value with the bit set to a 1 at the bit
+/// position within the bitmask. For example if your bitmask has field position
+/// set to 5, then this function will return the target value with the 5th bits
+/// set to a 1.
+template <typename T>
+[[nodiscard]] constexpr T Set(T target, Mask bitmask)
+{
+  return Set(target, bitmask.position);
+}
+/// Operates the same way as the Set(T target, Mask bitmask) function except it
+/// clears the bit.
+template <typename T>
+[[nodiscard]] constexpr T Clear(T target, Mask bitmask)
+{
+  return Clear(target, bitmask.position);
+}
+/// Operates the same way as the Set() function except it toggles the bit.
+template <typename T>
+[[nodiscard]] constexpr bool Toggle(T target, Mask bitmask)
+{
+  return Toggle(target, bitmask.position);
+}
+/// @returns the bit in the value at the "position" field of the bitmask. For
+/// example, if the passed bitmask has position set to 5, then this function
+/// will return the 5th bits value, regardless of the "width" field is.
+template <typename T>
+[[nodiscard]] constexpr bool Read(T target, Mask bitmask)
+{
+  return Read(target, bitmask.position);
+}
 }  // namespace bit
 }  // namespace sjsu
-// @}

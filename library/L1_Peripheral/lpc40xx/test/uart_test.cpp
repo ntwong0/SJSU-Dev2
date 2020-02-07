@@ -13,15 +13,15 @@ TEST_CASE("Testing lpc40xx Uart", "[lpc40xx-Uart]")
   memset(&local_uart, 0, sizeof(local_uart));
 
   // Set mock for sjsu::SystemController
-  constexpr uint32_t kDummySystemControllerClockFrequency = 48'000'000;
+  constexpr units::frequency::hertz_t kDummySystemControllerClockFrequency =
+      48_MHz;
   Mock<sjsu::SystemController> mock_system_controller;
   Fake(Method(mock_system_controller, PowerUpPeripheral));
   When(Method(mock_system_controller, GetSystemFrequency))
       .AlwaysReturn(kDummySystemControllerClockFrequency);
   When(Method(mock_system_controller, GetPeripheralClockDivider))
       .AlwaysReturn(1);
-  When(Method(mock_system_controller, GetPeripheralFrequency))
-      .AlwaysReturn(kDummySystemControllerClockFrequency);
+  sjsu::SystemController::SetPlatformController(&mock_system_controller.get());
 
   Mock<sjsu::Pin> mock_tx;
   Fake(Method(mock_tx, SetPinFunction));
@@ -42,7 +42,7 @@ TEST_CASE("Testing lpc40xx Uart", "[lpc40xx-Uart]")
   };
   constexpr uint32_t kBaudRate = 9600;
 
-  Uart uart_test(kMockUart2, mock_system_controller.get());
+  Uart uart_test(kMockUart2);
   uart_test.Initialize(kBaudRate);
 
   SECTION("Initialize")

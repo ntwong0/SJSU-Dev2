@@ -7,7 +7,7 @@
 
 #include "L1_Peripheral/i2c.hpp"
 #include "L3_Application/commandline.hpp"
-#include "third_party/etl/vector.h"
+#include "utility/containers/vector.hpp"
 #include "utility/log.hpp"
 
 namespace sjsu
@@ -17,6 +17,8 @@ namespace sjsu
 class I2cCommand final : public Command
 {
  public:
+  /// An enumeration that specifies the locations of each command argument in
+  /// the command line.
   enum Args
   {
     kName          = 0,
@@ -27,36 +29,131 @@ class I2cCommand final : public Command
     kWriteStartByte  = 3,
     kLength          = 4
   };
+
+  /// Container for each address found when running i2c "discover"
   struct AddressString_t
   {
-    // String large enough to hold the string 0x00
+    /// String large enough to hold the string 0x00
     char str[sizeof("0x00")];
   };
 
+  /// Holds the information needed to perform the I2C transaction with an
+  /// external device.
   struct Arguments_t
   {
-    char * operation         = nullptr;
-    uint8_t device_address   = 0x00;
+    /// String containing which operation to perform
+    char * operation = nullptr;
+    /// Holds the i2c address of the external device to communicate with.
+    /// NOTE: Only handles 8-bit i2c addresses currently.
+    uint8_t device_address = 0x00;
+    /// Holds the memory location mapped within the device.
+    /// NOTE: Only supports 8-bit i2c register addresses currently.
     uint8_t register_address = 0x00;
-    uint8_t length           = 0;
-    bool invalid             = false;
+    /// How many bytes to read or write to the device.
+    uint8_t length = 0;
+    /// Gets set when the1
+    bool invalid = false;
   };
 
+  /// I2c usage description and details.
   static constexpr char kDescription[] = R"(Read and write to the i2c bus.
                 i2c write <device address> <register address> <data0> ...
                 i2c read <device address> <register address> <length>
                 i2c discover
   )";
 
-  explicit I2cCommand(const I2c & i2c) : Command("i2c", kDescription), i2c_(i2c)
+  /// Sole constructor of the I2c command
+  explicit I2cCommand(const I2c & i2c)
+      : Command("i2c", kDescription),
+        devices_found_(decltype(devices_found_)::allocator_type{}),
+        i2c_(i2c)
   {
+    devices_found_.reserve(decltype(devices_found_)::allocator_type::size);
   }
 
+  /// Initializes i2c peripheral. MUST be called before calling any other method
+  /// in this class.
   void Initialize()
   {
     i2c_.Initialize();
   }
 
+  int AutoComplete(int argc,
+                   const char * const argv[],
+                   const char * completion[],
+                   size_t completion_length) override
+  {
+    size_t position = 0;
+    completion[0]   = nullptr;
+    switch (argc - 1)
+    {
+      // If nothing has been typed for the function, provide the i2c functions
+      case Args::kOperation:
+        for (const char * operation : kI2cOperations)
+        {
+          const char * const kArgument = argv[Args::kOperation];
+          if (std::strstr(operation, kArgument) == operation)
+          {
+            completion[position++] = const_cast<char *>(operation);
+          }
+        }
+        break;
+      case Args::kDeviceAddress:
+        // Do not perform a tab complete when the operation is "discover"
+        if (strcmp(argv[Args::kOperation], kI2cOperations[2]) == 0)
+        {
+          break;
+        }
+        I2cDiscover();
+        for (size_t i = 0; i < completion_length && i < devices_found_.size();
+             i++)
+        {
+          auto & address               = devices_found_[i];
+          const char * const kArgument = argv[Args::kDeviceAddress];
+          if (std::strstr(address.str, kArgument) == address.str)
+          {
+            completion[position++] = address.str;
+          }
+        }
+    }
+    return static_cast<int>(position);
+  }
+
+  int Program(int argc, const char * const argv[]) override
+  {
+    if (argc - 1 < kOperation)
+    {
+      LOG_ERROR("Invalid number of arguments, required %d, supplied %d",
+                kOperation,
+                argc);
+      return 1;
+    }
+
+    const char * operation = GetI2cOperation(argv[Args::kOperation]);
+
+    if (operation == kI2cOperations[0])  // read
+    {
+      return PerformReadOperation(argc, argv);
+    }
+    else if (operation == kI2cOperations[1])  // write
+    {
+      return PerformWriteOperation(argc, argv);
+    }
+    else if (operation == kI2cOperations[2])  // discover
+    {
+      return PerformDiscoveryOperation();
+    }
+
+    return 0;
+  }
+
+ private:
+  /// Converts a string holding a numeric value into a byte integer
+  ///
+  /// @param kArgument - number string to be converted
+  /// @param radix - the numeric radix (or numeric base) of the string
+  /// @return std::tuple<uint8_t, bool> - the converted value and a bool that
+  /// indicates if the value was valid.
   std::tuple<uint8_t, bool> ParseByte(const char * const kArgument,
                                       uint8_t radix)
   {
@@ -66,6 +163,12 @@ class I2cCommand final : public Command
     return std::make_tuple(byte, (string_end != kArgument));
   }
 
+  /// Returns the i2c operation from the argument string
+  ///
+  /// @param kOperationArgument - the start of string that contains the i2c
+  ///        operation.
+  /// @return returns which i2c operation to perform such as write, read,
+  /// discover.
   char * GetI2cOperation(const char * const kOperationArgument)
   {
     for (const char * operation : kI2cOperations)
@@ -77,6 +180,11 @@ class I2cCommand final : public Command
     }
     return nullptr;
   }
+
+  /// Converts a list of argv[] into an Arguments_t
+  ///
+  /// @param argv - list of string arguments
+  /// @return Arguments_t - structure full of the i2c arguments
   Arguments_t ParseArguments(int, const char * const argv[])
   {
     Arguments_t args;
@@ -122,11 +230,11 @@ class I2cCommand final : public Command
     for (uint8_t address = kFirstI2cAddress; address < kLastI2cAddress;
          address++)
     {
-      if (Status::kSuccess == i2c_.Write(address, nullptr, 0, 50))
+      if (Status::kSuccess == i2c_.Write(address, nullptr, 0, 50ms))
       {
         AddressString_t address_string;
-        snprintf(address_string.str, sizeof(address_string.str), "0x%02X",
-                 address);
+        snprintf(
+            address_string.str, sizeof(address_string.str), "0x%02X", address);
         devices_found_.push_back(address_string);
       }
     }
@@ -139,15 +247,19 @@ class I2cCommand final : public Command
       LOG_ERROR(
           "Invalid number of arguments for read operation, required %d, "
           "supplied %d",
-          kRegisterAddress, argc);
+          kRegisterAddress,
+          argc);
       return 1;
     }
     Arguments_t args = ParseArguments(argc, argv);
     uint8_t contents[128];
     if (args.length < sizeof(contents))
     {
-      i2c_.WriteThenRead(args.device_address, &args.register_address, 1,
-                         contents, args.length);
+      i2c_.WriteThenRead(args.device_address,
+                         &args.register_address,
+                         1,
+                         contents,
+                         args.length);
       debug::Hexdump(contents, args.length);
     }
     else
@@ -163,24 +275,25 @@ class I2cCommand final : public Command
     if (argc - 1 < kRegisterAddress)
     {
       LOG_ERROR(
-          "Invalid number of arguments for write opeation, required %d, "
+          "Invalid number of arguments for write operation, required %d, "
           "supplied %d",
-          kRegisterAddress, argc);
+          kRegisterAddress,
+          argc);
       return 1;
     }
     Arguments_t args = ParseArguments(argc, argv);
     uint8_t payload[64];
     size_t position;
+    size_t number_of_arguments = static_cast<size_t>(argc);
     for (position = 0; position < std::size(payload) &&
-                       argv[Args::kWriteStartByte + position] != nullptr;
+                       (Args::kWriteStartByte + position) < number_of_arguments;
          position++)
     {
       payload[position] =
           std::get<0>(ParseByte(argv[Args::kWriteStartByte + position], 16));
     }
-    // subtract 1 since position will overshoot by 1
-    i2c_.Write(args.device_address, payload, position - 1);
-    debug::Hexdump(payload, position - 1);
+    i2c_.Write(args.device_address, payload, position);
+    debug::Hexdump(payload, position);
     return 0;
   }
 
@@ -199,74 +312,10 @@ class I2cCommand final : public Command
     return 0;
   }
 
-  int AutoComplete(int argc, const char * const argv[],
-                   const char * completion[], const size_t) override
-  {
-    size_t position = 0;
-    completion[0]   = nullptr;
-    switch (argc - 1)
-    {
-      // If nothing has been typed for the function, provide the i2c functions
-      case Args::kOperation:
-        for (const char * operation : kI2cOperations)
-        {
-          const char * const kArgument = argv[Args::kOperation];
-          if (std::strstr(operation, kArgument) == operation)
-          {
-            completion[position++] = const_cast<char *>(operation);
-          }
-        }
-        break;
-      case Args::kDeviceAddress:
-        // Do not perform a tab complete when the operation is "discover"
-        if (strcmp(argv[Args::kOperation], kI2cOperations[2]) == 0)
-        {
-          break;
-        }
-        I2cDiscover();
-        for (auto & address : devices_found_)
-        {
-          const char * const kArgument = argv[Args::kDeviceAddress];
-          if (std::strstr(address.str, kArgument) == address.str)
-          {
-            completion[position++] = address.str;
-          }
-        }
-    }
-    return position;
-  }
-
-  int Program(int argc, const char * const argv[]) override
-  {
-    if (argc - 1 < kOperation)
-    {
-      LOG_ERROR("Invalid number of arguments, required %d, supplied %d",
-                kOperation, argc);
-      return 1;
-    }
-
-    const char * operation = GetI2cOperation(argv[Args::kOperation]);
-
-    if (operation == kI2cOperations[0])  // read
-    {
-      return PerformReadOperation(argc, argv);
-    }
-    else if (operation == kI2cOperations[1])  // write
-    {
-      return PerformWriteOperation(argc, argv);
-    }
-    else if (operation == kI2cOperations[2])  // discover
-    {
-      return PerformDiscoveryOperation();
-    }
-
-    return 0;
-  }
-
- private:
-  static inline const char * const kI2cOperations[] = { "read", "write",
-                                                        "discover", nullptr };
-  etl::vector<AddressString_t, command::kAutoCompleteOptions> devices_found_;
+  static inline const char * const kI2cOperations[] = {
+    "read", "write", "discover", nullptr
+  };
+  sjsu::Vector<AddressString_t, command::kAutoCompleteOptions> devices_found_;
   const I2c & i2c_;
 };
 }  // namespace sjsu

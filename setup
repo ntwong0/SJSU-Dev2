@@ -17,12 +17,12 @@ ARCH=$(uname -m)
 # Get System Operating System
 OS=$(uname -s)
 # Define name of the arm version we are downloading
-TOOLS_BUNDLE_BASE_URL="https://github.com/kammce/SJSU-Dev2/releases/download/v2.0/tools-bundle"
+TOOLS_BUNDLE_BASE_URL="https://github.com/kammce/SJSU-Dev2/releases/download/v2.3/tools-bundle"
 TOOLS_BUNDLE_URL_LINUX="$TOOLS_BUNDLE_BASE_URL-linux.tar.bz2"
 TOOLS_BUNDLE_URL_OSX="$TOOLS_BUNDLE_BASE_URL-osx.tar.bz2"
 # Set later
 TOOLS_BUNDLE_URL=
-TOOLS_FILE_COUNT=9615
+TOOLS_FILE_COUNT=9642
 
 PREREQUISITES=1
 TOOL_BUNDLE=1
@@ -30,6 +30,22 @@ PYTHON_TOOLS=1
 NXPPROG=1
 LOCATION_FILE=1
 LINK_PROJECTS=1
+
+# Import SJSU-Dev2 common shell script functions
+. $BASE/tools/common.sh
+
+function print_status_nl
+{
+  if [ $1 -ne 0 ]
+  then
+    printf "$BOLD_RED"
+    printf "✘ - failure"
+  else
+    printf "$BOLD_GREEN"
+    printf "✔ - success"
+  fi
+  printf "$RESET\n"
+}
 
 # Make sure only non-root users can run our script
 function quit_if_script_was_run_as_root() {
@@ -65,22 +81,24 @@ function install_linux_prerequisites() {
   echo " ───────────────────────────────────────────────────┐"
   echo "                   Updating Apt                      "
   echo "└─────────────────────────────────────────────────── "
+  sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   sudo apt update
   local apt_update=$?
+  print_status_nl $apt_update
   echo " ───────────────────────────────────────────────────┐"
-  echo "    Installing git, make python3, pip3, curl, tar    "
+  echo " Installing git, make python3, pip3, curl, tar, g++  "
   echo "└─────────────────────────────────────────────────── "
-  sudo apt -y install git make python3 python3-pip curl tar
+  sudo apt install -y git make curl tar tree pv g++-8 \
+                      python3 python3-pip
   local apt_install=$?
+  print_status_nl $apt_install
   echo " ──────────────────────────────────────────────────┐"
   echo "       Adding current user to 'dialout' group        "
   echo "└────────────────────────────────────────────────── "
   sudo adduser $USER dialout
-  local add_user=$?
   sudo udevadm control --reload-rules && sudo udevadm trigger
-  local udevadm_control=$?
 
-  return $(($apt_update + $apt_install + $add_user + $udevadm_control))
+  return $(($apt_update + $apt_install))
 }
 
 function install_mac_osx_prerequisites() {
@@ -90,99 +108,156 @@ function install_mac_osx_prerequisites() {
   echo ""
   echo "└────────────────────────────────────────────────── "
   echo " ───────────────────────────────────────────────────┐"
-  echo "    Install XCode Command Line Tools (GCC, make)     "
-  echo "└─────────────────────────────────────────────────── "
-  # Install Command Line tools (make etc...)
-  xcode-select --install &>/dev/null
-  # Accept User Agreement
-  sudo xcodebuild -license accept
-  local xcodebuild_status=$?
-  echo " ───────────────────────────────────────────────────┐"
   echo "          Prompt Git installer by invoking it        "
   echo "└─────────────────────────────────────────────────── "
   git --version
   local git_status=$?
+  print_status_nl $git_status
   echo " ───────────────────────────────────────────────────┐"
-  echo "        Installing PIP via bootstrap.pypa.io         "
+  echo "               Installing Homebrew                   "
   echo "└─────────────────────────────────────────────────── "
-  curl https://bootstrap.pypa.io/get-pip.py | python3
-  local pip_install_status=$?
+  /usr/bin/ruby -e \
+    "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+    < /dev/null
+  local brew_install=$?
+  print_status_nl $brew_install
 
-  return $(($xcodebuild_status + $git_status + $pip_install_status))
+  echo " ───────────────────────────────────────────────────┐"
+  echo "               Brew Install Python@3                 "
+  echo "└─────────────────────────────────────────────────── "
+  brew install python@3
+  echo " ───────────────────────────────────────────────────┐"
+  echo "                Brew Installing pv                   "
+  echo "└─────────────────────────────────────────────────── "
+  brew install pv
+  echo " ───────────────────────────────────────────────────┐"
+  echo "                Brew Installing gcc                  "
+  echo "└─────────────────────────────────────────────────── "
+  brew install gcc@8
+
+  return $(($git_status + $brew_install))
 }
 
-function install_python_tools()
-{
+function install_python_tools() {
   echo " ───────────────────────────────────────────────────┐"
   echo "                  Upgrading PIP                      "
   echo "└─────────────────────────────────────────────────── "
   sudo -H python3 -m pip install --upgrade pip
   local pip_status=$?
+  print_status_nl $pip_status
   echo " ───────────────────────────────────────────────────┐"
   echo "                 Installing Gcovr                    "
   echo "└─────────────────────────────────────────────────── "
   sudo -H python3 -m pip install gcovr
   local gcovr_status=$?
+  print_status_nl $gcovr_status
   echo " ───────────────────────────────────────────────────┐"
   echo "           Installing/Upgrading Virtualenv           "
   echo "└─────────────────────────────────────────────────── "
   sudo -H python3 -m pip install --upgrade virtualenv
   local virtualenv_status=$?
+  print_status_nl $virtualenv_status
 
   return $(($pip_status + $gcovr_status + $virtualenv_status))
 }
 
-function download_and_install_tool_bundle()
-{
+function download_and_extract_tool_bundle() {
   cd "$TOOLDIR/"
   echo " ───────────────────────────────────────────────────┐"
   echo "             Downloading Tools Bundle                "
   echo "└─────────────────────────────────────────────────── "
-  curl -C - -LO "$TOOLS_BUNDLE_URL"
-  echo " ──────────────────────────────────────────────────┐"
-  echo "             Extracting tools bundle                "
-  echo "└────────────────────────────────────────────────── "
-  # Delete old openocd folder
-  rm -r "openocd" &>/dev/null
-  rm -r "gcc-arm*" &>/dev/null
-  rm -r "clang+llvm*" &>/dev/null
-  tar --verbose --extract --bzip --file="$(basename $TOOLS_BUNDLE_URL)" 2>&1 |
-  while read line; do
-      x=$((x+1))
-      echo -en "Extracting Progress: $(($x*100/$TOOLS_FILE_COUNT))%\r"
-  done
-	echo "Extracting Progress: 100%"
-  local extract=$?
-  # Verify that each directory exists
-  ls clang+llvm-*/ &> /dev/null
-  local clang_exists=$?
-  ls gcc-arm-none-eabi-*/ &> /dev/null
-  local gcc_exists=$?
-  ls openocd/ &> /dev/null
-  local openocd_exists=$?
+  local temporary_name=temp_toolkit.tar.bz2
+  # Remove an old temporary file if it exists
+  rm $temporary_name &>/dev/null
+  # -z argument checks the online modification date with the file online and
+  # the current toolkit file. If the online one is newer, then it is
+  # downloaded. If it is older, it is ignored and no temporary file is created.
+  echo "Downloading: $TOOLS_BUNDLE_URL"
+  TOOLS_BUNDLE_PATH=$(basename $TOOLS_BUNDLE_URL)
 
-  return $(($extract + $clang_exists + $gcc_exists + $openocd_exists))
+  if [[ -f $TOOLS_BUNDLE_PATH ]]; then
+    curl -z $TOOLS_BUNDLE_PATH -o $temporary_name \
+          -L0 "$TOOLS_BUNDLE_URL"
+  else
+    curl -o $temporary_name -L0 "$TOOLS_BUNDLE_URL"
+  fi
+  # This will have an expected failure if curl ignored downloading the file,
+  # which would result in the temp file not existing. mv does nothing if the
+  # source file does not exist.
+  printf "Verify tools download/update was successful... "
+  mv $temporary_name $TOOLS_BUNDLE_PATH &>/dev/null
+  local tools_bundle_was_updated=$?
+  print_status_nl $tools_bundle_was_updated
+
+  if [[ $tools_bundle_was_updated -eq "0" ]]; then
+    echo " ──────────────────────────────────────────────────┐"
+    echo "             Extracting tools bundle                "
+    echo "└────────────────────────────────────────────────── "
+
+    # Delete old toolkit folders to be re-extracted
+    rm -r "openocd*" &>/dev/null
+    rm -r "gcc-arm*" &>/dev/null
+    rm -r "clang+llvm*" &>/dev/null
+
+    pv $TOOLS_BUNDLE_PATH | tar --extract --bzip --file="-"
+    local extract=$?
+    print_status_nl $extract
+
+    # Verify that each directory exists
+    ls clang+llvm-*/ &> /dev/null
+    printf "Verify that Clang tools were extracted... "
+    local clang_exists=$?
+    print_status_nl $clang_exists
+
+    ls gcc-arm*/ &> /dev/null
+    printf "Verify that ARM toolchain was extracted... "
+    local gcc_exists=$?
+    print_status_nl $gcc_exists
+
+    printf "Verify that OpenOCD debug tools were extracted... "
+    ls openocd/ &> /dev/null
+    local openocd_exists=$?
+    print_status_nl $openocd_exists
+
+    # Linux or Windows WSL
+    if [[ "$OS" == "Linux" ]]; then
+      printf "Verify that OpenOCD debug tools for windows was extracted... "
+      ls openocd-wsl/ &>/dev/null
+      openocd_exists=$(($openocd_exists+$?))
+      print_status_nl $openocd_exists
+    fi
+
+    return $(($extract + $clang_exists + $gcc_exists + $openocd_exists))
+  fi
+  return 0
 }
 
-function install_nxpprog()
-{
+function install_nxpprog() {
   cd "$TOOLDIR"
   echo " ───────────────────────────────────────────────────┐"
   echo "                Setting Up nxpprog                   "
   echo "└─────────────────────────────────────────────────── "
   rm -rf "nxpprog/"
-  git clone --depth=1 https://github.com/kammce/nxpprog.git "nxpprog/"
-  # Save the result of git clone
+  git clone https://github.com/kammce/nxpprog.git "nxpprog/"
   local git_clone=$?
-  cd "nxpprog/"
-  ./setup
-  local nxp_setup_status=$?
+  print_status_nl $git_clone
 
-  return $(($git_clone_status + $nxp_setup_status))
+  cd "nxpprog/"
+
+  git checkout --quiet ea28bd0
+  local git_checkout=$?
+  printf "Verify nxpprog commit checkout... "
+  print_status_nl $git_checkout
+
+  ./setup
+  local setup_status=$?
+  printf "Verify nxpprog setup... "
+  print_status_nl $setup_status
+
+  return $(($git_clone + $setup_status + $git_checkout))
 }
 
-function generate_location_file()
-{
+function generate_location_file() {
   echo " ───────────────────────────────────────────────────┐"
   echo "         Generating SJSU-Dev2 Location File          "
   echo "└─────────────────────────────────────────────────── "
@@ -192,7 +267,7 @@ function generate_location_file()
 SJSU_DEV2_BASE         = $BASE
 PREVIOUS_SETUP_VERSION = $SETUP_VERSION
 
-ifeq (,\$(wildcard \$(SJSU_DEV2_BASE)))
+ifeq (,\$(wildcard \$(SJSU_DEV2_BASE)/))
 \$(info +-------------- SJSU-Dev2 Folder Not Found Error ---------------+)
 \$(info |                                                               |)
 \$(info | To update the location of SJSU-Dev2's folder run ./setup      |)
@@ -202,74 +277,65 @@ ifeq (,\$(wildcard \$(SJSU_DEV2_BASE)))
 endif
 
 EOL
-  return $?
+  printf "Verify location file generation was successful... "
+  local generation_successful=$?
+  print_status_nl $generation_successful
+  return $generation_successful
 }
 
-function link_projects()
-{
-  cd "$BASE"
-  echo " ───────────────────────────────────────────────────┐"
-  echo "      Linking Files to Firmware Project Folder       "
-  echo "└─────────────────────────────────────────────────── "
-  ./tools/link_projects.sh
-  return $?
-}
-
-function print_status
-{
-  if [[ $1 -ne 0 ]]
-  then
-    printf "\e[31m✘\e[0;31m"
-  else
-    printf "\e[32m✔\e[0;31m"
-  fi
-}
-
-function final_install_check
-{
+function final_install_check() {
   local prerequisites="$(print_status $PREREQUISITES)"
   local tool_bundle="$(print_status $TOOL_BUNDLE)"
   local python_tools="$(print_status $PYTHON_TOOLS)"
   local nxpprog="$(print_status $NXPPROG)"
-  local location_file="$(print_status $LOCATION_FILE)"
-  local project_link="$(print_status $LINK_PROJECTS)"
 
-  if [[ $1 -ne 0 ]]
-    then
-    printf "\e[0;31m =========================== \e[0m\n"
-    printf "\e[1;31m|   Something went wrong!   |\e[0m\n"
-    printf "\e[1;31m|                           |\e[0m\n"
-    printf "\e[1;31m|      (╯°□ °)╯︵ ┻━┻       |\e[0m\n"
-    printf "\e[0;31m|                           |\e[0m\n"
-    printf "\e[0;31m| Prerequisites Install . %b |\e[0m\n" $prerequisites
-    printf "\e[0;31m| Tools Install ......... %b |\e[0m\n" $tool_bundle
-    printf "\e[0;31m| Python Tools .......... %b |\e[0m\n" $python_tools
-    printf "\e[0;31m| Setup nxpprog ......... %b |\e[0m\n" $nxpprog
-    printf "\e[0;31m| Setup Location File ... %b |\e[0m\n" $location_file
-    printf "\e[0;31m| Project Linking ....... %b |\e[0m\n" $project_link
-    printf "\e[0;31m|                           |\e[0m\n"
-    printf "\e[0;31m =========================== \e[0m\n"
+  local install_was_successful=$(($PREREQUISITES + $TOOL_BUNDLE + $PYTHON_TOOLS + $NXPPROG))
+
+  if [[ $install_was_successful -ne "0" ]]; then
+    printf "\e[0;31m"
+    echo " =========================== "
+    echo "|   Something went wrong!   |"
+    echo "|                           |"
+    echo "|      (╯°□ °)╯︵ ┻━┻       |"
+    printf "\e[0;31m"
+    echo "|                           |"
+    echo "| Prerequisites Install . %b |" $prerequisites
+    printf "\n"
+    echo "| Tools Install ......... %b |" $tool_bundle
+    printf "\n"
+    echo "| Python Tools .......... %b |" $python_tools
+    printf "\n"
+    echo "| Setup nxpprog ......... %b |" $nxpprog
+    printf "\n"
+    echo "|                           |"
+    echo " =========================== "
+    printf "\e[0m\n"
     exit 1
   else
-    printf "\e[0;32m =========================== \e[0m\n"
-    printf "\e[0;32m|                           |\e[0m\n"
-    printf "\e[0;32m| Prerequisites Install . %b |\e[0m\n" $prerequisites
-    printf "\e[0;32m| Tools Install ......... %b |\e[0m\n" $tool_bundle
-    printf "\e[0;32m| Python Tools .......... %b |\e[0m\n" $python_tools
-    printf "\e[0;32m| Setup nxpprog ......... %b |\e[0m\n" $nxpprog
-    printf "\e[0;32m| Setup Location File ... %b |\e[0m\n" $location_file
-    printf "\e[0;32m| Project Linking ....... %b |\e[0m\n" $project_link
-    printf "\e[0;32m|                           |\e[0m\n"
-    printf "\e[0;32m|          (•_•)            |\e[0m\r"
+    printf "\e[0;32m"
+    echo " =========================== "
+    echo "|                           |"
+    printf "| Prerequisites Install . %b " $prerequisites
+    printf "\e[0;32m|\n"
+    printf "| Tools Install ......... %b " $tool_bundle
+    printf "\e[0;32m|\n"
+    printf "| Python Tools .......... %b " $python_tools
+    printf "\e[0;32m|\n"
+    printf "| Setup nxpprog ......... %b " $nxpprog
+    printf "\e[0;32m|\n"
+    echo "|                           |"
+    printf "|          (•_•)            |\r"
     sleep .5
-    printf "\e[0;32m|          ( •_•)>⌐▪-▪      |\e[0m\r"
+    printf "|          ( •_•)>⌐▪-▪      |\r"
     sleep .5
-    printf "\e[0;32m|          (⌐▪_▪)           |\e[0m\n"
+    printf "|          (⌐▪_▪)           |\n"
     sleep .5
-    printf "\e[0;32m|                           |\e[0m\n"
-    printf "\e[0;32m|      SETUP COMPLETE!      |\e[0m\n"
-    printf "\e[0;32m|                           |\e[0m\n"
-    printf "\e[0;32m =========================== \e[0m\n"
+    echo "|                           |"
+    echo "|      SETUP COMPLETE!      |"
+    echo "|                           |"
+    printf " =========================== "
+    printf "\e[0m\n"
+    generate_location_file
     exit 0
   fi
 }
@@ -299,16 +365,16 @@ echo "    Starting SJSU-Dev2 Environment Setup Script     "
 echo ""
 echo "└────────────────────────────────────────────────── "
 
-if [[ "$OS" == "Linux" ]] # Linux or Windows WSL
-then
+if [[ "$OS" == "Linux" ]]; then # Linux or Windows WSL
   echo "Operating System: Linux"
   TOOLS_BUNDLE_URL=$TOOLS_BUNDLE_URL_LINUX
-  install_linux_prerequisites   ; PREREQUISITES=$?
-elif [[ "$OS" == "Darwin" ]] # Mac OSX
-then
+  install_linux_prerequisites
+  PREREQUISITES=$?
+elif [[ "$OS" == "Darwin" ]]; then # Mac OSX
   echo "Operating System: Mac OSX Darvin"
   TOOLS_BUNDLE_URL=$TOOLS_BUNDLE_URL_OSX
-  install_mac_osx_prerequisites ; PREREQUISITES=$?
+  install_mac_osx_prerequisites
+  PREREQUISITES=$?
 else
   # Default if Operating System other than Mac or Linux
   echo -n "Only Linux, OSX, and WSL (Windows Subsystem Linux) systems "
@@ -316,14 +382,27 @@ else
   exit 1
 fi
 
-download_and_install_tool_bundle  ; TOOL_BUNDLE=$?
-install_python_tools              ; PYTHON_TOOLS=$?
-install_nxpprog                   ; NXPPROG=$?
-generate_location_file            ; LOCATION_FILE=$?
-link_projects                     ; LINK_PROJECTS=$?
+if [ "$PREREQUISITES" -ne "0" ]; then
+  printf "\e[0;31m"
+  printf " ─────────────────────────────────────────────────────────┐"
+  echo ""
+  printf "                 Prequisite Install Failed.                "
+  echo ""
+  echo "  Make sure:                                               "
+  echo "     - You are connected to the internet                   "
+  echo ""
+  printf "└───────────────────────────────────────────────────────── "
+  printf "\e[0m\n"
+  exit 1
+fi
+
+download_and_extract_tool_bundle
+TOOL_BUNDLE=$?
+install_python_tools
+PYTHON_TOOLS=$?
+install_nxpprog
+NXPPROG=$?
 
 echo ""
 
-final_install_check \
-  $(($PREREQUISITES + $TOOL_BUNDLE + $PYTHON_TOOLS + \
-     $NXPPROG + $LOCATION_FILE + $LINK_PROJECTS))
+final_install_check

@@ -7,36 +7,41 @@ int main()
 {
   LOG_INFO("Starting LPC176x/5x SystemController example...");
 
-  constexpr uint32_t kInputFrequency =
-      sjsu::lpc17xx::SystemController::kDefaultIRCFrequency / 1'000;  // kHz
-  constexpr uint32_t kDesiredFrequency = 96;                          // MHz
+  constexpr units::frequency::hertz_t kInputFrequency =
+      sjsu::lpc17xx::SystemController::kDefaultIRCFrequency;
+  constexpr units::frequency::hertz_t kDesiredFrequency = 96_MHz;
   sjsu::lpc17xx::SystemController controller;
   controller.SetSystemClockFrequency(kDesiredFrequency);
   controller.SetPeripheralClockDivider(
       sjsu::lpc17xx::SystemController::Peripherals::kUart0, 2);
+  sjsu::SystemController::SetPlatformController(&controller);
 
   // re-configuring uart0 after changing cpu speed
-  sjsu::lpc17xx::Uart uart0(sjsu::lpc17xx::UartPort::kUart0, controller);
+  sjsu::lpc17xx::Uart uart0(sjsu::lpc17xx::UartPort::kUart0);
   uart0.SetBaudRate(config::kBaudRate);
 
   using sjsu::lpc17xx::LPC_SC_TypeDef;
   // Reading the multiplier and pre-divider values locked into the PLL0STAT
   // register to calculate the current running CPU clock speed.
-  const uint32_t kMultiplier = sjsu::bit::Extract(
-      LPC_SC->PLL0STAT, sjsu::lpc17xx::SystemController::MainPll::kMultiplier);
-  const uint32_t kPreDivider = sjsu::bit::Extract(
-      LPC_SC->PLL0STAT, sjsu::lpc17xx::SystemController::MainPll::kPreDivider);
-  const uint32_t kCpuDivider = sjsu::bit::Extract(
-      LPC_SC->CCLKCFG, sjsu::lpc17xx::SystemController::CpuClock::kDivider);
-  const uint32_t kClockFrequencyInKhz =
+  const uint32_t kMultiplier =
+      sjsu::bit::Extract(sjsu::lpc17xx::LPC_SC->PLL0STAT,
+                         sjsu::lpc17xx::SystemController::MainPll::kMultiplier);
+  const uint32_t kPreDivider =
+      sjsu::bit::Extract(sjsu::lpc17xx::LPC_SC->PLL0STAT,
+                         sjsu::lpc17xx::SystemController::MainPll::kPreDivider);
+  const uint32_t kCpuDivider =
+      sjsu::bit::Extract(sjsu::lpc17xx::LPC_SC->CCLKCFG,
+                         sjsu::lpc17xx::SystemController::CpuClock::kDivider);
+  const units::frequency::hertz_t kClockFrequency =
       ((2 * (kMultiplier + 1) * kInputFrequency) / (kPreDivider + 1)) /
       (kCpuDivider + 1);
-  LOG_INFO("CPU Clock Frequency: %lu", (kClockFrequencyInKhz * 1'000));
+
+  LOG_INFO("CPU Clock Frequency: %" PRIu32, kClockFrequency.to<uint32_t>());
 
   // configure the CLKOUT pin, P1.27, to output system clock
   sjsu::lpc17xx::Pin clock_pin(1, 27);
   clock_pin.SetPinFunction(0b01);
-  clock_pin.SetPull(sjsu::Pin::Resistor::kNone);
+  clock_pin.SetFloating();
   clock_pin.SetAsOpenDrain(false);
 
   constexpr uint8_t kClockOutEnableBit = 8;
@@ -44,13 +49,14 @@ int main()
       sjsu::bit::CreateMaskFromRange(0, 3);
   constexpr sjsu::bit::Mask kClockOutDividerMask =
       sjsu::bit::CreateMaskFromRange(4, 7);
-  LPC_SC->CLKOUTCFG = sjsu::bit::Set(LPC_SC->CLKOUTCFG, kClockOutEnableBit);
-  LPC_SC->CLKOUTCFG =
-      sjsu::bit::Insert(LPC_SC->CLKOUTCFG, 0b000, kClockOutSelectMask);
+  sjsu::lpc17xx::LPC_SC->CLKOUTCFG =
+      sjsu::bit::Set(sjsu::lpc17xx::LPC_SC->CLKOUTCFG, kClockOutEnableBit);
+  sjsu::lpc17xx::LPC_SC->CLKOUTCFG = sjsu::bit::Insert(
+      sjsu::lpc17xx::LPC_SC->CLKOUTCFG, 0b000, kClockOutSelectMask);
   // setting CLKOUT divider to 16, the resulting frequency outputted by CLKOUT
   // should be 6 MHz.
-  LPC_SC->CLKOUTCFG =
-      sjsu::bit::Insert(LPC_SC->CLKOUTCFG, 0xF, kClockOutDividerMask);
+  sjsu::lpc17xx::LPC_SC->CLKOUTCFG = sjsu::bit::Insert(
+      sjsu::lpc17xx::LPC_SC->CLKOUTCFG, 0xF, kClockOutDividerMask);
 
   while (1)
   {

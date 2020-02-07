@@ -43,12 +43,12 @@ class Ssd1306 final : public PixelDisplay
   }
   Color_t AvailableColors() override
   {
-    return Color_t(/* Red        = */ 1,
-                   /* Green      = */ 1,
-                   /* Blue       = */ 1,
-                   /* Alpha      = */ 1,
-                   /* Color Bits = */ 1,
-                   /* Monochrome = */ true);
+    return Color_t{
+      .red   = 0,
+      .green = 0,
+      .blue  = 0,
+      .alpha = 1,
+    };
   }
 
   void Write(uint32_t data, Transaction transaction, size_t size = 1)
@@ -76,7 +76,7 @@ class Ssd1306 final : public PixelDisplay
 
     spi_.Initialize();
     spi_.SetDataSize(sjsu::Spi::DataSize::kEight);
-    spi_.SetClock(100'000);
+    spi_.SetClock(2_MHz);
 
     Clear();
     InitializationPanel();
@@ -171,7 +171,7 @@ class Ssd1306 final : public PixelDisplay
     // Mask to clear the bit
     uint32_t clear_mask = ~(1 << bit_position);
     // Mask to set the bit, if color.alpha != 0
-    bool pixel_is_on  = (color.alpha != 0);
+    bool pixel_is_on  = !color.IsBlank();
     uint32_t set_mask = pixel_is_on << bit_position;
     // Address of the pixel column to edit
     uint8_t * pixel_column = &(bitmap_[row][x]);

@@ -3,11 +3,35 @@
 #include <cstddef>
 #include <cstdint>
 
+#include "utility/units.hpp"
+
 namespace sjsu
 {
+/// @ingroup l1_peripheral
 class SystemController
 {
+ private:
+  /// Global platform system controller scoped within this class. Most
+  /// systems only need a single platform system controller, and thus this
+  /// can hold a general/default platform system controller that can be
+  /// retrieved via SetPlatformController and GetPlatformController.
+  static inline SystemController * platform_system_controller = nullptr;
+
  public:
+  /// Set the controller for the platform
+  ///
+  /// @param system_controller - a pointer to the current platform's
+  ///        system controller.
+  static void SetPlatformController(SystemController * system_controller)
+  {
+    platform_system_controller = system_controller;
+  }
+  /// Retrieve a reference of the platforms system controller
+  static sjsu::SystemController & GetPlatformController()
+  {
+    return *platform_system_controller;
+  }
+
   // ==============================
   // Interface Defintions
   // ==============================
@@ -17,6 +41,7 @@ class SystemController
    public:
     uint8_t device_id = -1;
   };
+
   template <size_t kDeviceId>
   class AddPeripheralID : public PeripheralID
   {
@@ -35,14 +60,15 @@ class SystemController
   ///
   /// @returns the difference between the frequency supplied and the frequency
   ///          achieved.
-  virtual uint32_t SetSystemClockFrequency(uint8_t frequency_in_mhz) const = 0;
+  virtual void SetSystemClockFrequency(
+      units::frequency::megahertz_t frequency_in_mhz) const = 0;
   /// Set the peripheral/bus clock frequency divider
   virtual void SetPeripheralClockDivider(const PeripheralID &,
                                          uint8_t peripheral_divider) const = 0;
   /// @return peripheral clock divider
   virtual uint32_t GetPeripheralClockDivider(const PeripheralID &) const = 0;
   /// @return system clock frequency
-  virtual uint32_t GetSystemFrequency() const = 0;
+  virtual units::frequency::hertz_t GetSystemFrequency() const = 0;
   /// Checks hardware and determines if the peripheral is powered up
   virtual bool IsPeripheralPoweredUp(
       const PeripheralID & peripheral_select) const = 0;
@@ -58,11 +84,13 @@ class SystemController
   // ==============================
 
   /// @returns current bus/peripheral operating frequency
-  uint32_t GetPeripheralFrequency(const PeripheralID & peripheral_select) const
+  units::frequency::hertz_t GetPeripheralFrequency(
+      const PeripheralID & peripheral_select) const
   {
     uint32_t peripheral_clock_divider =
         GetPeripheralClockDivider(peripheral_select);
-    uint32_t result = 0;  // return 0 if peripheral_clock_divider == 0
+    // return 0 if peripheral_clock_divider == 0
+    units::frequency::hertz_t result = 0_Hz;
     if (peripheral_clock_divider != 0)
     {
       result = GetSystemFrequency() / peripheral_clock_divider;

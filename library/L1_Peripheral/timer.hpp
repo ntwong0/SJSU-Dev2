@@ -1,12 +1,15 @@
 #pragma once
 
 #include <cstdint>
+#include <functional>
 
 #include "L1_Peripheral/interrupt.hpp"
 #include "utility/status.hpp"
+#include "utility/units.hpp"
 
 namespace sjsu
 {
+/// @ingroup l1_peripheral
 class Timer
 {
  public:
@@ -34,16 +37,16 @@ class Timer
   /// Initialize and enable hardware. This must be called before any other
   /// method in this interface is called.
   ///
-  /// @param frequency - the frequency that the timer's count register will
-  ///        increment by. If this is set to 1'000'000Hz then the counter will
-  ///        increment every microsecond. register will be 10 ms.
-  /// @param isr - the ISR that will fire when the condition set by SetTimer
-  ///        method is achieved.
+  /// @param counter_frequency - the frequency that the timer's count register
+  ///        will increment by. If this is set to 1'000'000Hz then the counter
+  ///        will increment every microsecond. register will be 10 ms.
+  /// @param callback - a callback that will be called when the condition set by
+  ///        SetTimer method has occurred.
   /// @param priority - sets the Timer interrupt's priority level, defaults to
   ///        -1 which uses the platforms default priority.
-  virtual Status Initialize(uint32_t counter_frequency,
-                            IsrPointer isr   = nullptr,
-                            int32_t priority = -1) const = 0;
+  virtual Status Initialize(units::frequency::hertz_t counter_frequency,
+                            InterruptCallback callback = nullptr,
+                            int32_t priority                   = -1) const = 0;
   /// Set a timer to execute your timer command when the time counter equals the
   /// match register. time in ticks dependent on initialization Functionality is
   /// defined by mode: interrupt, stop, or reset on match.
@@ -61,5 +64,11 @@ class Timer
   virtual uint8_t GetAvailableMatchRegisters() const = 0;
   /// Get the current count in the count register
   virtual uint32_t GetCount() const = 0;
+  /// Starts the timer.
+  virtual void Start() const = 0;
+  /// Stops the timer.
+  virtual void Stop() const  = 0;
+  /// Resets the timer.
+  virtual void Reset() const = 0;
 };
 }  // namespace sjsu

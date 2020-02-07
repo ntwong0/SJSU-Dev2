@@ -1,4 +1,3 @@
-#include <inttypes.h>
 #include <cstdint>
 
 #include "L1_Peripheral/lpc40xx/i2c.hpp"
@@ -122,7 +121,7 @@ int main()
     LOG_INFO("add reg1 = 0x%02X", reg1);
     LOG_INFO("========================\n");
 
-    sjsu::Delay(500);
+    sjsu::Delay(500ms);
   }
   return 0;
 }

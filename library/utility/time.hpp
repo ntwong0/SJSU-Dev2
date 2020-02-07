@@ -1,56 +1,84 @@
 #pragma once
 
 #include <cstdint>
+#include <cinttypes>
+#include <functional>
+#include <cstdio>
 
 #include "utility/macros.hpp"
 #include "utility/status.hpp"
+#include "utility/units.hpp"
+#include "utility/build_info.hpp"
 
 namespace sjsu
 {
-using UptimeFunction = uint64_t (*)();
-inline uint64_t DefaultUptime() { return 0; }
-// Returns the system uptime in microseconds.
+/// Definition of an UptimeFunction
+using UptimeFunction = std::function<std::chrono::nanoseconds(void)>;
+
+/// A default uptime function that is used for testing or platforms without a
+/// means to keep time. It should not be used in production.
+///
+/// @return the current number of fake uptime nanoseconds that increments each
+/// time this function is called.
+inline std::chrono::nanoseconds DefaultUptime()
+{
+  static std::chrono::nanoseconds default_uptime = 0ns;
+  default_uptime += 1us;
+  return default_uptime;
+}
+
+/// Global Uptime function, preset to DefaultUptime() for testing purposes.
+/// In general, this function is overwritten by
 inline UptimeFunction Uptime = DefaultUptime;  // NOLINT
-// Max wait time in microseconds.
-constexpr uint64_t kMaxWait = 0xFFFFFFFFFFFFFFFF;
-// Returns the system uptime in microseconds, do not use this function directly
+
+/// Returns the system uptime in nanoseconds, do not use this function directly
+///
+/// @param uptime_function - new system wide uptime function to override the
+///        previous one.
 inline void SetUptimeFunction(UptimeFunction uptime_function)
 {
   Uptime = uptime_function;
 }
-// Get system uptime in milliseconds as a 64-bit integer
-inline uint64_t Milliseconds()
+
+/// Wait will until the is_done parameter returns true
+///
+/// @param timeout the maximum amount of time to wait for the is_done to
+///        return true.
+/// @param is_done will be run in a tight loop until it returns true or the
+///        timeout time has elapsed.
+inline Status Wait(std::chrono::nanoseconds timeout,
+                   std::function<bool()> is_done)
 {
-  return Uptime();
-}
-// Get system uptime in seconds as a 64-bit integer
-inline uint64_t Seconds()
-{
-  return Uptime() / 1'000;
-}
-// Wait will until the is_done parameter returns true
-//
-// @param timeout the maximum amount of time to wait for the is_done to
-//        return true.
-// @param is_done will be run in a tight loop until it returns true or the
-//        timeout time has elapsed.
-template <typename F>
-[[gnu::always_inline]] inline Status Wait(uint64_t timeout, F is_done);
-template <typename F>
-inline Status Wait(uint64_t timeout, F is_done)
-{
-  uint64_t timeout_time = 0;
-  if (timeout == kMaxWait)
+  std::chrono::nanoseconds timeout_time;
+  if (timeout == std::chrono::nanoseconds::max())
   {
-    timeout_time = kMaxWait;
+    // TODO(#983): This is a cheap hack to keep overflows from happening, but
+    // what if the system hsa been on for a long period of time and a new
+    // timeout overflows? This needs to be handled properly.
+    timeout_time = timeout;
+  }
+  else if (timeout == 0ns)
+  {
+    return Status::kTimedOut;
   }
   else
   {
-    timeout_time = Milliseconds() + timeout;
+    if constexpr (build::IsPlatform(build::Platform::host))
+    {
+      // NOTE: During host tests the default uptime counter will auto increment
+      // by 1, which will resulting in the default uptime being 1ns additional
+      // then it should. To counter act the calls to extra calls to Uptime() in
+      // this function, we substract 2ns.
+      timeout_time = (Uptime() + timeout) - 2us;
+    }
+    else
+    {
+      timeout_time = Uptime() + timeout;
+    }
   }
 
   Status status = Status::kTimedOut;
-  while (Milliseconds() < timeout_time)
+  while (Uptime() <= timeout_time)
   {
     if (is_done())
     {
@@ -61,22 +89,22 @@ inline Status Wait(uint64_t timeout, F is_done)
   return status;
 }
 
-inline Status Wait(uint64_t timeout)
+/// Overload of `Wait` that merely takes a timeout.
+///
+/// @param timeout - the amount of time to wait.
+/// @return always returns Status::kTimedOut
+inline Status Wait(std::chrono::nanoseconds timeout)
 {
   return Wait(timeout, []() -> bool { return false; });
 }
 
-// Delay the system for a duration of time
-inline void Delay([[maybe_unused]] uint64_t delay_time_ms)
+/// Delay the system for a duration of time
+inline void Delay(std::chrono::nanoseconds delay_time)
 {
-#if defined(HOST_TEST)
-  return;
-#else
-  Wait(delay_time_ms);
-#endif  // HOST_TEST
+  Wait(delay_time);
 }
-// Halt system by putting it into infinite loop
-[[gnu::always_inline]] inline void Halt()
+/// Halt system by putting it into infinite loop
+inline void Halt()
 {
   while (true)
   {

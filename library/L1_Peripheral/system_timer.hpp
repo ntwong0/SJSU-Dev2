@@ -3,25 +3,43 @@
 #pragma once
 
 #include <cstdint>
+#include <functional>
 
 #include "L1_Peripheral/interrupt.hpp"
 #include "utility/status.hpp"
+#include "utility/units.hpp"
 
 namespace sjsu
 {
+/// A system timer is a general timer used primarily for generating an interrupt
+/// at a fixed period, like 1ms or 10ms. Such interrupts are generally used to
+/// give control of the processor back to an operating.
+/// @ingroup l1_peripheral
 class SystemTimer
 {
  public:
   // ==============================
   // Interface Methods
   // ==============================
-
-  // Set the interrupt handler for the system timer
-  virtual void SetInterrupt(IsrPointer isr) const = 0;
-  // Set frequency of the timer
-  virtual uint32_t SetTickFrequency(uint32_t frequency) const = 0;
-  // Start the system timer. Should be done after SetInterrupt and
-  // SetTickFrequency have been called.
+  /// Initialize system timer hardware.
+  virtual void Initialize() const = 0;
+  /// Set the function to be called when the System Timer interrupt fires.
+  ///
+  /// @param callback - function to be called on system timer event.
+  virtual void SetCallback(InterruptCallback callback) const = 0;
+  /// Set frequency of the timer.
+  ///
+  /// @param frequency - How many times per second should the system timer
+  ///         interrupt be called.
+  /// @return the difference between the frequency that was achieved vs the
+  ///         input frequency.
+  virtual int32_t SetTickFrequency(
+      units::frequency::hertz_t frequency) const = 0;
+  /// Start the system timer. Should be done after SetInterrupt and
+  /// SetTickFrequency have been called.
+  ///
+  /// @return Status::kSuccess if the system timer started correctly. Otherwise,
+  ///         the exact status is implementation dependent.
   virtual Status StartTimer() const = 0;
 };
 }  // namespace sjsu
