@@ -10,16 +10,19 @@
 int main()
 {
   sjone board;
-  LOG_INFO("seven_seg init: %s", sjsu::Stringify(board.SevenSeg().Initialize()));
-
   static sjsu::lpc17xx::LPC_SC_TypeDef * system_controller 
-    = (( sjsu::lpc17xx::LPC_SC_TypeDef *) LPC_SC_BASE );
-  LOG_INFO("PCONP: 0x%X", system_controller->PCONP); // check bit 26, should be 1
+    = (( sjsu::lpc17xx::LPC_SC_TypeDef *) sjsu::lpc17xx::LPC_SC_BASE );
+  LOG_INFO("PCONP[0]: 0x%lX", system_controller->PCONP >> 26 & 1); // check bit 26, should be 1
 
   static sjsu::lpc17xx::LPC_PINCON_TypeDef * pin_configurator
-    = (( sjsu::lpc17xx::LPC_PINCON_TypeDef *) LPC_PINCON_BASE );
-  LOG_INFO("PINSEL0: 0x%X", pin_configurator->PINSEL0); // check bit 23:20, should be 4'b1010
+    = (( sjsu::lpc17xx::LPC_PINCON_TypeDef *) sjsu::lpc17xx::LPC_PINCON_BASE );
+  LOG_INFO("PINSEL0[23:20] before: 0x%lX", pin_configurator->PINSEL0 >> 20 & 0b1010); // check bit 23:20, should be 4'b1010
+  pin_configurator->PINSEL0 &= ~(0b1111 << 20);
+  pin_configurator->PINSEL0 |= 0b1010 << 20;
+  LOG_INFO("PINSEL0[23:20] after:  0x%lX", pin_configurator->PINSEL0 >> 20 & 0b1010); // check bit 23:20, should be 4'b1010
   
+  LOG_INFO("seven_seg init: %s", sjsu::Stringify(board.SevenSeg().Initialize()));
+
   board.SevenSeg().ConfigAllToOutput();
 
   sjsu::Pca9535::GpioParallelBus seg_bus = {
@@ -40,17 +43,17 @@ int main()
       LOG_INFO("Hello World 0x%X", i);
       
       board.SevenSeg().SetAll(sjsu::Gpio::State::kLow);
-      sjsu::Delay(500);
+      sjsu::Delay(500ms);
 
       // TODO(#___):ensure GpioParallelBus has member Set(uint8_t val)
       for(uint8_t j = 0; j < 8; j++)
       {
         kSevenSegHexadeciMap[i] & (1 << j) ? seg_bus[j].SetHigh() : seg_bus[j].SetLow();
       }
-      sjsu::Delay(500);
+      sjsu::Delay(500ms);
       
       board.SevenSeg().SetAll(sjsu::Gpio::State::kHigh);
-      sjsu::Delay(500);
+      sjsu::Delay(500ms);
     }
   }
 

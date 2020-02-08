@@ -43,8 +43,8 @@ class Pca9535
 
     // Config Port reg values reflect I/O state
     //   Set to: 0 for output, 1 for input
-    static constexpr uint8_t kCtrlRegAddrConfigPort0 = 0x06; // power-on init value: 8b'1111_1111
-    static constexpr uint8_t kCtrlRegAddrConfigPort1 = 0x07; // power-on init value: 8b'1111_1111
+    static constexpr uint8_t kCtrlRegAddrConfigPort0 = 0x06; // actual power-on init value: 8b'0000_0000, while datasheet reports 8b'1111_1111
+    static constexpr uint8_t kCtrlRegAddrConfigPort1 = 0x07; // actual power-on init value: 8b'0000_0000, while datasheet reports 8b'1111_1111
 
     // Specifies number of ports and pins that can be used
     static constexpr uint8_t kNumberOfPins  = 8;
@@ -57,12 +57,15 @@ class Pca9535
     static Status Initialize(const I2c &i2c, uint8_t address) 
     {
       i2c.Initialize();
-      uint8_t vals_from_config_ports[kNumberOfPorts];
-      Status retval =
-        i2c.WriteThenRead(address, { kCtrlRegAddrConfigPort0 }, &vals_from_config_ports[0], kNumberOfPorts);
-      // confirm pins are defaulted as inputs - return error if this is not the case
-      if(vals_from_config_ports[0] != 0xFF || vals_from_config_ports[1] != 0xFF)
-        retval = Status::kBusError;
+      uint8_t vals_from_config_ports[kNumberOfPorts] = {0, 0};
+      i2c.Write(address, { kCtrlRegAddrConfigPort0, 0xFF, 0xFF} ); // actual default is 
+
+      Status retval = i2c.WriteThenRead(address, { kCtrlRegAddrConfigPort0 }, &vals_from_config_ports[0], 1);
+      if(retval == Status::kSuccess)
+        retval = i2c.WriteThenRead(address, { kCtrlRegAddrConfigPort1 }, &vals_from_config_ports[1], 1);
+      // verify config ports are truly set as inputs
+      if(retval == Status::kSuccess && (vals_from_config_ports[0] != 0xFF || vals_from_config_ports[1] != 0xFF))
+        retval = Status::kInvalidSettings;
       return retval;
     }
 
@@ -337,8 +340,9 @@ class Pca9535
 
       // can't do hardware interrupts with pca9535
       // TODO(#___):consider software interrupt via polling
-      void AttachInterrupt(IsrPointer function, Edge edge) const override { return; }
-      void DetachInterrupt() const override                               { return; }
+      void AttachInterrupt(InterruptCallback callback, Edge edge) override { return; }
+      // void AttachInterrupt(InterruptCallback callback, Edge edge) const override { return; }
+      void DetachInterrupt() const override                                      { return; }
 
       // ===
       // Override inherited utility methods
