@@ -6,6 +6,7 @@
 #include "L0_Platform/lpc17xx/LPC17xx.h"
 #include "L2_HAL/boards/sjone.hpp"
 #include "L2_HAL/displays/seven_seg/pca9535.hpp"
+#include "L2_HAL/sensors/environment/airflow/hafuht0020l4axt.hpp"
 
 int main()
 {
@@ -22,7 +23,8 @@ int main()
   LOG_INFO("PINSEL0[23:20] after:  0x%lX", pin_configurator->PINSEL0 >> 20 & 0b1010); // check bit 23:20, should be 4'b1010
   
   LOG_INFO("seven_seg init: %s", sjsu::Stringify(board.SevenSeg().Initialize()));
-
+  LOG_INFO("flow init: %s", sjsu::Stringify(board.Flow().Initialize()));
+  
   board.SevenSeg().ConfigAllToOutput();
 
   sjsu::Pca9535::GpioParallelBus seg_bus = {

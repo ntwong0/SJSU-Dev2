@@ -7,6 +7,7 @@
 
 // #include "L2_HAL/displays/led/onboard_led.hpp"
 #include "L2_HAL/displays/seven_seg/pca9535.hpp"
+#include "L2_HAL/sensors/environment/airflow/hafuht0020l4axt.hpp"
 #include "L2_HAL/memory/sd.hpp"
 #include "L2_HAL/sensors/environment/light/temt6000x01.hpp"
 #include "L2_HAL/sensors/environment/temperature/tmp102.hpp"
@@ -51,6 +52,12 @@ struct sjone // NOLINT
   {
       static sjsu::Pca9535 seven_seg(i2c2);
       return seven_seg;
+  }
+
+  [[gnu::always_inline]] inline static sjsu::Hafuht0020l4axt & Flow()
+  {
+      static sjsu::Hafuht0020l4axt flow(i2c2);
+      return flow;
   }
 
   // [[gnu::always_inline]] inline static sjsu::Sd & SdCard()
