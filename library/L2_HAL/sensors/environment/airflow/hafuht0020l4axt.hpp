@@ -45,9 +45,12 @@ class Hafuht0020l4axt
     static constexpr uint8_t kFailure       = 0xCC9B; // command failed during execution
     static constexpr uint8_t kBadChecksum   = 0xCC90; // checksum did not match stored value
     static constexpr uint8_t kBusy          = 0xCCBB; // sensor is busy calculating the checksum value
+    
+    // HAFUHT0020L4AXT calculating constants
+    static constexpr float   kFullScaleFlow = 20.0;   // max flow
 
     // HAFUHT0020L4AXT test sensor values
-    static constexpr uint16_t kSerialNumber = 0x4609A495;
+    static constexpr uint16_t kSerialNumber  = 0x4609A495;
 
     // =====
     // HAFUHT0020L4AXT-specific I2C methods
@@ -67,10 +70,12 @@ class Hafuht0020l4axt
     }
 
     // Note: Read requests taken faster than the response time (1ms) are not guaranteed to return fresh data
-    static Status ReadFlow(const I2c &i2c, uint8_t address)
+    uint16_t ReadFlow(const I2c &i2c, uint8_t address)
     {
       uint8_t vals_from_blank_read[2] = {0, 0};
       i2c.Read(address, &vals_from_blank_read[0], 2);
+      uint16_t retval = (uint16_t) vals_from_blank_read[0] << 8 | vals_from_blank_read[1];
+      return retval;
     }
 
     // =====
@@ -78,29 +83,29 @@ class Hafuht0020l4axt
     // =====
 
     Hafuht0020l4axt(const I2c & i2c, uint8_t address = kDevI2CBaseAddr, uint16_t serialNumber = kSerialNumber)
-    : i2c_(i2c), address_(address)
+    : i2c_(i2c), address_(address), serialNumber_(serialNumber)
     {}
 
     Status Initialize()
     {
-        return Initialize(i2c_, address_);
+      return Initialize(i2c_, address_, serialNumber_);
     }
 
-    Status ConfigAllToOutput()
+    // convert "digital output code" to "standard liters per minute"
+    float SLPMfromDOC(uint16_t code)
     {
-        return SetConfigPorts(i2c_, address_, 0x00, 0x00);
-    }
-    
-    Status ConfigAllToInput()
-    {
-        return SetConfigPorts(i2c_, address_, 0xFF, 0xFF);
+      return kFullScaleFlow * (((float)code/16384.0) - 0.1)/0.8;
     }
 
-    Status SetAll(Gpio::State level)
+    float GetFlowrate()
     {
-        return (level == Gpio::State::kHigh) ?
-                SetOutputPorts(i2c_, address_, 0xFF, 0xFF) :
-                SetOutputPorts(i2c_, address_, 0x00, 0x00);
+      return SLPMfromDOC(ReadFlow(i2c_, address_));
+    }
+
+    void DelayForSensorResponseTime()
+    {
+      Delay(1ms);
+      return;
     }
 
   private:

@@ -53,7 +53,7 @@ int main()
         kSevenSegHexadeciMap[i] & (1 << j) ? seg_bus[j].SetHigh() : seg_bus[j].SetLow();
       }
       sjsu::Delay(500ms);
-      
+      LOG_INFO("flowrate: %f", board.Flow().GetFlowrate());
       board.SevenSeg().SetAll(sjsu::Gpio::State::kHigh);
       sjsu::Delay(500ms);
     }
