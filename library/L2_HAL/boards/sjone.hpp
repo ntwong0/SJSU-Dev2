@@ -48,11 +48,11 @@ struct sjone // NOLINT
 //     return leds;
 //   }
 
-  [[gnu::always_inline]] inline static sjsu::Pca9535 & SevenSeg()
-  {
-      static sjsu::Pca9535 seven_seg(i2c2);
-      return seven_seg;
-  }
+//   [[gnu::always_inline]] inline static sjsu::Pca9535 & SevenSeg()
+//   {
+//       static sjsu::Pca9535 seven_seg(i2c2);
+//       return seven_seg;
+//   }
 
   [[gnu::always_inline]] inline static sjsu::Hafuht0020l4axt & Flow()
   {

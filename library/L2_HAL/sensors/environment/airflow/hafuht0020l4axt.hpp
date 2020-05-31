@@ -50,7 +50,7 @@ class Hafuht0020l4axt
     static constexpr float   kFullScaleFlow = 20.0;   // max flow
 
     // HAFUHT0020L4AXT test sensor values
-    static constexpr uint16_t kSerialNumber  = 0x4609A495;
+    static constexpr uint32_t kSerialNumber  = 0x4609A495;
 
     // =====
     // HAFUHT0020L4AXT-specific I2C methods
@@ -61,12 +61,30 @@ class Hafuht0020l4axt
       i2c.Initialize();
       i2c.Write(address, { kGetSerialNumber } );
       Delay(10ms);
-      uint8_t vals_from_get_serial[2] = {0, 0};
-      Status retval = i2c.Read(address, &vals_from_get_serial[0], 2);
-      uint16_t gotten_serial = (uint16_t)vals_from_get_serial[1] << 8 | vals_from_get_serial[0];
-      if(retval == Status::kSuccess && gotten_serial != serialNumber)
-        retval = Status::kInvalidSettings;
-      return retval;
+      uint8_t vals_from_get_serial[4] = {0, 0, 0, 0};
+      Status retval0 = i2c.Read(address, &vals_from_get_serial[0], 2);
+      Delay(10ms);
+      Status retval1 = i2c.Read(address, &vals_from_get_serial[2], 2);
+      LOG_INFO("received %x %x %x %x %x", 
+               vals_from_get_serial[0],
+               vals_from_get_serial[1],
+               vals_from_get_serial[2],
+               vals_from_get_serial[3]);
+      uint32_t gotten_serial = (uint32_t)vals_from_get_serial[0] << 24 | 
+                               (uint32_t)vals_from_get_serial[1] << 16 |
+                               (uint32_t)vals_from_get_serial[2] <<  8 |
+                               (uint32_t)vals_from_get_serial[3];
+      if(retval0 == Status::kSuccess && retval1 == Status::kSuccess
+                                     && gotten_serial == serialNumber)
+      {
+        retval0 = Status::kSuccess;
+      }
+      else
+      {
+        LOG_INFO("bad serial: %x", gotten_serial);
+        retval0 = Status::kInvalidSettings;
+      }
+      return retval0;
     }
 
     // Note: Read requests taken faster than the response time (1ms) are not guaranteed to return fresh data
